@@ -1,80 +1,166 @@
 import seasonData from './data/2025.json'
 import matchupData from './data/2025-matchups.json'
 import { calculateStandings } from './utils/standings'
+import './App.css'
 
 function App() {
   const standings = calculateStandings(seasonData, matchupData)
 
+  const leader = standings[0]
+  const highestScorer = [...standings].sort(
+    (a, b) => b.highScore - a.highScore
+  )[0]
+  const luckiest = [...standings].sort(
+    (a, b) => b.luck - a.luck
+  )[0]
+  const unluckiest = [...standings].sort(
+    (a, b) => a.luck - b.luck
+  )[0]
+
   return (
-    <div style={{ padding: '40px', fontFamily: 'Arial' }}>
-      <h1>🏈 Clownsters FFB</h1>
-      <h2>2025 Standings Test</h2>
+    <div className="app">
+      <header className="header">
+        <div>
+          <div className="brand">🏈 CLOWNSTERS FFB</div>
+          <div className="subtitle">Fantasy Football League</div>
+        </div>
 
-    <table
-  style={{
-    borderCollapse: 'collapse',
-    width: '1100px',
-    maxWidth: '100%',
-  }}
->
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Team</th>
-      <th>Record</th>
-      <th>PF</th>
-      <th>Avg</th>
-      <th>High</th>
-      <th>Low</th>
-      <th>Diff</th>
-      <th>All-Play</th>
-      <th>xW</th>
-      <th>Luck</th>
-      <th>SOS</th>
-    </tr>
-  </thead>
+        <div className="season">2025 Season</div>
+      </header>
 
-  <tbody>
-    {standings.map((team, index) => (
-      <tr key={team.team}>
-        <td>{index + 1}</td>
+      <main className="dashboard">
 
-        <td>{team.team}</td>
+        <section className="hero">
+          <div>
+            <div className="eyebrow">LEAGUE LEADER</div>
+            <h1>{leader.team}</h1>
+            <div className="hero-record">
+              {leader.wins}-{leader.losses}
+            </div>
+          </div>
 
-        <td>
-          {team.wins}-{team.losses}
-          {team.ties > 0 ? `-${team.ties}` : ''}
-        </td>
+          <div className="hero-stat">
+            <span>{leader.pointsFor.toFixed(1)}</span>
+            <small>POINTS FOR</small>
+          </div>
 
-        <td>{team.pointsFor.toFixed(2)}</td>
+          <div className="hero-stat">
+            <span>{leader.averagePF.toFixed(1)}</span>
+            <small>AVG / WEEK</small>
+          </div>
 
-        <td>{team.averagePF.toFixed(1)}</td>
+          <div className="hero-stat">
+            <span>
+              {leader.luck > 0 ? '+' : ''}
+              {leader.luck.toFixed(1)}
+            </span>
+            <small>LUCK</small>
+          </div>
+        </section>
 
-        <td>{team.highScore.toFixed(1)}</td>
+        <section className="cards">
 
-        <td>{team.lowScore.toFixed(1)}</td>
+          <div className="card">
+            <div className="card-icon">🔥</div>
+            <div>
+              <div className="card-label">BEST WEEK</div>
+              <div className="card-value">{highestScorer.team}</div>
+              <div className="card-detail">
+                {highestScorer.highScore.toFixed(1)} pts
+              </div>
+            </div>
+          </div>
 
-        <td>
-          {team.pointDifferential > 0 ? '+' : ''}
-          {team.pointDifferential.toFixed(1)}
-        </td>
+          <div className="card">
+            <div className="card-icon">🍀</div>
+            <div>
+              <div className="card-label">LUCKIEST</div>
+              <div className="card-value">{luckiest.team}</div>
+              <div className="card-detail">
+                +{luckiest.luck.toFixed(1)} wins
+              </div>
+            </div>
+          </div>
 
-        <td>
-          {team.allPlayWins}-{team.allPlayLosses}
-        </td>
+          <div className="card">
+            <div className="card-icon">💀</div>
+            <div>
+              <div className="card-label">UNLUCKIEST</div>
+              <div className="card-value">{unluckiest.team}</div>
+              <div className="card-detail">
+                {unluckiest.luck.toFixed(1)} wins
+              </div>
+            </div>
+          </div>
 
-        <td>{team.expectedWins.toFixed(1)}</td>
+        </section>
 
-        <td>
-          {team.luck > 0 ? '+' : ''}
-          {team.luck.toFixed(1)}
-        </td>
+        <section className="panel">
 
-        <td>{team.strengthOfSchedule.toFixed(1)}</td>
-      </tr>
-    ))}
-  </tbody>
-</table>
+          <div className="panel-header">
+            <div>
+              <div className="eyebrow">LEAGUE TABLE</div>
+              <h2>Standings</h2>
+            </div>
+          </div>
+
+          <div className="standings">
+
+            <div className="standings-row standings-heading">
+              <div>#</div>
+              <div>TEAM</div>
+              <div>RECORD</div>
+              <div>PF</div>
+              <div>DIFF</div>
+              <div>xW</div>
+              <div>LUCK</div>
+            </div>
+
+            {standings.map((team, index) => (
+              <div className="standings-row" key={team.team}>
+
+                <div className="rank">{index + 1}</div>
+
+                <div className="team-name">{team.team}</div>
+
+                <div>
+                  {team.wins}-{team.losses}
+                </div>
+
+                <div>{team.pointsFor.toFixed(1)}</div>
+
+                <div
+                  className={
+                    team.pointDifferential >= 0
+                      ? 'positive'
+                      : 'negative'
+                  }
+                >
+                  {team.pointDifferential > 0 ? '+' : ''}
+                  {team.pointDifferential.toFixed(1)}
+                </div>
+
+                <div>{team.expectedWins.toFixed(1)}</div>
+
+                <div
+                  className={
+                    team.luck >= 0
+                      ? 'positive'
+                      : 'negative'
+                  }
+                >
+                  {team.luck > 0 ? '+' : ''}
+                  {team.luck.toFixed(1)}
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+        </section>
+
+      </main>
     </div>
   )
 }
