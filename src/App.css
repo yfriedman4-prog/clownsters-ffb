@@ -953,3 +953,173 @@ padding: 0 3%;  display: flex;
   background: #253047;
   color: #f4f6fb;
 }
+.history-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.history-header h1 {
+  margin: 6px 0 4px;
+  font-size: 32px;
+}
+
+.history-header p {
+  margin: 0;
+  color: #7f8ba3;
+  font-size: 14px;
+}
+
+.history-season {
+  padding: 10px 18px;
+  border: 1px solid #2b3448;
+  border-radius: 8px;
+  background: #111725;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.history-section-header {
+  margin: 26px 0 15px;
+}
+
+.history-section-header h2 {
+  margin: 4px 0 0;
+  font-size: 23px;
+}
+
+.history-podium {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  align-items: end;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.podium-card {
+  padding: 28px 24px;
+  border: 1px solid #232b3c;
+  border-radius: 14px;
+  background: #111725;
+  text-align: center;
+}
+
+.podium-first {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  border-color: #3b465d;
+}
+
+.podium-place {
+  color: #71809b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.podium-medal {
+  margin: 12px 0 6px;
+  font-size: 31px;
+}
+
+.podium-card h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.podium-first h2 {
+  font-size: 29px;
+}
+
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.record-card {
+  padding: 22px;
+  border: 1px solid #232b3c;
+  border-radius: 11px;
+  background: #111725;
+}
+
+.record-card span {
+  display: block;
+  color: #65728a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.record-card strong {
+  display: block;
+  margin-top: 9px;
+  font-size: 20px;
+}
+
+.record-card div {
+  margin-top: 4px;
+  color: #8d9ab0;
+  font-size: 13px;
+}
+
+.history-standings {
+  margin: 28px 0 40px;
+}
+
+.history-table {
+  overflow: hidden;
+  border: 1px solid #232b3c;
+  border-radius: 14px;
+  background: #111725;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: 55px 2fr 1fr 1fr 1fr 1fr 0.8fr;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-top: 1px solid #202738;
+  font-size: 13px;
+}
+
+.history-heading {
+  min-height: 39px;
+  border-top: 0;
+  background: #0e1420;
+  color: #69768e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .history-podium {
+    grid-template-columns: 1fr;
+  }
+
+  .podium-first {
+    order: -1;
+  }
+
+  .record-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-table {
+    overflow-x: auto;
+  }
+
+  .history-row {
+    min-width: 750px;
+  }
+}
+
+@media (max-width: 600px) {
+  .record-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,7 +3,13 @@ import seasonData from './data/2025.json'
 import matchupData from './data/2025-matchups.json'
 import { calculateStandings } from './utils/standings'
 import './App.css'
-
+const seasonHistory = {
+  2025: {
+    champion: 'Yaakov',
+    runnerUp: 'Benjy',
+    thirdPlace: 'Reoven',
+  },
+}
 function App() {
   const [page, setPage] = useState('dashboard')
   const [selectedWeek, setSelectedWeek] = useState(1)
@@ -83,7 +89,21 @@ const maxAbsLuck = Math.max(
   const unluckiest = [...standings].sort(
     (a, b) => a.luck - b.luck
   )[0]
+const highestScoringTeam = [...standings].sort(
+  (a, b) => b.pointsFor - a.pointsFor
+)[0]
 
+const highestWeeklyScore = [...standings].sort(
+  (a, b) => b.highScore - a.highScore
+)[0]
+
+const lowestWeeklyScore = [...standings].sort(
+  (a, b) => a.lowScore - b.lowScore
+)[0]
+
+const bestPointDifferential = [...standings].sort(
+  (a, b) => b.pointDifferential - a.pointDifferential
+)[0]
   return (
     <div className="app">
      <header className="header">
@@ -119,7 +139,8 @@ const maxAbsLuck = Math.max(
 page !== 'standings' &&
 page !== 'matchups' &&
 page !== 'teams' &&
-page !== 'analytics' ? (
+page !== 'analytics' &&
+page !== 'history' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -326,7 +347,9 @@ page !== 'analytics' ? (
             {team.luck.toFixed(1)}
           </div>
 
-          <div>{team.strengthOfSchedule.toFixed(1)}</div>
+          <div>
+  {team.strengthOfSchedule.toFixed(1)}%
+</div>
         </div>
       ))}
     </div>
@@ -865,6 +888,147 @@ page !== 'analytics' ? (
               {team.luck.toFixed(1)}
             </div>
 
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+{page === 'history' && (
+  <section>
+    <div className="history-header">
+      <div>
+        <div className="eyebrow">CLOWNSTERS FFB</div>
+        <h1>League History</h1>
+        <p>
+          Championships, season results, and the Clownsters record book.
+        </p>
+      </div>
+
+      <div className="history-season">
+        2025
+      </div>
+    </div>
+
+    <div className="history-section-header">
+      <div className="eyebrow">FINAL RESULTS</div>
+      <h2>2025 Podium</h2>
+    </div>
+
+    <div className="history-podium">
+
+      <div className="podium-card podium-second">
+        <div className="podium-place">RUNNER-UP</div>
+        <div className="podium-medal">🥈</div>
+        <h2>{seasonHistory[2025].runnerUp}</h2>
+      </div>
+
+      <div className="podium-card podium-first">
+        <div className="podium-place">2025 CHAMPION</div>
+        <div className="podium-medal">🏆</div>
+        <h2>{seasonHistory[2025].champion}</h2>
+      </div>
+
+      <div className="podium-card podium-third">
+        <div className="podium-place">3RD PLACE</div>
+        <div className="podium-medal">🥉</div>
+        <h2>{seasonHistory[2025].thirdPlace}</h2>
+      </div>
+
+    </div>
+
+    <div className="history-section-header">
+      <div className="eyebrow">2025 RECORD BOOK</div>
+      <h2>Season Records</h2>
+    </div>
+
+    <div className="record-grid">
+
+      <div className="record-card">
+        <span>MOST POINTS</span>
+        <strong>{highestScoringTeam.team}</strong>
+        <div>
+          {highestScoringTeam.pointsFor.toFixed(1)}
+        </div>
+      </div>
+
+      <div className="record-card">
+        <span>HIGHEST WEEK</span>
+        <strong>{highestWeeklyScore.team}</strong>
+        <div>
+          {highestWeeklyScore.highScore.toFixed(1)}
+        </div>
+      </div>
+
+      <div className="record-card">
+        <span>LOWEST WEEK</span>
+        <strong>{lowestWeeklyScore.team}</strong>
+        <div>
+          {lowestWeeklyScore.lowScore.toFixed(1)}
+        </div>
+      </div>
+
+      <div className="record-card">
+        <span>BEST POINT DIFFERENTIAL</span>
+        <strong>{bestPointDifferential.team}</strong>
+        <div
+          className={
+            bestPointDifferential.pointDifferential >= 0
+              ? 'positive'
+              : 'negative'
+          }
+        >
+          {bestPointDifferential.pointDifferential > 0 ? '+' : ''}
+          {bestPointDifferential.pointDifferential.toFixed(1)}
+        </div>
+      </div>
+
+    </div>
+
+    <div className="history-standings">
+      <div className="history-section-header">
+        <div className="eyebrow">FINAL TABLE</div>
+        <h2>2025 Regular Season</h2>
+      </div>
+
+      <div className="history-table">
+        <div className="history-row history-heading">
+          <div>#</div>
+          <div>TEAM</div>
+          <div>RECORD</div>
+          <div>PF</div>
+          <div>AVG</div>
+          <div>ALL-PLAY</div>
+          <div>xW</div>
+        </div>
+
+        {standings.map((team, index) => (
+          <div className="history-row" key={team.team}>
+            <div>{index + 1}</div>
+
+            <div className="team-name">
+              {team.team}
+            </div>
+
+            <div>
+              {team.wins}-{team.losses}
+            </div>
+
+            <div>
+              {team.pointsFor.toFixed(1)}
+            </div>
+
+            <div>
+              {team.averagePF.toFixed(1)}
+            </div>
+
+            <div>
+              {team.allPlayWins}-{team.allPlayLosses}
+            </div>
+
+            <div>
+              {team.expectedWins.toFixed(1)}
+            </div>
           </div>
         ))}
       </div>

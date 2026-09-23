@@ -11,6 +11,7 @@ export function calculateStandings(seasonData, matchupData) {
       pointsAgainst: 0,
       allPlayWins: 0,
       allPlayLosses: 0,
+      allPlayTies: 0,
     }
   })
 
@@ -50,13 +51,13 @@ export function calculateStandings(seasonData, matchupData) {
 
     weeklyScores.forEach((teamA) => {
       weeklyScores.forEach((teamB) => {
-        if (teamA.team === teamB.team) return
-
         if (teamA.score > teamB.score) {
-          standings[teamA.team].allPlayWins += 1
-        } else if (teamA.score < teamB.score) {
-          standings[teamA.team].allPlayLosses += 1
-        }
+  standings[teamA.team].allPlayWins += 1
+} else if (teamA.score < teamB.score) {
+  standings[teamA.team].allPlayLosses += 1
+} else {
+  standings[teamA.team].allPlayTies += 1
+}
       })
     })
   }
@@ -83,7 +84,8 @@ export function calculateStandings(seasonData, matchupData) {
       gamesPlayed > 0 ? pointDifferential / gamesPlayed : 0
 
     const expectedWins =
-      team.allPlayWins / (seasonData.teams.length - 1)
+  (team.allPlayWins + team.allPlayTies * 0.5) /
+  (seasonData.teams.length - 1)
 
     const luck = team.wins - expectedWins
 
@@ -108,38 +110,56 @@ export function calculateStandings(seasonData, matchupData) {
     }
   })
 
-  // Calculate Strength of Schedule:
-  // average Points For of the opponents actually faced
-  results.forEach((team) => {
-    let opponentTotalPF = 0
-    let opponentGames = 0
+// Calculate Strength of Schedule (SOS):
+// average all-play win percentage of the opponents actually faced
+results.forEach((team) => {
+  let opponentStrengthTotal = 0
+  let opponentGames = 0
 
-    matchupData.matchups.forEach((weekData) => {
-      weekData.games.forEach(([teamA, teamB]) => {
-        let opponent = null
+  matchupData.matchups.forEach((weekData) => {
+    weekData.games.forEach(([teamA, teamB]) => {
+      let opponent = null
 
-        if (teamA === team.team) {
-          opponent = teamB
-        } else if (teamB === team.team) {
-          opponent = teamA
-        }
+      if (teamA === team.team) {
+        opponent = teamB
+      } else if (teamB === team.team) {
+        opponent = teamA
+      }
 
-        if (opponent) {
-          const opponentResult = results.find(
-            (result) => result.team === opponent
-          )
+      if (opponent) {
+        const opponentResult = results.find(
+          (result) => result.team === opponent
+        )
 
-          opponentTotalPF += opponentResult.averagePF
-          opponentGames += 1
-        }
-      })
+      const opponentAllPlayGames =
+  opponentResult.allPlayWins +
+  opponentResult.allPlayLosses +
+  opponentResult.allPlayTies
+
+const opponentAllPlayWinPct =
+  opponentAllPlayGames > 0
+    ? (
+        opponentResult.allPlayWins +
+        opponentResult.allPlayTies * 0.5
+      ) / opponentAllPlayGames
+    : 0
+
+        opponentStrengthTotal += opponentAllPlayWinPct
+        opponentGames += 1
+      }
     })
-
-    team.strengthOfSchedule =
-      opponentGames > 0
-        ? Number((opponentTotalPF / opponentGames).toFixed(2))
-        : 0
   })
+
+  team.strengthOfSchedule =
+    opponentGames > 0
+      ? Number(
+          (
+            (opponentStrengthTotal / opponentGames) *
+            100
+          ).toFixed(1)
+        )
+      : 0
+})
 
   // Rank by actual record, then PF
   return results.sort((a, b) => {
