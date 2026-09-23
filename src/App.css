@@ -290,3 +290,143 @@ padding: 0 3%;  display: flex;
 .placeholder-page p {
   color: #7f8ba3;
 }
+.page-header {
+  padding: 34px 28px 28px;
+}
+
+.page-header h1 {
+  margin: 6px 0 4px;
+  font-size: 32px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #7f8ba3;
+  font-size: 14px;
+}
+
+.full-standings {
+  overflow-x: auto;
+}
+
+.full-row {
+  display: grid;
+  grid-template-columns:
+    45px
+    minmax(120px, 1.7fr)
+    0.9fr
+    0.9fr
+    0.9fr
+    0.8fr
+    0.9fr
+    1fr
+    0.7fr
+    0.7fr
+    0.7fr;
+  align-items: center;
+  min-width: 1050px;
+  min-height: 55px;
+  padding: 0 28px;
+  border-top: 1px solid #202738;
+  font-size: 13px;
+}
+
+.full-heading {
+  min-height: 40px;
+  background: #0e1420;
+  color: #69768e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.matchups-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.matchups-header h1 {
+  margin: 6px 0 4px;
+  font-size: 32px;
+}
+
+.matchups-header p {
+  margin: 0;
+  color: #7f8ba3;
+  font-size: 14px;
+}
+
+.week-select {
+  min-width: 130px;
+  padding: 11px 14px;
+  border: 1px solid #2b3448;
+  border-radius: 8px;
+  outline: none;
+  background: #111725;
+  color: #f4f6fb;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.matchup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.matchup-card {
+  overflow: hidden;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+}
+
+.matchup-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  padding: 0 24px;
+  border-bottom: 1px solid #202738;
+  color: #9aa6bb;
+}
+
+.matchup-team span {
+  font-weight: 700;
+}
+
+.matchup-team strong {
+  font-size: 20px;
+}
+
+.matchup-team.winner {
+  color: #f4f6fb;
+}
+
+.matchup-team.winner strong {
+  color: #67d89a;
+}
+
+.matchup-footer {
+  padding: 10px 24px;
+  background: #0e1420;
+  color: #66738b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .matchup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .matchups-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}

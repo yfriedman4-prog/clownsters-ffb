@@ -6,7 +6,11 @@ import './App.css'
 
 function App() {
   const [page, setPage] = useState('dashboard')
+  const [selectedWeek, setSelectedWeek] = useState(1)
   const standings = calculateStandings(seasonData, matchupData)
+  const selectedWeekData = matchupData.matchups.find(
+  (week) => week.week === selectedWeek
+)
 
   const leader = standings[0]
   const highestScorer = [...standings].sort(
@@ -50,8 +54,10 @@ function App() {
 </header>
 
       <main className="dashboard">
-        {page !== 'dashboard' ? (
-  <section className="placeholder-page">
+{page !== 'dashboard' &&
+page !== 'standings' &&
+page !== 'matchups' ? (
+      <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
     <h1>
@@ -62,8 +68,8 @@ function App() {
       This section is under construction.
     </p>
   </section>
-) : (
-  <>
+) : page === 'dashboard' ? (
+    <>
 
         <section className="hero">
           <div>
@@ -194,7 +200,136 @@ function App() {
           </div>
 
         </section>
-  </>
+    </>
+) : null}
+{page === 'standings' && (
+  <section className="panel">
+    <div className="page-header">
+      <div className="eyebrow">2025 SEASON</div>
+      <h1>League Standings</h1>
+      <p>Full season standings and performance metrics.</p>
+    </div>
+
+    <div className="full-standings">
+      <div className="full-row full-heading">
+        <div>#</div>
+        <div>TEAM</div>
+        <div>RECORD</div>
+        <div>PF</div>
+        <div>PA</div>
+        <div>AVG</div>
+        <div>DIFF</div>
+        <div>ALL-PLAY</div>
+        <div>xW</div>
+        <div>LUCK</div>
+        <div>SOS</div>
+      </div>
+
+      {standings.map((team, index) => (
+        <div className="full-row" key={team.team}>
+          <div className="rank">{index + 1}</div>
+
+          <div className="team-name">{team.team}</div>
+
+          <div>
+            {team.wins}-{team.losses}
+          </div>
+
+          <div>{team.pointsFor.toFixed(1)}</div>
+
+          <div>{team.pointsAgainst.toFixed(1)}</div>
+
+          <div>{team.averagePF.toFixed(1)}</div>
+
+          <div
+            className={
+              team.pointDifferential >= 0 ? 'positive' : 'negative'
+            }
+          >
+            {team.pointDifferential > 0 ? '+' : ''}
+            {team.pointDifferential.toFixed(1)}
+          </div>
+
+          <div>
+            {team.allPlayWins}-{team.allPlayLosses}
+          </div>
+
+          <div>{team.expectedWins.toFixed(1)}</div>
+
+          <div
+            className={team.luck >= 0 ? 'positive' : 'negative'}
+          >
+            {team.luck > 0 ? '+' : ''}
+            {team.luck.toFixed(1)}
+          </div>
+
+          <div>{team.strengthOfSchedule.toFixed(1)}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+{page === 'matchups' && (
+  <section>
+    <div className="matchups-header">
+      <div>
+        <div className="eyebrow">2025 SEASON</div>
+        <h1>Weekly Matchups</h1>
+        <p>Select a week to view results.</p>
+      </div>
+
+      <select
+        className="week-select"
+        value={selectedWeek}
+        onChange={(e) => setSelectedWeek(Number(e.target.value))}
+      >
+        {matchupData.matchups.map((week) => (
+          <option key={week.week} value={week.week}>
+            Week {week.week}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div className="matchup-grid">
+      {selectedWeekData.games.map(([teamA, teamB]) => {
+        const scoreA =
+          seasonData.scores[teamA][selectedWeek - 1]
+
+        const scoreB =
+          seasonData.scores[teamB][selectedWeek - 1]
+
+        const winnerA = scoreA > scoreB
+        const winnerB = scoreB > scoreA
+
+        return (
+          <div className="matchup-card" key={`${teamA}-${teamB}`}>
+            <div
+              className={`matchup-team ${
+                winnerA ? 'winner' : ''
+              }`}
+            >
+              <span>{teamA}</span>
+              <strong>{scoreA.toFixed(2)}</strong>
+            </div>
+
+            <div
+              className={`matchup-team ${
+                winnerB ? 'winner' : ''
+              }`}
+            >
+              <span>{teamB}</span>
+              <strong>{scoreB.toFixed(2)}</strong>
+            </div>
+
+            <div className="matchup-footer">
+              Final
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  </section>
 )}
       </main>
     </div>
