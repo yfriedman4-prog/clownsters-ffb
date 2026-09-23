@@ -1,7 +1,6 @@
 export function calculateStandings(seasonData, matchupData) {
   const standings = {}
 
-  // Create an empty record for every team
   seasonData.teams.forEach((team) => {
     standings[team] = {
       team,
@@ -11,17 +10,17 @@ export function calculateStandings(seasonData, matchupData) {
       pointsFor: 0,
       pointsAgainst: 0,
       allPlayWins: 0,
-allPlayLosses: 0,
+      allPlayLosses: 0,
     }
   })
 
-  // Process each week's matchups
+  // Process actual weekly matchups
   matchupData.matchups.forEach((weekData) => {
-    const scoreIndex = weekData.week - 1
+    const weekIndex = weekData.week - 1
 
     weekData.games.forEach(([teamA, teamB]) => {
-      const scoreA = seasonData.scores[teamA][scoreIndex]
-      const scoreB = seasonData.scores[teamB][scoreIndex]
+      const scoreA = seasonData.scores[teamA][weekIndex]
+      const scoreB = seasonData.scores[teamB][weekIndex]
 
       standings[teamA].pointsFor += scoreA
       standings[teamA].pointsAgainst += scoreB
@@ -41,38 +40,113 @@ allPlayLosses: 0,
       }
     })
   })
-// Calculate all-play record:
-// How many other teams would each team have beaten each week?
-for (let week = 0; week < seasonData.weeks; week++) {
-  const weeklyScores = seasonData.teams.map((team) => ({
-    team,
-    score: seasonData.scores[team][week],
-  }))
 
-  weeklyScores.forEach((teamA) => {
-    weeklyScores.forEach((teamB) => {
-      if (teamA.team === teamB.team) return
+  // Calculate all-play records
+  for (let week = 0; week < seasonData.weeks; week++) {
+    const weeklyScores = seasonData.teams.map((team) => ({
+      team,
+      score: seasonData.scores[team][week],
+    }))
 
-      if (teamA.score > teamB.score) {
-        standings[teamA.team].allPlayWins += 1
-      } else if (teamA.score < teamB.score) {
-        standings[teamA.team].allPlayLosses += 1
-      }
+    weeklyScores.forEach((teamA) => {
+      weeklyScores.forEach((teamB) => {
+        if (teamA.team === teamB.team) return
+
+        if (teamA.score > teamB.score) {
+          standings[teamA.team].allPlayWins += 1
+        } else if (teamA.score < teamB.score) {
+          standings[teamA.team].allPlayLosses += 1
+        }
+      })
     })
-  })
-}
-  // Convert to an array and rank by record, then Points For
-  return Object.values(standings)
-    .map((team) => ({
+  }
+
+  // Calculate derived statistics
+  const results = Object.values(standings).map((team) => {
+    const scores = seasonData.scores[team.team]
+
+    const gamesPlayed = team.wins + team.losses + team.ties
+
+    const averagePF =
+      gamesPlayed > 0 ? team.pointsFor / gamesPlayed : 0
+
+    const averagePA =
+      gamesPlayed > 0 ? team.pointsAgainst / gamesPlayed : 0
+
+    const highScore = Math.max(...scores)
+    const lowScore = Math.min(...scores)
+
+    const pointDifferential =
+      team.pointsFor - team.pointsAgainst
+
+    const averageMargin =
+      gamesPlayed > 0 ? pointDifferential / gamesPlayed : 0
+
+    const expectedWins =
+      team.allPlayWins / (seasonData.teams.length - 1)
+
+    const luck = team.wins - expectedWins
+
+    return {
       ...team,
+      gamesPlayed,
+
       pointsFor: Number(team.pointsFor.toFixed(2)),
       pointsAgainst: Number(team.pointsAgainst.toFixed(2)),
-    }))
-    .sort((a, b) => {
-      if (b.wins !== a.wins) {
-        return b.wins - a.wins
-      }
 
-      return b.pointsFor - a.pointsFor
+      averagePF: Number(averagePF.toFixed(2)),
+      averagePA: Number(averagePA.toFixed(2)),
+
+      highScore: Number(highScore.toFixed(2)),
+      lowScore: Number(lowScore.toFixed(2)),
+
+      pointDifferential: Number(pointDifferential.toFixed(2)),
+      averageMargin: Number(averageMargin.toFixed(2)),
+
+      expectedWins: Number(expectedWins.toFixed(2)),
+      luck: Number(luck.toFixed(2)),
+    }
+  })
+
+  // Calculate Strength of Schedule:
+  // average Points For of the opponents actually faced
+  results.forEach((team) => {
+    let opponentTotalPF = 0
+    let opponentGames = 0
+
+    matchupData.matchups.forEach((weekData) => {
+      weekData.games.forEach(([teamA, teamB]) => {
+        let opponent = null
+
+        if (teamA === team.team) {
+          opponent = teamB
+        } else if (teamB === team.team) {
+          opponent = teamA
+        }
+
+        if (opponent) {
+          const opponentResult = results.find(
+            (result) => result.team === opponent
+          )
+
+          opponentTotalPF += opponentResult.averagePF
+          opponentGames += 1
+        }
+      })
     })
+
+    team.strengthOfSchedule =
+      opponentGames > 0
+        ? Number((opponentTotalPF / opponentGames).toFixed(2))
+        : 0
+  })
+
+  // Rank by actual record, then PF
+  return results.sort((a, b) => {
+    if (b.wins !== a.wins) {
+      return b.wins - a.wins
+    }
+
+    return b.pointsFor - a.pointsFor
+  })
 }
