@@ -7,10 +7,42 @@ import './App.css'
 function App() {
   const [page, setPage] = useState('dashboard')
   const [selectedWeek, setSelectedWeek] = useState(1)
+  const [selectedTeam, setSelectedTeam] = useState(null)
   const standings = calculateStandings(seasonData, matchupData)
   const selectedWeekData = matchupData.matchups.find(
   (week) => week.week === selectedWeek
 )
+const getTeamWeeklyResults = (teamName) => {
+  return matchupData.matchups.map((weekData) => {
+    const game = weekData.games.find(
+      ([teamA, teamB]) =>
+        teamA === teamName || teamB === teamName
+    )
+
+    if (!game) return null
+
+    const [teamA, teamB] = game
+    const opponent = teamA === teamName ? teamB : teamA
+    const weekIndex = weekData.week - 1
+
+    const score = seasonData.scores[teamName][weekIndex]
+    const opponentScore = seasonData.scores[opponent][weekIndex]
+
+    let result = 'T'
+
+    if (score > opponentScore) result = 'W'
+    if (score < opponentScore) result = 'L'
+
+    return {
+      week: weekData.week,
+      opponent,
+      score,
+      opponentScore,
+      result,
+      margin: score - opponentScore,
+    }
+  }).filter(Boolean)
+}
 
   const leader = standings[0]
   const highestScorer = [...standings].sort(
@@ -56,7 +88,8 @@ function App() {
       <main className="dashboard">
 {page !== 'dashboard' &&
 page !== 'standings' &&
-page !== 'matchups' ? (
+page !== 'matchups' &&
+page !== 'teams' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -329,6 +362,212 @@ page !== 'matchups' ? (
         )
       })}
     </div>
+  </section>
+)}
+{page === 'teams' && (
+  <section>
+    {selectedTeam ? (
+      <div className="team-profile">
+
+        <button
+          className="back-button"
+          onClick={() => setSelectedTeam(null)}
+        >
+          ← All Teams
+        </button>
+
+        <div className="profile-hero">
+          <div>
+            <div className="eyebrow">2025 TEAM PROFILE</div>
+
+            <h1>{selectedTeam.team}</h1>
+
+            <div className="profile-record">
+              {selectedTeam.wins}-{selectedTeam.losses}
+            </div>
+          </div>
+
+          <div className="profile-stat">
+            <strong>{selectedTeam.pointsFor.toFixed(1)}</strong>
+            <span>POINTS FOR</span>
+          </div>
+
+          <div className="profile-stat">
+            <strong>{selectedTeam.averagePF.toFixed(1)}</strong>
+            <span>AVG / WEEK</span>
+          </div>
+
+          <div className="profile-stat">
+            <strong>{selectedTeam.expectedWins.toFixed(1)}</strong>
+            <span>EXPECTED WINS</span>
+          </div>
+
+          <div className="profile-stat">
+            <strong
+              className={
+                selectedTeam.luck >= 0 ? 'positive' : 'negative'
+              }
+            >
+              {selectedTeam.luck > 0 ? '+' : ''}
+              {selectedTeam.luck.toFixed(1)}
+            </strong>
+            <span>LUCK</span>
+          </div>
+        </div>
+
+        <div className="profile-cards">
+          <div className="profile-mini-card">
+            <span>HIGH SCORE</span>
+            <strong>{selectedTeam.highScore.toFixed(1)}</strong>
+          </div>
+
+          <div className="profile-mini-card">
+            <span>LOW SCORE</span>
+            <strong>{selectedTeam.lowScore.toFixed(1)}</strong>
+          </div>
+
+          <div className="profile-mini-card">
+            <span>POINT DIFF</span>
+            <strong
+              className={
+                selectedTeam.pointDifferential >= 0
+                  ? 'positive'
+                  : 'negative'
+              }
+            >
+              {selectedTeam.pointDifferential > 0 ? '+' : ''}
+              {selectedTeam.pointDifferential.toFixed(1)}
+            </strong>
+          </div>
+
+          <div className="profile-mini-card">
+            <span>ALL-PLAY</span>
+            <strong>
+              {selectedTeam.allPlayWins}-{selectedTeam.allPlayLosses}
+            </strong>
+          </div>
+        </div>
+
+        <div className="profile-results">
+          <div className="profile-section-header">
+            <div className="eyebrow">GAME LOG</div>
+            <h2>Weekly Results</h2>
+          </div>
+
+          <div className="results-table">
+            <div className="results-row results-heading">
+              <div>WEEK</div>
+              <div>OPPONENT</div>
+              <div>RESULT</div>
+              <div>PF</div>
+              <div>PA</div>
+              <div>MARGIN</div>
+            </div>
+
+            {getTeamWeeklyResults(selectedTeam.team).map((game) => (
+              <div
+                className="results-row"
+                key={game.week}
+              >
+                <div>{game.week}</div>
+
+                <div className="team-name">
+                  {game.opponent}
+                </div>
+
+                <div>
+                  <span
+                    className={`result-badge result-${game.result.toLowerCase()}`}
+                  >
+                    {game.result}
+                  </span>
+                </div>
+
+                <div>{game.score.toFixed(2)}</div>
+
+                <div>{game.opponentScore.toFixed(2)}</div>
+
+                <div
+                  className={
+                    game.margin >= 0 ? 'positive' : 'negative'
+                  }
+                >
+                  {game.margin > 0 ? '+' : ''}
+                  {game.margin.toFixed(2)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    ) : (
+      <>
+        <div className="teams-header">
+          <div>
+            <div className="eyebrow">2025 SEASON</div>
+            <h1>Teams</h1>
+            <p>Select a team to view its season profile.</p>
+          </div>
+        </div>
+
+        <div className="teams-grid">
+          {standings.map((team, index) => (
+            <button
+              className="team-card"
+              key={team.team}
+              onClick={() => setSelectedTeam(team)}
+            >
+              <div className="team-card-top">
+                <span className="team-rank">
+                  #{index + 1}
+                </span>
+
+                <span
+                  className={
+                    team.luck >= 0
+                      ? 'team-luck positive'
+                      : 'team-luck negative'
+                  }
+                >
+                  {team.luck > 0 ? '+' : ''}
+                  {team.luck.toFixed(1)} luck
+                </span>
+              </div>
+
+              <div className="team-card-name">
+                {team.team}
+              </div>
+
+              <div className="team-card-record">
+                {team.wins}-{team.losses}
+              </div>
+
+              <div className="team-card-stats">
+                <div>
+                  <strong>{team.pointsFor.toFixed(1)}</strong>
+                  <span>POINTS FOR</span>
+                </div>
+
+                <div>
+                  <strong>{team.averagePF.toFixed(1)}</strong>
+                  <span>AVG / WEEK</span>
+                </div>
+
+                <div>
+                  <strong>{team.expectedWins.toFixed(1)}</strong>
+                  <span>xW</span>
+                </div>
+              </div>
+
+              <div className="team-card-footer">
+                View Team →
+              </div>
+            </button>
+          ))}
+        </div>
+      </>
+    )}
   </section>
 )}
       </main>
