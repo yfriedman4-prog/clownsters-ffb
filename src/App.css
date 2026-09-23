@@ -21,8 +21,7 @@ body {
 
 .header {
   height: 90px;
-  padding: 0 6%;
-  display: flex;
+padding: 0 3%;  display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #202738;
@@ -40,7 +39,47 @@ body {
   color: #7f8ba3;
   font-size: 13px;
 }
+.nav {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  margin-left: auto;
+  margin-right: 30px;
+}
 
+.nav-item {
+  position: relative;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  color: #77839a;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #f4f6fb;
+  background: #111725;
+}
+
+.nav-item.active {
+  color: #f4f6fb;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 2px;
+  background: #67d89a;
+}
 .season {
   padding: 10px 16px;
   border: 1px solid #2b3448;
@@ -231,4 +270,23 @@ body {
   .standings-row {
     min-width: 750px;
   }
+  .nav {
+  display: none;
+}
+}
+.placeholder-page {
+  min-height: 500px;
+  padding: 60px;
+  border: 1px solid #232b3c;
+  border-radius: 14px;
+  background: #111725;
+}
+
+.placeholder-page h1 {
+  margin: 8px 0;
+  font-size: 38px;
+}
+
+.placeholder-page p {
+  color: #7f8ba3;
 }

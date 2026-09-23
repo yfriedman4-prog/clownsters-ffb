@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import seasonData from './data/2025.json'
 import matchupData from './data/2025-matchups.json'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 
 function App() {
+  const [page, setPage] = useState('dashboard')
   const standings = calculateStandings(seasonData, matchupData)
 
   const leader = standings[0]
@@ -19,16 +21,49 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <div>
-          <div className="brand">🏈 CLOWNSTERS FFB</div>
-          <div className="subtitle">Fantasy Football League</div>
-        </div>
+     <header className="header">
+  <div className="header-brand">
+    <div className="brand">🏈 CLOWNSTERS FFB</div>
+    <div className="subtitle">Fantasy Football League</div>
+  </div>
 
-        <div className="season">2025 Season</div>
-      </header>
+ <nav className="nav">
+  {[
+    ['dashboard', 'Dashboard'],
+    ['standings', 'Standings'],
+    ['matchups', 'Matchups'],
+    ['teams', 'Teams'],
+    ['analytics', 'Analytics'],
+    ['history', 'History'],
+  ].map(([id, label]) => (
+    <button
+      key={id}
+      className={`nav-item ${page === id ? 'active' : ''}`}
+      onClick={() => setPage(id)}
+    >
+      {label}
+    </button>
+  ))}
+</nav>
+
+  <div className="season">2025 Season</div>
+</header>
 
       <main className="dashboard">
+        {page !== 'dashboard' ? (
+  <section className="placeholder-page">
+    <div className="eyebrow">CLOWNSTERS FFB</div>
+
+    <h1>
+      {page.charAt(0).toUpperCase() + page.slice(1)}
+    </h1>
+
+    <p>
+      This section is under construction.
+    </p>
+  </section>
+) : (
+  <>
 
         <section className="hero">
           <div>
@@ -159,7 +194,8 @@ function App() {
           </div>
 
         </section>
-
+  </>
+)}
       </main>
     </div>
   )
