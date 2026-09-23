@@ -104,6 +104,110 @@ const lowestWeeklyScore = [...standings].sort(
 const bestPointDifferential = [...standings].sort(
   (a, b) => b.pointDifferential - a.pointDifferential
 )[0]
+const powerRankings = standings
+  .map((team) => {
+    const teamScores = seasonData.scores[team.team]
+
+    // Recent form = average score over the final 3 regular-season weeks
+    const recentScores = teamScores.slice(-3)
+
+    const recentAverage =
+      recentScores.reduce((sum, score) => sum + score, 0) /
+      recentScores.length
+
+    const allPlayGames =
+      team.allPlayWins +
+      team.allPlayLosses +
+      (team.allPlayTies || 0)
+
+    const allPlayPct =
+      allPlayGames > 0
+        ? (
+            team.allPlayWins +
+            (team.allPlayTies || 0) * 0.5
+          ) / allPlayGames
+        : 0
+
+    const recordGames =
+      team.wins + team.losses + team.ties
+
+    const recordPct =
+      recordGames > 0
+        ? (team.wins + team.ties * 0.5) / recordGames
+        : 0
+
+    return {
+      ...team,
+      recentAverage,
+      allPlayPct,
+      recordPct,
+    }
+  })
+  const getRankScore = (value, values) => {
+  const sorted = [...values].sort((a, b) => a - b)
+
+  if (sorted.length <= 1) return 100
+
+  const below = sorted.filter((item) => item < value).length
+  const equal = sorted.filter((item) => item === value).length
+
+  const averageRank = below + (equal - 1) / 2
+
+  return (averageRank / (sorted.length - 1)) * 100
+}
+const allPlayValues = powerRankings.map(
+  (team) => team.allPlayPct
+)
+
+const scoringValues = powerRankings.map(
+  (team) => team.averagePF
+)
+
+const recentFormValues = powerRankings.map(
+  (team) => team.recentAverage
+)
+
+const recordValues = powerRankings.map(
+  (team) => team.recordPct
+)
+const calculatedPowerRankings = powerRankings
+  .map((team) => {
+    const allPlayScore = getRankScore(
+      team.allPlayPct,
+      allPlayValues
+    )
+
+    const scoringScore = getRankScore(
+      team.averagePF,
+      scoringValues
+    )
+
+    const formScore = getRankScore(
+      team.recentAverage,
+      recentFormValues
+    )
+
+    const recordScore = getRankScore(
+      team.recordPct,
+      recordValues
+    )
+
+    const powerScore =
+      allPlayScore * 0.4 +
+      scoringScore * 0.3 +
+      formScore * 0.2 +
+      recordScore * 0.1
+
+    return {
+      ...team,
+      allPlayScore,
+      scoringScore,
+      formScore,
+      recordScore,
+      powerScore,
+    }
+  })
+  .sort((a, b) => b.powerScore - a.powerScore)
   return (
     <div className="app">
      <header className="header">
@@ -635,7 +739,73 @@ page !== 'history' ? (
         </p>
       </div>
     </div>
+<div className="power-panel">
 
+  <div className="power-header">
+    <div>
+      <div className="eyebrow">2025 FINAL</div>
+      <h2>Power Rankings</h2>
+      <p>
+        Team strength based on all-play performance, scoring,
+        recent form, and actual record.
+      </p>
+    </div>
+
+    <div className="power-formula">
+      40% ALL-PLAY · 30% SCORING · 20% FORM · 10% RECORD
+    </div>
+  </div>
+
+  <div className="power-table">
+
+    <div className="power-row power-heading">
+      <div>#</div>
+      <div>TEAM</div>
+      <div>POWER</div>
+      <div>RECORD</div>
+      <div>ALL-PLAY</div>
+      <div>AVG PF</div>
+      <div>LAST 3</div>
+    </div>
+
+    {calculatedPowerRankings.map((team, index) => (
+      <div className="power-row" key={team.team}>
+
+        <div className="power-rank">
+          {index + 1}
+        </div>
+
+        <div className="team-name">
+          {team.team}
+        </div>
+
+        <div>
+          <span className="power-score">
+            {team.powerScore.toFixed(1)}
+          </span>
+        </div>
+
+        <div>
+          {team.wins}-{team.losses}
+        </div>
+
+        <div>
+          {team.allPlayWins}-{team.allPlayLosses}
+        </div>
+
+        <div>
+          {team.averagePF.toFixed(1)}
+        </div>
+
+        <div>
+          {team.recentAverage.toFixed(1)}
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+</div>
     <div className="analytics-summary">
       <div className="analytics-summary-card">
         <span>TOP OFFENSE</span>
