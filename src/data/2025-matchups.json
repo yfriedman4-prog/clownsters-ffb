@@ -1,0 +1,159 @@
+{
+  "season": 2025,
+  "matchups": [
+    {
+      "week": 1,
+      "games": [
+        ["Kotsias", "Max"],
+        ["Yair", "Alex"],
+        ["Hasten", "Yaron"],
+        ["Yaakov", "Halpert"],
+        ["Benjy", "Reoven"],
+        ["Jeff", "Jeremy"]
+      ]
+    },
+    {
+      "week": 2,
+      "games": [
+        ["Kotsias", "Jeff"],
+        ["Yair", "Max"],
+        ["Hasten", "Benjy"],
+        ["Yaakov", "Reoven"],
+        ["Alex", "Yaron"],
+        ["Jeremy", "Halpert"]
+      ]
+    },
+    {
+      "week": 3,
+      "games": [
+        ["Kotsias", "Jeremy"],
+        ["Yair", "Jeff"],
+        ["Hasten", "Yaakov"],
+        ["Alex", "Benjy"],
+        ["Max", "Yaron"],
+        ["Reoven", "Halpert"]
+      ]
+    },
+    {
+      "week": 4,
+      "games": [
+        ["Kotsias", "Yair"],
+        ["Hasten", "Halpert"],
+        ["Yaakov", "Alex"],
+        ["Benjy", "Max"],
+        ["Jeff", "Yaron"],
+        ["Reoven", "Jeremy"]
+      ]
+    },
+    {
+      "week": 5,
+      "games": [
+        ["Kotsias", "Yaron"],
+        ["Yair", "Jeremy"],
+        ["Hasten", "Reoven"],
+        ["Yaakov", "Max"],
+        ["Alex", "Halpert"],
+        ["Benjy", "Jeff"]
+      ]
+    },
+    {
+      "week": 6,
+      "games": [
+        ["Kotsias", "Benjy"],
+        ["Yair", "Yaron"],
+        ["Hasten", "Jeremy"],
+        ["Yaakov", "Jeff"],
+        ["Alex", "Reoven"],
+        ["Max", "Halpert"]
+      ]
+    },
+    {
+      "week": 7,
+      "games": [
+        ["Kotsias", "Yaakov"],
+        ["Yair", "Benjy"],
+        ["Hasten", "Alex"],
+        ["Max", "Reoven"],
+        ["Jeff", "Halpert"],
+        ["Jeremy", "Yaron"]
+      ]
+    },
+    {
+      "week": 8,
+      "games": [
+        ["Kotsias", "Halpert"],
+        ["Yair", "Yaakov"],
+        ["Hasten", "Max"],
+        ["Alex", "Jeremy"],
+        ["Benjy", "Yaron"],
+        ["Jeff", "Reoven"]
+      ]
+    },
+    {
+      "week": 9,
+      "games": [
+        ["Kotsias", "Reoven"],
+        ["Yair", "Halpert"],
+        ["Hasten", "Jeff"],
+        ["Yaakov", "Yaron"],
+        ["Alex", "Max"],
+        ["Benjy", "Jeremy"]
+      ]
+    },
+    {
+      "week": 10,
+      "games": [
+        ["Kotsias", "Hasten"],
+        ["Yair", "Reoven"],
+        ["Yaakov", "Benjy"],
+        ["Alex", "Jeff"],
+        ["Max", "Jeremy"],
+        ["Yaron", "Halpert"]
+      ]
+    },
+    {
+      "week": 11,
+      "games": [
+        ["Kotsias", "Alex"],
+        ["Yair", "Hasten"],
+        ["Yaakov", "Jeremy"],
+        ["Benjy", "Halpert"],
+        ["Max", "Jeff"],
+        ["Reoven", "Yaron"]
+      ]
+    },
+    {
+      "week": 12,
+      "games": [
+        ["Kotsias", "Max"],
+        ["Yair", "Alex"],
+        ["Hasten", "Yaron"],
+        ["Yaakov", "Halpert"],
+        ["Benjy", "Reoven"],
+        ["Jeff", "Jeremy"]
+      ]
+    },
+    {
+      "week": 13,
+      "games": [
+        ["Kotsias", "Jeff"],
+        ["Yair", "Max"],
+        ["Hasten", "Benjy"],
+        ["Yaakov", "Reoven"],
+        ["Alex", "Yaron"],
+        ["Jeremy", "Halpert"]
+      ]
+    },
+    {
+      "week": 14,
+      "games": [
+        ["Kotsias", "Jeremy"],
+        ["Yair", "Jeff"],
+        ["Hasten", "Yaakov"],
+        ["Alex", "Benjy"],
+        ["Max", "Yaron"],
+        ["Reoven", "Halpert"]
+      ]
+    }
+  ]
+}
