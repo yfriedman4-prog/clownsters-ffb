@@ -49,17 +49,20 @@ export function calculateStandings(seasonData, matchupData) {
       score: seasonData.scores[team][week],
     }))
 
-    weeklyScores.forEach((teamA) => {
-      weeklyScores.forEach((teamB) => {
-        if (teamA.score > teamB.score) {
-  standings[teamA.team].allPlayWins += 1
-} else if (teamA.score < teamB.score) {
-  standings[teamA.team].allPlayLosses += 1
-} else {
-  standings[teamA.team].allPlayTies += 1
-}
-      })
-    })
+   weeklyScores.forEach((teamA) => {
+  weeklyScores.forEach((teamB) => {
+    // Don't compare a team against itself
+    if (teamA.team === teamB.team) return
+
+    if (teamA.score > teamB.score) {
+      standings[teamA.team].allPlayWins += 1
+    } else if (teamA.score < teamB.score) {
+      standings[teamA.team].allPlayLosses += 1
+    } else {
+      standings[teamA.team].allPlayTies += 1
+    }
+  })
+})
   }
 
   // Calculate derived statistics

@@ -228,7 +228,13 @@ const calculatedPowerRankings = powerRankings
     <button
       key={id}
       className={`nav-item ${page === id ? 'active' : ''}`}
-      onClick={() => setPage(id)}
+      onClick={() => {
+  setPage(id)
+
+  if (id === 'teams') {
+    setSelectedTeam(null)
+  }
+}}
     >
       {label}
     </button>
@@ -410,7 +416,6 @@ page !== 'history' ? (
         <div>ALL-PLAY</div>
         <div>xW</div>
         <div>LUCK</div>
-        <div>SOS</div>
       </div>
 
       {standings.map((team, index) => (
@@ -452,7 +457,6 @@ page !== 'history' ? (
           </div>
 
           <div>
-  {team.strengthOfSchedule.toFixed(1)}%
 </div>
         </div>
       ))}
