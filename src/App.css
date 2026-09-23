@@ -728,3 +728,228 @@ padding: 0 3%;  display: flex;
     min-width: 700px;
   }
 }
+.analytics-header {
+  margin-bottom: 28px;
+}
+
+.analytics-header h1 {
+  margin: 6px 0 4px;
+  font-size: 32px;
+}
+
+.analytics-header p {
+  margin: 0;
+  color: #7f8ba3;
+  font-size: 14px;
+}
+
+.analytics-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.analytics-summary-card {
+  padding: 21px 22px;
+  border: 1px solid #232b3c;
+  border-radius: 11px;
+  background: #111725;
+}
+
+.analytics-summary-card span {
+  display: block;
+  color: #65728a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.analytics-summary-card strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 21px;
+}
+
+.analytics-summary-card small {
+  display: block;
+  margin-top: 3px;
+  color: #8d9ab0;
+  font-size: 12px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.analytics-panel {
+  padding: 25px 28px 28px;
+  border: 1px solid #232b3c;
+  border-radius: 14px;
+  background: #111725;
+}
+
+.analytics-panel-header {
+  margin-bottom: 23px;
+}
+
+.analytics-panel-header h2 {
+  margin: 4px 0 0;
+  font-size: 23px;
+}
+
+.analytics-panel-header p {
+  margin: 6px 0 0;
+  color: #7f8ba3;
+  font-size: 12px;
+}
+
+.ranking-item {
+  margin-bottom: 16px;
+}
+
+.ranking-item:last-child {
+  margin-bottom: 0;
+}
+
+.ranking-info {
+  display: grid;
+  grid-template-columns: 25px 1fr auto;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+
+.ranking-position {
+  color: #65728a;
+}
+
+.ranking-team {
+  font-weight: 700;
+}
+
+.ranking-info strong {
+  font-size: 12px;
+}
+
+.bar-track {
+  height: 5px;
+  margin-left: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #20283a;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #67d89a;
+}
+
+.luck-panel {
+  margin-bottom: 40px;
+}
+
+.luck-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 55px;
+  align-items: center;
+  min-height: 34px;
+  font-size: 12px;
+}
+
+.luck-team {
+  font-weight: 700;
+}
+
+.luck-chart {
+  position: relative;
+  height: 7px;
+  margin: 0 18px;
+  border-radius: 10px;
+  background: #20283a;
+}
+
+.luck-center {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 50%;
+  width: 1px;
+  background: #566178;
+}
+
+.luck-bar {
+  position: absolute;
+  top: 0;
+  height: 7px;
+  border-radius: 10px;
+}
+
+.luck-positive {
+  left: 50%;
+  background: #67d89a;
+}
+
+.luck-negative {
+  right: 50%;
+  background: #ef7b86;
+}
+
+.luck-value {
+  text-align: right;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .analytics-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-summary {
+    grid-template-columns: 1fr;
+  }
+}
+.bar-fill-danger {
+  background: #ef7b86;
+}
+.analytics-panel-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.metric-toggle {
+  display: flex;
+  padding: 3px;
+  border: 1px solid #293247;
+  border-radius: 7px;
+  background: #0e1420;
+}
+
+.metric-toggle button {
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #71809b;
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.metric-toggle button.active {
+  background: #253047;
+  color: #f4f6fb;
+}

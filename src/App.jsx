@@ -8,6 +8,8 @@ function App() {
   const [page, setPage] = useState('dashboard')
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
+  const [pfMode, setPfMode] = useState('total')
+const [paMode, setPaMode] = useState('total')
   const standings = calculateStandings(seasonData, matchupData)
   const selectedWeekData = matchupData.matchups.find(
   (week) => week.week === selectedWeek
@@ -43,7 +45,34 @@ const getTeamWeeklyResults = (teamName) => {
     }
   }).filter(Boolean)
 }
+const scoringRankings = [...standings].sort(
+  (a, b) => b.pointsFor - a.pointsFor
+)
 
+const allPlayRankings = [...standings].sort(
+  (a, b) => b.expectedWins - a.expectedWins
+)
+
+const luckRankings = [...standings].sort(
+  (a, b) => b.luck - a.luck
+)
+const pointsAgainstRankings = [...standings].sort(
+  (a, b) => b.averagePA - a.averagePA
+)
+
+const maxPointsFor = Math.max(
+  ...standings.map((team) => team.pointsFor)
+)
+
+const maxExpectedWins = Math.max(
+  ...standings.map((team) => team.expectedWins)
+)
+const maxAveragePA = Math.max(
+  ...standings.map((team) => team.averagePA)
+)
+const maxAbsLuck = Math.max(
+  ...standings.map((team) => Math.abs(team.luck))
+)
   const leader = standings[0]
   const highestScorer = [...standings].sort(
     (a, b) => b.highScore - a.highScore
@@ -89,7 +118,8 @@ const getTeamWeeklyResults = (teamName) => {
 {page !== 'dashboard' &&
 page !== 'standings' &&
 page !== 'matchups' &&
-page !== 'teams' ? (
+page !== 'teams' &&
+page !== 'analytics' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -568,6 +598,277 @@ page !== 'teams' ? (
         </div>
       </>
     )}
+  </section>
+)}
+{page === 'analytics' && (
+  <section>
+    <div className="analytics-header">
+      <div>
+        <div className="eyebrow">2025 SEASON</div>
+        <h1>League Analytics</h1>
+        <p>
+          A deeper look at scoring strength, expected performance,
+          and schedule luck.
+        </p>
+      </div>
+    </div>
+
+    <div className="analytics-summary">
+      <div className="analytics-summary-card">
+        <span>TOP OFFENSE</span>
+        <strong>{scoringRankings[0].team}</strong>
+        <small>
+          {scoringRankings[0].pointsFor.toFixed(1)} PF
+        </small>
+      </div>
+
+      <div className="analytics-summary-card">
+        <span>BEST ALL-PLAY</span>
+        <strong>{allPlayRankings[0].team}</strong>
+        <small>
+          {allPlayRankings[0].allPlayWins}-
+          {allPlayRankings[0].allPlayLosses}
+        </small>
+      </div>
+
+      <div className="analytics-summary-card">
+        <span>LUCKIEST</span>
+        <strong>{luckRankings[0].team}</strong>
+        <small className="positive">
+          +{luckRankings[0].luck.toFixed(1)} wins
+        </small>
+      </div>
+
+      <div className="analytics-summary-card">
+        <span>UNLUCKIEST</span>
+        <strong>{luckRankings[luckRankings.length - 1].team}</strong>
+        <small className="negative">
+          {luckRankings[luckRankings.length - 1].luck.toFixed(1)} wins
+        </small>
+      </div>
+    </div>
+
+    <div className="analytics-grid">
+
+      <div className="analytics-panel">
+        <div className="analytics-panel-header analytics-panel-header-row">
+  <div>
+    <div className="eyebrow">SCORING</div>
+    <h2>Points For</h2>
+  </div>
+
+  <div className="metric-toggle">
+    <button
+      className={pfMode === 'total' ? 'active' : ''}
+      onClick={() => setPfMode('total')}
+    >
+      Total
+    </button>
+
+    <button
+      className={pfMode === 'average' ? 'active' : ''}
+      onClick={() => setPfMode('average')}
+    >
+      Average
+    </button>
+  </div>
+</div>
+
+        <div className="ranking-list">
+          {scoringRankings.map((team, index) => (
+            <div className="ranking-item" key={team.team}>
+              <div className="ranking-info">
+                <span className="ranking-position">
+                  {index + 1}
+                </span>
+
+                <span className="ranking-team">
+                  {team.team}
+                </span>
+
+               <strong>
+  {pfMode === 'total'
+    ? team.pointsFor.toFixed(1)
+    : team.averagePF.toFixed(1)}
+</strong>
+              </div>
+
+              <div className="bar-track">
+                <div
+                  className="bar-fill"
+                 style={{
+  width: `${
+    pfMode === 'total'
+      ? (team.pointsFor / maxPointsFor) * 100
+      : (team.averagePF /
+          Math.max(...standings.map((t) => t.averagePF))) *
+        100
+  }%`,
+}}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="analytics-panel">
+        <div className="analytics-panel-header">
+          <div className="eyebrow">PERFORMANCE</div>
+          <h2>Expected Wins</h2>
+        </div>
+
+        <div className="ranking-list">
+          {allPlayRankings.map((team, index) => (
+            <div className="ranking-item" key={team.team}>
+              <div className="ranking-info">
+                <span className="ranking-position">
+                  {index + 1}
+                </span>
+
+                <span className="ranking-team">
+                  {team.team}
+                </span>
+
+                <strong>
+                  {team.expectedWins.toFixed(1)}
+                </strong>
+              </div>
+
+              <div className="bar-track">
+                <div
+                  className="bar-fill"
+                  style={{
+                    width: `${
+                      (team.expectedWins / maxExpectedWins) * 100
+                    }%`,
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+<div className="analytics-panel">
+ <div className="analytics-panel-header analytics-panel-header-row">
+  <div>
+    <div className="eyebrow">SCHEDULE</div>
+    <h2>Points Against</h2>
+  </div>
+
+  <div className="metric-toggle">
+    <button
+      className={paMode === 'total' ? 'active' : ''}
+      onClick={() => setPaMode('total')}
+    >
+      Total
+    </button>
+
+    <button
+      className={paMode === 'average' ? 'active' : ''}
+      onClick={() => setPaMode('average')}
+    >
+      Average
+    </button>
+  </div>
+</div>
+
+  <div className="ranking-list">
+    {pointsAgainstRankings.map((team, index) => (
+      <div className="ranking-item" key={team.team}>
+        <div className="ranking-info">
+          <span className="ranking-position">
+            {index + 1}
+          </span>
+
+          <span className="ranking-team">
+            {team.team}
+          </span>
+
+          <strong>
+  {paMode === 'total'
+    ? team.pointsAgainst.toFixed(1)
+    : team.averagePA.toFixed(1)}
+</strong>
+        </div>
+
+        <div className="bar-track">
+          <div
+            className="bar-fill bar-fill-danger"
+            style={{
+  width: `${
+    paMode === 'total'
+      ? (team.pointsAgainst /
+          Math.max(...standings.map((t) => t.pointsAgainst))) *
+        100
+      : (team.averagePA / maxAveragePA) * 100
+  }%`,
+}}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+    </div>
+
+</div>
+    <div className="analytics-panel luck-panel">
+      <div className="analytics-panel-header">
+        <div className="eyebrow">ACTUAL WINS VS EXPECTED WINS</div>
+        <h2>Luck Index</h2>
+        <p>
+          Positive values indicate more actual wins than expected
+          from weekly scoring performance.
+        </p>
+      </div>
+
+      <div className="luck-list">
+        {luckRankings.map((team) => (
+          <div className="luck-row" key={team.team}>
+
+            <div className="luck-team">
+              {team.team}
+            </div>
+
+            <div className="luck-chart">
+              <div className="luck-center" />
+
+              {team.luck >= 0 ? (
+                <div
+                  className="luck-bar luck-positive"
+                  style={{
+                    width: `${
+                      (team.luck / maxAbsLuck) * 50
+                    }%`,
+                  }}
+                />
+              ) : (
+                <div
+                  className="luck-bar luck-negative"
+                  style={{
+                    width: `${
+                      (Math.abs(team.luck) / maxAbsLuck) * 50
+                    }%`,
+                  }}
+                />
+              )}
+            </div>
+
+            <div
+              className={
+                team.luck >= 0
+                  ? 'luck-value positive'
+                  : 'luck-value negative'
+              }
+            >
+              {team.luck > 0 ? '+' : ''}
+              {team.luck.toFixed(1)}
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
   </section>
 )}
       </main>
