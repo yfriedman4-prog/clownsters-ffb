@@ -104,6 +104,104 @@ const lowestWeeklyScore = [...standings].sort(
 const bestPointDifferential = [...standings].sort(
   (a, b) => b.pointDifferential - a.pointDifferential
 )[0]
+const [standingsSort, setStandingsSort] = useState({
+  key: 'rank',
+  direction: 'asc',
+})
+const handleStandingsSort = (key) => {
+  setStandingsSort((current) => {
+    if (current.key === key) {
+      return {
+        key,
+        direction: current.direction === 'asc' ? 'desc' : 'asc',
+      }
+    }
+
+    return {
+      key,
+      direction:
+        key === 'rank' || key === 'team'
+          ? 'asc'
+          : 'desc',
+    }
+  })
+}
+const sortedStandings = [...standings].sort((a, b) => {
+  const { key, direction } = standingsSort
+
+  let valueA
+  let valueB
+
+  switch (key) {
+    case 'rank':
+      valueA = standings.indexOf(a)
+      valueB = standings.indexOf(b)
+      break
+
+    case 'team':
+      valueA = a.team
+      valueB = b.team
+      break
+
+    case 'record':
+      valueA = a.wins + a.ties * 0.5
+      valueB = b.wins + b.ties * 0.5
+      break
+
+    case 'pointsFor':
+      valueA = a.pointsFor
+      valueB = b.pointsFor
+      break
+
+    case 'pointsAgainst':
+      valueA = a.pointsAgainst
+      valueB = b.pointsAgainst
+      break
+
+    case 'averagePF':
+      valueA = a.averagePF
+      valueB = b.averagePF
+      break
+
+    case 'pointDifferential':
+      valueA = a.pointDifferential
+      valueB = b.pointDifferential
+      break
+
+    case 'allPlay':
+      valueA = a.allPlayWins + a.allPlayTies * 0.5
+      valueB = b.allPlayWins + b.allPlayTies * 0.5
+      break
+
+    case 'expectedWins':
+      valueA = a.expectedWins
+      valueB = b.expectedWins
+      break
+
+    case 'luck':
+      valueA = a.luck
+      valueB = b.luck
+      break
+
+    default:
+      return 0
+  }
+
+  if (typeof valueA === 'string') {
+    return direction === 'asc'
+      ? valueA.localeCompare(valueB)
+      : valueB.localeCompare(valueA)
+  }
+
+  return direction === 'asc'
+    ? valueA - valueB
+    : valueB - valueA
+})
+const getSortIndicator = (key) => {
+  if (standingsSort.key !== key) return ''
+
+  return standingsSort.direction === 'asc' ? ' ▲' : ' ▼'
+}
 const powerRankings = standings
   .map((team) => {
     const teamScores = seasonData.scores[team.team]
@@ -405,22 +503,81 @@ page !== 'history' ? (
     </div>
 
     <div className="full-standings">
-      <div className="full-row full-heading">
-        <div>#</div>
-        <div>TEAM</div>
-        <div>RECORD</div>
-        <div>PF</div>
-        <div>PA</div>
-        <div>AVG</div>
-        <div>DIFF</div>
-        <div>ALL-PLAY</div>
-        <div>xW</div>
-        <div>LUCK</div>
-      </div>
+ <div className="full-row full-heading">
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('rank')}
+  >
+    #{getSortIndicator('rank')}
+  </button>
 
-      {standings.map((team, index) => (
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('team')}
+  >
+    TEAM{getSortIndicator('team')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('record')}
+  >
+    RECORD{getSortIndicator('record')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('pointsFor')}
+  >
+    PF{getSortIndicator('pointsFor')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('pointsAgainst')}
+  >
+    PA{getSortIndicator('pointsAgainst')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('averagePF')}
+  >
+    AVG{getSortIndicator('averagePF')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('pointDifferential')}
+  >
+    DIFF{getSortIndicator('pointDifferential')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('allPlay')}
+  >
+    ALL-PLAY{getSortIndicator('allPlay')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('expectedWins')}
+  >
+    xW{getSortIndicator('expectedWins')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handleStandingsSort('luck')}
+  >
+    LUCK{getSortIndicator('luck')}
+  </button>
+</div>
+
+   {sortedStandings.map((team) => (
         <div className="full-row" key={team.team}>
-          <div className="rank">{index + 1}</div>
+          <div className="rank">{standings.findIndex((item) => item.team === team.team) + 1}</div>
 
           <div className="team-name">{team.team}</div>
 
@@ -455,9 +612,6 @@ page !== 'history' ? (
             {team.luck > 0 ? '+' : ''}
             {team.luck.toFixed(1)}
           </div>
-
-          <div>
-</div>
         </div>
       ))}
     </div>
