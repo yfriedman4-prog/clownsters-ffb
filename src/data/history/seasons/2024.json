@@ -1,0 +1,1693 @@
+{
+  "season": 2024,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 14,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "sourceOwnerId": "frb:dd67357abb9246ce91f972b8a46891a3"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "sourceOwnerId": "frb:dac61610c57c48958f72c83506754cec"
+    },
+    {
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "sourceOwnerId": "frb:df112cf25046447da19ce27fe8aaf6be"
+    },
+    {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "sourceOwnerId": "frb:f0c28cb267b745d5b89c561750bea4f7"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:ec7857f7e9cf4264ab24ca4ea3ca368f"
+    },
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Likely Injured",
+      "sourceOwnerId": "frb:23964a8578e74532ad6e5a6405c4de29"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Cee Deez Nuts",
+      "sourceOwnerId": "frb:5e66cfc4706c4390a382fd800b71af93"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "sourceOwnerId": "frb:fbd381975aa242c0a82172c1e96f80f2"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "sourceOwnerId": "frb:34e9a0836ae74db88fa9ace9cf15ef4f"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:0b49254d2e3343de90448380da3cff17"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "The Dearborn Squad",
+      "sourceOwnerId": "frb:1857e9ba3d244df3891943967636fb9e"
+    },
+    {
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "sourceOwnerId": "frb:6d0a9666607a42ab9dcb79a5e691ec9a"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1921.58,
+      "pointsAgainst": 1837.3
+    },
+    {
+      "rank": 2,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "wins": 7,
+      "losses": 7,
+      "pointsFor": 1989.42,
+      "pointsAgainst": 1912.68
+    },
+    {
+      "rank": 3,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1827,
+      "pointsAgainst": 1700.86
+    },
+    {
+      "rank": 4,
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "Motown mohels",
+      "wins": 9,
+      "losses": 5,
+      "pointsFor": 1877.4,
+      "pointsAgainst": 1736.4
+    },
+    {
+      "rank": 5,
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1800.92,
+      "pointsAgainst": 1833.08
+    },
+    {
+      "rank": 6,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1896.84,
+      "pointsAgainst": 1863.56
+    },
+    {
+      "rank": 7,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Rashid AR Tlaib",
+      "wins": 6,
+      "losses": 8,
+      "pointsFor": 1794.72,
+      "pointsAgainst": 1793.1
+    },
+    {
+      "rank": 8,
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "wins": 4,
+      "losses": 10,
+      "pointsFor": 1644.04,
+      "pointsAgainst": 1847.12
+    },
+    {
+      "rank": 9,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Big League Mongrel",
+      "wins": 7,
+      "losses": 7,
+      "pointsFor": 1988.3,
+      "pointsAgainst": 1958.94
+    },
+    {
+      "rank": 10,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 7,
+      "losses": 7,
+      "pointsFor": 1948.24,
+      "pointsAgainst": 1848.98
+    },
+    {
+      "rank": 11,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "wins": 7,
+      "losses": 7,
+      "pointsFor": 1921.78,
+      "pointsAgainst": 2042.68
+    },
+    {
+      "rank": 12,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Make Jer Make Playoffs Again",
+      "wins": 5,
+      "losses": 9,
+      "pointsFor": 1657.48,
+      "pointsAgainst": 1893.02
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 148.52
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 106.16
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 169.64
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 130.78
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 146.98
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 115.82
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 149.7
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 77.06
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 114.38
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 130.08
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 112.22
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 128.36
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 122.62
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 124.38
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 99.54
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 172.58
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 113.96
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 132.22
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 134.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 115.42
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 121.2
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 117.34
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 99.2
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 168.04
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 111.94
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 100.38
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 116.68
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 193.88
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 163.72
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 126.36
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 126.66
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 120.4
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 79.02
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 124.2
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 173.36
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 107.86
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 151.92
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 149.42
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 139.8
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 176.7
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 99.84
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 151.64
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 144
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 116.08
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 97.58
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 118.66
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 113.34
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 122.8
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 121.56
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 120.24
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 124.94
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 150.78
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 108.8
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 148.48
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 155.74
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 128.66
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 157.56
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 102.3
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 145.82
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 136.72
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 121.96
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 135.3
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 119.08
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 123.16
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 109.8
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 133.12
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 152.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 161.6
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 148.52
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 92.46
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 148.12
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 132.48
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 137.06
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 135.02
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 143.8
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 122.54
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 121.78
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 101.74
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 86.7
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 125.48
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 135.44
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 109.64
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 106.8
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 108.8
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 143.14
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 161.24
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 113
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 159.68
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 157.12
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 157.28
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 131.56
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 163.8
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 157.24
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 95.62
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 137.22
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 122.18
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 148.6
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 103.34
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 149.2
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 107.26
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 149.5
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 160.8
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 166.52
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 145.6
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 136.64
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 114.44
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 175.6
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 113.42
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 132.28
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 151.84
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 100.3
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 117.58
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 124.04
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 99.72
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 93.9
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 160.68
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 158.42
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 102.42
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 149.6
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 102.84
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 136.54
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 172.46
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 166.28
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 157.14
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 133.58
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 82.38
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 140.48
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 115.08
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 138.94
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 105.14
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 145.84
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 158.5
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 132.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 130.38
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 168.06
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 149.28
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 157.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 135.66
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 128.62
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 148.78
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 101
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 72.2
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 137.58
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 111.32
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 123.32
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 143.58
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 152.74
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 161.46
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 129.86
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 151.32
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 132.32
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 133.16
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 127.1
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 133.44
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 147.48
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 128.4
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 165.22
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 129.82
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 142.5
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 121.06
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 181.18
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 148.84
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 130.76
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 113.42
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 199.78
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 140.78
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 129.12
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 121.6
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 154.5
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 155.94
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 97.36
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 116.46
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 173.56
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 75.14
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 156.84
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 144.88
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 118.24
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 130.92
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 121.14
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Make Jer Make Playoffs Again",
+        "score": 0
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 155.52
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 143.48
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 119.06
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 122.48
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 139.38
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 156.52
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 160.22
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 204.48
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Rashid AR Tlaib",
+        "score": 136.26
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 125.24
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Big League Mongrel",
+        "score": 146.08
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 104.4
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 139.18
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 156.68
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 166.46
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 191.92
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo"
+    },
+    "runnerUp": {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club"
+    },
+    "thirdPlace": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes"
+    }
+  }
+}

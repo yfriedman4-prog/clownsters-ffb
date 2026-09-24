@@ -1,0 +1,1693 @@
+{
+  "season": 2025,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 14,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "sourceOwnerId": "frb:dd67357abb9246ce91f972b8a46891a3"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "sourceOwnerId": "frb:dac61610c57c48958f72c83506754cec"
+    },
+    {
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "sourceOwnerId": "frb:df112cf25046447da19ce27fe8aaf6be"
+    },
+    {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "sourceOwnerId": "frb:f0c28cb267b745d5b89c561750bea4f7"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:ec7857f7e9cf4264ab24ca4ea3ca368f"
+    },
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Likely Injured",
+      "sourceOwnerId": "frb:23964a8578e74532ad6e5a6405c4de29"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Cee Deez Nuts",
+      "sourceOwnerId": "frb:5e66cfc4706c4390a382fd800b71af93"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "sourceOwnerId": "frb:fbd381975aa242c0a82172c1e96f80f2"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "sourceOwnerId": "frb:34e9a0836ae74db88fa9ace9cf15ef4f"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:0b49254d2e3343de90448380da3cff17"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "The Dearborn Squad",
+      "sourceOwnerId": "frb:1857e9ba3d244df3891943967636fb9e"
+    },
+    {
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "sourceOwnerId": "frb:6d0a9666607a42ab9dcb79a5e691ec9a"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1946.22,
+      "pointsAgainst": 1873.24
+    },
+    {
+      "rank": 2,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1838.66,
+      "pointsAgainst": 1889.28
+    },
+    {
+      "rank": 3,
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "wins": 11,
+      "losses": 3,
+      "pointsFor": 1989.74,
+      "pointsAgainst": 1781.54
+    },
+    {
+      "rank": 4,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "wins": 9,
+      "losses": 5,
+      "pointsFor": 1866.2,
+      "pointsAgainst": 1744.24
+    },
+    {
+      "rank": 5,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "2022 Throwback",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1938.56,
+      "pointsAgainst": 1779.8
+    },
+    {
+      "rank": 6,
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "wins": 8,
+      "losses": 6,
+      "pointsFor": 1792.76,
+      "pointsAgainst": 1695.24
+    },
+    {
+      "rank": 7,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "wins": 6,
+      "losses": 8,
+      "pointsFor": 1856.28,
+      "pointsAgainst": 1897.1
+    },
+    {
+      "rank": 8,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Devonta’s Inferno",
+      "wins": 4,
+      "losses": 10,
+      "pointsFor": 1702.74,
+      "pointsAgainst": 1942.54
+    },
+    {
+      "rank": 9,
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "Motown mohels",
+      "wins": 7,
+      "losses": 7,
+      "pointsFor": 1712.78,
+      "pointsAgainst": 1758.06
+    },
+    {
+      "rank": 10,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "wins": 6,
+      "losses": 8,
+      "pointsFor": 1890.32,
+      "pointsAgainst": 1815.26
+    },
+    {
+      "rank": 11,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 3,
+      "losses": 11,
+      "pointsFor": 1562.68,
+      "pointsAgainst": 1809.2
+    },
+    {
+      "rank": 12,
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "wins": 6,
+      "losses": 8,
+      "pointsFor": 1655.44,
+      "pointsAgainst": 1766.88
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 141.02
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 114.48
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 111
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 130.62
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 112.88
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 115.72
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 107.62
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 152.66
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 71.84
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 138.02
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 155.76
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 126.88
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 107.24
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 121.2
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 141.16
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 197.9
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 169.74
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 116.5
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 96.74
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 120.12
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 117.44
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 130.28
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 162.6
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 123.38
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 102.72
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 135.56
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 116.58
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 163.4
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 150.62
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 184.54
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 100.24
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 105.3
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 117.02
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 143.52
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 91.12
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 88.56
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 201.28
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 129.76
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 131.92
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 113.58
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 122.24
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 124.48
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 112.06
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 118.68
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 151.8
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 179.9
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 132.3
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 112.72
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 191.16
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 100.74
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 154.22
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 155.48
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 135.06
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 116.92
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 163.78
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 171.9
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 112.72
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 133.24
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 93.7
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 131.52
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 91.14
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 172.24
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 128.82
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 103.1
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 121.34
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 156.42
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 127.86
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.04
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 123.6
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 111.14
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 103.46
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 138.38
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 109.46
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 105.56
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 110.64
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 89.24
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 202.32
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 131.88
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 153.86
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 162.54
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 125.76
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 184.04
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 133.34
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 128.44
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 98.18
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 148.72
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 137.72
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 116.52
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 121.2
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 140.02
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 124.68
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 148.16
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 113.12
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 144.08
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 127.46
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 123.08
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 141.28
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 134.46
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 154.14
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 185.4
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 156.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 111.12
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 107.3
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 108.96
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 118.32
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 102.8
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 165.94
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 139.14
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 109.5
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 170.68
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 134.4
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 122.02
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 151.5
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 81.94
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 143.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 136.72
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 125.1
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 98.3
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 130.34
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 180.12
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 121.36
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 125.3
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 87.7
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 85.22
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 124.42
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 151.1
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 146.28
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 126.64
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 130.36
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 128.3
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 120.94
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 135.44
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 130.14
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 169.56
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 147.56
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 190.68
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 107.32
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 93.94
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 145.76
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 129.72
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 69.72
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 106.68
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 105.62
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 167.66
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 138.24
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 146.94
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 120.24
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 116.72
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 148.8
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 86.04
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 111.54
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 135.32
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 90.8
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 116.44
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 121.06
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 111.38
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 173.56
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 121.9
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 124.96
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 83.26
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 147.64
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 99.4
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 99.54
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 149.56
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 72.68
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 111.86
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 134.94
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 163.94
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 124.1
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 103.28
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 166.72
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 132.92
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 181.7
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 128.04
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 89.3
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 136
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 157.96
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 111.86
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 184.96
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 140.1
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "2022 Throwback",
+        "score": 132.78
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 116.92
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 116.28
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 89.76
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 123.5
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 124
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 112.9
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 160.5
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 154.8
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Devonta’s Inferno",
+        "score": 118.14
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 88.58
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.3
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 79.38
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Motown mohels",
+        "score": 147.78
+      }
+    },
+    {
+      "week": 17,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 129.78
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 130.52
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes"
+    },
+    "runnerUp": {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy"
+    },
+    "thirdPlace": {
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team"
+    }
+  }
+}

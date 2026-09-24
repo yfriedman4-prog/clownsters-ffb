@@ -1,0 +1,1603 @@
+{
+  "season": 2020,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "sourceOwnerId": "frb:dd67357abb9246ce91f972b8a46891a3"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "sourceOwnerId": "frb:dac61610c57c48958f72c83506754cec"
+    },
+    {
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "sourceOwnerId": "frb:df112cf25046447da19ce27fe8aaf6be"
+    },
+    {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "sourceOwnerId": "frb:f0c28cb267b745d5b89c561750bea4f7"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:ec7857f7e9cf4264ab24ca4ea3ca368f"
+    },
+    {
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "Danica Patricks' XBF",
+      "sourceOwnerId": "frb:8b6e5b2ccc564ef6b46c9cb2a870ec33"
+    },
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Likely Injured",
+      "sourceOwnerId": "frb:23964a8578e74532ad6e5a6405c4de29"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Cee Deez Nuts",
+      "sourceOwnerId": "frb:5e66cfc4706c4390a382fd800b71af93"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "sourceOwnerId": "frb:fbd381975aa242c0a82172c1e96f80f2"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "sourceOwnerId": "frb:34e9a0836ae74db88fa9ace9cf15ef4f"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "Dan Campbell soup",
+      "sourceOwnerId": "frb:096b7f102cb84a31b2972b839fb940f7"
+    },
+    {
+      "managerId": "yaron",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "ZDAWG",
+      "sourceOwnerId": "frb:c1f4d9ac5f4a4f629df15d55f4524341"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1840.62,
+      "pointsAgainst": 1807.7
+    },
+    {
+      "rank": 2,
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Ursa the Chef",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1789.94,
+      "pointsAgainst": 1743.42
+    },
+    {
+      "rank": 3,
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "Danica Patricks' XBF",
+      "wins": 12,
+      "losses": 1,
+      "pointsFor": 2070.98,
+      "pointsAgainst": 1553.54
+    },
+    {
+      "rank": 4,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 10,
+      "losses": 3,
+      "pointsFor": 1691.82,
+      "pointsAgainst": 1555.56
+    },
+    {
+      "rank": 5,
+      "managerId": "yaron",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "ZDAWG",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1741.76,
+      "pointsAgainst": 1800.86
+    },
+    {
+      "rank": 6,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Halpert's Mom",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1645.86,
+      "pointsAgainst": 1784.48
+    },
+    {
+      "rank": 7,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Kings HUUUUUGE Wall",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1613.6,
+      "pointsAgainst": 1654.04
+    },
+    {
+      "rank": 8,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "DUIToldYouSo",
+      "wins": 3,
+      "losses": 10,
+      "pointsFor": 1637.16,
+      "pointsAgainst": 1771.88
+    },
+    {
+      "rank": 9,
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1751.8,
+      "pointsAgainst": 1694.34
+    },
+    {
+      "rank": 10,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1766.76,
+      "pointsAgainst": 1835.82
+    },
+    {
+      "rank": 11,
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "Freud's phalluses",
+      "wins": 3,
+      "losses": 10,
+      "pointsFor": 1548.72,
+      "pointsAgainst": 1675.26
+    },
+    {
+      "rank": 12,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "Mongrel Legacy",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1580.5,
+      "pointsAgainst": 1802.62
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 132.12
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 140.2
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 173.08
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 162.3
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 97.6
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 135.4
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 133.16
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 126.76
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 174.76
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 124.7
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 135.34
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 163.24
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 157.7
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 210.02
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 163.28
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 125.28
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 144.62
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 159.94
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 187.14
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 156.68
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 141.8
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 106.08
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 114.7
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 86.56
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 149.84
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 130.12
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 108.1
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 202.5
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 128.28
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 113.4
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 140.72
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 149.02
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 113.18
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 208.44
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 125.38
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 135.1
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 146.4
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 134.3
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 139.14
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 120.4
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 154.7
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 83.44
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 141.58
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 81.72
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 188.46
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 134.42
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 148.22
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 112.4
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 124.96
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 120.62
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 140.92
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 87.96
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 168.58
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 85.24
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 125.04
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 176.8
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 144.9
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 167.12
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 147.86
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 155.3
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 132.12
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 125.12
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.92
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 46.7
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 93.32
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 113.98
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 204.84
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 104.5
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 143.64
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 154.62
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 152.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 124.74
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 162.86
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 124.16
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 133.72
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 109.66
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 170.42
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 138.32
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 135.32
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 140.62
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 111.16
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 147.2
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 98.3
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 146
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 119.42
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 140.66
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 114.2
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 108.52
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 169.04
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 100.86
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 95.44
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 125.44
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 79.54
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 159.84
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 142.24
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 121.12
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 184.44
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 145.7
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 112.58
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 75.46
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 154.4
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 99.7
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 135.96
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 86.64
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 107.34
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 129.6
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 145.02
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 140.38
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 87.48
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 159.6
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 95.44
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 129.66
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 131.72
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 118.84
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 102.38
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 128.66
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 110.62
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 109.34
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 107.2
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 139.66
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 165.22
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 122.92
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 140.1
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 126.66
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 144.18
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 139.72
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 84.18
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 132.04
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 149.78
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 131.44
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 100.52
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 128.42
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 153.02
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 110.26
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 155
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 120.3
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 101.8
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 83.2
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 141.54
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 180.9
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 105.04
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 148.58
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 119.22
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 128.48
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 125.04
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 144.02
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 154.96
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 137.62
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 110.82
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 121.26
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 131.6
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 160.56
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 141.3
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 138.78
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 124.52
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 122.7
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 142.38
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 135.38
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 81.36
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 161.94
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 90.52
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 110.2
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 168.72
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 135.62
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 149.72
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 122.62
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 142.64
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 168.04
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "Freud's phalluses",
+        "score": 143.64
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "Mongrel Legacy",
+        "score": 122.48
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Halpert's Mom",
+        "score": 111.7
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "ZDAWG",
+        "score": 115.86
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 154.22
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 133.8
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 146.64
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 135.38
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 141.26
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Ursa the Chef",
+        "score": 123.08
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 116.24
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "Danica Patricks' XBF",
+        "score": 194
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Kings HUUUUUGE Wall",
+        "score": 120.04
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "DUIToldYouSo",
+        "score": 103.44
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 141.92
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 88.6
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers"
+    },
+    "runnerUp": {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Ursa the Chef"
+    },
+    "thirdPlace": {
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "Danica Patricks' XBF"
+    }
+  }
+}
