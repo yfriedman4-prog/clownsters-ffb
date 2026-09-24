@@ -1,0 +1,1331 @@
+{
+  "season": 2013,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Suck My Vick",
+      "sourceOwnerId": "frb:a6a9030bd36f482e88540ab95acf1602"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "sourceOwnerId": "frb:5b24a282247648839b7ffdd03c944ca6"
+    },
+    {
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "Maca'Geek's",
+      "sourceOwnerId": "frb:0c79d89ee8fd4abb8c6fd3009669784a"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:0396681ebc7242a590d60cc5522667fd"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The Crimson Jmeister",
+      "sourceOwnerId": "frb:edf34cd835424763a3a241872bfeeb98"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "sourceOwnerId": "frb:884fa293b0514b8e8b14461294bc406e"
+    },
+    {
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Slammin Salmons!!",
+      "sourceOwnerId": "frb:ba804db92f76418f8b9a6a9a7db5497a"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "BMS Goats",
+      "sourceOwnerId": "frb:4844c3241bb345d89dea5a53bbba0572"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "The Married men",
+      "sourceOwnerId": "frb:c5c72f78b20249c08e3e6a6b905d7bcc"
+    },
+    {
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Feder your balls",
+      "sourceOwnerId": "frb:1b02fec1fb1547a388706e9dc829ec2b"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "BMS Goats",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1698.02,
+      "pointsAgainst": 1593.98
+    },
+    {
+      "rank": 2,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Suck My Vick",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1794.62,
+      "pointsAgainst": 1517.06
+    },
+    {
+      "rank": 3,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1684.8,
+      "pointsAgainst": 1524.86
+    },
+    {
+      "rank": 4,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1649.68,
+      "pointsAgainst": 1684.56
+    },
+    {
+      "rank": 5,
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Feder your balls",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1612.4,
+      "pointsAgainst": 1731.68
+    },
+    {
+      "rank": 6,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1803.5,
+      "pointsAgainst": 1632.46
+    },
+    {
+      "rank": 7,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The Crimson Jmeister",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1725.38,
+      "pointsAgainst": 1715.66
+    },
+    {
+      "rank": 8,
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "The Married men",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1538.06,
+      "pointsAgainst": 1708.08
+    },
+    {
+      "rank": 9,
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "Maca'Geek's",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1450.6,
+      "pointsAgainst": 1706.58
+    },
+    {
+      "rank": 10,
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Slammin Salmons!!",
+      "wins": 2,
+      "losses": 11,
+      "pointsFor": 1570.14,
+      "pointsAgainst": 1712.28
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 186.48
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 117.62
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 158.58
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 101.72
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 148.72
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 128.98
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 148.48
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 120.66
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 161.2
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 117.56
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 79.68
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 98.1
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 147.98
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 113.48
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 168.52
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 129.2
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 147.7
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 158.96
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 98.08
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 149.36
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 154.9
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 111.9
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 139.76
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 100.1
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 118.96
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 90.18
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 99.36
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 157.74
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 122.44
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 130.42
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 151.92
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 106.32
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 140.28
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 91.98
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 166.94
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 172.38
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 126.42
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 167.92
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 125.38
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 145.04
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 122.4
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 137.26
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 138.76
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 148.74
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 87.88
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 149.58
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 157.34
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 100.82
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 132.16
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 115.52
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 94.24
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 78.1
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 115.5
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 119.9
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 120.78
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 191.88
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 134.52
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 76.38
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 109.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 121.84
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 94
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 119.92
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 143.24
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 95.68
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 64.92
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 119.1
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 175.58
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 133.2
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 109.5
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 121.16
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 140.66
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 139.18
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 119.06
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 90.14
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 111.24
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 105.34
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 143.12
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 140.6
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 133.86
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 133.94
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 205.02
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 112.56
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 104.2
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 106.68
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 97.42
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 135.36
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 109.4
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 159.68
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 109.04
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 125.78
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 147.92
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 107.4
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 110.76
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 128.38
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 152.26
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 102.06
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 142.22
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 95.32
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 125.54
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 89.62
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 125.92
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 112.02
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 137.42
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 152.16
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 160.78
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 90
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 109.5
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 131.36
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 138.66
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 117.24
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 151.8
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 130.78
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 86.8
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 129.76
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 111.08
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 146.82
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 120.76
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 132.38
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 105.66
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 113.76
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 139.68
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 145.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 145.82
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 126.6
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 101.96
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 143.42
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 149.48
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 109.68
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 142.7
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 163.08
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 159.98
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 93.7
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 136.14
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 158.86
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 163.32
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 115.76
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 80.46
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 119.72
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 117.4
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Feder your balls",
+        "score": 163.02
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 126.24
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 125.72
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 130.54
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 167.6
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Suck My Vick",
+        "score": 100.7
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "BMS Goats",
+        "score": 138.98
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 195.4
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 100.14
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "Maca'Geek's",
+        "score": 77.08
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Slammin Salmons!!",
+        "score": 71.64
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Crimson Jmeister",
+        "score": 135.22
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Married men",
+        "score": 88.04
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "BMS Goats"
+    },
+    "runnerUp": {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Suck My Vick"
+    },
+    "thirdPlace": {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers"
+    }
+  }
+}
