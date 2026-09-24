@@ -1077,7 +1077,7 @@ padding: 0 3%;  display: flex;
 
 .history-row {
   display: grid;
-  grid-template-columns: 55px 2fr 1fr 1fr 1fr 1fr 0.8fr;
+  grid-template-columns: 55px 2fr 1.25fr 1fr 1fr 1fr;
   align-items: center;
   min-height: 52px;
   padding: 0 28px;

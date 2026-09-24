@@ -1,8 +1,29 @@
 import { useState } from 'react'
 import seasonData from './data/2025.json'
 import matchupData from './data/2025-matchups.json'
+const historicalSeasonModules = import.meta.glob(
+  './data/history/seasons/*.json',
+  { eager: true, import: 'default' }
+)
+
+const historicalSeasons = Object.fromEntries(
+  Object.values(historicalSeasonModules).map((season) => [
+    season.season,
+    season,
+  ])
+)
+const managersById = Object.fromEntries(
+  managerRegistry.managers.map((manager) => [
+    manager.id,
+    manager,
+  ])
+)
+
+const getManagerName = (managerId) =>
+  managersById[managerId]?.displayName ?? managerId
 import { calculateStandings } from './utils/standings'
 import './App.css'
+import managerRegistry from './data/history/managers.json'
 const seasonHistory = {
   2025: {
     champion: 'Yaakov',
@@ -10,6 +31,11 @@ const seasonHistory = {
     thirdPlace: 'Reoven',
   },
 }
+const availableSeasons = [
+  2025, 2024, 2023, 2022, 2021, 2020,
+  2019, 2018, 2017, 2016, 2015, 2014,
+  2013, 2012, 2009, 2008, 2007, 2006,
+]
 const weeklyAwards = seasonData.teams.map((team) => ({
   team,
   wins: 0,
@@ -50,6 +76,8 @@ weeklyAwards.sort((a, b) => {
 })
 function App() {
   const [page, setPage] = useState('dashboard')
+  const [activeSeason, setActiveSeason] = useState(2025)
+  const activeHistoricalSeason = historicalSeasons[activeSeason]
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [pfMode, setPfMode] = useState('total')
@@ -463,7 +491,21 @@ const calculatedPowerRankings = powerRankings
   ))}
 </nav>
 
-  <div className="season">2025 Season</div>
+  <div className="season">
+  <select
+    value={activeSeason}
+    onChange={(event) => {
+      setActiveSeason(Number(event.target.value))
+    }}
+    aria-label="Select season"
+  >
+    {availableSeasons.map((year) => (
+      <option key={year} value={year}>
+        {year} Season
+      </option>
+    ))}
+  </select>
+</div>
 </header>
 
       <main className="dashboard">
@@ -1400,37 +1442,48 @@ page !== 'history' ? (
         </p>
       </div>
 
-      <div className="history-season">
-        2025
-      </div>
+     <div className="history-season">
+  {activeSeason}
+</div>
     </div>
 
     <div className="history-section-header">
       <div className="eyebrow">FINAL RESULTS</div>
-      <h2>2025 Podium</h2>
+     <h2>{activeSeason} Podium</h2>
     </div>
 
-    <div className="history-podium">
+   <div className="history-podium">
 
-      <div className="podium-card podium-second">
-        <div className="podium-place">RUNNER-UP</div>
-        <div className="podium-medal">🥈</div>
-        <h2>{seasonHistory[2025].runnerUp}</h2>
-      </div>
+  <div className="podium-card podium-second">
+    <div className="podium-place">RUNNER-UP</div>
+    <div className="podium-medal">🥈</div>
+    <h2>{activeHistoricalSeason.podium.runnerUp.teamName}</h2>
+    <div>
+  {getManagerName(activeHistoricalSeason.podium.runnerUp.managerId)}
+</div>
+  </div>
 
-      <div className="podium-card podium-first">
-        <div className="podium-place">2025 CHAMPION</div>
-        <div className="podium-medal">🏆</div>
-        <h2>{seasonHistory[2025].champion}</h2>
-      </div>
-
-      <div className="podium-card podium-third">
-        <div className="podium-place">3RD PLACE</div>
-        <div className="podium-medal">🥉</div>
-        <h2>{seasonHistory[2025].thirdPlace}</h2>
-      </div>
-
+  <div className="podium-card podium-first">
+    <div className="podium-place">
+      {activeSeason} CHAMPION
     </div>
+    <div className="podium-medal">🏆</div>
+    <h2>{activeHistoricalSeason.podium.champion.teamName}</h2>
+  <div>
+  {getManagerName(activeHistoricalSeason.podium.champion.managerId)}
+</div>
+  </div>
+
+  <div className="podium-card podium-third">
+    <div className="podium-place">3RD PLACE</div>
+    <div className="podium-medal">🥉</div>
+    <h2>{activeHistoricalSeason.podium.thirdPlace.teamName}</h2>
+   <div>
+  {getManagerName(activeHistoricalSeason.podium.thirdPlace.managerId)}
+</div>
+  </div>
+
+</div>
 <div className="history-section-header">
   <div className="eyebrow">REGULAR SEASON AWARDS</div>
   <h2>2025 Regular Season Awards</h2>
@@ -1522,53 +1575,51 @@ page !== 'history' ? (
     </div>
 
     <div className="history-standings">
-      <div className="history-section-header">
-        <div className="eyebrow">REGULAR SEASON STANDINGS</div>
-        <h2>2025 Regular Season</h2>
-      </div>
+  <div className="history-section-header">
+    <div className="eyebrow">REGULAR SEASON STANDINGS</div>
+    <h2>{activeSeason} Regular Season</h2>
+  </div>
 
-      <div className="history-table">
-        <div className="history-row history-heading">
-          <div>#</div>
-          <div>TEAM</div>
-          <div>RECORD</div>
-          <div>PF</div>
-          <div>AVG</div>
-          <div>ALL-PLAY</div>
-          <div>xW</div>
-        </div>
-
-        {standings.map((team, index) => (
-          <div className="history-row" key={team.team}>
-            <div>{index + 1}</div>
-
-            <div className="team-name">
-              {team.team}
-            </div>
-
-            <div>
-              {team.wins}-{team.losses}
-            </div>
-
-            <div>
-              {team.pointsFor.toFixed(1)}
-            </div>
-
-            <div>
-              {team.averagePF.toFixed(1)}
-            </div>
-
-            <div>
-              {team.allPlayWins}-{team.allPlayLosses}
-            </div>
-
-            <div>
-              {team.expectedWins.toFixed(1)}
-            </div>
-          </div>
-        ))}
-      </div>
+  <div className="history-table">
+    <div className="history-row history-heading">
+      <div>#</div>
+      <div>TEAM</div>
+      <div>MANAGER</div>
+      <div>RECORD</div>
+      <div>PF</div>
+      <div>PA</div>
     </div>
+
+    {[...activeHistoricalSeason.standings]
+      .sort((a, b) => a.rank - b.rank)
+      .map((team) => (
+        <div className="history-row" key={team.managerId}>
+          <div>{team.rank}</div>
+
+          <div className="team-name">
+            {team.teamName}
+          </div>
+
+          <div>
+            {getManagerName(team.managerId)}
+          </div>
+
+          <div>
+            {team.wins}-{team.losses}
+          </div>
+
+          <div>
+            {team.pointsFor.toFixed(1)}
+          </div>
+
+          <div>
+            {team.pointsAgainst.toFixed(1)}
+          </div>
+        </div>
+      ))}
+  </div>
+</div>
+
   </section>
 )}
       </main>
