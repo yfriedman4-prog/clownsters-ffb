@@ -1,0 +1,100 @@
+{
+  "managers": [
+    {
+      "id": "max",
+      "displayName": "Max",
+      "aliases": ["Max"],
+      "status": "active"
+    },
+    {
+      "id": "halpert",
+      "displayName": "Halpert",
+      "aliases": ["Halpert", "Jonathon H"],
+      "status": "active"
+    },
+    {
+      "id": "yaakov",
+      "displayName": "Yaakov",
+      "aliases": ["Yaakov"],
+      "status": "active"
+    },
+    {
+      "id": "jeremy",
+      "displayName": "Jeremy",
+      "aliases": ["Jeremy", "Jeremyf"],
+      "status": "active"
+    },
+    {
+      "id": "benjy",
+      "displayName": "Benjy",
+      "aliases": ["Benjy"],
+      "status": "active"
+    },
+    {
+      "id": "hasten",
+      "displayName": "Hasten",
+      "aliases": ["Hasten", "Joseph"],
+      "status": "active"
+    },
+    {
+      "id": "kotsias",
+      "displayName": "Kotsias",
+      "aliases": ["Kotsias", "Danielk", "Daniel"],
+      "status": "active"
+    },
+    {
+      "id": "alex",
+      "displayName": "Alex",
+      "aliases": ["Alex"],
+      "status": "active"
+    },
+    {
+      "id": "yair",
+      "displayName": "Yair",
+      "aliases": ["Yair", "Slimbig"],
+      "status": "active"
+    },
+    {
+      "id": "yaron",
+      "displayName": "Yaron",
+      "aliases": ["Yaron", "Rones1992"],
+      "status": "active"
+    },
+    {
+      "id": "spornstarr",
+      "displayName": "Spornstarr",
+      "aliases": ["Spornstarr", "Lms"],
+      "status": "former"
+    },
+    {
+      "id": "korman",
+      "displayName": "Korman",
+      "aliases": ["Korman", "Leo"],
+      "status": "former"
+    },
+    {
+      "id": "jonathan",
+      "displayName": "Jonathan",
+      "aliases": ["Jonathan"],
+      "status": "former"
+    },
+    {
+      "id": "jacob",
+      "displayName": "Jacob",
+      "aliases": ["Jacob"],
+      "status": "former"
+    },
+    {
+  "id": "jeff",
+  "displayName": "Jeff",
+  "aliases": ["Jeff", "Jeffrey"],
+  "status": "active"
+},
+{
+  "id": "reoven",
+  "displayName": "Reoven",
+  "aliases": ["Reoven"],
+  "status": "active"
+}
+  ]
+}
