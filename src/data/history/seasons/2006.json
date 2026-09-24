@@ -1,0 +1,1622 @@
+{
+  "season": 2006,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 12,
+  "regularSeasonStartWeek": 2,
+  "regularSeasonEndWeek": 13,
+  "seasonTeams": [
+    {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "the plastic bags",
+      "sourceOwnerId": "frb:43fd2ec5b8214bafb4dc20f4f14e6983"
+    },
+    {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE GOMO'S",
+      "sourceOwnerId": "frb:45a7ec45aebd49c5bcc44f3dcec7efac"
+    },
+    {
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "mIkeLITO!",
+      "sourceOwnerId": "frb:ce640e142bf4459f801c63df356cc6b4"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "French Fry",
+      "sourceOwnerId": "frb:40e12e47d4674a6ca46420b402db5fc7"
+    },
+    {
+      "managerId": "daniel-dunietz",
+      "sourceManagerName": "Daniel",
+      "teamName": "Wildkits",
+      "sourceOwnerId": "frb:d257dc06772d448f9964d0e2f01bc7b9"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "KING'S KINGS",
+      "sourceOwnerId": "frb:560586f8fc654871a20ca9445dbb6f88"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoe4",
+      "sourceOwnerId": "frb:0c3f4a655adf47e89a30d76e47945af9"
+    },
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Chenchos",
+      "sourceOwnerId": "frb:4196eedc07e740248422de86d745dc53"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "kookoomongas",
+      "sourceOwnerId": "frb:10f58366b0e54898a6a79cdc8e97b2a5"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:8db39297bd584a8488c7aae2256c561e"
+    },
+    {
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "chi town bad boiz",
+      "sourceOwnerId": "frb:6afd08da669a42fc9747401a4a8eee7e"
+    },
+    {
+      "managerId": "adir",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Matzah Ballers",
+      "sourceOwnerId": "frb:344904af6a8c413ab5da11d37ec04174"
+    },
+    {
+      "managerId": "q",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Q's Doggs",
+      "sourceOwnerId": "frb:cf085b848a28498f9e579fd358a544bf"
+    },
+    {
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "REDlickMYballs",
+      "sourceOwnerId": "frb:229d7ac5884140f1a49b4420ccdd6d5a"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoe4",
+      "wins": 9,
+      "losses": 3,
+      "pointsFor": 932.73,
+      "pointsAgainst": 813.11
+    },
+    {
+      "rank": 2,
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE GOMO'S",
+      "wins": 9,
+      "losses": 3,
+      "pointsFor": 1072.79,
+      "pointsAgainst": 893.01
+    },
+    {
+      "rank": 3,
+      "managerId": "adir",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Matzah Ballers",
+      "wins": 7,
+      "losses": 5,
+      "pointsFor": 944.76,
+      "pointsAgainst": 890.58
+    },
+    {
+      "rank": 4,
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "chi town bad boiz",
+      "wins": 9,
+      "losses": 3,
+      "pointsFor": 1044.41,
+      "pointsAgainst": 762.94
+    },
+    {
+      "rank": 5,
+      "managerId": "hasten",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "KING'S KINGS",
+      "wins": 8,
+      "losses": 4,
+      "pointsFor": 838.23,
+      "pointsAgainst": 854.21
+    },
+    {
+      "rank": 6,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Chenchos",
+      "wins": 7,
+      "losses": 5,
+      "pointsFor": 872.57,
+      "pointsAgainst": 854.38
+    },
+    {
+      "rank": 7,
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "mIkeLITO!",
+      "wins": 6,
+      "losses": 6,
+      "pointsFor": 931.69,
+      "pointsAgainst": 842.18
+    },
+    {
+      "rank": 8,
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "REDlickMYballs",
+      "wins": 6,
+      "losses": 6,
+      "pointsFor": 927.14,
+      "pointsAgainst": 905.63
+    },
+    {
+      "rank": 9,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "kookoomongas",
+      "wins": 6,
+      "losses": 6,
+      "pointsFor": 779.85,
+      "pointsAgainst": 808.71
+    },
+    {
+      "rank": 10,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 5,
+      "losses": 7,
+      "pointsFor": 860.06,
+      "pointsAgainst": 880.15
+    },
+    {
+      "rank": 11,
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "the plastic bags",
+      "wins": 5,
+      "losses": 7,
+      "pointsFor": 764.37,
+      "pointsAgainst": 828.37
+    },
+    {
+      "rank": 12,
+      "managerId": "q",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Q's Doggs",
+      "wins": 4,
+      "losses": 8,
+      "pointsFor": 709.4,
+      "pointsAgainst": 1005.62
+    },
+    {
+      "rank": 13,
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "French Fry",
+      "wins": 3,
+      "losses": 9,
+      "pointsFor": 897.08,
+      "pointsAgainst": 967.69
+    },
+    {
+      "rank": 14,
+      "managerId": "daniel-dunietz",
+      "sourceManagerName": "Daniel",
+      "teamName": "Wildkits",
+      "wins": 0,
+      "losses": 12,
+      "pointsFor": 649.57,
+      "pointsAgainst": 918.07
+    }
+  ],
+  "matchups": [
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 53.49
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 89.87
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 95.21
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 64.43
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 91.87
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 84.59
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 63.54
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 85.68
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 70.23
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 101.04
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 70.19
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 65.07
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 71.99
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 77.92
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 77.3
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 64.46
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 80.26
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 66.93
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 65.9
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 88.2
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 74.92
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 59.27
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 72.11
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 67.08
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 116.77
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 60.45
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 67.18
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 68.87
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 44.09
+      },
+      "away": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 39.98
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 94.6
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 79.2
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 85.95
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 86.86
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 53.18
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 63.95
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 68.13
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 50.93
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 99.33
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 59.98
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 58.8
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 40.55
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 54.63
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 62.83
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 85.26
+      },
+      "away": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 52.36
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 88.74
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 67.24
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 84.71
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 55.66
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 73.13
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 62.52
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 45.9
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 73.82
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 58.56
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 68.8
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 100.34
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 53.47
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 84.87
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 51.84
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 91.38
+      },
+      "away": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 59.2
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 55.79
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 74.16
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 100.29
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 60.43
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 76.56
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 98.38
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 43.92
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 97.7
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 51.43
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 53.17
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 65.19
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 97.53
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 95.56
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 41.37
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 78.07
+      },
+      "away": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 61.42
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 30.38
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 48.58
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 78.72
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 84.9
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 81.83
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 77.77
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 43.74
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 70.7
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 108.85
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 60.87
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 78.91
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 71.95
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 72.42
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 84.73
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 60.2
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 120.72
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 98.84
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 34.74
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 80.12
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 60.68
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 50.25
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 106.58
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 85.23
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 42.99
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 75.27
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 85.37
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 43.93
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 93.3
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 72.78
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 84.71
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 104.23
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 44.51
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 100.54
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 44.01
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 40.86
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 112.17
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 99.78
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 87.36
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 55.4
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 70.93
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 104.08
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 50.89
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 55.2
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 84.17
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 70.76
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 70.73
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 126.07
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 67.79
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 58.45
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 63.15
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 66.25
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 134.83
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 66.89
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 78.5
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 86.37
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 87.7
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 26.72
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 32.44
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 75.79
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 55.46
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 46.16
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 84.66
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 104.28
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 27.14
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 146.08
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 67.02
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 77.66
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 61.39
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 89.93
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 100.04
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 50.87
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 81.88
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 82.96
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 54.59
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 97.94
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 81.28
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "the plastic bags",
+        "score": 85.51
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "REDlickMYballs",
+        "score": 84.85
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 61.21
+      },
+      "away": {
+        "managerId": "q",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Q's Doggs",
+        "score": 87.65
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "mIkeLITO!",
+        "score": 59.13
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 85.62
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "French Fry",
+        "score": 63.72
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 70.22
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "daniel-dunietz",
+        "sourceManagerName": "Daniel",
+        "teamName": "Wildkits",
+        "score": 41.4
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 41.47
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 84.91
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "kookoomongas",
+        "score": 68.91
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 83.77
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 73.73
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 51.45
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 121.45
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 87.91
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 72.26
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 111.33
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 97.5
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "KING'S KINGS",
+        "score": 104.36
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Chenchos",
+        "score": 36.86
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 97.46
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 92.45
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE GOMO'S",
+        "score": 67.04
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoe4",
+        "score": 86.13
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "chi town bad boiz",
+        "score": 59.17
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Matzah Ballers",
+        "score": 83.96
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoe4"
+    },
+    "runnerUp": {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE GOMO'S"
+    },
+    "thirdPlace": {
+      "managerId": "adir",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Matzah Ballers"
+    }
+  }
+}

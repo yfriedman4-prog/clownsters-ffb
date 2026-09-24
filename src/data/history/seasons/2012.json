@@ -1,0 +1,1333 @@
+{
+  "season": 2012,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 13,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Best Ever",
+      "sourceOwnerId": "frb:de1a788e5c4b40d2ae297944d94b73de"
+    },
+    {
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Tony Whitt",
+      "sourceOwnerId": "frb:73d8ad16e4bf460187b57fd431aba815"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:c0715085ea524dec959478e9ff241501"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "All the Kings Men II",
+      "sourceOwnerId": "frb:1ad016e7e57b468aa8e6a806f6d59124"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "penny pinchers",
+      "sourceOwnerId": "frb:1857618d4ee04c9587f9a01f813f1bbb"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "ı am legend",
+      "sourceOwnerId": "frb:c4b5a42566c74eec8e6bf214190168fa"
+    },
+    {
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "The Maca'geeks'",
+      "sourceOwnerId": "frb:97125370a38645c68f68ec5dd0ba4f57"
+    },
+    {
+      "managerId": "gutstein",
+      "sourceManagerName": "Daniel",
+      "teamName": "Gutensteiners",
+      "sourceOwnerId": "frb:7ee5df4dd7f94f2db73ecc2bc3cacc5f"
+    },
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's Da Bomb",
+      "sourceOwnerId": "frb:772c1e83db3d4af890b8b94e73b6307a"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "haylege yidden",
+      "sourceOwnerId": "frb:241cb98b3d044fed88d50c1f5eba5347"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "The Maca'geeks'",
+      "wins": 10,
+      "losses": 3,
+      "pointsFor": 1624.28,
+      "pointsAgainst": 1527.16
+    },
+    {
+      "rank": 2,
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Best Ever",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1742.18,
+      "pointsAgainst": 1569.94
+    },
+    {
+      "rank": 3,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1648.48,
+      "pointsAgainst": 1567.54
+    },
+    {
+      "rank": 4,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "penny pinchers",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1609.96,
+      "pointsAgainst": 1606.7
+    },
+    {
+      "rank": 5,
+      "managerId": "gutstein",
+      "sourceManagerName": "Daniel",
+      "teamName": "Gutensteiners",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1445.4,
+      "pointsAgainst": 1506.52
+    },
+    {
+      "rank": 6,
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Tony Whitt",
+      "wins": 6,
+      "losses": 6,
+      "pointsFor": 1649.42,
+      "pointsAgainst": 1597
+    },
+    {
+      "rank": 7,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "ı am legend",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1500.48,
+      "pointsAgainst": 1548.76
+    },
+    {
+      "rank": 8,
+      "managerId": "kotsias",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "haylege yidden",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1732.66,
+      "pointsAgainst": 1739.82
+    },
+    {
+      "rank": 9,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's Da Bomb",
+      "wins": 3,
+      "losses": 10,
+      "pointsFor": 1352.66,
+      "pointsAgainst": 1500.14
+    },
+    {
+      "rank": 10,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "All the Kings Men II",
+      "wins": 4,
+      "losses": 8,
+      "pointsFor": 1427.22,
+      "pointsAgainst": 1569.16
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 103.42
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 101
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 128.82
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 103.22
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 142.28
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 98.14
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 135.62
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 129.64
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 170.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 124.28
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 91.84
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 131.4
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 150.54
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 173.34
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 102.24
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 143.56
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 118.66
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 128.16
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 95.1
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 100.14
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 141.4
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 97.32
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 115.84
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 128.42
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 75.72
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 134.5
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 109.4
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 117.22
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 122
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 103.88
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 149.32
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 153.76
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 145.02
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 127.08
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 158.76
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 92.94
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 122.04
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 126.86
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 125.64
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 98.96
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 117.08
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 135.5
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 126.94
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 110.3
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 135.96
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 136
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 158.52
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 116
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 131.76
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 121
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 130.26
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 119.1
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 158.14
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 118.32
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 123.52
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 177.12
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 128.52
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 107.74
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 111.94
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 89.26
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 111.4
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 130.18
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 163.32
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 119.46
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 110.28
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 99.58
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 92.62
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 134.88
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 96.92
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 113.44
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 131.5
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 104.56
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 93.88
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 116.76
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 114.38
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 135.36
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 88.68
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 111.82
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 113.14
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 141.28
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 134.64
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 178.58
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 123.9
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 76.58
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 149.2
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 129.9
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 115.44
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 116.26
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 147.22
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 95.26
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 164.74
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 111.86
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 100.6
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 91.74
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 90.76
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 103.42
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 80.9
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 93.28
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 109.72
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 154.18
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 120.2
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 106.2
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 142.2
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 126.26
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 98.42
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 75.24
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 138.94
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 88.48
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 132.56
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 135.04
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 154
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 106.14
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 115.06
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 130.6
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 129.36
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 111.32
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 97.38
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 86.74
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 151.12
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 137
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 192.38
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 94.34
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 101.72
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 101.72
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 130.34
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 158.74
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 103.64
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 82.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 118.72
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 103.74
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 123.78
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.86
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 112.02
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 108.52
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 130.06
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 85.64
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Tony Whitt",
+        "score": 83.94
+      },
+      "away": {
+        "managerId": "gutstein",
+        "sourceManagerName": "Daniel",
+        "teamName": "Gutensteiners",
+        "score": 110.48
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 89.04
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 116.28
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 118.34
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 147.32
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 101.7
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 103.94
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Best Ever",
+        "score": 131.66
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "The Maca'geeks'",
+        "score": 141.08
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 139.1
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "penny pinchers",
+        "score": 135.48
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "All the Kings Men II",
+        "score": 122.84
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's Da Bomb",
+        "score": 132.66
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "ı am legend",
+        "score": 147.24
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "haylege yidden",
+        "score": 99.1
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "The Maca'geeks'"
+    },
+    "runnerUp": {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Best Ever"
+    },
+    "thirdPlace": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes"
+    }
+  }
+}

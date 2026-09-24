@@ -22,8 +22,16 @@ for (const team of data.seasonTeams) {
   }
 }
 
+const regularSeasonStartWeek =
+  data.regularSeasonStartWeek ?? 1
+
+const regularSeasonEndWeek =
+  data.regularSeasonEndWeek ?? data.regularSeasonWeeks
+
 const regularSeasonMatchups = data.matchups.filter(
-  (matchup) => matchup.week <= data.regularSeasonWeeks
+  (matchup) =>
+    matchup.week >= regularSeasonStartWeek &&
+    matchup.week <= regularSeasonEndWeek
 )
 
 for (const matchup of regularSeasonMatchups) {

@@ -5,6 +5,8 @@
     "importedFrom": "FRB CSV export"
   },
   "regularSeasonWeeks": 14,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 14,
   "seasonTeams": [
     {
       "managerId": "max",

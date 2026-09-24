@@ -69,6 +69,173 @@
   "season": 2022,
   "teamName": "ZDAWG",
   "managerId": "yaron"
+}, 
+{
+  "season": 2006,
+  "teamName": "THE GOMO'S",
+  "managerId": "feiger"
+},
+{
+  "season": 2006,
+  "teamName": "mIkeLITO!",
+  "managerId": "finn"
+},
+{
+  "season": 2006,
+  "teamName": "French Fry",
+  "managerId": "max"
+},
+{
+  "season": 2006,
+  "teamName": "KING'S KINGS",
+  "managerId": "hasten"
+},
+{
+  "season": 2006,
+  "teamName": "The Chenchos",
+  "managerId": "shefler"
+},
+{
+  "season": 2006,
+  "teamName": "chi town bad boiz",
+  "managerId": "jon-alport"
+},
+{
+  "season": 2006,
+  "teamName": "The Matzah Ballers",
+  "managerId": "adir"
+},
+{
+  "season": 2006,
+  "teamName": "Q's Doggs",
+  "managerId": "q"
+},
+{
+  "season": 2007,
+  "teamName": "Hey Ho Elmos",
+  "managerId": "shefler"
+},
+{
+  "season": 2007,
+  "teamName": "THE DIRTY GUZZLERS",
+  "managerId": "feiger"
+},
+{
+  "season": 2007,
+  "teamName": "The Acrobats",
+  "managerId": "max"
+},
+{
+  "season": 2007,
+  "teamName": "Ziva Levy",
+  "managerId": "finn"
+},
+{
+  "season": 2007,
+  "teamName": "skokie yeshiva",
+  "managerId": "jon-alport"
+},
+{
+  "season": 2007,
+  "teamName": "shepsaholic",
+  "managerId": "sheppy"
+},
+{
+  "season": 2008,
+  "teamName": "Weezy F",
+  "managerId": "finn"
+},
+{
+  "season": 2008,
+  "teamName": "Red Rockets",
+  "managerId": "max"
+},
+{
+  "season": 2008,
+  "teamName": "Tirza's the Bomb",
+  "managerId": "shefler"
+},
+{
+  "season": 2008,
+  "teamName": "BEST IN THE MIDWEST",
+  "managerId": "feiger"
+},
+{
+  "season": 2008,
+  "teamName": "Gildorf The Black",
+  "managerId": "sheppy"
+},
+{
+  "season": 2009,
+  "teamName": "The Guzzlers",
+  "managerId": "feiger"
+},
+{
+  "season": 2009,
+  "teamName": "Tirza's the Bomb",
+  "managerId": "shefler"
+},
+{
+  "season": 2009,
+  "teamName": "Red Rockets",
+  "managerId": "max"
+},
+{
+  "season": 2009,
+  "teamName": "Mr. Milk's Men",
+  "managerId": "finn"
+},
+{
+  "season": 2012,
+  "teamName": "The Best Ever",
+  "managerId": "max"
+},
+{
+  "season": 2012,
+  "teamName": "Tirza's Da Bomb",
+  "managerId": "shefler"
+},
+{
+  "season": 2012,
+  "teamName": "haylege yidden",
+  "managerId": "kotsias"
+}, 
+{
+  "season": 2006,
+  "sourceName": "Daniel",
+  "teamName": "Wildkits",
+  "managerId": "daniel-dunietz"
+},
+{
+  "season": 2012,
+  "sourceName": "Daniel",
+  "teamName": "Gutensteiners",
+  "managerId": "gutstein"
+},
+{
+  "season": 2020,
+  "sourceName": "Daniel",
+  "managerId": "kotsias"
+},
+{
+  "season": 2021,
+  "sourceName": "Daniel",
+  "managerId": "kotsias"
+},
+{
+  "season": 2023,
+  "sourceName": "Daniel",
+  "managerId": "kotsias"
+},
+{
+  "season": 2024,
+  "sourceName": "Daniel",
+  "managerId": "kotsias"
+},
+{
+  "season": 2025,
+  "sourceName": "Daniel",
+  "managerId": "kotsias"
 }
   ]
 }

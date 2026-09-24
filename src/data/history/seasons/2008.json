@@ -1,0 +1,1500 @@
+{
+  "season": 2008,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 13,
+  "seasonTeams": [
+    {
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "The Six Chizls",
+      "sourceOwnerId": "frb:62a46cd24d1141d983edb6bb44364234"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The Garsoms",
+      "sourceOwnerId": "frb:ef0b5bdea8c34233a03ccfc53a5c415a"
+    },
+    {
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Weezy F",
+      "sourceOwnerId": "frb:8115d33dd76b4ef5bcc60955138ed9f2"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:5cd33dc9895a436e8ce00eb167150f8c"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Red Rockets",
+      "sourceOwnerId": "frb:5179b86f69f147379c646497e9b58d87"
+    },
+    {
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Krollo's",
+      "sourceOwnerId": "frb:1a1b3c1f9b354b18b437987a3a943673"
+    },
+    {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The Bedwetters",
+      "sourceOwnerId": "frb:81972525331f482d8c832227bc071f0d"
+    },
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's the Bomb",
+      "sourceOwnerId": "frb:9a095625c40b4a03851652c14b8b2b01"
+    },
+    {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "BEST IN THE MIDWEST",
+      "sourceOwnerId": "frb:3ddad34df0784345b5b5bf29b3122ff4"
+    },
+    {
+      "managerId": "sheppy",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Gildorf The Black",
+      "sourceOwnerId": "frb:01b55454fe55485cadc6f19bd9c10ad9"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:126ea6f2e59b4d49a1b7efb6511be458"
+    },
+    {
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "redLICK MY BALLS",
+      "sourceOwnerId": "frb:6a9174a3c2fa45f2a9187a6e6d063cc3"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's the Bomb",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1605.44,
+      "pointsAgainst": 1587.48
+    },
+    {
+      "rank": 2,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1809.7,
+      "pointsAgainst": 1630.48
+    },
+    {
+      "rank": 3,
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The Bedwetters",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1622.5,
+      "pointsAgainst": 1605.02
+    },
+    {
+      "rank": 4,
+      "managerId": "sheppy",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Gildorf The Black",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1567.65,
+      "pointsAgainst": 1502.88
+    },
+    {
+      "rank": 5,
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "The Six Chizls",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1620.77,
+      "pointsAgainst": 1545.03
+    },
+    {
+      "rank": 6,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The Garsoms",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1704.82,
+      "pointsAgainst": 1536.18
+    },
+    {
+      "rank": 7,
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Red Rockets",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1516.47,
+      "pointsAgainst": 1524.17
+    },
+    {
+      "rank": 8,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1492.9,
+      "pointsAgainst": 1556.74
+    },
+    {
+      "rank": 9,
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "BEST IN THE MIDWEST",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1474.08,
+      "pointsAgainst": 1682.17
+    },
+    {
+      "rank": 10,
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Weezy F",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1588.5,
+      "pointsAgainst": 1687.17
+    },
+    {
+      "rank": 11,
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "redLICK MY BALLS",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1491.37,
+      "pointsAgainst": 1522.32
+    },
+    {
+      "rank": 12,
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Krollo's",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1516.91,
+      "pointsAgainst": 1631.47
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 142.67
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 112.74
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 102.99
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 144.89
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 103.84
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 94.74
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 97.25
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 113.55
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 113.13
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 73.57
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 128.53
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 159.7
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 168.53
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 100.12
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 132.12
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 140.2
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 102.85
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 154.24
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 83.32
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 99.9
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 116.04
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 131.94
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 152.72
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 113.97
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 105.84
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 107.08
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 154.23
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 82.4
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 132.81
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 132.31
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 144.49
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 163.6
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 87.91
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 107.27
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 124.18
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 97.39
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 143.45
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 74.05
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 105.1
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 131.75
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 116.51
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 80.67
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 147.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 147.18
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 117.95
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 137.18
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 127.6
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 148.31
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 130.29
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 84.63
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 105.12
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 124.76
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 157.91
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.21
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 135.79
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 110.43
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 100.17
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 105.74
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 54.03
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 127.74
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 141.81
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 86.92
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 142.67
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 126.25
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 81.83
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 105.8
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 96.6
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 100.48
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 134
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 148.54
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 123.97
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 145.27
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 99.7
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 130.55
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 143.4
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 126.28
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 98.88
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 117.62
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 141.14
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 130.27
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 92.19
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 139.32
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 150.96
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 125.9
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 120.4
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 137.92
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 134.11
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 147.34
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 156.35
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 164.39
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.78
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 130.74
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 98.84
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 84.39
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 99.17
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 130.49
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 105.41
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 104.57
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 166.55
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 124.89
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 107.54
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 145.01
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 76.03
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 114.52
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 123.3
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 89.65
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 134.44
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 110.09
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 183.28
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 158.97
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 98.83
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 76.72
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 131.51
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 91.17
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 106.25
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 110.74
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 128.93
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 117.55
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 116.63
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 99.04
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 102.3
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 147.1
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 117.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 119.01
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 126.95
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 146.34
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 133.28
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 95.81
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 145.7
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 163.57
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 107.64
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 119.94
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 85.63
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 155.03
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 180.16
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 138.85
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 125.14
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 105.32
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 155.02
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 113.57
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 88.21
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 122.82
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 129.86
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 110.39
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 91.46
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Weezy F",
+        "score": 145.35
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 137.32
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "redLICK MY BALLS",
+        "score": 108.28
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 91.95
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 151.03
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 116.42
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 138.14
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Krollo's",
+        "score": 134.28
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "BEST IN THE MIDWEST",
+        "score": 139.46
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 140.14
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 111.92
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 107.91
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 127.38
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 83.41
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 198.27
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "The Six Chizls",
+        "score": 115.47
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The Garsoms",
+        "score": 105.6
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 135.08
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 136.67
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 167.73
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 116.04
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 97.85
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Gildorf The Black",
+        "score": 90.02
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 165.69
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 141.59
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's the Bomb"
+    },
+    "runnerUp": {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears"
+    },
+    "thirdPlace": {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The Bedwetters"
+    }
+  }
+}

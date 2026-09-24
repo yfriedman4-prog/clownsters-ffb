@@ -1,0 +1,1500 @@
+{
+  "season": 2007,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 13,
+  "seasonTeams": [
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Hey Ho Elmos",
+      "sourceOwnerId": "frb:800b48134530417d8f8e293775229b96"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoes",
+      "sourceOwnerId": "frb:af51602b52b64946ab3621fc04158efe"
+    },
+    {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE DIRTY GUZZLERS",
+      "sourceOwnerId": "frb:b543d87809df4a8893efb2f85683f522"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Acrobats",
+      "sourceOwnerId": "frb:3fd987ec092c4304b16f34d587f942f7"
+    },
+    {
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Ziva Levy",
+      "sourceOwnerId": "frb:e9675cf17b75424cbfe156caa10b2a07"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:fae85469de524fa5b31741a4b2d7d95a"
+    },
+    {
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "theMANtheLEGEND",
+      "sourceOwnerId": "frb:f7cf90fb02ca4226939e2f305331ff51"
+    },
+    {
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "we are...SPARTA",
+      "sourceOwnerId": "frb:b5b0e2326b3144679a76ad3c46a61b31"
+    },
+    {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The BedWetTaS",
+      "sourceOwnerId": "frb:ceb4b55123fd4dd4868e6105084c4bfd"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "the jackaling jackal",
+      "sourceOwnerId": "frb:421a31f7e89341f8854a78fd72350da0"
+    },
+    {
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "skokie yeshiva",
+      "sourceOwnerId": "frb:59352e20bcd146328a5b453fa5ec58b7"
+    },
+    {
+      "managerId": "sheppy",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "shepsaholic",
+      "sourceOwnerId": "frb:1571d64760284c2982c8a3346984472b"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoes",
+      "wins": 10,
+      "losses": 3,
+      "pointsFor": 1759.75,
+      "pointsAgainst": 1512.8
+    },
+    {
+      "rank": 2,
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The BedWetTaS",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1676.2,
+      "pointsAgainst": 1484.25
+    },
+    {
+      "rank": 3,
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE DIRTY GUZZLERS",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1610.75,
+      "pointsAgainst": 1434.25
+    },
+    {
+      "rank": 4,
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "we are...SPARTA",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1500.15,
+      "pointsAgainst": 1515.8
+    },
+    {
+      "rank": 5,
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Ziva Levy",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1676.75,
+      "pointsAgainst": 1611.1
+    },
+    {
+      "rank": 6,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "the jackaling jackal",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1510.7,
+      "pointsAgainst": 1476.45
+    },
+    {
+      "rank": 7,
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Acrobats",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1497.6,
+      "pointsAgainst": 1423.25
+    },
+    {
+      "rank": 8,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1530.05,
+      "pointsAgainst": 1688.65
+    },
+    {
+      "rank": 9,
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "theMANtheLEGEND",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1503.45,
+      "pointsAgainst": 1649.8
+    },
+    {
+      "rank": 10,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Hey Ho Elmos",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1486.45,
+      "pointsAgainst": 1485.75
+    },
+    {
+      "rank": 11,
+      "managerId": "sheppy",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "shepsaholic",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1306.15,
+      "pointsAgainst": 1465.3
+    },
+    {
+      "rank": 12,
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "skokie yeshiva",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1246.15,
+      "pointsAgainst": 1556.75
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 101.3
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 112.5
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 126.85
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 112.3
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 128.3
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 131.25
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 100.85
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 187.45
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 137.15
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 109.7
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 123.7
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 100
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 146.95
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 141.85
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 99.1
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 124.7
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 150
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 112.85
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 147.5
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 131.4
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 130.4
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 93.55
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 181.15
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 107.8
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 104
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 121
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 152.55
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 137.45
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 141.3
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 142
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 165.75
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 89.2
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 84.1
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 157
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 103.15
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 86.65
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 95.65
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 118.7
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 131.75
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 111.45
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 135.15
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 75.65
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 106.35
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 75.35
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 68.9
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 144.4
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 57.8
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 117.25
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 107.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 110.05
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 92.05
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 84.9
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 108.25
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 111.8
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 96.7
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 118.9
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 114.05
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 88.05
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 133.8
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 85.8
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 101.3
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 96.8
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 158.3
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 109.85
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 138.2
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 127.6
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 154.35
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 67.3
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 99.05
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 122.7
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 108.85
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 169.95
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 97.5
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 130.6
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 155.35
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 97
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 173.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 87.35
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 107.1
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 103.15
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 103.65
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 93.85
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 70.65
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 92.65
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 85.1
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 143.2
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 92.65
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 116.8
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 102.3
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 102.45
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 116.45
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 105.35
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 134.45
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 106.5
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 90.1
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 78.55
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 113.25
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 149
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 226.35
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 162.5
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 121.25
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 104.1
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 86.55
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 138.65
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 171.6
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 116.8
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 45.9
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 163.45
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 130.7
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 74.4
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 138.9
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 94.5
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 40.35
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 104.9
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 121.35
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 124.95
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 189.75
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 93.25
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 100.85
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 91.8
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 83.45
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 90.3
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 125.05
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 89.55
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 164.65
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 101.65
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 112.3
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 109.15
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 123.2
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 121.8
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 124.65
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 181.95
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 189.55
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 105.3
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 128.8
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 76.85
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 82.2
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 83.65
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 160.85
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 112
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 98.95
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 176.65
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 110.85
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 128.1
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Hey Ho Elmos",
+        "score": 130.1
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 92.05
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 169.9
+      },
+      "away": {
+        "managerId": "sheppy",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "shepsaholic",
+        "score": 93.25
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Acrobats",
+        "score": 94.75
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "skokie yeshiva",
+        "score": 102.95
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 72.9
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 166.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 136.55
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 142.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "theMANtheLEGEND",
+        "score": 127.95
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 133.7
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 191.35
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 182.2
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 122.8
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 130.35
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 103.7
+      },
+      "away": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 76.3
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Ziva Levy",
+        "score": 100.35
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "the jackaling jackal",
+        "score": 99
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 104.55
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 133.7
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "couchpotatoes",
+        "score": 149.95
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The BedWetTaS",
+        "score": 107.95
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "THE DIRTY GUZZLERS",
+        "score": 101.85
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "we are...SPARTA",
+        "score": 95.85
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "couchpotatoes"
+    },
+    "runnerUp": {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The BedWetTaS"
+    },
+    "thirdPlace": {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "THE DIRTY GUZZLERS"
+    }
+  }
+}

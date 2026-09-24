@@ -39,7 +39,7 @@
     {
       "id": "kotsias",
       "displayName": "Kotsias",
-      "aliases": ["Kotsias", "Danielk", "Daniel"],
+      "aliases": ["Kotsias", "Danielk"],
       "status": "active"
     },
     {
@@ -117,6 +117,60 @@
 {
   "id": "shefler",
   "displayName": "Shefler",
+  "aliases": [],
+  "status": "former"
+}, 
+{
+  "id": "daniel-dunietz",
+  "displayName": "Daniel Dunietz",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "benji-r",
+  "displayName": "Benji R",
+  "aliases": ["Benjir"],
+  "status": "former"
+},
+{
+  "id": "redlich",
+  "displayName": "Redlich",
+  "aliases": ["Ariel"],
+  "status": "former"
+},
+{
+  "id": "feiger",
+  "displayName": "Feiger",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "adir",
+  "displayName": "Adir",
+  "aliases": ["Adir"],
+  "status": "former"
+},
+{
+  "id": "finn",
+  "displayName": "Finn",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "q",
+  "displayName": "Q",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "sheppy",
+  "displayName": "Sheppy",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "gutstein",
+  "displayName": "Gutstein",
   "aliases": [],
   "status": "former"
 }

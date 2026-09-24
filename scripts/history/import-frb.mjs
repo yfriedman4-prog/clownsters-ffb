@@ -92,27 +92,28 @@ for (const manager of managerRegistry) {
 }
 
 function resolveManager(sourceName, teamName, recordSeason = season) {
-  if (sourceName === '--Hidden--') {
-    const mapping = hiddenMappings.find(
-      (item) =>
-        item.season === recordSeason &&
-        item.teamName === teamName
-    )
+  const mapping = hiddenMappings.find(
+    (item) =>
+      item.season === recordSeason &&
+      (!item.teamName || item.teamName === teamName) &&
+      (!item.sourceName || item.sourceName === sourceName)
+  )
 
-    if (!mapping) {
-      throw new Error(
-        `Unresolved hidden manager: ${recordSeason} / "${teamName}"`
-      )
-    }
-
+  if (mapping) {
     return mapping.managerId
+  }
+
+  if (sourceName === '--Hidden--') {
+    throw new Error(
+      `Unresolved hidden manager: ${recordSeason} / "${teamName}"`
+    )
   }
 
   const managerId = aliasMap.get(sourceName.toLowerCase())
 
   if (!managerId) {
     throw new Error(
-      `Unresolved manager "${sourceName}". Add an alias to managers.json before importing.`
+      `Unresolved manager "${sourceName}" for ${recordSeason} / "${teamName}".`
     )
   }
 
@@ -211,6 +212,13 @@ const podium = {
 const regularSeasonWeeks = Math.max(
   ...standings.map((standing) => standing.wins + standing.losses)
 )
+const firstMatchupWeek = Math.min(
+  ...matchups.map((matchup) => matchup.week)
+)
+
+const regularSeasonStartWeek = firstMatchupWeek
+const regularSeasonEndWeek =
+  regularSeasonStartWeek + regularSeasonWeeks - 1
 
 const normalized = {
   season,
@@ -219,7 +227,9 @@ const normalized = {
     importedFrom: 'FRB CSV export',
   },
   regularSeasonWeeks,
-  seasonTeams,
+regularSeasonStartWeek,
+regularSeasonEndWeek,
+seasonTeams,
   standings,
   matchups,
   podium,

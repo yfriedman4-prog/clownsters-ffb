@@ -1,0 +1,1500 @@
+{
+  "season": 2009,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 13,
+  "seasonTeams": [
+    {
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Guzzlers",
+      "sourceOwnerId": "frb:c2d199862d254be1aaba8b4015bb5faf"
+    },
+    {
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The Bedwetters",
+      "sourceOwnerId": "frb:9f2ab0e511214cceaa7f31de0f1489fd"
+    },
+    {
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Fuck the Cardinals!!",
+      "sourceOwnerId": "frb:4bfa0460e5d143f6947c7e24f5eafe98"
+    },
+    {
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "Revival",
+      "sourceOwnerId": "frb:1faaabc24a394865831a983275bcb475"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:7f64b62bd1d74b1f92e0967c199d3195"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The EyeBallers",
+      "sourceOwnerId": "frb:35a83d04a0614e88b87083e3be79360c"
+    },
+    {
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "THE BREASTICALS",
+      "sourceOwnerId": "frb:2c8f9ab44f45469189cdd7a99674172e"
+    },
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's the Bomb",
+      "sourceOwnerId": "frb:cce0f81084d74bb8ba7846df6e1c118c"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Red Rockets",
+      "sourceOwnerId": "frb:9344af4b1c5f43538d892154d441a89f"
+    },
+    {
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "berenstein bears",
+      "sourceOwnerId": "frb:0af39413639e465a8137834ad10b98d6"
+    },
+    {
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Mr. Milk's Men",
+      "sourceOwnerId": "frb:0adb66a7df824c8b8e0ec9d943c21211"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:3b168f70b385401ca65d507d530e1baf"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 11,
+      "losses": 2,
+      "pointsFor": 1705.74,
+      "pointsAgainst": 1493.8
+    },
+    {
+      "rank": 2,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The EyeBallers",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1859.33,
+      "pointsAgainst": 1531.54
+    },
+    {
+      "rank": 3,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1883.21,
+      "pointsAgainst": 1630.49
+    },
+    {
+      "rank": 4,
+      "managerId": "finn",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Mr. Milk's Men",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1736.67,
+      "pointsAgainst": 1593.48
+    },
+    {
+      "rank": 5,
+      "managerId": "redlich",
+      "sourceManagerName": "Ariel",
+      "teamName": "THE BREASTICALS",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1479.38,
+      "pointsAgainst": 1486.24
+    },
+    {
+      "rank": 6,
+      "managerId": "korman",
+      "sourceManagerName": "Leo",
+      "teamName": "Fuck the Cardinals!!",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1533.78,
+      "pointsAgainst": 1582.29
+    },
+    {
+      "rank": 7,
+      "managerId": "max",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Red Rockets",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1566.3,
+      "pointsAgainst": 1683.71
+    },
+    {
+      "rank": 8,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Tirza's the Bomb",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1668.56,
+      "pointsAgainst": 1713.85
+    },
+    {
+      "rank": 9,
+      "managerId": "adir",
+      "sourceManagerName": "Adir",
+      "teamName": "Revival",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1595.18,
+      "pointsAgainst": 1599.55
+    },
+    {
+      "rank": 10,
+      "managerId": "jonathan",
+      "sourceManagerName": "Jonathan",
+      "teamName": "berenstein bears",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1484.73,
+      "pointsAgainst": 1685.33
+    },
+    {
+      "rank": 11,
+      "managerId": "feiger",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "The Guzzlers",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1193.28,
+      "pointsAgainst": 1486.13
+    },
+    {
+      "rank": 12,
+      "managerId": "benji-r",
+      "sourceManagerName": "Benjir",
+      "teamName": "The Bedwetters",
+      "wins": 2,
+      "losses": 11,
+      "pointsFor": 1456.47,
+      "pointsAgainst": 1676.22
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 113.45
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 107.25
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 108.92
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 175.06
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 110.67
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 112.27
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 134.03
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 104.2
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 135.48
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 163.45
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 62.19
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 134.75
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 107.83
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 87.02
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 140.18
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 171.62
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 128.13
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 145.95
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 124.13
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 102.72
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 141.84
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 105.34
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 115.82
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 100.95
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 95.68
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 104.15
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 97.1
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 123.23
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 143.8
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 113.21
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 164.4
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 89.9
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 146.12
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 93.95
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 100.08
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 114.31
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 67.67
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 148.01
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 79.02
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 131.23
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 122.19
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 94.02
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 156.87
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 116.84
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 112.56
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 109.22
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 114.08
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 134.47
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 114.94
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 107.7
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 140.32
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 119.12
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 145.65
+      },
+      "away": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 108.7
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 107.77
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 123.31
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 123.22
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 109.63
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 109.55
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 143.9
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 82.79
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 100.27
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 83.49
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 187.39
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 118.52
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 166.17
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 121.39
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 126.94
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 160.66
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 143.19
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 192.23
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 134.6
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 59.83
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 160.91
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 113.36
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 113.97
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 108.18
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 106.88
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 163.2
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 176.8
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 117.96
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 166.33
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 99.32
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 100.32
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 101.62
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 94.54
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 111.5
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 119.56
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 117.15
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 139.51
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 87.95
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 123.16
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 127.33
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 130.68
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 107.37
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 138.24
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 92.85
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 117.65
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 110.19
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 124.47
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 150.56
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 129.83
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 121.42
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 86.84
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 138.38
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 158.48
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 124.6
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 156.76
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 64.49
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 98.85
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 112.23
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 119.23
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 124.88
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 89.41
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 140.95
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 110.71
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 104.91
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 122.25
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 158.56
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 147.99
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 97.1
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 132.39
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 119.9
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 125.22
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 119.25
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 137.21
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 110.52
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 136.1
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 199.49
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 122.23
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 155.56
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 124.16
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 85.15
+      },
+      "away": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 117.29
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 98.13
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 120.69
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 144.15
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 115.25
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 149.96
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 156.65
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 157.37
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 143.49
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 106.67
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 109.48
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "feiger",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "The Guzzlers",
+        "score": 109.88
+      },
+      "away": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 110.1
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benji-r",
+        "sourceManagerName": "Benjir",
+        "teamName": "The Bedwetters",
+        "score": 124.64
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 142.58
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "adir",
+        "sourceManagerName": "Adir",
+        "teamName": "Revival",
+        "score": 122.72
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 145.18
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 151.08
+      },
+      "away": {
+        "managerId": "jonathan",
+        "sourceManagerName": "Jonathan",
+        "teamName": "berenstein bears",
+        "score": 130.36
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 105.64
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Red Rockets",
+        "score": 107.43
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 141.25
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Tirza's the Bomb",
+        "score": 119.39
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 127.2
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 133.5
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 124.95
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 119.57
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "korman",
+        "sourceManagerName": "Leo",
+        "teamName": "Fuck the Cardinals!!",
+        "score": 112.03
+      },
+      "away": {
+        "managerId": "redlich",
+        "sourceManagerName": "Ariel",
+        "teamName": "THE BREASTICALS",
+        "score": 185.28
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 125.39
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 159.35
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 138.43
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 126.2
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 134.77
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Mr. Milk's Men",
+        "score": 87.93
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "The EyeBallers",
+        "score": 135.85
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 149.27
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes"
+    },
+    "runnerUp": {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "The EyeBallers"
+    },
+    "thirdPlace": {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears"
+    }
+  }
+}
