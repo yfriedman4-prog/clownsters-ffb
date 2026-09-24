@@ -95,6 +95,30 @@
   "displayName": "Reoven",
   "aliases": ["Reoven"],
   "status": "active"
+},
+{
+  "id": "avi-aaron",
+  "displayName": "Avi Aaron",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "jon-alport",
+  "displayName": "Jon Alport z\"l",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "massey",
+  "displayName": "Massey",
+  "aliases": [],
+  "status": "former"
+},
+{
+  "id": "shefler",
+  "displayName": "Shefler",
+  "aliases": [],
+  "status": "former"
 }
   ]
 }

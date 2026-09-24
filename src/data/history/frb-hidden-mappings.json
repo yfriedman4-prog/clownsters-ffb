@@ -1,0 +1,49 @@
+{
+  "mappings": [
+    {
+      "season": 2014,
+      "teamName": "Bout dat action boss",
+      "managerId": "avi-aaron"
+    },
+    {
+      "season": 2014,
+      "teamName": "Password Is Taco",
+      "managerId": "jon-alport"
+    },
+    {
+      "season": 2015,
+      "teamName": "Team Waiver Wire",
+      "managerId": "jon-alport"
+    },
+    {
+      "season": 2015,
+      "teamName": "For Whom Odell Tolls",
+      "managerId": "massey"
+    },
+    {
+      "season": 2016,
+      "teamName": "For Whom Odell Tolls",
+      "managerId": "massey"
+    },
+    {
+      "season": 2017,
+      "teamName": "For Whom Odell Tolls",
+      "managerId": "massey"
+    },
+    {
+      "season": 2015,
+      "teamName": "Last Place 4Ever",
+      "managerId": "shefler"
+    },
+    {
+      "season": 2016,
+      "teamName": "Last Place 4Ever",
+      "managerId": "shefler"
+    },
+    {
+      "season": 2016,
+      "teamName": "Password Is Taco",
+      "managerId": "jon-alport"
+    }
+  ]
+}

@@ -1,0 +1,1603 @@
+{
+  "season": 2017,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "seasonTeams": [
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "WestboroBaptistSmurf",
+      "sourceOwnerId": "frb:c8cbf09baad848c295848e69ef382abc"
+    },
+    {
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "NelsonsWoundedKnee",
+      "sourceOwnerId": "frb:8b199f1a7e3f442cb38b1bf6a16a35c5"
+    },
+    {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "TImmy",
+      "sourceOwnerId": "frb:89e5cef8446148658ea2e408c61ab87b"
+    },
+    {
+      "managerId": "massey",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "For Whom Odell Tolls",
+      "sourceOwnerId": "frb:cd47d234e85a45c99661cdf0ab8a98bc"
+    },
+    {
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDOG",
+      "sourceOwnerId": "frb:f251b755f30e47a996de37a4bba67985"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Stfu",
+      "sourceOwnerId": "frb:49ff07af408d417c96d51cb9d0cb759e"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "sourceOwnerId": "frb:730ca524f94542e4b94be3d9840210c3"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "sourceOwnerId": "frb:089b2fb5eba340a48f690204bd3d58c0"
+    },
+    {
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Racist Redskins",
+      "sourceOwnerId": "frb:1a4d2892a9cd469292c6f87224ba004a"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Nelson Mandela",
+      "sourceOwnerId": "frb:a1e5a2fc4dd944ae910d546547058783"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "BORATS #1 TEAM",
+      "sourceOwnerId": "frb:b1fff52b6d2a403db0832c0356ba70bb"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:3515b4666ee94d9ca9b22c1bf969dfd0"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "TImmy",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1712.44,
+      "pointsAgainst": 1483.74
+    },
+    {
+      "rank": 2,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1591.88,
+      "pointsAgainst": 1461.24
+    },
+    {
+      "rank": 3,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1524.24,
+      "pointsAgainst": 1489.66
+    },
+    {
+      "rank": 4,
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Nelson Mandela",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1429.54,
+      "pointsAgainst": 1512.54
+    },
+    {
+      "rank": 5,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "BORATS #1 TEAM",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1515.24,
+      "pointsAgainst": 1618.3
+    },
+    {
+      "rank": 6,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Stfu",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1415.98,
+      "pointsAgainst": 1402.78
+    },
+    {
+      "rank": 7,
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "NelsonsWoundedKnee",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1489.46,
+      "pointsAgainst": 1493.34
+    },
+    {
+      "rank": 8,
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Racist Redskins",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1515.06,
+      "pointsAgainst": 1595.24
+    },
+    {
+      "rank": 9,
+      "managerId": "massey",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "For Whom Odell Tolls",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1511.76,
+      "pointsAgainst": 1399.28
+    },
+    {
+      "rank": 10,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1445.18,
+      "pointsAgainst": 1580.34
+    },
+    {
+      "rank": 11,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "WestboroBaptistSmurf",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1348.4,
+      "pointsAgainst": 1498.76
+    },
+    {
+      "rank": 12,
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDOG",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1502.72,
+      "pointsAgainst": 1466.68
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 123.28
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 124.42
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 109.04
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 79.22
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 91.14
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 134.34
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 77.7
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 81
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 111.38
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 107.54
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 110.34
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 103.62
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 107.98
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 96.82
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 99.18
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 122.4
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 125.64
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 87.02
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 100.7
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 135.62
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 147.78
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 152.66
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 82.74
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 98.58
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 98.16
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 105
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 133.42
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 112.58
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 95.32
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 194.02
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 119.92
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 128.42
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 140.2
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 89.9
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 104.96
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 85
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 94.76
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 102.8
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 145.98
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 119.82
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 119.64
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 141.46
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 80.08
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 140.6
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 138.72
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 129.06
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 111.28
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 103.98
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 115.4
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 76.42
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 97.14
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 122.22
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 162.3
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 106.52
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 138.84
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 101.82
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 132.76
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 147.84
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 140.06
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 91.86
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 86.28
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 129.4
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 149.32
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 94.38
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 170.96
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 118.44
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 114.04
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 89.14
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 79.92
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 164.68
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 138.84
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 82.22
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 123.18
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 113.12
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 155.76
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 135.32
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 97.42
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 131.66
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 129.04
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 95.82
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 98.3
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 97.96
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 95.12
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 158.78
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 140.12
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 103.1
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 100.82
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 110.66
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 160.66
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 157.18
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 98.36
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 85.32
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 103.42
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 115.88
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 87.88
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 120.34
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 80.6
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 138.7
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 113.46
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 78.98
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 152.3
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 81.52
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 105.12
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 105.94
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 79.88
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 94.42
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 130.86
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 116.62
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 101.16
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 75.42
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 126.74
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 97.9
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 159.56
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 108.94
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 112.36
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 136.2
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 167.68
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 121.9
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 118.34
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 97.28
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 118.58
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 110.3
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 99.6
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 118.72
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 131.12
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 120.34
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 132.1
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 129.76
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 123.98
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 103.4
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 132.6
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 73.9
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 120.5
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 106.76
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 119.52
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 91.08
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 137.74
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 109.66
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 139.38
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 134.24
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 96.38
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 128.28
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 72.86
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 165.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 105.98
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 120.52
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 139.28
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 104.48
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 147.36
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 110.02
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 117.84
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 107.96
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 59.72
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 129.7
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 107.9
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 121.32
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 104.94
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 123.14
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 115.34
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 104.96
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 92.04
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 48.62
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 126.56
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 101.82
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "Stfu",
+        "score": 75.44
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "BORATS #1 TEAM",
+        "score": 101.9
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 131.48
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 111.84
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 170.08
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 152.8
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 74.44
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 115.04
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 132.12
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDOG",
+        "score": 80.74
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 131.18
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 71.6
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 123.88
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "TImmy",
+        "score": 132.8
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 115.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Nelson Mandela",
+        "score": 60
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 119.66
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 122.04
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 109.54
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 96.4
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "TImmy"
+    },
+    "runnerUp": {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes"
+    },
+    "thirdPlace": {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy"
+    }
+  }
+}

@@ -1,0 +1,1603 @@
+{
+  "season": 2016,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "seasonTeams": [
+    {
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Password Is Taco",
+      "sourceOwnerId": "frb:96ffb7fd97664824b8174cc27bd2ab92"
+    },
+    {
+      "managerId": "massey",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "For Whom Odell Tolls",
+      "sourceOwnerId": "frb:166ca4ac0cf340eeaedb66160ffeb497"
+    },
+    {
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Last Place 4Ever",
+      "sourceOwnerId": "frb:4a7f20793ef145ad90610153fd827cde"
+    },
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "WestboroBaptistSmurf",
+      "sourceOwnerId": "frb:c8cbf09baad848c295848e69ef382abc"
+    },
+    {
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "NelsonsWoundedKnee",
+      "sourceOwnerId": "frb:8b199f1a7e3f442cb38b1bf6a16a35c5"
+    },
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Stfu",
+      "sourceOwnerId": "frb:49ff07af408d417c96d51cb9d0cb759e"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "sourceOwnerId": "frb:730ca524f94542e4b94be3d9840210c3"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "sourceOwnerId": "frb:089b2fb5eba340a48f690204bd3d58c0"
+    },
+    {
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Racist Redskins",
+      "sourceOwnerId": "frb:1a4d2892a9cd469292c6f87224ba004a"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Nelson Mandela",
+      "sourceOwnerId": "frb:a1e5a2fc4dd944ae910d546547058783"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "BORATS #1 TEAM",
+      "sourceOwnerId": "frb:b1fff52b6d2a403db0832c0356ba70bb"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:3515b4666ee94d9ca9b22c1bf969dfd0"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1661.68,
+      "pointsAgainst": 1535.32
+    },
+    {
+      "rank": 2,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1652.5,
+      "pointsAgainst": 1538.56
+    },
+    {
+      "rank": 3,
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Demaryus Targaryen",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1611.32,
+      "pointsAgainst": 1453.88
+    },
+    {
+      "rank": 4,
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Racist Redskins",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1740.08,
+      "pointsAgainst": 1570.42
+    },
+    {
+      "rank": 5,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1545.56,
+      "pointsAgainst": 1486.92
+    },
+    {
+      "rank": 6,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "WestboroBaptistSmurf",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1466.96,
+      "pointsAgainst": 1562.48
+    },
+    {
+      "rank": 7,
+      "managerId": "massey",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "For Whom Odell Tolls",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1565.76,
+      "pointsAgainst": 1579.66
+    },
+    {
+      "rank": 8,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "Da Goodell Boys Club",
+      "wins": 2,
+      "losses": 11,
+      "pointsFor": 1266.8,
+      "pointsAgainst": 1699.78
+    },
+    {
+      "rank": 9,
+      "managerId": "spornstarr",
+      "sourceManagerName": "Lms",
+      "teamName": "NelsonsWoundedKnee",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1638.8,
+      "pointsAgainst": 1626.06
+    },
+    {
+      "rank": 10,
+      "managerId": "shefler",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Last Place 4Ever",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1637.94,
+      "pointsAgainst": 1542.06
+    },
+    {
+      "rank": 11,
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Password Is Taco",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1505.52,
+      "pointsAgainst": 1510.04
+    },
+    {
+      "rank": 12,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "The Chicago Bears",
+      "wins": 5,
+      "losses": 8,
+      "pointsFor": 1359.3,
+      "pointsAgainst": 1547.04
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 108.28
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 123.7
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 106.9
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 147
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 141.64
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 162.42
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 137.58
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 136.36
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 106.44
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 151.76
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 91.76
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 125.32
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 105.32
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 101.86
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 129.5
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 119.96
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 119.54
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 138.58
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 125.92
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 127.12
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 115.46
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 112.06
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 99.32
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 96.72
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 66.04
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 146.46
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 101.58
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 101.86
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 128.5
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 114.24
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 98.38
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 128.64
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 154.68
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 181.16
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 114.3
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 130.52
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 97.34
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 131.42
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 113.42
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 109.64
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 137.28
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 103.12
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 128.94
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 110.86
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 81.8
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 134.98
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 125
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 117.76
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 115.54
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 94.86
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 139.1
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 131.78
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 110.86
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 158.76
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 87.18
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 121.88
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 139.46
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 138.02
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 97.58
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 165.7
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 103.84
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 105.38
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 91.06
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 95.42
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 122.84
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 133.3
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 110.26
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 82.4
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 125.26
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 124.88
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 80.4
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 159.74
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 82.48
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 126.54
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 152.94
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 89.66
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 94.36
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 111.64
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 148.12
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 125.12
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 139.4
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 108.72
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 142.18
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 98.9
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 149.7
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 137.32
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 109.8
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 149.94
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 151.4
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 69.08
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 110.36
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 88.72
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 116.12
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 99.82
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 127.5
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 99.6
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 137.02
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 112.52
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 94.26
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 134.96
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 93.98
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 127.88
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 128.46
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 111.1
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 136.06
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 143
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 133.34
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 146.18
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 110.44
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 127.1
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 151.42
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 118.92
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 99.48
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 126.04
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 136.66
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 122.84
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 118.18
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 98.04
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 126.64
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 187.82
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 120.7
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 116.28
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 93.88
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 112.08
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 142.14
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 140.4
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 94.98
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 136.6
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 109.88
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 86.34
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 127.7
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 100.88
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 83.54
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 112.54
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 131.5
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 106.86
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 122.36
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 156.6
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 107.26
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 135.2
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 116.26
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 119.12
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 90.04
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 131.04
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 79.06
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 111.06
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 132.36
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 130.88
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 134.44
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 120.62
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 151.38
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 91.04
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 113.5
+      },
+      "away": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 103.96
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 87.88
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 126.16
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 99.94
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 158.24
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 76.5
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 120.28
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 115.3
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 130.6
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 71.9
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 62.84
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "The Chicago Bears",
+        "score": 106.02
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 108.78
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 113.04
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "WestboroBaptistSmurf",
+        "score": 79.84
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 132.06
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 111.96
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 165.74
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 102.38
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 116.7
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 109.06
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 81.72
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 141
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 131.86
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 120.18
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "Da Goodell Boys Club",
+        "score": 65.42
+      },
+      "away": {
+        "managerId": "massey",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "For Whom Odell Tolls",
+        "score": 147.72
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "Demaryus Targaryen",
+        "score": 131.28
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "Racist Redskins",
+        "score": 103.36
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "spornstarr",
+        "sourceManagerName": "Lms",
+        "teamName": "NelsonsWoundedKnee",
+        "score": 173.18
+      },
+      "away": {
+        "managerId": "shefler",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Last Place 4Ever",
+        "score": 125.3
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy"
+    },
+    "runnerUp": {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers"
+    },
+    "thirdPlace": {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Demaryus Targaryen"
+    }
+  }
+}

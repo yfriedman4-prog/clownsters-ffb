@@ -1,0 +1,1331 @@
+{
+  "season": 2014,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "regularSeasonWeeks": 13,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "Stfu",
+      "sourceOwnerId": "frb:49ff07af408d417c96d51cb9d0cb759e"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "sourceOwnerId": "frb:730ca524f94542e4b94be3d9840210c3"
+    },
+    {
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Password Is Taco",
+      "sourceOwnerId": "frb:aee5b26426784493943bbcb0311f06c9"
+    },
+    {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "sourceOwnerId": "frb:089b2fb5eba340a48f690204bd3d58c0"
+    },
+    {
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "Racist Redskins",
+      "sourceOwnerId": "frb:1a4d2892a9cd469292c6f87224ba004a"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "Nelson Mandela",
+      "sourceOwnerId": "frb:a1e5a2fc4dd944ae910d546547058783"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "The Champion",
+      "sourceOwnerId": "frb:2e5d0a07932741289ee29f90a43ad14b"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "BORATS #1 TEAM",
+      "sourceOwnerId": "frb:b1fff52b6d2a403db0832c0356ba70bb"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:3515b4666ee94d9ca9b22c1bf969dfd0"
+    },
+    {
+      "managerId": "avi-aaron",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Bout dat action boss",
+      "sourceOwnerId": "frb:8020af10ecdb402383b0aa03354edaf2"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "The Plante Pirates",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1695.92,
+      "pointsAgainst": 1611.5
+    },
+    {
+      "rank": 2,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1846.84,
+      "pointsAgainst": 1683
+    },
+    {
+      "rank": 3,
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1768.26,
+      "pointsAgainst": 1655.9
+    },
+    {
+      "rank": 4,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremyf",
+      "teamName": "King Hodor",
+      "wins": 9,
+      "losses": 4,
+      "pointsFor": 1739.78,
+      "pointsAgainst": 1546.36
+    },
+    {
+      "rank": 5,
+      "managerId": "avi-aaron",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Bout dat action boss",
+      "wins": 7,
+      "losses": 6,
+      "pointsFor": 1600.44,
+      "pointsAgainst": 1697.7
+    },
+    {
+      "rank": 6,
+      "managerId": "jacob",
+      "sourceManagerName": "Jacob",
+      "teamName": "The Peasants",
+      "wins": 8,
+      "losses": 5,
+      "pointsFor": 1642.4,
+      "pointsAgainst": 1612.14
+    },
+    {
+      "rank": 7,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "I Am The League",
+      "wins": 6,
+      "losses": 7,
+      "pointsFor": 1670.72,
+      "pointsAgainst": 1574.42
+    },
+    {
+      "rank": 8,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "The Champion",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1511.28,
+      "pointsAgainst": 1642.3
+    },
+    {
+      "rank": 9,
+      "managerId": "jon-alport",
+      "sourceManagerName": "--Hidden--",
+      "teamName": "Password Is Taco",
+      "wins": 4,
+      "losses": 9,
+      "pointsFor": 1559.54,
+      "pointsAgainst": 1669.08
+    },
+    {
+      "rank": 10,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 3,
+      "losses": 10,
+      "pointsFor": 1399.44,
+      "pointsAgainst": 1742.22
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 112.66
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 133.46
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 131.12
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 111.66
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 106.52
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 119.44
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 96.78
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 129.66
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 126.74
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 143.92
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 98.74
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 93.68
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 194.38
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 95.74
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 119.14
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 69.44
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 143.28
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 117.28
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 117.34
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 105.56
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 133.2
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 139
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 121.62
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 96.32
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 137.2
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 103.48
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 126.94
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 104.32
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 126.06
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 137.94
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 116.24
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 132.92
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 123.66
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 135.98
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 122.1
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 110.92
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 122.22
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 138.68
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 111.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 155.08
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 129.56
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 151.52
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 134.56
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 164.88
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 82.74
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 105.28
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 114.14
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 112.14
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 141.44
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 86.14
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 107.54
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 102.54
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 129.48
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 177.72
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 100.62
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 147.4
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 112.12
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 134.04
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 120.34
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 83.46
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 116.2
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 148.02
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 115.82
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 102.44
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 119.48
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 132.5
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 135.22
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 145.46
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 120.4
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 115.52
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 151.28
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 96.26
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 159.64
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 153.06
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 179.34
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 161.16
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 185.92
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 155.78
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 126.1
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 116.62
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 156.7
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 95.56
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 154.22
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 90.14
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 129.08
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 138.66
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 115.76
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 150.52
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 113.06
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 95.52
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 112.72
+      },
+      "away": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 157.8
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 148.28
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 100.04
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 137.8
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 162.58
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 118.88
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 136.4
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 111.26
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 124.16
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 142.58
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 80.8
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 132.36
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 137.92
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 174.04
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 121.78
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 88.22
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 136.04
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 92.62
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 76.12
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 121.2
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 131.96
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 153.78
+      },
+      "away": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 133.9
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 117.32
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 118.4
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 148.36
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 107.68
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 85.96
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 157.22
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 172.1
+      },
+      "away": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 110.9
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 136.06
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 169.52
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 142.08
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 144.74
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 137.4
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 133.56
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 109.3
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 135.84
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 169.88
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 159.7
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 95.16
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 172.74
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 171.1
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 91.4
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 136.02
+      },
+      "away": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 105.6
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 97.7
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 108.48
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "jacob",
+        "sourceManagerName": "Jacob",
+        "teamName": "The Peasants",
+        "score": 112.88
+      },
+      "away": {
+        "managerId": "avi-aaron",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Bout dat action boss",
+        "score": 127.8
+      }
+    },
+    {
+      "week": 15,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 102.42
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 96.68
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "I Am The League",
+        "score": 129
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "The Champion",
+        "score": 109.78
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny Pinchers",
+        "score": 100.44
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Danielk",
+        "teamName": "The Plante Pirates",
+        "score": 154.52
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "jon-alport",
+        "sourceManagerName": "--Hidden--",
+        "teamName": "Password Is Taco",
+        "score": 92.42
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 82.02
+      }
+    },
+    {
+      "week": 16,
+      "home": {
+        "managerId": "benjy",
+        "sourceManagerName": "Benjy",
+        "teamName": "The Mongrel Legacy",
+        "score": 126.02
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremyf",
+        "teamName": "King Hodor",
+        "score": 125.16
+      }
+    }
+  ],
+  "podium": {
+    "champion": {
+      "managerId": "kotsias",
+      "sourceManagerName": "Danielk",
+      "teamName": "The Plante Pirates"
+    },
+    "runnerUp": {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny Pinchers"
+    },
+    "thirdPlace": {
+      "managerId": "benjy",
+      "sourceManagerName": "Benjy",
+      "teamName": "The Mongrel Legacy"
+    }
+  }
+}
