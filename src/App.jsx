@@ -10,6 +10,44 @@ const seasonHistory = {
     thirdPlace: 'Reoven',
   },
 }
+const weeklyAwards = seasonData.teams.map((team) => ({
+  team,
+  wins: 0,
+  weeks: [],
+}))
+
+for (let week = 0; week < seasonData.weeks; week++) {
+  const weeklyScores = seasonData.teams.map((team) => ({
+    team,
+    score: seasonData.scores[team][week],
+  }))
+
+  const highestScore = Math.max(
+    ...weeklyScores.map((item) => item.score)
+  )
+
+  weeklyScores
+    .filter((item) => item.score === highestScore)
+    .forEach((winner) => {
+      const manager = weeklyAwards.find(
+        (item) => item.team === winner.team
+      )
+
+      manager.wins += 1
+      manager.weeks.push({
+        week: week + 1,
+        score: winner.score,
+      })
+    })
+}
+
+weeklyAwards.sort((a, b) => {
+  if (b.wins !== a.wins) {
+    return b.wins - a.wins
+  }
+
+  return a.team.localeCompare(b.team)
+})
 function App() {
   const [page, setPage] = useState('dashboard')
   const [selectedWeek, setSelectedWeek] = useState(1)
@@ -1393,7 +1431,54 @@ page !== 'history' ? (
       </div>
 
     </div>
+<div className="history-section-header">
+  <div className="eyebrow">REGULAR SEASON AWARDS</div>
+  <h2>2025 Regular Season Awards</h2>
+</div>
 
+<div className="scoring-champion-card">
+  <div>
+    <span>SCORING CHAMPION</span>
+    <strong>{highestScoringTeam.team}</strong>
+    <div>
+      {highestScoringTeam.pointsFor.toFixed(1)} points
+    </div>
+  </div>
+
+  <div className="scoring-champion-icon">🏆</div>
+</div>
+
+<div className="history-section-header weekly-awards-header">
+  <h2>Weekly High-Score Winners</h2>
+</div>
+
+<div className="weekly-awards">
+  {weeklyAwards
+    .filter((manager) => manager.wins > 0)
+    .map((manager) => (
+      <div className="weekly-award-card" key={manager.team}>
+        <div>
+          <strong>{manager.team}</strong>
+
+          <div className="weekly-award-weeks">
+            {manager.weeks
+              .map(
+                (result) =>
+                  `W${result.week} · ${result.score.toFixed(1)}`
+              )
+              .join('   •   ')}
+          </div>
+        </div>
+
+        <div className="weekly-award-count">
+          {manager.wins}
+          <span>
+            {manager.wins === 1 ? ' WEEKLY WIN' : ' WEEKLY WINS'}
+          </span>
+        </div>
+      </div>
+    ))}
+</div>
     <div className="history-section-header">
       <div className="eyebrow">2025 RECORD BOOK</div>
       <h2>Season Records</h2>
@@ -1401,13 +1486,7 @@ page !== 'history' ? (
 
     <div className="record-grid">
 
-      <div className="record-card">
-        <span>SCORING CHAMPION</span>
-        <strong>{highestScoringTeam.team}</strong>
-        <div>
-          {highestScoringTeam.pointsFor.toFixed(1)}
-        </div>
-      </div>
+      
 
       <div className="record-card">
         <span>HIGHEST WEEK</span>

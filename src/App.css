@@ -1033,7 +1033,7 @@ padding: 0 3%;  display: flex;
 
 .record-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
@@ -1283,4 +1283,94 @@ padding: 0 3%;  display: flex;
 
 .sort-header:hover {
   color: #f4f6fb;
+}
+.weekly-awards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.weekly-award-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border: 1px solid #232b3c;
+  border-radius: 11px;
+  background: #111725;
+}
+
+.weekly-award-card strong {
+  font-size: 16px;
+}
+
+.weekly-award-weeks {
+  margin-top: 6px;
+  color: #7f8ba3;
+  font-size: 11px;
+}
+
+.weekly-award-count {
+  flex-shrink: 0;
+  color: #67d89a;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.weekly-award-count span {
+  display: block;
+  margin-top: 3px;
+  color: #65728a;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 700px) {
+  .weekly-awards {
+    grid-template-columns: 1fr;
+  }
+}
+.scoring-champion-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(50% - 6px);
+  margin-bottom: 18px;
+  padding: 20px 22px;
+  border: 1px solid #232b3c;
+  border-radius: 11px;
+  background: #111725;
+}
+
+.scoring-champion-card span {
+  display: block;
+  color: #65728a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.scoring-champion-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.scoring-champion-card div div {
+  margin-top: 4px;
+  color: #8d9ab0;
+  font-size: 13px;
+}
+
+.scoring-champion-icon {
+  font-size: 28px;
+}
+@media (max-width: 700px) {
+  .scoring-champion-card {
+    width: 100%;
+  }
 }
