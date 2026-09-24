@@ -108,6 +108,10 @@ const [standingsSort, setStandingsSort] = useState({
   key: 'rank',
   direction: 'asc',
 })
+const [powerSort, setPowerSort] = useState({
+  key: 'powerRank',
+  direction: 'asc',
+})
 const handleStandingsSort = (key) => {
   setStandingsSort((current) => {
     if (current.key === key) {
@@ -125,6 +129,30 @@ const handleStandingsSort = (key) => {
           : 'desc',
     }
   })
+}
+const handlePowerSort = (key) => {
+  setPowerSort((current) => {
+    if (current.key === key) {
+      return {
+        key,
+        direction: current.direction === 'asc' ? 'desc' : 'asc',
+      }
+    }
+
+    return {
+      key,
+      direction:
+        key === 'powerRank' || key === 'team'
+          ? 'asc'
+          : 'desc',
+    }
+  })
+}
+
+const getPowerSortIndicator = (key) => {
+  if (powerSort.key !== key) return ''
+
+  return powerSort.direction === 'asc' ? ' ▲' : ' ▼'
 }
 const sortedStandings = [...standings].sort((a, b) => {
   const { key, direction } = standingsSort
@@ -306,6 +334,64 @@ const calculatedPowerRankings = powerRankings
     }
   })
   .sort((a, b) => b.powerScore - a.powerScore)
+  const sortedPowerRankings = [...calculatedPowerRankings].sort((a, b) => {
+  const { key, direction } = powerSort
+
+  let valueA
+  let valueB
+
+  switch (key) {
+    case 'powerRank':
+      valueA = calculatedPowerRankings.indexOf(a)
+      valueB = calculatedPowerRankings.indexOf(b)
+      break
+
+    case 'team':
+      valueA = a.team
+      valueB = b.team
+      break
+
+    case 'powerScore':
+      valueA = a.powerScore
+      valueB = b.powerScore
+      break
+
+    case 'record':
+      valueA = a.wins + a.ties * 0.5
+      valueB = b.wins + b.ties * 0.5
+      break
+
+    case 'allPlay':
+      valueA =
+        a.allPlayWins + (a.allPlayTies || 0) * 0.5
+      valueB =
+        b.allPlayWins + (b.allPlayTies || 0) * 0.5
+      break
+
+    case 'averagePF':
+      valueA = a.averagePF
+      valueB = b.averagePF
+      break
+
+    case 'recentAverage':
+      valueA = a.recentAverage
+      valueB = b.recentAverage
+      break
+
+    default:
+      return 0
+  }
+
+  if (typeof valueA === 'string') {
+    return direction === 'asc'
+      ? valueA.localeCompare(valueB)
+      : valueB.localeCompare(valueA)
+  }
+
+  return direction === 'asc'
+    ? valueA - valueB
+    : valueB - valueA
+})
   return (
     <div className="app">
      <header className="header">
@@ -917,21 +1003,64 @@ page !== 'history' ? (
   <div className="power-table">
 
     <div className="power-row power-heading">
-      <div>#</div>
-      <div>TEAM</div>
-      <div>POWER</div>
-      <div>RECORD</div>
-      <div>ALL-PLAY</div>
-      <div>AVG PF</div>
-      <div>LAST 3</div>
-    </div>
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('powerRank')}
+  >
+    #{getPowerSortIndicator('powerRank')}
+  </button>
 
-    {calculatedPowerRankings.map((team, index) => (
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('team')}
+  >
+    TEAM{getPowerSortIndicator('team')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('powerScore')}
+  >
+    POWER{getPowerSortIndicator('powerScore')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('record')}
+  >
+    RECORD{getPowerSortIndicator('record')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('allPlay')}
+  >
+    ALL-PLAY{getPowerSortIndicator('allPlay')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('averagePF')}
+  >
+    AVG PF{getPowerSortIndicator('averagePF')}
+  </button>
+
+  <button
+    className="sort-header"
+    onClick={() => handlePowerSort('recentAverage')}
+  >
+    LAST 3{getPowerSortIndicator('recentAverage')}
+  </button>
+</div>
+
+{sortedPowerRankings.map((team) => (
       <div className="power-row" key={team.team}>
 
-        <div className="power-rank">
-          {index + 1}
-        </div>
+       <div className="power-rank">
+  {calculatedPowerRankings.findIndex(
+    (item) => item.team === team.team
+  ) + 1}
+</div>
 
         <div className="team-name">
           {team.team}
