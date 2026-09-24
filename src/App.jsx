@@ -1402,7 +1402,7 @@ page !== 'history' ? (
     <div className="record-grid">
 
       <div className="record-card">
-        <span>MOST POINTS</span>
+        <span>SCORING CHAMPION</span>
         <strong>{highestScoringTeam.team}</strong>
         <div>
           {highestScoringTeam.pointsFor.toFixed(1)}
@@ -1444,7 +1444,7 @@ page !== 'history' ? (
 
     <div className="history-standings">
       <div className="history-section-header">
-        <div className="eyebrow">FINAL TABLE</div>
+        <div className="eyebrow">REGULAR SEASON STANDINGS</div>
         <h2>2025 Regular Season</h2>
       </div>
 
