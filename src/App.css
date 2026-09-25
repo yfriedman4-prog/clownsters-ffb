@@ -87,7 +87,41 @@ padding: 0 3%;  display: flex;
   color: #b8c1d4;
   font-size: 14px;
 }
+.season-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 34px 8px 12px;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  background-color: #111725;
+  color: #f4f7fb;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
 
+  background-image:
+    linear-gradient(45deg, transparent 50%, #8b98ad 50%),
+    linear-gradient(135deg, #8b98ad 50%, transparent 50%);
+  background-position:
+    calc(100% - 15px) 50%,
+    calc(100% - 10px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.season-select:hover {
+  border-color: #475569;
+}
+
+.season-select:focus {
+  border-color: #64748b;
+}
+
+.season-select option {
+  background: #111725;
+  color: #f4f7fb;
+}
 .dashboard {
   width: min(1180px, 92%);
   margin: 40px auto 80px;
@@ -1077,7 +1111,7 @@ padding: 0 3%;  display: flex;
 
 .history-row {
   display: grid;
-  grid-template-columns: 55px 2fr 1.25fr 1fr 1fr 1fr;
+  grid-template-columns: 55px 2fr 1.25fr 1fr 1fr 1fr 0.8fr;
   align-items: center;
   min-height: 52px;
   padding: 0 28px;

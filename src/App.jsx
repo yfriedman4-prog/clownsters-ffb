@@ -100,6 +100,48 @@ const historicalScoringChampion =
       week: matchup.week,
     },
   ])
+  const historicalExpectedWins = {}
+
+activeHistoricalSeason.standings.forEach((team) => {
+  historicalExpectedWins[team.managerId] = {
+    allPlayWins: 0,
+    allPlayLosses: 0,
+    allPlayTies: 0,
+  }
+})
+
+for (
+  let week = activeHistoricalSeason.regularSeasonStartWeek;
+  week <= activeHistoricalSeason.regularSeasonEndWeek;
+  week++
+) {
+  const weekScores = historicalRegularSeasonScores.filter(
+    (team) => team.week === week
+  )
+
+  weekScores.forEach((teamA) => {
+    weekScores.forEach((teamB) => {
+      if (teamA.managerId === teamB.managerId) return
+
+      if (teamA.score > teamB.score) {
+        historicalExpectedWins[teamA.managerId].allPlayWins += 1
+      } else if (teamA.score < teamB.score) {
+        historicalExpectedWins[teamA.managerId].allPlayLosses += 1
+      } else {
+        historicalExpectedWins[teamA.managerId].allPlayTies += 1
+      }
+    })
+  })
+}
+
+const historicalTeamCount =
+  activeHistoricalSeason.standings.length
+
+Object.values(historicalExpectedWins).forEach((team) => {
+  team.expectedWins =
+    (team.allPlayWins + team.allPlayTies * 0.5) /
+    (historicalTeamCount - 1)
+})
   const historicalWeeklyAwards = {}
 
 for (
@@ -589,7 +631,8 @@ const calculatedPowerRankings = powerRankings
 
   <div className="season">
   <select
-    value={activeSeason}
+  className="season-select"
+  value={activeSeason}
     onChange={(event) => {
       setActiveSeason(Number(event.target.value))
     }}
@@ -1704,6 +1747,7 @@ page !== 'history' ? (
       <div>RECORD</div>
       <div>PF</div>
       <div>PA</div>
+      <div>xW</div>
     </div>
 
     {[...activeHistoricalSeason.standings]
@@ -1731,6 +1775,9 @@ page !== 'history' ? (
           <div>
             {team.pointsAgainst.toFixed(1)}
           </div>
+          <div>
+  {historicalExpectedWins[team.managerId].expectedWins.toFixed(1)}
+</div>
         </div>
       ))}
   </div>
