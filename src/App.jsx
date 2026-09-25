@@ -75,6 +75,7 @@ weeklyAwards.sort((a, b) => {
   return a.team.localeCompare(b.team)
 })
 function App() {
+  const [mode, setMode] = useState('current')
   const [page, setPage] = useState('dashboard')
   const [activeSeason, setActiveSeason] = useState(2025)
   const activeHistoricalSeason = historicalSeasons[activeSeason]
@@ -604,47 +605,79 @@ const calculatedPowerRankings = powerRankings
     <div className="subtitle">Fantasy Football League</div>
   </div>
 
- <nav className="nav">
-  {[
-    ['dashboard', 'Dashboard'],
-    ['standings', 'Standings'],
-    ['matchups', 'Matchups'],
-    ['teams', 'Teams'],
-    ['analytics', 'Analytics'],
-    ['history', 'History'],
-  ].map(([id, label]) => (
+<div className="header-navigation">
+  <div className="mode-switcher">
     <button
-      key={id}
-      className={`nav-item ${page === id ? 'active' : ''}`}
+      className={`mode-button ${mode === 'current' ? 'active' : ''}`}
       onClick={() => {
-  setPage(id)
-
-  if (id === 'teams') {
-    setSelectedTeam(null)
-  }
-}}
+        setMode('current')
+        setPage('dashboard')
+      }}
     >
-      {label}
+      Current Season
     </button>
-  ))}
-</nav>
 
-  <div className="season">
-  <select
-  className="season-select"
-  value={activeSeason}
-    onChange={(event) => {
-      setActiveSeason(Number(event.target.value))
-    }}
-    aria-label="Select season"
-  >
-    {availableSeasons.map((year) => (
-      <option key={year} value={year}>
-        {year} Season
-      </option>
+    <button
+      className={`mode-button ${mode === 'history' ? 'active' : ''}`}
+      onClick={() => {
+        setMode('history')
+        setPage('history')
+      }}
+    >
+      League History
+    </button>
+  </div>
+
+  <nav className="nav">
+    {(mode === 'current'
+      ? [
+          ['dashboard', 'Dashboard'],
+          ['standings', 'Standings'],
+          ['matchups', 'Matchups'],
+          ['teams', 'Teams'],
+          ['analytics', 'Analytics'],
+        ]
+      : [
+          ['overview', 'Overview'],
+          ['history', 'Seasons'],
+          ['managers', 'Managers'],
+        ]
+    ).map(([id, label]) => (
+      <button
+        key={id}
+        className={`nav-item ${page === id ? 'active' : ''}`}
+        onClick={() => {
+          setPage(id)
+
+          if (id === 'teams') {
+            setSelectedTeam(null)
+          }
+        }}
+      >
+        {label}
+      </button>
     ))}
-  </select>
+  </nav>
 </div>
+
+  {mode === 'history' && page === 'history' && (
+  <div className="season">
+    <select
+      className="season-select"
+      value={activeSeason}
+      onChange={(event) => {
+        setActiveSeason(Number(event.target.value))
+      }}
+      aria-label="Select season"
+    >
+      {availableSeasons.map((year) => (
+        <option key={year} value={year}>
+          {year} Season
+        </option>
+      ))}
+    </select>
+  </div>
+)}
 </header>
 
       <main className="dashboard">
