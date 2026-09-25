@@ -78,6 +78,102 @@ function App() {
   const [page, setPage] = useState('dashboard')
   const [activeSeason, setActiveSeason] = useState(2025)
   const activeHistoricalSeason = historicalSeasons[activeSeason]
+  const historicalRegularSeasonMatchups =
+  activeHistoricalSeason.matchups.filter(
+    (matchup) =>
+      matchup.week >= activeHistoricalSeason.regularSeasonStartWeek &&
+      matchup.week <= activeHistoricalSeason.regularSeasonEndWeek
+  )
+
+const historicalScoringChampion =
+  [...activeHistoricalSeason.standings].sort(
+    (a, b) => b.pointsFor - a.pointsFor
+  )[0]
+  const historicalRegularSeasonScores =
+  historicalRegularSeasonMatchups.flatMap((matchup) => [
+    {
+      ...matchup.home,
+      week: matchup.week,
+    },
+    {
+      ...matchup.away,
+      week: matchup.week,
+    },
+  ])
+  const historicalWeeklyAwards = {}
+
+for (
+  let week = activeHistoricalSeason.regularSeasonStartWeek;
+  week <= activeHistoricalSeason.regularSeasonEndWeek;
+  week++
+) {
+  const weekMatchups = historicalRegularSeasonMatchups.filter(
+    (matchup) => matchup.week === week
+  )
+
+  const weekTeams = weekMatchups.flatMap((matchup) => [
+    matchup.home,
+    matchup.away,
+  ])
+
+  if (weekTeams.length === 0) continue
+
+  const highestScore = Math.max(
+    ...weekTeams.map((team) => team.score)
+  )
+
+  weekTeams
+    .filter((team) => team.score === highestScore)
+    .forEach((team) => {
+      if (!historicalWeeklyAwards[team.managerId]) {
+        historicalWeeklyAwards[team.managerId] = {
+          managerId: team.managerId,
+          teamName: team.teamName,
+          wins: 0,
+          weeks: [],
+        }
+      }
+
+      historicalWeeklyAwards[team.managerId].wins += 1
+      historicalWeeklyAwards[team.managerId].weeks.push({
+        week,
+        score: team.score,
+      })
+    })
+}
+
+const historicalWeeklyAwardLeaders = Object.values(
+  historicalWeeklyAwards
+).sort((a, b) => {
+  if (b.wins !== a.wins) {
+    return b.wins - a.wins
+  }
+
+  return getManagerName(a.managerId).localeCompare(
+    getManagerName(b.managerId)
+  )
+})
+const historicalHighestWeek =
+  [...historicalRegularSeasonScores].sort(
+    (a, b) => b.score - a.score
+  )[0]
+
+const historicalLowestWeek =
+  [...historicalRegularSeasonScores].sort(
+    (a, b) => a.score - b.score
+  )[0]
+
+const historicalBestPointDifferential =
+  [...activeHistoricalSeason.standings]
+    .map((team) => ({
+      ...team,
+      pointDifferential:
+        team.pointsFor - team.pointsAgainst,
+    }))
+    .sort(
+      (a, b) =>
+        b.pointDifferential - a.pointDifferential
+    )[0]
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [pfMode, setPfMode] = useState('total')
@@ -1486,15 +1582,23 @@ page !== 'history' ? (
 </div>
 <div className="history-section-header">
   <div className="eyebrow">REGULAR SEASON AWARDS</div>
-  <h2>2025 Regular Season Awards</h2>
+<h2>{activeSeason} Regular Season Awards</h2>
 </div>
 
 <div className="scoring-champion-card">
   <div>
     <span>SCORING CHAMPION</span>
-    <strong>{highestScoringTeam.team}</strong>
+
+    <strong>
+      {historicalScoringChampion.teamName}
+    </strong>
+
     <div>
-      {highestScoringTeam.pointsFor.toFixed(1)} points
+      {getManagerName(historicalScoringChampion.managerId)}
+    </div>
+
+    <div>
+      {historicalScoringChampion.pointsFor.toFixed(1)} points
     </div>
   </div>
 
@@ -1506,34 +1610,41 @@ page !== 'history' ? (
 </div>
 
 <div className="weekly-awards">
-  {weeklyAwards
-    .filter((manager) => manager.wins > 0)
-    .map((manager) => (
-      <div className="weekly-award-card" key={manager.team}>
-        <div>
-          <strong>{manager.team}</strong>
+  {historicalWeeklyAwardLeaders.map((manager) => (
+    <div
+      className="weekly-award-card"
+      key={manager.managerId}
+    >
+      <div>
+        <strong>{manager.teamName}</strong>
 
-          <div className="weekly-award-weeks">
-            {manager.weeks
-              .map(
-                (result) =>
-                  `W${result.week} · ${result.score.toFixed(1)}`
-              )
-              .join('   •   ')}
-          </div>
+        <div>
+          {getManagerName(manager.managerId)}
         </div>
 
-        <div className="weekly-award-count">
-          {manager.wins}
-          <span>
-            {manager.wins === 1 ? ' WEEKLY WIN' : ' WEEKLY WINS'}
-          </span>
+        <div className="weekly-award-weeks">
+          {manager.weeks
+            .map(
+              (result) =>
+                `W${result.week} · ${result.score.toFixed(1)}`
+            )
+            .join('   •   ')}
         </div>
       </div>
-    ))}
+
+      <div className="weekly-award-count">
+        {manager.wins}
+        <span>
+          {manager.wins === 1
+            ? ' WEEKLY WIN'
+            : ' WEEKLY WINS'}
+        </span>
+      </div>
+    </div>
+  ))}
 </div>
     <div className="history-section-header">
-      <div className="eyebrow">2025 RECORD BOOK</div>
+      <div className="eyebrow">{activeSeason} RECORD BOOK</div>
       <h2>Season Records</h2>
     </div>
 
@@ -1542,35 +1653,40 @@ page !== 'history' ? (
       
 
       <div className="record-card">
-        <span>HIGHEST WEEK</span>
-        <strong>{highestWeeklyScore.team}</strong>
-        <div>
-          {highestWeeklyScore.highScore.toFixed(1)}
-        </div>
-      </div>
+  <span>HIGHEST WEEK</span>
+  <strong>{historicalHighestWeek.teamName}</strong>
+  <div>{getManagerName(historicalHighestWeek.managerId)}</div>
+  <div>
+    {historicalHighestWeek.score.toFixed(1)} · W{historicalHighestWeek.week}
+  </div>
+</div>
 
-      <div className="record-card">
-        <span>LOWEST WEEK</span>
-        <strong>{lowestWeeklyScore.team}</strong>
-        <div>
-          {lowestWeeklyScore.lowScore.toFixed(1)}
-        </div>
-      </div>
+<div className="record-card">
+  <span>LOWEST WEEK</span>
+  <strong>{historicalLowestWeek.teamName}</strong>
+  <div>{getManagerName(historicalLowestWeek.managerId)}</div>
+  <div>
+    {historicalLowestWeek.score.toFixed(1)} · W{historicalLowestWeek.week}
+  </div>
+</div>
 
-      <div className="record-card">
-        <span>BEST POINT DIFFERENTIAL</span>
-        <strong>{bestPointDifferential.team}</strong>
-        <div
-          className={
-            bestPointDifferential.pointDifferential >= 0
-              ? 'positive'
-              : 'negative'
-          }
-        >
-          {bestPointDifferential.pointDifferential > 0 ? '+' : ''}
-          {bestPointDifferential.pointDifferential.toFixed(1)}
-        </div>
-      </div>
+<div className="record-card">
+  <span>BEST POINT DIFFERENTIAL</span>
+  <strong>{historicalBestPointDifferential.teamName}</strong>
+  <div>
+    {getManagerName(historicalBestPointDifferential.managerId)}
+  </div>
+  <div
+    className={
+      historicalBestPointDifferential.pointDifferential >= 0
+        ? 'positive'
+        : 'negative'
+    }
+  >
+    {historicalBestPointDifferential.pointDifferential > 0 ? '+' : ''}
+    {historicalBestPointDifferential.pointDifferential.toFixed(1)}
+  </div>
+</div>
 
     </div>
 
