@@ -345,13 +345,19 @@ function SeasonHistory({
           </div>
 
           {[...activeHistoricalSeason.standings]
-            .sort((a, b) => a.rank - b.rank)
-            .map((team) => (
+  .sort((a, b) => {
+    if (b.wins !== a.wins) {
+      return b.wins - a.wins
+    }
+
+    return b.pointsFor - a.pointsFor
+  })
+  .map((team, index) => (
               <div
                 className="history-row"
                 key={team.managerId}
               >
-                <div>{team.rank}</div>
+                <div>{index + 1}</div>
 
                 <div className="team-name">
                   {team.teamName}
