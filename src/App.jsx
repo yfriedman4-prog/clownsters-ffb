@@ -22,6 +22,7 @@ const managersById = Object.fromEntries(
 
 const getManagerName = (managerId) =>
   managersById[managerId]?.displayName ?? managerId
+import HistoryOverview from './pages/history/HistoryOverview'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 import managerRegistry from './data/history/managers.json'
@@ -549,7 +550,8 @@ page !== 'standings' &&
 page !== 'matchups' &&
 page !== 'teams' &&
 page !== 'analytics' &&
-page !== 'history' ? (
+page !== 'history' &&
+page !== 'overview' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -695,6 +697,13 @@ page !== 'history' ? (
         </section>
     </>
 ) : null}
+{mode === 'history' && page === 'overview' && (
+  <HistoryOverview
+  availableSeasons={availableSeasons}
+  historicalSeasons={historicalSeasons}
+  getManagerName={getManagerName}
+/>
+)}
 {page === 'standings' && (
   <section className="panel">
     <div className="page-header">
