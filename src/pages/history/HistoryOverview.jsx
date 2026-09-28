@@ -11,19 +11,57 @@ function HistoryOverview({
 
   const [startSeason, setStartSeason] = useState(firstSeason)
   const [endSeason, setEndSeason] = useState(lastSeason)
-
+const [managerSort, setManagerSort] = useState({
+  key: 'winPercentage',
+  direction: 'desc',
+})
   const historyStats = aggregateHistory(
     historicalSeasons,
     startSeason,
     endSeason
   )
 const managerStandings = [...historyStats.managers].sort((a, b) => {
-  if (b.winPercentage !== a.winPercentage) {
-    return b.winPercentage - a.winPercentage
+  const key = managerSort.key
+  const direction = managerSort.direction === 'asc' ? 1 : -1
+
+  if (key === 'manager') {
+    return (
+      getManagerName(a.managerId).localeCompare(
+        getManagerName(b.managerId)
+      ) * direction
+    )
   }
 
-  return b.wins - a.wins
+  if (a[key] !== b[key]) {
+    return (a[key] - b[key]) * direction
+  }
+
+  if (b.wins !== a.wins) {
+    return b.wins - a.wins
+  }
+
+  return getManagerName(a.managerId).localeCompare(
+    getManagerName(b.managerId)
+  )
 })
+
+const handleManagerSort = (key) => {
+  setManagerSort((current) => ({
+    key,
+    direction:
+      current.key === key && current.direction === 'desc'
+        ? 'asc'
+        : 'desc',
+  }))
+}
+
+const getSortIndicator = (key) => {
+  if (managerSort.key !== key) {
+    return ''
+  }
+
+  return managerSort.direction === 'desc' ? ' ↓' : ' ↑'
+}
  const winPercentageLeader =
   historyStats.leaders.winPercentage[0]
   const handleStartChange = (event) => {
@@ -200,16 +238,95 @@ const podiumLeaders = historyStats.leaders.podiums
 
   <div className="history-manager-table-wrap">
     <div className="history-manager-table">
-      <div className="history-manager-row history-manager-heading">
-        <div>MANAGER</div>
-        <div>SEASONS</div>
-        <div>W-L</div>
-        <div>WIN %</div>
-        <div>PPG</div>
-        <div>TITLES</div>
-        <div>RUNNER-UP</div>
-        <div>PODIUMS</div>
-      </div>
+     <div className="history-manager-row history-manager-heading">
+  <button
+    type="button"
+    onClick={() => handleManagerSort('manager')}
+    className={
+      managerSort.key === 'manager' ? 'active-sort' : ''
+    }
+  >
+    MANAGER{getSortIndicator('manager')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('seasons')}
+    className={
+      managerSort.key === 'seasons' ? 'active-sort' : ''
+    }
+  >
+    SEASONS{getSortIndicator('seasons')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('wins')}
+    className={
+      managerSort.key === 'wins' ? 'active-sort' : ''
+    }
+  >
+    W-L{getSortIndicator('wins')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('winPercentage')}
+    className={
+      managerSort.key === 'winPercentage'
+        ? 'active-sort'
+        : ''
+    }
+  >
+    WIN %{getSortIndicator('winPercentage')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('pointsPerGame')}
+    className={
+      managerSort.key === 'pointsPerGame'
+        ? 'active-sort'
+        : ''
+    }
+  >
+    PPG{getSortIndicator('pointsPerGame')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('championships')}
+    className={
+      managerSort.key === 'championships'
+        ? 'active-sort'
+        : ''
+    }
+  >
+    TITLES{getSortIndicator('championships')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('runnerUps')}
+    className={
+      managerSort.key === 'runnerUps'
+        ? 'active-sort'
+        : ''
+    }
+  >
+    RUNNER-UP{getSortIndicator('runnerUps')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('podiums')}
+    className={
+      managerSort.key === 'podiums' ? 'active-sort' : ''
+    }
+  >
+    PODIUMS{getSortIndicator('podiums')}
+  </button>
+</div>
 
       {managerStandings.map((manager) => (
         <div

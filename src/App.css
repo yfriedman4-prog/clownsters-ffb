@@ -1737,3 +1737,20 @@ margin-right: 30px;
   color: #67d89a;
   font-weight: 800;
 }
+.history-manager-heading button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.history-manager-heading button:hover {
+  color: #f4f6fb;
+}
+.history-manager-heading button.active-sort {
+  color: #67d89a;
+}
