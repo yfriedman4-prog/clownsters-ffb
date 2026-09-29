@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import { aggregateHistory } from '../../utils/historyAnalytics'
 
+const LEAGUE_ERAS = [
+  { id: 'all', label: 'All Time', startSeason: 2006, endSeason: 2025 },
+  { id: 'high-school', label: 'High School', startSeason: 2006, endSeason: 2009 },
+  { id: 'revival', label: 'Revival', startSeason: 2012, endSeason: 2017 },
+  { id: 'modern', label: 'Modern', startSeason: 2018, endSeason: 2025 },
+]
+
 function HistoryOverview({
   availableSeasons,
   historicalSeasons,
@@ -78,11 +85,20 @@ const getSortIndicator = (key) => {
   const winsLeaders = historyStats.leaders.wins
 const championshipLeaders = historyStats.leaders.championships
 const podiumLeaders = historyStats.leaders.podiums
-
   const handleEndChange = (event) => {
     const year = Number(event.target.value)
     setEndSeason(Math.max(year, startSeason))
   }
+  const activeEra =
+  LEAGUE_ERAS.find(
+    (era) =>
+      era.startSeason === startSeason &&
+      era.endSeason === endSeason
+  )?.id ?? 'custom'
+  const handleEraSelect = (era) => {
+  setStartSeason(era.startSeason)
+  setEndSeason(era.endSeason)
+}
 
   return (
     <section className="history-overview">
@@ -111,6 +127,23 @@ const podiumLeaders = historyStats.leaders.podiums
           <strong>
             {startSeason}–{endSeason}
           </strong>
+        </div>
+
+        <div className="history-era-presets">
+          {LEAGUE_ERAS.map((era) => (
+            <button
+              key={era.id}
+              type="button"
+              className={activeEra === era.id ? 'active' : ''}
+              onClick={() => handleEraSelect(era)}
+            >
+              {era.label}
+            </button>
+          ))}
+
+          {activeEra === 'custom' && (
+            <span className="history-era-custom">Custom</span>
+          )}
         </div>
 
         <div className="history-range-controls">
@@ -183,11 +216,12 @@ const podiumLeaders = historyStats.leaders.podiums
     </strong>
 
     <div>
-      {championshipLeaders[0].championships}{' '}
-      {championshipLeaders[0].championships === 1
-        ? 'title'
-        : 'titles'}
-    </div>
+  {championshipLeaders[0].championships}{' '}
+  {championshipLeaders[0].championships === 1
+    ? 'title'
+    : 'titles'}
+  {championshipLeaders.length > 1 ? ' each' : ''}
+</div>
   </div>
 
   <div className="history-overview-record-card">
@@ -199,12 +233,13 @@ const podiumLeaders = historyStats.leaders.podiums
         .join(' · ')}
     </strong>
 
-    <div>
-      {podiumLeaders[0].podiums}{' '}
-      {podiumLeaders[0].podiums === 1
-        ? 'podium'
-        : 'podiums'}
-    </div>
+   <div>
+  {podiumLeaders[0].podiums}{' '}
+  {podiumLeaders[0].podiums === 1
+    ? 'podium'
+    : 'podiums'}
+  {podiumLeaders.length > 1 ? ' each' : ''}
+</div>
   </div>
 
   <div className="history-overview-record-card">
