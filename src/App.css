@@ -1692,21 +1692,24 @@ margin-right: 30px;
 }
 
 .history-manager-table {
-  min-width: 760px;
+  min-width: 900px;
 }
 
 .history-manager-row {
   display: grid;
   grid-template-columns:
-    minmax(140px, 1.6fr)
-    80px
-    90px
-    80px
+    minmax(150px, 1.5fr)
+    75px
+    85px
     80px
     70px
-    90px
+    85px
+    95px
+    70px
+    95px
     80px;
   align-items: center;
+  gap: 12px;
   min-height: 50px;
   padding: 0 22px;
   border-bottom: 1px solid #20283a;
@@ -1734,8 +1737,8 @@ margin-right: 30px;
 
 .history-manager-winpct,
 .history-manager-title-count {
-  color: #67d89a;
-  font-weight: 800;
+  color: inherit;
+  font-weight: inherit;
 }
 .history-manager-heading button {
   padding: 0;
@@ -1753,4 +1756,15 @@ margin-right: 30px;
 }
 .history-manager-heading button.active-sort {
   color: #67d89a;
+}
+.history-manager-row > *:not(:first-child) {
+  text-align: center;
+}
+
+.history-manager-heading button:not(:first-child) {
+  text-align: center;
+}
+.history-manager-row > :first-child,
+.history-manager-heading button:first-child {
+  text-align: left;
 }

@@ -27,6 +27,7 @@ export function aggregateHistory(
           championships: 0,
           runnerUps: 0,
           thirdPlaces: 0,
+          playoffAppearances: 0,
         }
       }
 
@@ -60,6 +61,47 @@ if (standingsTies != null) {
       manager.pointsFor += team.pointsFor
       manager.pointsAgainst += team.pointsAgainst
     })
+    const regularSeasonStandings = [...season.standings]
+  .map((team) => {
+    const ties =
+      team.ties ??
+      season.matchups.filter(
+        (matchup) =>
+          matchup.week >= season.regularSeasonStartWeek &&
+          matchup.week <= season.regularSeasonEndWeek &&
+          matchup.home.score === matchup.away.score &&
+          (
+            matchup.home.managerId === team.managerId ||
+            matchup.away.managerId === team.managerId
+          )
+      ).length
+
+    const games = team.wins + team.losses + ties
+
+    const winPercentage =
+      games > 0
+        ? (team.wins + ties * 0.5) / games
+        : 0
+
+    return {
+      ...team,
+      ties,
+      winPercentage,
+    }
+  })
+  .sort((a, b) => {
+    if (b.winPercentage !== a.winPercentage) {
+      return b.winPercentage - a.winPercentage
+    }
+
+    return b.pointsFor - a.pointsFor
+  })
+
+regularSeasonStandings
+  .slice(0, 6)
+  .forEach((team) => {
+    managers[team.managerId].playoffAppearances += 1
+  })
 
     const championId = season.podium.champion.managerId
     const runnerUpId = season.podium.runnerUp.managerId
@@ -87,11 +129,21 @@ if (standingsTies != null) {
     manager.championships +
     manager.runnerUps +
     manager.thirdPlaces
+    const playoffPercentage =
+  manager.seasons > 0
+    ? Number(
+        (
+          (manager.playoffAppearances / manager.seasons) *
+          100
+        ).toFixed(1)
+      )
+    : 0
 
 return {
   ...manager,
   games,
   podiums,
+  playoffPercentage,
   pointsFor: Number(manager.pointsFor.toFixed(2)),
   pointsAgainst: Number(manager.pointsAgainst.toFixed(2)),
   pointsPerGame:
@@ -109,7 +161,6 @@ return {
     : 0,
 }
 })
-
 const maxWins = Math.max(
   ...managerStats.map((manager) => manager.wins)
 )

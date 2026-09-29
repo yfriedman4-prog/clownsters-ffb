@@ -46,13 +46,20 @@ const managerStandings = [...historyStats.managers].sort((a, b) => {
 })
 
 const handleManagerSort = (key) => {
-  setManagerSort((current) => ({
-    key,
-    direction:
-      current.key === key && current.direction === 'desc'
-        ? 'asc'
-        : 'desc',
-  }))
+  setManagerSort((current) => {
+    if (current.key === key) {
+      return {
+        key,
+        direction:
+          current.direction === 'desc' ? 'asc' : 'desc',
+      }
+    }
+
+    return {
+      key,
+      direction: key === 'manager' ? 'asc' : 'desc',
+    }
+  })
 }
 
 const getSortIndicator = (key) => {
@@ -238,13 +245,11 @@ const podiumLeaders = historyStats.leaders.podiums
 
   <div className="history-manager-table-wrap">
     <div className="history-manager-table">
-     <div className="history-manager-row history-manager-heading">
+    <div className="history-manager-row history-manager-heading">
   <button
     type="button"
     onClick={() => handleManagerSort('manager')}
-    className={
-      managerSort.key === 'manager' ? 'active-sort' : ''
-    }
+    className={managerSort.key === 'manager' ? 'active-sort' : ''}
   >
     MANAGER{getSortIndicator('manager')}
   </button>
@@ -252,9 +257,7 @@ const podiumLeaders = historyStats.leaders.podiums
   <button
     type="button"
     onClick={() => handleManagerSort('seasons')}
-    className={
-      managerSort.key === 'seasons' ? 'active-sort' : ''
-    }
+    className={managerSort.key === 'seasons' ? 'active-sort' : ''}
   >
     SEASONS{getSortIndicator('seasons')}
   </button>
@@ -262,20 +265,16 @@ const podiumLeaders = historyStats.leaders.podiums
   <button
     type="button"
     onClick={() => handleManagerSort('wins')}
-    className={
-      managerSort.key === 'wins' ? 'active-sort' : ''
-    }
+    className={managerSort.key === 'wins' ? 'active-sort' : ''}
   >
-    W-L{getSortIndicator('wins')}
+    W-L-T{getSortIndicator('wins')}
   </button>
 
   <button
     type="button"
     onClick={() => handleManagerSort('winPercentage')}
     className={
-      managerSort.key === 'winPercentage'
-        ? 'active-sort'
-        : ''
+      managerSort.key === 'winPercentage' ? 'active-sort' : ''
     }
   >
     WIN %{getSortIndicator('winPercentage')}
@@ -285,9 +284,7 @@ const podiumLeaders = historyStats.leaders.podiums
     type="button"
     onClick={() => handleManagerSort('pointsPerGame')}
     className={
-      managerSort.key === 'pointsPerGame'
-        ? 'active-sort'
-        : ''
+      managerSort.key === 'pointsPerGame' ? 'active-sort' : ''
     }
   >
     PPG{getSortIndicator('pointsPerGame')}
@@ -295,11 +292,29 @@ const podiumLeaders = historyStats.leaders.podiums
 
   <button
     type="button"
+    onClick={() => handleManagerSort('playoffAppearances')}
+    className={
+      managerSort.key === 'playoffAppearances' ? 'active-sort' : ''
+    }
+  >
+    PLAYOFFS{getSortIndicator('playoffAppearances')}
+  </button>
+
+  <button
+    type="button"
+    onClick={() => handleManagerSort('playoffPercentage')}
+    className={
+      managerSort.key === 'playoffPercentage' ? 'active-sort' : ''
+    }
+  >
+    PLAYOFF %{getSortIndicator('playoffPercentage')}
+  </button>
+
+  <button
+    type="button"
     onClick={() => handleManagerSort('championships')}
     className={
-      managerSort.key === 'championships'
-        ? 'active-sort'
-        : ''
+      managerSort.key === 'championships' ? 'active-sort' : ''
     }
   >
     TITLES{getSortIndicator('championships')}
@@ -309,9 +324,7 @@ const podiumLeaders = historyStats.leaders.podiums
     type="button"
     onClick={() => handleManagerSort('runnerUps')}
     className={
-      managerSort.key === 'runnerUps'
-        ? 'active-sort'
-        : ''
+      managerSort.key === 'runnerUps' ? 'active-sort' : ''
     }
   >
     RUNNER-UP{getSortIndicator('runnerUps')}
@@ -320,9 +333,7 @@ const podiumLeaders = historyStats.leaders.podiums
   <button
     type="button"
     onClick={() => handleManagerSort('podiums')}
-    className={
-      managerSort.key === 'podiums' ? 'active-sort' : ''
-    }
+    className={managerSort.key === 'podiums' ? 'active-sort' : ''}
   >
     PODIUMS{getSortIndicator('podiums')}
   </button>
@@ -351,6 +362,13 @@ const podiumLeaders = historyStats.leaders.podiums
           <div>
             {manager.pointsPerGame.toFixed(1)}
           </div>
+          <div>
+  {manager.playoffAppearances}
+</div>
+
+<div>
+  {manager.playoffPercentage.toFixed(1)}%
+</div>
 
           <div className="history-manager-title-count">
             {manager.championships}
