@@ -24,6 +24,7 @@ const getManagerName = (managerId) =>
   managersById[managerId]?.displayName ?? managerId
 import HistoryOverview from './pages/history/HistoryOverview'
 import ManagerProfile from './pages/history/ManagerProfile'
+import ManagerDirectory from './pages/history/ManagerDirectory'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 import managerRegistry from './data/history/managers.json'
@@ -82,6 +83,8 @@ function App() {
   const [page, setPage] = useState('dashboard')
   const [activeSeason, setActiveSeason] = useState(2025)
   const [selectedManagerId, setSelectedManagerId] = useState(null)
+  const [managerProfileOrigin, setManagerProfileOrigin] =
+  useState('overview')
   const activeHistoricalSeason = historicalSeasons[activeSeason]
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
@@ -554,6 +557,7 @@ page !== 'teams' &&
 page !== 'analytics' &&
 page !== 'history' &&
   page !== 'overview' &&
+  page !== 'managers' &&
   page !== 'manager-profile' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
@@ -706,10 +710,22 @@ page !== 'history' &&
   historicalSeasons={historicalSeasons}
   getManagerName={getManagerName}
   onSelectManager={(managerId) => {
-    setSelectedManagerId(managerId)
-    setPage('manager-profile')
-  }}
+  setSelectedManagerId(managerId)
+  setManagerProfileOrigin('overview')
+  setPage('manager-profile')
+}}
 />
+)}
+{mode === 'history' && page === 'managers' && (
+  <ManagerDirectory
+    historicalSeasons={historicalSeasons}
+    getManagerName={getManagerName}
+    onSelectManager={(managerId) => {
+  setSelectedManagerId(managerId)
+  setManagerProfileOrigin('managers')
+  setPage('manager-profile')
+}}
+  />
 )}
 {mode === 'history' &&
   page === 'manager-profile' &&
@@ -718,7 +734,12 @@ page !== 'history' &&
       managerId={selectedManagerId}
       historicalSeasons={historicalSeasons}
       getManagerName={getManagerName}
-      onBack={() => setPage('overview')}
+      onBack={() => setPage(managerProfileOrigin)}
+      backLabel={
+  managerProfileOrigin === 'managers'
+    ? 'Managers'
+    : 'Overview'
+}
     />
   )}
 {page === 'standings' && (

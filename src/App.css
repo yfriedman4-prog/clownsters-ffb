@@ -2332,3 +2332,105 @@ button.history-manager-name:hover {
 .history-profile-finish.third {
   color: #c98b5b;
 }
+/* ========================================
+   HISTORY — MANAGER DIRECTORY
+   ======================================== */
+
+.history-manager-directory {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.history-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.history-directory-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.history-directory-card:hover {
+  border-color: #3a465d;
+  transform: translateY(-1px);
+}
+
+.history-directory-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.history-directory-name {
+  color: #f4f6fb;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.history-directory-seasons {
+  margin-top: 4px;
+  color: #69768e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.history-directory-arrow {
+  color: #69768e;
+  font-size: 18px;
+  transition: color 0.15s ease;
+}
+
+.history-directory-card:hover
+.history-directory-arrow {
+  color: #67d89a;
+}
+
+.history-directory-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #20283a;
+}
+
+.history-directory-stats span {
+  display: block;
+  color: #69768e;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.history-directory-stats strong {
+  display: block;
+  margin-top: 5px;
+  color: #f4f6fb;
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .history-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .history-directory-grid {
+    grid-template-columns: 1fr;
+  }
+}

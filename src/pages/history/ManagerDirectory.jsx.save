@@ -1,0 +1,101 @@
+import { aggregateHistory } from '../../utils/historyAnalytics'
+
+function ManagerDirectory({
+  historicalSeasons,
+  getManagerName,
+  onSelectManager,
+}) {
+  const seasons = Object.values(historicalSeasons)
+    .map((season) => season.season)
+    .sort((a, b) => a - b)
+
+  const history = aggregateHistory(
+    historicalSeasons,
+    seasons[0],
+    seasons[seasons.length - 1]
+  )
+
+  const managers = [...history.managerStats].sort((a, b) =>
+    getManagerName(a.managerId).localeCompare(
+      getManagerName(b.managerId)
+    )
+  )
+
+  return (
+    <section className="history-manager-directory">
+      <div className="page-header">
+        <div className="eyebrow">LEAGUE HISTORY</div>
+        <h1>Managers</h1>
+        <p>
+          Career records and profiles for all {managers.length} league
+          managers.
+        </p>
+      </div>
+
+      <div className="history-directory-grid">
+        {managers.map((manager) => (
+          <button
+            type="button"
+            className="history-directory-card"
+            key={manager.managerId}
+            onClick={() =>
+              onSelectManager(manager.managerId)
+            }
+          >
+            <div className="history-directory-card-top">
+              <div>
+                <div className="history-directory-name">
+                  {getManagerName(manager.managerId)}
+                </div>
+
+                <div className="history-directory-seasons">
+                  {manager.seasons}{' '}
+                  {manager.seasons === 1
+                    ? 'season'
+                    : 'seasons'}
+                </div>
+              </div>
+
+              <span className="history-directory-arrow">
+                →
+              </span>
+            </div>
+
+            <div className="history-directory-stats">
+              <div>
+                <span>RECORD</span>
+                <strong>
+                  {manager.wins}-{manager.losses}
+                  {manager.ties > 0
+                    ? `-${manager.ties}`
+                    : ''}
+                </strong>
+              </div>
+
+              <div>
+                <span>WIN %</span>
+                <strong>
+                  {manager.winPercentage.toFixed(1)}%
+                </strong>
+              </div>
+
+              <div>
+                <span>TITLES</span>
+                <strong>{manager.championships}</strong>
+              </div>
+
+              <div>
+                <span>PLAYOFFS</span>
+                <strong>
+                  {manager.playoffAppearances}
+                </strong>
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+export default ManagerDirectory

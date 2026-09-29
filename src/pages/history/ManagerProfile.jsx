@@ -5,6 +5,7 @@ function ManagerProfile({
   historicalSeasons,
   getManagerName,
   onBack,
+    backLabel = 'Overview',
 }) {
   const profile = getManagerProfile(
     historicalSeasons,
@@ -43,7 +44,7 @@ function ManagerProfile({
         className="history-profile-back"
         onClick={onBack}
       >
-        ← Back to Overview
+       ← Back to {backLabel}
       </button>
 
       <div className="page-header history-profile-header">
