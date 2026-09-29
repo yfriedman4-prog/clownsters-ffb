@@ -2,97 +2,97 @@
   "managers": [
     {
       "id": "max",
-      "displayName": "Max",
+      "displayName": "Max Gordon",
       "aliases": ["Max"],
       "status": "active"
     },
     {
       "id": "halpert",
-      "displayName": "Halpert",
+      "displayName": "Jonathan Halpert",
       "aliases": ["Halpert", "Jonathon H"],
       "status": "active"
     },
     {
       "id": "yaakov",
-      "displayName": "Yaakov",
+      "displayName": "Yaakov Friedman",
       "aliases": ["Yaakov"],
       "status": "active"
     },
     {
       "id": "jeremy",
-      "displayName": "Jeremy",
+      "displayName": "Jeremy Firestein",
       "aliases": ["Jeremy", "Jeremyf"],
       "status": "active"
     },
     {
       "id": "benjy",
-      "displayName": "Benjy",
+      "displayName": "Benjy Blumenthal",
       "aliases": ["Benjy"],
       "status": "active"
     },
     {
       "id": "hasten",
-      "displayName": "Hasten",
+      "displayName": "Joseph Hasten",
       "aliases": ["Hasten", "Joseph"],
       "status": "active"
     },
     {
       "id": "kotsias",
-      "displayName": "Kotsias",
+      "displayName": "Daniel Kotsias",
       "aliases": ["Kotsias", "Danielk"],
       "status": "active"
     },
     {
       "id": "alex",
-      "displayName": "Alex",
+      "displayName": "Alex Jakubowski",
       "aliases": ["Alex"],
       "status": "active"
     },
     {
       "id": "yair",
-      "displayName": "Yair",
+      "displayName": "Yair Rudick",
       "aliases": ["Yair", "Slimbig"],
       "status": "active"
     },
     {
       "id": "yaron",
-      "displayName": "Yaron",
+      "displayName": "Yaron Zaret",
       "aliases": ["Yaron", "Rones1992"],
       "status": "active"
     },
     {
       "id": "spornstarr",
-      "displayName": "Spornstarr",
+      "displayName": "Leo Spornstarr",
       "aliases": ["Spornstarr", "Lms"],
       "status": "former"
     },
     {
       "id": "korman",
-      "displayName": "Korman",
+      "displayName": "Leo Korman",
       "aliases": ["Korman", "Leo"],
       "status": "former"
     },
     {
       "id": "jonathan",
-      "displayName": "Jonathan",
+      "displayName": "Jonathan Bernstein",
       "aliases": ["Jonathan"],
       "status": "former"
     },
     {
       "id": "jacob",
-      "displayName": "Jacob",
+      "displayName": "Jacob Cherney",
       "aliases": ["Jacob"],
       "status": "former"
     },
     {
   "id": "jeff",
-  "displayName": "Jeff",
+  "displayName": "Jeffery Camras",
   "aliases": ["Jeff", "Jeffrey"],
   "status": "active"
 },
 {
   "id": "reoven",
-  "displayName": "Reoven",
+  "displayName": "Reoven Bassala",
   "aliases": ["Reoven"],
   "status": "active"
 },
@@ -110,13 +110,13 @@
 },
 {
   "id": "massey",
-  "displayName": "Massey",
+  "displayName": "Aaron Massey",
   "aliases": [],
   "status": "former"
 },
 {
   "id": "shefler",
-  "displayName": "Shefler",
+  "displayName": "Sammy Shefler",
   "aliases": [],
   "status": "former"
 }, 
@@ -128,49 +128,49 @@
 },
 {
   "id": "benji-r",
-  "displayName": "Benji R",
+  "displayName": "Benji Richter",
   "aliases": ["Benjir"],
   "status": "former"
 },
 {
   "id": "redlich",
-  "displayName": "Redlich",
+  "displayName": "Ariel Redlich",
   "aliases": ["Ariel"],
   "status": "former"
 },
 {
   "id": "feiger",
-  "displayName": "Feiger",
+  "displayName": "Ari Feiger",
   "aliases": [],
   "status": "former"
 },
 {
   "id": "adir",
-  "displayName": "Adir",
+  "displayName": "Adir Pinchot",
   "aliases": ["Adir"],
   "status": "former"
 },
 {
   "id": "finn",
-  "displayName": "Finn",
+  "displayName": "Michael Finn",
   "aliases": [],
   "status": "former"
 },
 {
   "id": "q",
-  "displayName": "Q",
+  "displayName": "Joesph Quintas",
   "aliases": [],
   "status": "former"
 },
 {
   "id": "sheppy",
-  "displayName": "Sheppy",
+  "displayName": "Sheppy Barack",
   "aliases": [],
   "status": "former"
 },
 {
   "id": "gutstein",
-  "displayName": "Gutstein",
+  "displayName": "Daniel Gutstein",
   "aliases": [],
   "status": "former"
 }
