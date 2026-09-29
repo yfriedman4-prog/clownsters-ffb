@@ -23,6 +23,7 @@ const managersById = Object.fromEntries(
 const getManagerName = (managerId) =>
   managersById[managerId]?.displayName ?? managerId
 import HistoryOverview from './pages/history/HistoryOverview'
+import ManagerProfile from './pages/history/ManagerProfile'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 import managerRegistry from './data/history/managers.json'
@@ -80,6 +81,7 @@ function App() {
   const [mode, setMode] = useState('current')
   const [page, setPage] = useState('dashboard')
   const [activeSeason, setActiveSeason] = useState(2025)
+  const [selectedManagerId, setSelectedManagerId] = useState(null)
   const activeHistoricalSeason = historicalSeasons[activeSeason]
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
@@ -485,7 +487,7 @@ const calculatedPowerRankings = powerRankings
       className={`mode-button ${mode === 'history' ? 'active' : ''}`}
       onClick={() => {
         setMode('history')
-        setPage('history')
+        setPage('overview')
       }}
     >
       League History
@@ -551,7 +553,8 @@ page !== 'matchups' &&
 page !== 'teams' &&
 page !== 'analytics' &&
 page !== 'history' &&
-page !== 'overview' ? (
+  page !== 'overview' &&
+  page !== 'manager-profile' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -698,12 +701,26 @@ page !== 'overview' ? (
     </>
 ) : null}
 {mode === 'history' && page === 'overview' && (
-  <HistoryOverview
+<HistoryOverview
   availableSeasons={availableSeasons}
   historicalSeasons={historicalSeasons}
   getManagerName={getManagerName}
+  onSelectManager={(managerId) => {
+    setSelectedManagerId(managerId)
+    setPage('manager-profile')
+  }}
 />
 )}
+{mode === 'history' &&
+  page === 'manager-profile' &&
+  selectedManagerId && (
+    <ManagerProfile
+      managerId={selectedManagerId}
+      historicalSeasons={historicalSeasons}
+      getManagerName={getManagerName}
+      onBack={() => setPage('overview')}
+    />
+  )}
 {page === 'standings' && (
   <section className="panel">
     <div className="page-header">

@@ -1692,24 +1692,24 @@ margin-right: 30px;
 }
 
 .history-manager-table {
-  min-width: 900px;
+  min-width: 960px;
 }
 
 .history-manager-row {
   display: grid;
   grid-template-columns:
-    minmax(150px, 1.5fr)
-    75px
-    85px
-    80px
+    minmax(140px, 1.35fr)
     70px
-    85px
-    95px
+    82px
+    78px
     70px
-    95px
-    80px;
+    82px
+    92px
+    68px
+    92px
+    72px;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-height: 50px;
   padding: 0 22px;
   border-bottom: 1px solid #20283a;
@@ -1733,6 +1733,22 @@ margin-right: 30px;
 .history-manager-name {
   color: #f4f6fb;
   font-weight: 800;
+}
+
+button.history-manager-name {
+  width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f4f6fb;
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+button.history-manager-name:hover {
+  color: #67d89a;
 }
 
 .history-manager-winpct,
@@ -1811,4 +1827,508 @@ margin-right: 30px;
 }
 .history-range-controls {
   margin-top: 14px;
+}
+.history-manager-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.history-profile-back {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #69768e;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.history-profile-back:hover {
+  color: #f4f6fb;
+}
+
+.history-profile-header {
+  margin-bottom: 0;
+}
+
+.history-profile-achievements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.history-profile-achievement {
+  min-height: 120px;
+  padding: 20px;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history-profile-achievement span,
+.history-profile-career-grid span {
+  color: #69768e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.history-profile-achievement strong {
+  margin-top: 8px;
+  color: #f4f6fb;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.history-profile-achievement small {
+  margin-top: 7px;
+  color: #67d89a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.history-profile-career {
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+  overflow: hidden;
+}
+
+.history-profile-section-heading {
+  padding: 18px 20px;
+  border-bottom: 1px solid #20283a;
+}
+
+.history-profile-section-heading h2 {
+  margin: 4px 0 0;
+  color: #f4f6fb;
+  font-size: 18px;
+}
+
+.history-profile-career-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.history-profile-career-grid > div {
+  min-width: 0;
+  padding: 18px 20px;
+  border-right: 1px solid #20283a;
+}
+
+.history-profile-career-grid > div:last-child {
+  border-right: 0;
+}
+
+.history-profile-career-grid strong {
+  display: block;
+  margin-top: 7px;
+  color: #f4f6fb;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  .history-profile-achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-profile-career-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .history-profile-career-grid > div {
+    border-bottom: 1px solid #20283a;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-profile-achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .history-profile-career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ========================================
+   HISTORY — MANAGER PROFILE REFINEMENT
+   ======================================== */
+
+.history-manager-profile.panel {
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.history-manager-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-profile-back {
+  align-self: flex-start;
+  margin-bottom: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #7383a4;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.history-profile-back:hover {
+  color: #67d89a;
+}
+
+.history-manager-profile .page-header {
+  padding: 10px 4px 8px;
+}
+
+.history-manager-profile .page-header h1 {
+  margin: 7px 0 5px;
+  font-size: 36px;
+}
+
+.history-manager-profile .page-header p {
+  color: #8290aa;
+  font-size: 13px;
+}
+
+.history-profile-achievements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.history-profile-achievement {
+  min-height: 112px;
+  padding: 20px;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history-profile-achievement span,
+.history-profile-career-grid span {
+  color: #69768e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.history-profile-achievement strong {
+  margin-top: 9px;
+  color: #f4f6fb;
+  font-size: 29px;
+  line-height: 1;
+}
+
+.history-profile-achievement small {
+  margin-top: 7px;
+  color: #67d89a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.history-profile-career {
+  overflow: hidden;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+}
+
+.history-profile-section-heading {
+  padding: 18px 20px;
+  border-bottom: 1px solid #20283a;
+}
+
+.history-profile-section-heading h2 {
+  margin: 4px 0 0;
+  color: #f4f6fb;
+  font-size: 18px;
+}
+
+.history-profile-career-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.history-profile-career-grid > div {
+  min-width: 0;
+  padding: 17px 20px;
+  border-right: 1px solid #20283a;
+}
+
+.history-profile-career-grid > div:last-child {
+  border-right: 0;
+}
+
+.history-profile-career-grid strong {
+  display: block;
+  margin-top: 7px;
+  color: #f4f6fb;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  .history-profile-achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-profile-career-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .history-profile-career-grid > div {
+    border-bottom: 1px solid #20283a;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-manager-profile .page-header {
+    padding-bottom: 18px;
+  }
+
+  .history-profile-achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .history-profile-career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ========================================
+   HISTORY — MANAGER ERA PERFORMANCE
+   ======================================== */
+
+.history-profile-eras {
+  overflow: hidden;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+}
+
+.history-profile-era-heading {
+  border-bottom: 1px solid #20283a;
+}
+
+.history-profile-era-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.history-profile-era-card {
+  min-width: 0;
+  padding: 20px;
+  border-right: 1px solid #20283a;
+}
+
+.history-profile-era-card:last-child {
+  border-right: 0;
+}
+
+.history-profile-era-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.history-profile-era-top > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-profile-era-name {
+  color: #f4f6fb;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.history-profile-era-top small {
+  margin-top: 4px;
+  color: #69768e;
+  font-size: 11px;
+}
+
+.history-profile-era-top > strong {
+  color: #69768e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.history-profile-era-record {
+  margin-top: 22px;
+}
+
+.history-profile-era-record > strong {
+  display: block;
+  color: #f4f6fb;
+  font-size: 25px;
+}
+
+.history-profile-era-record > span {
+  display: block;
+  margin-top: 4px;
+  color: #67d89a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.history-profile-era-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #20283a;
+}
+
+.history-profile-era-stats span {
+  display: block;
+  color: #69768e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.history-profile-era-stats strong {
+  display: block;
+  margin-top: 5px;
+  color: #f4f6fb;
+  font-size: 16px;
+}
+
+.history-profile-era-empty {
+  margin-top: 28px;
+  color: #69768e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .history-profile-era-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-profile-era-card {
+    border-right: 0;
+    border-bottom: 1px solid #20283a;
+  }
+
+  .history-profile-era-card:last-child {
+    border-bottom: 0;
+  }
+}
+/* ========================================
+   HISTORY — MANAGER SEASON HISTORY
+   ======================================== */
+
+.history-profile-seasons {
+  overflow: hidden;
+  border: 1px solid #232b3c;
+  border-radius: 12px;
+  background: #111725;
+}
+
+.history-profile-season-table-wrap {
+  overflow-x: auto;
+}
+
+.history-profile-season-table {
+  min-width: 900px;
+}
+
+.history-profile-season-row {
+  display: grid;
+  grid-template-columns:
+    70px
+    minmax(170px, 1.6fr)
+    90px
+    80px
+    100px
+    75px
+    90px
+    105px;
+  gap: 12px;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid #20283a;
+  color: #aeb8cb;
+  font-size: 13px;
+}
+
+.history-profile-season-row:last-child {
+  border-bottom: 0;
+}
+
+.history-profile-season-heading {
+  min-height: 40px;
+  background: #0e1420;
+  color: #69768e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.history-profile-season-row > *:not(:nth-child(2)) {
+  text-align: center;
+}
+
+.history-profile-season-heading > :nth-child(2),
+.history-profile-season-team {
+  text-align: left;
+}
+
+.history-profile-season-year {
+  color: #f4f6fb;
+  font-weight: 800;
+}
+
+.history-profile-season-team {
+  overflow: hidden;
+  color: #f4f6fb;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-profile-playoff-yes {
+  color: #67d89a;
+  font-weight: 800;
+}
+
+.history-profile-playoff-no {
+  color: #69768e;
+}
+
+.history-profile-finish {
+  font-weight: 800;
+}
+
+.history-profile-finish.champion {
+  color: #f2c94c;
+}
+
+.history-profile-finish.runner-up {
+  color: #d6dbe5;
+}
+
+.history-profile-finish.third {
+  color: #c98b5b;
 }

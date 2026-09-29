@@ -12,6 +12,7 @@ function HistoryOverview({
   availableSeasons,
   historicalSeasons,
   getManagerName,
+  onSelectManager,
 }) {
   const firstSeason = Math.min(...availableSeasons)
   const lastSeason = Math.max(...availableSeasons)
@@ -379,9 +380,13 @@ const podiumLeaders = historyStats.leaders.podiums
           className="history-manager-row"
           key={manager.managerId}
         >
-          <div className="history-manager-name">
-            {getManagerName(manager.managerId)}
-          </div>
+         <button
+  type="button"
+  className="history-manager-name history-manager-link"
+  onClick={() => onSelectManager(manager.managerId)}
+>
+  {getManagerName(manager.managerId)}
+</button>
 
           <div>{manager.seasons}</div>
 
