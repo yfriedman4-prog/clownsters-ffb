@@ -27,6 +27,7 @@ import ManagerProfile from './pages/history/ManagerProfile'
 import ManagerDirectory from './pages/history/ManagerDirectory'
 import { calculateStandings } from './utils/standings'
 import './App.css'
+import RecordBook from './pages/history/RecordBook'
 import managerRegistry from './data/history/managers.json'
 const seasonHistory = {
   2025: {
@@ -507,10 +508,11 @@ const calculatedPowerRankings = powerRankings
           ['analytics', 'Analytics'],
         ]
       : [
-          ['overview', 'Overview'],
-          ['history', 'Seasons'],
-          ['managers', 'Managers'],
-        ]
+  ['overview', 'Overview'],
+  ['history', 'Seasons'],
+  ['managers', 'Managers'],
+  ['records', 'Records'],
+]
     ).map(([id, label]) => (
       <button
         key={id}
@@ -558,7 +560,8 @@ page !== 'analytics' &&
 page !== 'history' &&
   page !== 'overview' &&
   page !== 'managers' &&
-  page !== 'manager-profile' ? (
+  page !== 'manager-profile' &&
+page !== 'records' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
@@ -725,6 +728,12 @@ page !== 'history' &&
   setManagerProfileOrigin('managers')
   setPage('manager-profile')
 }}
+  />
+)}
+{mode === 'history' && page === 'records' && (
+  <RecordBook
+    historicalSeasons={historicalSeasons}
+    getManagerName={getManagerName}
   />
 )}
 {mode === 'history' &&
