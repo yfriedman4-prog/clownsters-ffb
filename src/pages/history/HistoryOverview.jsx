@@ -210,11 +210,13 @@ const podiumLeaders = historyStats.leaders.podiums
   <div className="history-overview-record-card">
     <span>MOST CHAMPIONSHIPS</span>
 
-    <strong>
-      {championshipLeaders
-        .map((manager) => getManagerName(manager.managerId))
-        .join(' · ')}
-    </strong>
+  <strong className="history-leader-name-list">
+  {championshipLeaders.map((manager) => (
+    <span key={manager.managerId}>
+      {getManagerName(manager.managerId)}
+    </span>
+  ))}
+</strong>
 
     <div>
   {championshipLeaders[0].championships}{' '}
@@ -228,11 +230,13 @@ const podiumLeaders = historyStats.leaders.podiums
   <div className="history-overview-record-card">
     <span>MOST PODIUMS</span>
 
-    <strong>
-      {podiumLeaders
-        .map((manager) => getManagerName(manager.managerId))
-        .join(' · ')}
-    </strong>
+   <strong className="history-leader-name-list">
+  {podiumLeaders.map((manager) => (
+    <span key={manager.managerId}>
+      {getManagerName(manager.managerId)}
+    </span>
+  ))}
+</strong>
 
    <div>
   {podiumLeaders[0].podiums}{' '}
