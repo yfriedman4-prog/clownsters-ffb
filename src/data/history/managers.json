@@ -39,7 +39,7 @@
     {
       "id": "kotsias",
       "displayName": "Daniel Kotsias",
-      "aliases": ["Kotsias", "Danielk"],
+      "aliases": ["Kotsias", "Danielk", "Daniel"],
       "status": "active"
     },
     {
@@ -153,7 +153,7 @@
 {
   "id": "finn",
   "displayName": "Michael Finn",
-  "aliases": [],
+  "aliases": ["Michael"],
   "status": "former"
 },
 {

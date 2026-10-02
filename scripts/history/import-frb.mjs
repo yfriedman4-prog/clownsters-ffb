@@ -179,39 +179,56 @@ if (!championshipRow) {
   throw new Error(`No championship record found for ${season}`)
 }
 
-const podium = {
-  champion: {
-    managerId: resolveManager(
-      championshipRow['1st Place Owner'],
-      championshipRow['1st Place Team'],
-      season
-    ),
-    sourceManagerName: championshipRow['1st Place Owner'],
-    teamName: championshipRow['1st Place Team'],
-  },
-  runnerUp: {
-    managerId: resolveManager(
-      championshipRow['2nd Place Owner'],
-      championshipRow['2nd Place Team'],
-      season
-    ),
-    sourceManagerName: championshipRow['2nd Place Owner'],
-    teamName: championshipRow['2nd Place Team'],
-  },
-  thirdPlace: {
-    managerId: resolveManager(
-      championshipRow['3rd Place Owner'],
-      championshipRow['3rd Place Team'],
-      season
-    ),
-    sourceManagerName: championshipRow['3rd Place Owner'],
-    teamName: championshipRow['3rd Place Team'],
-  },
-}
+const hasCompletedPodium =
+  championshipRow['1st Place Owner'] &&
+  championshipRow['1st Place Team'] &&
+  championshipRow['2nd Place Owner'] &&
+  championshipRow['2nd Place Team'] &&
+  championshipRow['3rd Place Owner'] &&
+  championshipRow['3rd Place Team']
 
-const regularSeasonWeeks = Math.max(
+const podium = hasCompletedPodium
+  ? {
+      champion: {
+        managerId: resolveManager(
+          championshipRow['1st Place Owner'],
+          championshipRow['1st Place Team'],
+          season
+        ),
+        sourceManagerName: championshipRow['1st Place Owner'],
+        teamName: championshipRow['1st Place Team'],
+      },
+      runnerUp: {
+        managerId: resolveManager(
+          championshipRow['2nd Place Owner'],
+          championshipRow['2nd Place Team'],
+          season
+        ),
+        sourceManagerName: championshipRow['2nd Place Owner'],
+        teamName: championshipRow['2nd Place Team'],
+      },
+      thirdPlace: {
+        managerId: resolveManager(
+          championshipRow['3rd Place Owner'],
+          championshipRow['3rd Place Team'],
+          season
+        ),
+        sourceManagerName: championshipRow['3rd Place Owner'],
+        teamName: championshipRow['3rd Place Team'],
+      },
+    }
+  : null
+const seasonStatus = podium ? 'complete' : 'in_progress'
+
+const completedThroughWeek = Math.max(
   ...standings.map((standing) => standing.wins + standing.losses)
 )
+
+const regularSeasonWeeks =
+  seasonStatus === 'in_progress' && season === 2026
+    ? 14
+    : completedThroughWeek
+
 const firstMatchupWeek = Math.min(
   ...matchups.map((matchup) => matchup.week)
 )
@@ -226,6 +243,8 @@ const normalized = {
     provider: 'Fantasy Record Book',
     importedFrom: 'FRB CSV export',
   },
+  seasonStatus,
+  completedThroughWeek,
   regularSeasonWeeks,
   regularSeasonStartWeek,
   regularSeasonEndWeek,

@@ -1,0 +1,1471 @@
+{
+  "season": 2026,
+  "source": {
+    "provider": "Fantasy Record Book",
+    "importedFrom": "FRB CSV export"
+  },
+  "seasonStatus": "in_progress",
+  "completedThroughWeek": 3,
+  "regularSeasonWeeks": 14,
+  "regularSeasonStartWeek": 1,
+  "regularSeasonEndWeek": 14,
+  "seasonTeams": [
+    {
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "sourceOwnerId": "frb:dd67357abb9246ce91f972b8a46891a3"
+    },
+    {
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "sourceOwnerId": "frb:dac61610c57c48958f72c83506754cec"
+    },
+    {
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "sourceOwnerId": "frb:df112cf25046447da19ce27fe8aaf6be"
+    },
+    {
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "sourceOwnerId": "frb:f0c28cb267b745d5b89c561750bea4f7"
+    },
+    {
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "sourceOwnerId": "frb:ec7857f7e9cf4264ab24ca4ea3ca368f"
+    },
+    {
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Likely Injured",
+      "sourceOwnerId": "frb:23964a8578e74532ad6e5a6405c4de29"
+    },
+    {
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Cee Deez Nuts",
+      "sourceOwnerId": "frb:5e66cfc4706c4390a382fd800b71af93"
+    },
+    {
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "sourceOwnerId": "frb:fbd381975aa242c0a82172c1e96f80f2"
+    },
+    {
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "sourceOwnerId": "frb:0b49254d2e3343de90448380da3cff17"
+    },
+    {
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "The Dearborn Squad",
+      "sourceOwnerId": "frb:1857e9ba3d244df3891943967636fb9e"
+    },
+    {
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "sourceOwnerId": "frb:6d0a9666607a42ab9dcb79a5e691ec9a"
+    },
+    {
+      "managerId": "finn",
+      "sourceManagerName": "Michael",
+      "teamName": "Pukaluxklan",
+      "sourceOwnerId": "frb:b575703b858045e7a6093f43620e970e"
+    }
+  ],
+  "standings": [
+    {
+      "rank": 0,
+      "managerId": "max",
+      "sourceManagerName": "Max",
+      "teamName": "mongrel",
+      "wins": 2,
+      "losses": 1,
+      "pointsFor": 393.38,
+      "pointsAgainst": 391.9
+    },
+    {
+      "rank": 0,
+      "managerId": "jeff",
+      "sourceManagerName": "Jeffrey",
+      "teamName": "Da Bears",
+      "wins": 1,
+      "losses": 2,
+      "pointsFor": 386.34,
+      "pointsAgainst": 388.44
+    },
+    {
+      "rank": 0,
+      "managerId": "kotsias",
+      "sourceManagerName": "Daniel",
+      "teamName": "The Dearborn Squad",
+      "wins": 1,
+      "losses": 2,
+      "pointsFor": 433.14,
+      "pointsAgainst": 409.98
+    },
+    {
+      "rank": 0,
+      "managerId": "jeremy",
+      "sourceManagerName": "Jeremy",
+      "teamName": "Team Sandwich Club",
+      "wins": 1,
+      "losses": 2,
+      "pointsFor": 346.84,
+      "pointsAgainst": 421
+    },
+    {
+      "rank": 0,
+      "managerId": "yaakov",
+      "sourceManagerName": "Yaakov",
+      "teamName": "Couchpotatoes",
+      "wins": 2,
+      "losses": 1,
+      "pointsFor": 446.48,
+      "pointsAgainst": 415.58
+    },
+    {
+      "rank": 0,
+      "managerId": "yaron",
+      "sourceManagerName": "Rones1992",
+      "teamName": "ZDAWG",
+      "wins": 1,
+      "losses": 2,
+      "pointsFor": 404.56,
+      "pointsAgainst": 471.26
+    },
+    {
+      "rank": 0,
+      "managerId": "reoven",
+      "sourceManagerName": "Reoven",
+      "teamName": "Reoven's Rad Team",
+      "wins": 3,
+      "losses": 0,
+      "pointsFor": 430.58,
+      "pointsAgainst": 394.86
+    },
+    {
+      "rank": 0,
+      "managerId": "alex",
+      "sourceManagerName": "Alex",
+      "teamName": "Likely Injured",
+      "wins": 0,
+      "losses": 3,
+      "pointsFor": 306.2,
+      "pointsAgainst": 439.38
+    },
+    {
+      "rank": 0,
+      "managerId": "halpert",
+      "sourceManagerName": "Jonathon H",
+      "teamName": "Penny pinchers",
+      "wins": 2,
+      "losses": 1,
+      "pointsFor": 401.5,
+      "pointsAgainst": 338.66
+    },
+    {
+      "rank": 0,
+      "managerId": "finn",
+      "sourceManagerName": "Michael",
+      "teamName": "Pukaluxklan",
+      "wins": 2,
+      "losses": 1,
+      "pointsFor": 427.46,
+      "pointsAgainst": 427.38
+    },
+    {
+      "rank": 0,
+      "managerId": "hasten",
+      "sourceManagerName": "Joseph",
+      "teamName": "Cee Deez Nuts",
+      "wins": 3,
+      "losses": 0,
+      "pointsFor": 484,
+      "pointsAgainst": 299.88
+    },
+    {
+      "rank": 0,
+      "managerId": "yair",
+      "sourceManagerName": "Slimbig",
+      "teamName": "Herbo",
+      "wins": 0,
+      "losses": 3,
+      "pointsFor": 375.94,
+      "pointsAgainst": 438.1
+    }
+  ],
+  "matchups": [
+    {
+      "week": 1,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 109.5
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 117.5
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 154.96
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 140.52
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 171.32
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 121.86
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 181.16
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 139.74
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 122.4
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 138.86
+      }
+    },
+    {
+      "week": 1,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 154
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 144.76
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 154.76
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 92.3
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 113.22
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 143.98
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 182.06
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 108.88
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 133
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 123.12
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 130.78
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 147.28
+      }
+    },
+    {
+      "week": 2,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 136.48
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 132.34
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 137.24
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 128.86
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 159.28
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 142.88
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 130.62
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 69.14
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 133.7
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 69.84
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 162.76
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 121.2
+      }
+    },
+    {
+      "week": 3,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 141.68
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 144.44
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 4,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 5,
+      "home": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 6,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 7,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 8,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 9,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 10,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 11,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 12,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    },
+    {
+      "week": 13,
+      "home": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "halpert",
+        "sourceManagerName": "Jonathon H",
+        "teamName": "Penny pinchers",
+        "score": 0
+      },
+      "away": {
+        "managerId": "kotsias",
+        "sourceManagerName": "Daniel",
+        "teamName": "The Dearborn Squad",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "finn",
+        "sourceManagerName": "Michael",
+        "teamName": "Pukaluxklan",
+        "score": 0
+      },
+      "away": {
+        "managerId": "max",
+        "sourceManagerName": "Max",
+        "teamName": "mongrel",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "hasten",
+        "sourceManagerName": "Joseph",
+        "teamName": "Cee Deez Nuts",
+        "score": 0
+      },
+      "away": {
+        "managerId": "alex",
+        "sourceManagerName": "Alex",
+        "teamName": "Likely Injured",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "jeff",
+        "sourceManagerName": "Jeffrey",
+        "teamName": "Da Bears",
+        "score": 0
+      },
+      "away": {
+        "managerId": "jeremy",
+        "sourceManagerName": "Jeremy",
+        "teamName": "Team Sandwich Club",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaakov",
+        "sourceManagerName": "Yaakov",
+        "teamName": "Couchpotatoes",
+        "score": 0
+      },
+      "away": {
+        "managerId": "yair",
+        "sourceManagerName": "Slimbig",
+        "teamName": "Herbo",
+        "score": 0
+      }
+    },
+    {
+      "week": 14,
+      "home": {
+        "managerId": "yaron",
+        "sourceManagerName": "Rones1992",
+        "teamName": "ZDAWG",
+        "score": 0
+      },
+      "away": {
+        "managerId": "reoven",
+        "sourceManagerName": "Reoven",
+        "teamName": "Reoven's Rad Team",
+        "score": 0
+      }
+    }
+  ],
+  "podium": null
+}
