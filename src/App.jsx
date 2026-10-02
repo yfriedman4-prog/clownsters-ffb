@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import seasonData from './data/2025.json'
-import matchupData from './data/2025-matchups.json'
+// import seasonData from './data/2025.json'
+// import matchupData from './data/2025-matchups.json'
 import SeasonHistory from './pages/history/SeasonHistory'
 const historicalSeasonModules = import.meta.glob(
   './data/history/seasons/*.json',
@@ -13,6 +13,84 @@ const historicalSeasons = Object.fromEntries(
     season,
   ])
 )
+const CURRENT_SEASON = 2026
+const currentSeason = historicalSeasons[CURRENT_SEASON]
+const completedCurrentMatchups = currentSeason.matchups.filter(
+  (matchup) => matchup.week <= currentSeason.completedThroughWeek
+)
+const scheduledCurrentMatchups = currentSeason.matchups
+const currentTeams = currentSeason.seasonTeams.map(
+  (team) => team.teamName
+)
+
+const seasonData = {
+  year: CURRENT_SEASON,
+  weeks: currentSeason.completedThroughWeek,
+  teams: currentTeams,
+  scores: Object.fromEntries(
+    currentTeams.map((teamName) => [
+      teamName,
+      Array.from(
+        { length: currentSeason.completedThroughWeek },
+        (_, index) => {
+          const week = index + 1
+
+          const matchup = completedCurrentMatchups.find(
+            (game) =>
+              game.week === week &&
+              (game.home.teamName === teamName ||
+                game.away.teamName === teamName)
+          )
+
+          if (!matchup) return 0
+
+          return matchup.home.teamName === teamName
+            ? matchup.home.score
+            : matchup.away.score
+        }
+      ),
+    ])
+  ),
+}
+
+const matchupData = {
+  matchups: Array.from(
+    { length: currentSeason.completedThroughWeek },
+    (_, index) => {
+      const week = index + 1
+
+      return {
+        week,
+        games: completedCurrentMatchups
+          .filter((matchup) => matchup.week === week)
+          .map((matchup) => [
+            matchup.home.teamName,
+            matchup.away.teamName,
+          ]),
+      }
+    }
+  ),
+}
+const currentScheduleData = {
+  matchups: Array.from(
+    { length: currentSeason.regularSeasonWeeks },
+    (_, index) => {
+      const week = index + 1
+
+      return {
+        week,
+        games: currentSeason.matchups
+          .filter((matchup) => matchup.week === week)
+          .map((matchup) => ({
+            home: matchup.home,
+            away: matchup.away,
+            isCompleted:
+              week <= currentSeason.completedThroughWeek,
+          })),
+      }
+    }
+  ),
+}
 const managersById = Object.fromEntries(
   managerRegistry.managers.map((manager) => [
     manager.id,
@@ -29,15 +107,9 @@ import { calculateStandings } from './utils/standings'
 import './App.css'
 import RecordBook from './pages/history/RecordBook'
 import managerRegistry from './data/history/managers.json'
-const seasonHistory = {
-  2025: {
-    champion: 'Yaakov',
-    runnerUp: 'Benjy',
-    thirdPlace: 'Reoven',
-  },
-}
+
 const availableSeasons = [
-  2025, 2024, 2023, 2022, 2021, 2020,
+  2026, 2025, 2024, 2023, 2022, 2021, 2020,
   2019, 2018, 2017, 2016, 2015, 2014,
   2013, 2012, 2009, 2008, 2007, 2006,
 ]
@@ -82,7 +154,7 @@ weeklyAwards.sort((a, b) => {
 function App() {
   const [mode, setMode] = useState('current')
   const [page, setPage] = useState('dashboard')
-  const [activeSeason, setActiveSeason] = useState(2025)
+  const [activeSeason, setActiveSeason] = useState(CURRENT_SEASON)
   const [selectedManagerId, setSelectedManagerId] = useState(null)
   const [managerProfileOrigin, setManagerProfileOrigin] =
   useState('overview')
@@ -92,39 +164,48 @@ function App() {
   const [pfMode, setPfMode] = useState('total')
 const [paMode, setPaMode] = useState('total')
   const standings = calculateStandings(seasonData, matchupData)
-  const selectedWeekData = matchupData.matchups.find(
+  const selectedWeekData = currentScheduleData.matchups.find(
   (week) => week.week === selectedWeek
 )
 const getTeamWeeklyResults = (teamName) => {
-  return matchupData.matchups.map((weekData) => {
-    const game = weekData.games.find(
-      ([teamA, teamB]) =>
-        teamA === teamName || teamB === teamName
-    )
+  return currentScheduleData.matchups
+    .map((weekData) => {
+      const game = weekData.games.find(
+        (game) =>
+          game.home.teamName === teamName ||
+          game.away.teamName === teamName
+      )
 
-    if (!game) return null
+      if (!game) return null
 
-    const [teamA, teamB] = game
-    const opponent = teamA === teamName ? teamB : teamA
-    const weekIndex = weekData.week - 1
+      const isHome = game.home.teamName === teamName
+      const team = isHome ? game.home : game.away
+      const opponent = isHome ? game.away : game.home
 
-    const score = seasonData.scores[teamName][weekIndex]
-    const opponentScore = seasonData.scores[opponent][weekIndex]
+      if (!game.isCompleted) {
+        return {
+          week: weekData.week,
+          opponent: opponent.teamName,
+          isCompleted: false,
+        }
+      }
 
-    let result = 'T'
+      let result = 'T'
 
-    if (score > opponentScore) result = 'W'
-    if (score < opponentScore) result = 'L'
+      if (team.score > opponent.score) result = 'W'
+      if (team.score < opponent.score) result = 'L'
 
-    return {
-      week: weekData.week,
-      opponent,
-      score,
-      opponentScore,
-      result,
-      margin: score - opponentScore,
-    }
-  }).filter(Boolean)
+      return {
+        week: weekData.week,
+        opponent: opponent.teamName,
+        score: team.score,
+        opponentScore: opponent.score,
+        result,
+        margin: team.score - opponent.score,
+        isCompleted: true,
+      }
+    })
+    .filter(Boolean)
 }
 const scoringRankings = [...standings].sort(
   (a, b) => b.pointsFor - a.pointsFor
@@ -754,7 +835,7 @@ page !== 'records' ? (
 {page === 'standings' && (
   <section className="panel">
     <div className="page-header">
-      <div className="eyebrow">2025 SEASON</div>
+      <div className="eyebrow">{CURRENT_SEASON} SEASON</div>
       <h1>League Standings</h1>
       <p>Full season standings and performance metrics.</p>
     </div>
@@ -878,7 +959,7 @@ page !== 'records' ? (
   <section>
     <div className="matchups-header">
       <div>
-        <div className="eyebrow">2025 SEASON</div>
+        <div className="eyebrow">{CURRENT_SEASON} SEASON</div>
         <h1>Weekly Matchups</h1>
         <p>Select a week to view results.</p>
       </div>
@@ -888,7 +969,7 @@ page !== 'records' ? (
         value={selectedWeek}
         onChange={(e) => setSelectedWeek(Number(e.target.value))}
       >
-        {matchupData.matchups.map((week) => (
+        {currentScheduleData.matchups.map((week) => (
           <option key={week.week} value={week.week}>
             Week {week.week}
           </option>
@@ -897,42 +978,48 @@ page !== 'records' ? (
     </div>
 
     <div className="matchup-grid">
-      {selectedWeekData.games.map(([teamA, teamB]) => {
-        const scoreA =
-          seasonData.scores[teamA][selectedWeek - 1]
+      {selectedWeekData.games.map((game) => {
+  const teamA = game.home.teamName
+  const teamB = game.away.teamName
 
-        const scoreB =
-          seasonData.scores[teamB][selectedWeek - 1]
+  const scoreA = game.home.score
+  const scoreB = game.away.score
 
-        const winnerA = scoreA > scoreB
-        const winnerB = scoreB > scoreA
+  const winnerA = game.isCompleted && scoreA > scoreB
+  const winnerB = game.isCompleted && scoreB > scoreA
 
-        return (
-          <div className="matchup-card" key={`${teamA}-${teamB}`}>
-            <div
-              className={`matchup-team ${
-                winnerA ? 'winner' : ''
-              }`}
-            >
-              <span>{teamA}</span>
-              <strong>{scoreA.toFixed(2)}</strong>
-            </div>
+  return (
+    <div className="matchup-card" key={`${teamA}-${teamB}`}>
+      <div
+        className={`matchup-team ${
+          winnerA ? 'winner' : ''
+        }`}
+      >
+        <span>{teamA}</span>
 
-            <div
-              className={`matchup-team ${
-                winnerB ? 'winner' : ''
-              }`}
-            >
-              <span>{teamB}</span>
-              <strong>{scoreB.toFixed(2)}</strong>
-            </div>
+        {game.isCompleted && (
+          <strong>{scoreA.toFixed(2)}</strong>
+        )}
+      </div>
 
-            <div className="matchup-footer">
-              Final
-            </div>
-          </div>
-        )
-      })}
+      <div
+        className={`matchup-team ${
+          winnerB ? 'winner' : ''
+        }`}
+      >
+        <span>{teamB}</span>
+
+        {game.isCompleted && (
+          <strong>{scoreB.toFixed(2)}</strong>
+        )}
+      </div>
+
+      <div className="matchup-footer">
+        {game.isCompleted ? 'Final' : 'Scheduled'}
+      </div>
+    </div>
+  )
+})}
     </div>
   </section>
 )}
@@ -950,7 +1037,7 @@ page !== 'records' ? (
 
         <div className="profile-hero">
           <div>
-            <div className="eyebrow">2025 TEAM PROFILE</div>
+            <div className="eyebrow">{CURRENT_SEASON} TEAM PROFILE</div>
 
             <h1>{selectedTeam.team}</h1>
 
@@ -1023,7 +1110,7 @@ page !== 'records' ? (
         <div className="profile-results">
           <div className="profile-section-header">
             <div className="eyebrow">GAME LOG</div>
-            <h2>Weekly Results</h2>
+            <h2>Season Schedule</h2>
           </div>
 
           <div className="results-table">
@@ -1037,38 +1124,58 @@ page !== 'records' ? (
             </div>
 
             {getTeamWeeklyResults(selectedTeam.team).map((game) => (
-              <div
-                className="results-row"
-                key={game.week}
-              >
-                <div>{game.week}</div>
+  <div
+    className="results-row"
+    key={game.week}
+  >
+    <div>{game.week}</div>
 
-                <div className="team-name">
-                  {game.opponent}
-                </div>
+    <div className="team-name">
+      {game.opponent}
+    </div>
 
-                <div>
-                  <span
-                    className={`result-badge result-${game.result.toLowerCase()}`}
-                  >
-                    {game.result}
-                  </span>
-                </div>
+    <div>
+      {game.isCompleted ? (
+        <span
+          className={`result-badge result-${game.result.toLowerCase()}`}
+        >
+          {game.result}
+        </span>
+      ) : (
+        <span>Scheduled</span>
+      )}
+    </div>
 
-                <div>{game.score.toFixed(2)}</div>
+    <div>
+      {game.isCompleted ? game.score.toFixed(2) : '—'}
+    </div>
 
-                <div>{game.opponentScore.toFixed(2)}</div>
+    <div>
+      {game.isCompleted
+        ? game.opponentScore.toFixed(2)
+        : '—'}
+    </div>
 
-                <div
-                  className={
-                    game.margin >= 0 ? 'positive' : 'negative'
-                  }
-                >
-                  {game.margin > 0 ? '+' : ''}
-                  {game.margin.toFixed(2)}
-                </div>
-              </div>
-            ))}
+    <div
+      className={
+        game.isCompleted
+          ? game.margin >= 0
+            ? 'positive'
+            : 'negative'
+          : ''
+      }
+    >
+      {game.isCompleted ? (
+        <>
+          {game.margin > 0 ? '+' : ''}
+          {game.margin.toFixed(2)}
+        </>
+      ) : (
+        '—'
+      )}
+    </div>
+  </div>
+))}
           </div>
         </div>
 
@@ -1077,7 +1184,7 @@ page !== 'records' ? (
       <>
         <div className="teams-header">
           <div>
-            <div className="eyebrow">2025 SEASON</div>
+            <div className="eyebrow">{CURRENT_SEASON} SEASON</div>
             <h1>Teams</h1>
             <p>Select a team to view its season profile.</p>
           </div>
@@ -1146,7 +1253,7 @@ page !== 'records' ? (
   <section>
     <div className="analytics-header">
       <div>
-        <div className="eyebrow">2025 SEASON</div>
+        <div className="eyebrow">{CURRENT_SEASON} SEASON</div>
         <h1>League Analytics</h1>
         <p>
           A deeper look at scoring strength, expected performance,
@@ -1158,7 +1265,9 @@ page !== 'records' ? (
 
   <div className="power-header">
     <div>
-      <div className="eyebrow">2025 FINAL</div>
+      <div className="eyebrow">
+  {CURRENT_SEASON} THROUGH WEEK {currentSeason.completedThroughWeek}
+</div>
       <h2>Power Rankings</h2>
       <p>
         Team strength based on all-play performance, scoring,
