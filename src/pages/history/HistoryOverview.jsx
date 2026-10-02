@@ -28,6 +28,14 @@ const [managerSort, setManagerSort] = useState({
     startSeason,
     endSeason
   )
+  const minSeason = Math.min(...availableSeasons)
+const maxSeason = Math.max(...availableSeasons)
+const sliderSeasons = [...availableSeasons].sort((a, b) => a - b)
+
+const startSeasonIndex = sliderSeasons.indexOf(startSeason)
+const endSeasonIndex = sliderSeasons.indexOf(endSeason)
+
+
 const managerStandings = [...historyStats.managers].sort((a, b) => {
   const key = managerSort.key
   const direction = managerSort.direction === 'asc' ? 1 : -1
@@ -90,6 +98,10 @@ const podiumLeaders = historyStats.leaders.podiums
     const year = Number(event.target.value)
     setEndSeason(Math.max(year, startSeason))
   }
+  const selectedSeasonCount =
+  availableSeasons.filter(
+    (year) => year >= startSeason && year <= endSeason
+  ).length
   const activeEra =
   LEAGUE_ERAS.find(
     (era) =>
@@ -147,49 +159,82 @@ const podiumLeaders = historyStats.leaders.podiums
           )}
         </div>
 
-        <div className="history-range-controls">
-          <div className="history-range-control">
-            <label htmlFor="history-start-season">
-              START
-            </label>
+       <div className="history-range-slider">
+  <div className="history-range-labels">
+    <span>{startSeason}</span>
+    <span>{endSeason}</span>
+  </div>
 
-            <select
-              id="history-start-season"
-              value={startSeason}
-              onChange={handleStartChange}
-            >
-              {availableSeasons.map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </div>
+  <div className="history-range-track-wrap">
+    <div className="history-range-track" />
 
-          <div className="history-range-track">
-            <span>{firstSeason}</span>
-            <div className="history-range-line" />
-            <span>{lastSeason}</span>
-          </div>
+    <div
+      className="history-range-selected"
+      style={{
+  left: `${
+    (startSeasonIndex /
+      (sliderSeasons.length - 1)) *
+    100
+  }%`,
+  right: `${
+    100 -
+    (endSeasonIndex /
+      (sliderSeasons.length - 1)) *
+      100
+  }%`,
+}}
+    />
 
-          <div className="history-range-control">
-            <label htmlFor="history-end-season">
-              END
-            </label>
+    <input
+  type="range"
+  min="0"
+  max={sliderSeasons.length - 1}
+  step="1"
+  value={startSeasonIndex}
+  onChange={(event) => {
+    const nextIndex = Number(event.target.value)
 
-            <select
-              id="history-end-season"
-              value={endSeason}
-              onChange={handleEndChange}
-            >
-              {availableSeasons.map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+    if (nextIndex <= endSeasonIndex) {
+      setStartSeason(sliderSeasons[nextIndex])
+    }
+  }}
+  className="history-range-input history-range-start"
+  aria-label="Starting season"
+/>
+
+  <input
+  type="range"
+  min="0"
+  max={sliderSeasons.length - 1}
+  step="1"
+  value={endSeasonIndex}
+  onChange={(event) => {
+    const nextIndex = Number(event.target.value)
+
+    if (nextIndex >= startSeasonIndex) {
+      setEndSeason(sliderSeasons[nextIndex])
+    }
+  }}
+  className="history-range-input history-range-end"
+  aria-label="Ending season"
+/>
+  </div>
+
+  <div className="history-range-extents">
+    <span>{minSeason}</span>
+    <span>{maxSeason}</span>
+  </div>
+  <div className="history-range-summary">
+  <strong>
+    {startSeason}–{endSeason}
+  </strong>
+  <span>·</span>
+  <span>
+    {selectedSeasonCount}{' '}
+    {selectedSeasonCount === 1 ? 'season' : 'seasons'}
+  </span>
+</div>
+</div>
       </div>
 
      <div className="history-overview-records">

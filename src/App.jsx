@@ -1504,19 +1504,7 @@ page !== 'records' ? (
 
   </div>
 </div>
-<div className="trend-panel">
-  <div className="trend-header">
-    <div>
-      <div className="eyebrow">POWER RANKINGS</div>
-      <h2>Power Ranking Trend</h2>
-      <p>
-        Composite team strength after each completed week.
-      </p>
-      <small className="trend-hint">
-  Click a team in the legend to isolate its trend.
-</small>
-    </div>
-  </div>
+
 {/* POWER RANKING TREND */}
 <div className="trend-panel">
   <div className="trend-header">
@@ -1721,7 +1709,6 @@ page !== 'records' ? (
     </ResponsiveContainer>
   </div>
   </div>
-</div>
     <div className="analytics-summary">
       <div className="analytics-summary-card">
         <span>TOP OFFENSE</span>
