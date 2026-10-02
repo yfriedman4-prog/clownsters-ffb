@@ -13,6 +13,11 @@ const historicalSeasons = Object.fromEntries(
     season,
   ])
 )
+const completedHistoricalSeasons = Object.fromEntries(
+  Object.entries(historicalSeasons).filter(
+    ([, season]) => season.seasonStatus !== 'in_progress'
+  )
+)
 const CURRENT_SEASON = 2026
 const currentSeason = historicalSeasons[CURRENT_SEASON]
 const completedCurrentMatchups = currentSeason.matchups.filter(
@@ -108,11 +113,10 @@ import './App.css'
 import RecordBook from './pages/history/RecordBook'
 import managerRegistry from './data/history/managers.json'
 
-const availableSeasons = [
-  2026, 2025, 2024, 2023, 2022, 2021, 2020,
-  2019, 2018, 2017, 2016, 2015, 2014,
-  2013, 2012, 2009, 2008, 2007, 2006,
-]
+const availableSeasons = Object.keys(completedHistoricalSeasons)
+  .map(Number)
+  .sort((a, b) => b - a)
+
 const weeklyAwards = seasonData.teams.map((team) => ({
   team,
   wins: 0,
@@ -154,11 +158,14 @@ weeklyAwards.sort((a, b) => {
 function App() {
   const [mode, setMode] = useState('current')
   const [page, setPage] = useState('dashboard')
-  const [activeSeason, setActiveSeason] = useState(CURRENT_SEASON)
+  const [activeSeason, setActiveSeason] = useState(
+  availableSeasons[0]
+)
   const [selectedManagerId, setSelectedManagerId] = useState(null)
   const [managerProfileOrigin, setManagerProfileOrigin] =
   useState('overview')
-  const activeHistoricalSeason = historicalSeasons[activeSeason]
+  const activeHistoricalSeason =
+  completedHistoricalSeasons[activeSeason]
   const [selectedWeek, setSelectedWeek] = useState(1)
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [pfMode, setPfMode] = useState('total')
@@ -791,7 +798,7 @@ page !== 'records' ? (
 {mode === 'history' && page === 'overview' && (
 <HistoryOverview
   availableSeasons={availableSeasons}
-  historicalSeasons={historicalSeasons}
+  historicalSeasons={completedHistoricalSeasons}
   getManagerName={getManagerName}
   onSelectManager={(managerId) => {
   setSelectedManagerId(managerId)
@@ -802,7 +809,7 @@ page !== 'records' ? (
 )}
 {mode === 'history' && page === 'managers' && (
   <ManagerDirectory
-    historicalSeasons={historicalSeasons}
+    historicalSeasons={completedHistoricalSeasons}
     getManagerName={getManagerName}
     onSelectManager={(managerId) => {
   setSelectedManagerId(managerId)
@@ -813,7 +820,7 @@ page !== 'records' ? (
 )}
 {mode === 'history' && page === 'records' && (
   <RecordBook
-    historicalSeasons={historicalSeasons}
+    historicalSeasons={completedHistoricalSeasons}
     getManagerName={getManagerName}
   />
 )}
@@ -822,7 +829,7 @@ page !== 'records' ? (
   selectedManagerId && (
     <ManagerProfile
       managerId={selectedManagerId}
-      historicalSeasons={historicalSeasons}
+      historicalSeasons={completedHistoricalSeasons}
       getManagerName={getManagerName}
       onBack={() => setPage(managerProfileOrigin)}
       backLabel={
