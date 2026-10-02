@@ -170,7 +170,18 @@ function App() {
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [pfMode, setPfMode] = useState('total')
 const [paMode, setPaMode] = useState('total')
-  const standings = calculateStandings(seasonData, matchupData)
+  const standings = calculateStandings(seasonData, matchupData).map(
+  (team) => {
+    const seasonTeam = currentSeason.seasonTeams.find(
+      (item) => item.teamName === team.team
+    )
+
+    return {
+      ...team,
+      managerId: seasonTeam?.managerId ?? null,
+    }
+  }
+)
   const selectedWeekData = currentScheduleData.matchups.find(
   (week) => week.week === selectedWeek
 )
@@ -1049,6 +1060,9 @@ page !== 'records' ? (
             <div className="eyebrow">{CURRENT_SEASON} TEAM PROFILE</div>
 
             <h1>{selectedTeam.team}</h1>
+           <div className="profile-manager">
+  Managed by {getManagerName(selectedTeam.managerId)}
+</div>
 
             <div className="profile-record">
               {selectedTeam.wins}-{selectedTeam.losses}
@@ -1223,13 +1237,17 @@ page !== 'records' ? (
                 </span>
               </div>
 
-              <div className="team-card-name">
-                {team.team}
-              </div>
+             <div className="team-card-name">
+  {team.team}
+</div>
 
-              <div className="team-card-record">
-                {team.wins}-{team.losses}
-              </div>
+<div className="team-card-manager">
+  {getManagerName(team.managerId)}
+</div>
+
+<div className="team-card-record">
+  {team.wins}-{team.losses}
+</div>
 
               <div className="team-card-stats">
                 <div>

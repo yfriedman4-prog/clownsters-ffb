@@ -571,9 +571,15 @@ margin-right: 30px;
   font-size: 25px;
   font-weight: 800;
 }
+.team-card-manager {
+  padding: 4px 22px 0;
+  color: #7383a4;
+  font-size: 12px;
+  font-weight: 700;
+}
 
 .team-card-record {
-  padding: 2px 22px 20px;
+  padding: 6px 22px 20px;
   color: #8d9ab0;
   font-size: 15px;
 }
@@ -660,6 +666,18 @@ margin-right: 30px;
 .profile-hero h1 {
   margin: 6px 0 2px;
   font-size: 36px;
+}
+.profile-manager {
+  margin-top: 4px;
+  color: #7383a4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-record {
+  margin-top: 5px;
+  color: #8d9ab0;
+  font-size: 17px;
 }
 
 .profile-record {
