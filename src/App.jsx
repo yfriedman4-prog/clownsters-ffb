@@ -1,4 +1,14 @@
 import { useState } from 'react'
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from 'recharts'
 // import seasonData from './data/2025.json'
 // import matchupData from './data/2025-matchups.json'
 import SeasonHistory from './pages/history/SeasonHistory'
@@ -155,6 +165,129 @@ weeklyAwards.sort((a, b) => {
 
   return a.team.localeCompare(b.team)
 })
+const calculatePowerRankings = (seasonData, matchupData) => {
+  const standings = calculateStandings(seasonData, matchupData)
+
+  const powerRankings = standings.map((team) => {
+    const teamScores = seasonData.scores[team.team]
+
+    const recentScores = teamScores.slice(-3)
+
+    const recentAverage =
+      recentScores.reduce((sum, score) => sum + score, 0) /
+      recentScores.length
+
+    const allPlayGames =
+      team.allPlayWins +
+      team.allPlayLosses +
+      (team.allPlayTies || 0)
+
+    const allPlayPct =
+      allPlayGames > 0
+        ? (
+            team.allPlayWins +
+            (team.allPlayTies || 0) * 0.5
+          ) / allPlayGames
+        : 0
+
+    const recordGames =
+      team.wins + team.losses + team.ties
+
+    const recordPct =
+      recordGames > 0
+        ? (team.wins + team.ties * 0.5) / recordGames
+        : 0
+
+    return {
+      ...team,
+      recentAverage,
+      allPlayPct,
+      recordPct,
+    }
+  })
+
+  const getRankScore = (value, values) => {
+    const sorted = [...values].sort((a, b) => a - b)
+
+    if (sorted.length <= 1) return 100
+
+    const below = sorted.filter((item) => item < value).length
+    const equal = sorted.filter((item) => item === value).length
+
+    const averageRank = below + (equal - 1) / 2
+
+    return (averageRank / (sorted.length - 1)) * 100
+  }
+
+  const allPlayValues = powerRankings.map(
+    (team) => team.allPlayPct
+  )
+
+  const scoringValues = powerRankings.map(
+    (team) => team.averagePF
+  )
+
+  const recentFormValues = powerRankings.map(
+    (team) => team.recentAverage
+  )
+
+  const recordValues = powerRankings.map(
+    (team) => team.recordPct
+  )
+
+  return powerRankings
+    .map((team) => {
+      const allPlayScore = getRankScore(
+        team.allPlayPct,
+        allPlayValues
+      )
+
+      const scoringScore = getRankScore(
+        team.averagePF,
+        scoringValues
+      )
+
+      const formScore = getRankScore(
+        team.recentAverage,
+        recentFormValues
+      )
+
+      const recordScore = getRankScore(
+        team.recordPct,
+        recordValues
+      )
+
+      const powerScore =
+        allPlayScore * 0.4 +
+        scoringScore * 0.3 +
+        formScore * 0.2 +
+        recordScore * 0.1
+
+      return {
+        ...team,
+        allPlayScore,
+        scoringScore,
+        formScore,
+        recordScore,
+        powerScore,
+      }
+    })
+    .sort((a, b) => b.powerScore - a.powerScore)
+}
+const POWER_CHART_COLORS = [
+  '#4f8cff',
+  '#ff8a3d',
+  '#a7b0c0',
+  '#ffc233',
+  '#65b5ff',
+  '#74c44f',
+  '#3559a6',
+  '#d45c13',
+  '#777777',
+  '#a47b00',
+  '#2d7db8',
+  '#467d2b',
+]
 function App() {
   const [mode, setMode] = useState('current')
   const [page, setPage] = useState('dashboard')
@@ -170,6 +303,8 @@ function App() {
   const [selectedTeam, setSelectedTeam] = useState(null)
   const [pfMode, setPfMode] = useState('total')
 const [paMode, setPaMode] = useState('total')
+const [highlightedPowerTeam, setHighlightedPowerTeam] =
+  useState(null)
   const standings = calculateStandings(seasonData, matchupData).map(
   (team) => {
     const seasonTeam = currentSeason.seasonTeams.find(
@@ -182,6 +317,8 @@ const [paMode, setPaMode] = useState('total')
     }
   }
 )
+const [highlightedPointsTeam, setHighlightedPointsTeam] =
+  useState(null)
   const selectedWeekData = currentScheduleData.matchups.find(
   (week) => week.week === selectedWeek
 )
@@ -404,110 +541,77 @@ const getSortIndicator = (key) => {
 
   return standingsSort.direction === 'asc' ? ' ▲' : ' ▼'
 }
-const powerRankings = standings
-  .map((team) => {
-    const teamScores = seasonData.scores[team.team]
+const calculatedPowerRankings =
+  calculatePowerRankings(seasonData, matchupData)
+  const powerRankingTrend = Array.from(
+  { length: currentSeason.completedThroughWeek },
+  (_, index) => {
+    const throughWeek = index + 1
 
-    // Recent form = average score over the final 3 regular-season weeks
-    const recentScores = teamScores.slice(-3)
+    const trendSeasonData = {
+      ...seasonData,
+      weeks: throughWeek,
+      scores: Object.fromEntries(
+        seasonData.teams.map((team) => [
+          team,
+          seasonData.scores[team].slice(0, throughWeek),
+        ])
+      ),
+    }
 
-    const recentAverage =
-      recentScores.reduce((sum, score) => sum + score, 0) /
-      recentScores.length
+    const trendMatchupData = {
+      matchups: matchupData.matchups.filter(
+        (week) => week.week <= throughWeek
+      ),
+    }
 
-    const allPlayGames =
-      team.allPlayWins +
-      team.allPlayLosses +
-      (team.allPlayTies || 0)
-
-    const allPlayPct =
-      allPlayGames > 0
-        ? (
-            team.allPlayWins +
-            (team.allPlayTies || 0) * 0.5
-          ) / allPlayGames
-        : 0
-
-    const recordGames =
-      team.wins + team.losses + team.ties
-
-    const recordPct =
-      recordGames > 0
-        ? (team.wins + team.ties * 0.5) / recordGames
-        : 0
+    const rankings = calculatePowerRankings(
+      trendSeasonData,
+      trendMatchupData
+    )
 
     return {
-      ...team,
-      recentAverage,
-      allPlayPct,
-      recordPct,
+      week: throughWeek,
+      rankings,
     }
+  }
+)
+const powerTrendChartData = powerRankingTrend.map((weekData) => {
+  const row = {
+    week: `Week ${weekData.week}`,
+  }
+
+  weekData.rankings.forEach((team) => {
+    row[team.team] = Number(team.powerScore.toFixed(1))
   })
-  const getRankScore = (value, values) => {
-  const sorted = [...values].sort((a, b) => a - b)
 
-  if (sorted.length <= 1) return 100
+  return row
+})
+const cumulativePointsChartData = Array.from(
+  { length: currentSeason.completedThroughWeek },
+  (_, index) => {
+    const throughWeek = index + 1
 
-  const below = sorted.filter((item) => item < value).length
-  const equal = sorted.filter((item) => item === value).length
+    const cumulativeTotals = seasonData.teams
+      .map((team) => ({
+        team,
+        points: seasonData.scores[team]
+          .slice(0, throughWeek)
+          .reduce((sum, score) => sum + score, 0),
+      }))
+      .sort((a, b) => b.points - a.points)
 
-  const averageRank = below + (equal - 1) / 2
-
-  return (averageRank / (sorted.length - 1)) * 100
-}
-const allPlayValues = powerRankings.map(
-  (team) => team.allPlayPct
-)
-
-const scoringValues = powerRankings.map(
-  (team) => team.averagePF
-)
-
-const recentFormValues = powerRankings.map(
-  (team) => team.recentAverage
-)
-
-const recordValues = powerRankings.map(
-  (team) => team.recordPct
-)
-const calculatedPowerRankings = powerRankings
-  .map((team) => {
-    const allPlayScore = getRankScore(
-      team.allPlayPct,
-      allPlayValues
-    )
-
-    const scoringScore = getRankScore(
-      team.averagePF,
-      scoringValues
-    )
-
-    const formScore = getRankScore(
-      team.recentAverage,
-      recentFormValues
-    )
-
-    const recordScore = getRankScore(
-      team.recordPct,
-      recordValues
-    )
-
-    const powerScore =
-      allPlayScore * 0.4 +
-      scoringScore * 0.3 +
-      formScore * 0.2 +
-      recordScore * 0.1
-
-    return {
-      ...team,
-      allPlayScore,
-      scoringScore,
-      formScore,
-      recordScore,
-      powerScore,
+    const row = {
+      week: `Week ${throughWeek}`,
     }
-  })
-  .sort((a, b) => b.powerScore - a.powerScore)
+
+    cumulativeTotals.forEach((team, rankIndex) => {
+      row[team.team] = rankIndex + 1
+    })
+
+    return row
+  }
+)
   const sortedPowerRankings = [...calculatedPowerRankings].sort((a, b) => {
   const { key, direction } = powerSort
 
@@ -1398,6 +1502,224 @@ page !== 'records' ? (
       </div>
     ))}
 
+  </div>
+</div>
+<div className="trend-panel">
+  <div className="trend-header">
+    <div>
+      <div className="eyebrow">POWER RANKINGS</div>
+      <h2>Power Ranking Trend</h2>
+      <p>
+        Composite team strength after each completed week.
+      </p>
+      <small className="trend-hint">
+  Click a team in the legend to isolate its trend.
+</small>
+    </div>
+  </div>
+{/* POWER RANKING TREND */}
+<div className="trend-panel">
+  <div className="trend-header">
+    <div>
+      <div className="eyebrow">POWER RANKINGS</div>
+      <h2>Power Ranking Trend</h2>
+      <p>
+        Composite team strength after each completed week.
+      </p>
+      <small className="trend-hint">
+        Click a team in the legend to isolate its trend.
+      </small>
+    </div>
+  </div>
+
+  <div className="trend-chart">
+    <ResponsiveContainer width="100%" height={420}>
+      <LineChart
+        data={powerTrendChartData}
+        margin={{
+          top: 20,
+          right: 20,
+          left: 0,
+          bottom: 10,
+        }}
+      >
+        <CartesianGrid
+          strokeDasharray="3 3"
+          stroke="rgba(255,255,255,0.08)"
+        />
+
+        <XAxis
+          dataKey="week"
+          stroke="#8d9ab0"
+          tickLine={false}
+        />
+
+        <YAxis
+          domain={[0, 100]}
+          stroke="#8d9ab0"
+          tickLine={false}
+        />
+
+        <Tooltip
+          contentStyle={{
+            background: '#111827',
+            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: '10px',
+          }}
+          formatter={(value) => [
+            Number(value).toFixed(1),
+            'Power',
+          ]}
+        />
+
+        <Legend
+          onClick={(entry) => {
+            const team = entry.dataKey
+
+            setHighlightedPowerTeam((current) =>
+              current === team ? null : team
+            )
+          }}
+          wrapperStyle={{
+            cursor: 'pointer',
+          }}
+        />
+
+        {seasonData.teams.map((team, index) => {
+          const isHighlighted =
+            !highlightedPowerTeam ||
+            highlightedPowerTeam === team
+
+          return (
+            <Line
+              key={team}
+              type="monotone"
+              dataKey={team}
+              stroke={
+                POWER_CHART_COLORS[
+                  index % POWER_CHART_COLORS.length
+                ]
+              }
+              strokeWidth={
+                highlightedPowerTeam === team ? 4 : 2.5
+              }
+              strokeOpacity={isHighlighted ? 1 : 0.12}
+              dot={
+                isHighlighted
+                  ? {
+                      r:
+                        highlightedPowerTeam === team
+                          ? 5
+                          : 3,
+                    }
+                  : false
+              }
+              activeDot={{ r: 6 }}
+            />
+          )
+        })}
+      </LineChart>
+    </ResponsiveContainer>
+  </div>
+</div>
+
+{/* CUMULATIVE POINTS FOR */}
+<div className="trend-panel">
+  <div className="trend-header">
+    <div>
+      <div className="eyebrow">SCORING TREND</div>
+<h2>Cumulative Points For Ranking</h2>
+<p>
+  Weekly rank based on cumulative points scored through each week.
+</p>
+<small className="trend-hint">
+  Click a team in the legend to isolate its trend.
+</small>
+    </div>
+  </div>
+
+  <div className="trend-chart">
+    <ResponsiveContainer width="100%" height={420}>
+      <LineChart
+        data={cumulativePointsChartData}
+        margin={{
+          top: 20,
+          right: 20,
+          left: 0,
+          bottom: 10,
+        }}
+      >
+        <CartesianGrid
+          strokeDasharray="3 3"
+          stroke="rgba(255,255,255,0.08)"
+        />
+
+        <XAxis
+          dataKey="week"
+          stroke="#8d9ab0"
+          tickLine={false}
+        />
+
+       <YAxis
+  domain={[1, 12]}
+  reversed
+  allowDecimals={false}
+  ticks={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+  stroke="#8d9ab0"
+  tickLine={false}
+/>
+
+        
+
+        <Legend
+          onClick={(entry) => {
+            const team = entry.dataKey
+
+            setHighlightedPointsTeam((current) =>
+              current === team ? null : team
+            )
+          }}
+          wrapperStyle={{
+            cursor: 'pointer',
+          }}
+        />
+
+        {seasonData.teams.map((team, index) => {
+          const isHighlighted =
+            !highlightedPointsTeam ||
+            highlightedPointsTeam === team
+
+          return (
+            <Line
+              key={team}
+              type="linear"
+              dataKey={team}
+              stroke={
+                POWER_CHART_COLORS[
+                  index % POWER_CHART_COLORS.length
+                ]
+              }
+              strokeWidth={
+                highlightedPointsTeam === team ? 4 : 2.5
+              }
+              strokeOpacity={isHighlighted ? 1 : 0.12}
+              dot={
+                isHighlighted
+                  ? {
+                      r:
+                        highlightedPointsTeam === team
+                          ? 5
+                          : 3,
+                    }
+                  : false
+              }
+              activeDot={{ r: 6 }}
+            />
+          )
+        })}
+      </LineChart>
+    </ResponsiveContainer>
+  </div>
   </div>
 </div>
     <div className="analytics-summary">

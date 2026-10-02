@@ -2782,3 +2782,44 @@ button.history-manager-name:hover {
     width: 100%;
   }
 }
+.trend-panel {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.trend-header {
+  margin-bottom: 22px;
+}
+
+.trend-header h2 {
+  margin: 4px 0 6px;
+}
+
+.trend-header p {
+  margin: 0;
+  color: #8d9ab0;
+}
+
+.trend-chart {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .trend-panel {
+    padding: 18px 12px;
+  }
+
+  .trend-chart {
+    overflow-x: auto;
+  }
+}
+.trend-hint {
+  display: block;
+  margin-top: 6px;
+  color: #7383a4;
+  font-size: 12px;
+}
