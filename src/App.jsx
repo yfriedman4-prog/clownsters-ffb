@@ -665,8 +665,10 @@ page !== 'records' ? (
     <>
 
         <section className="hero">
-          <div>
-            <div className="eyebrow">LEAGUE LEADER</div>
+  <div>
+    <div className="eyebrow">
+      {CURRENT_SEASON} SEASON · LEAGUE LEADER
+    </div>
             <h1>{leader.team}</h1>
             <div className="hero-record">
               {leader.wins}-{leader.losses}
@@ -733,7 +735,7 @@ page !== 'records' ? (
 
           <div className="panel-header">
             <div>
-              <div className="eyebrow">LEAGUE TABLE</div>
+              <div className="eyebrow">{CURRENT_SEASON} LEAGUE TABLE</div>
               <h2>Standings</h2>
             </div>
           </div>
