@@ -767,8 +767,9 @@ page !== 'analytics' &&
 page !== 'history' &&
   page !== 'overview' &&
   page !== 'managers' &&
-  page !== 'manager-profile' &&
-page !== 'records' ? (
+    page !== 'manager-profile' &&
+  page !== 'rivalry-detail' &&
+  page !== 'records' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
 
