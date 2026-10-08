@@ -18,6 +18,8 @@ function HistoryOverview({
   const firstSeason = Math.min(...availableSeasons)
   const lastSeason = Math.max(...availableSeasons)
 
+  const [leaderMetric, setLeaderMetric] = useState('championships')
+  const [showAllLeaders, setShowAllLeaders] = useState(false)
   const [startSeason, setStartSeason] = useState(firstSeason)
   const [endSeason, setEndSeason] = useState(lastSeason)
 const [managerSort, setManagerSort] = useState({
@@ -116,6 +118,48 @@ const podiumLeaders = historyStats.leaders.podiums
   const scoredSeasons = timeline.filter((entry) => entry.average !== null)
   const highest = scoredSeasons.reduce((best, entry) => !best || entry.average > best.average ? entry : best, null)
   const lowest = scoredSeasons.reduce((best, entry) => !best || entry.average < best.average ? entry : best, null)
+  const leaderMetrics = [
+    { key: 'championships', label: 'Championships' },
+    { key: 'podiums', label: 'Podiums' },
+    { key: 'winPercentage', label: 'Win %' },
+    { key: 'wins', label: 'Total Wins' },
+    { key: 'pointsFor', label: 'Points For' },
+    { key: 'pointsPerGame', label: 'Points / Game' },
+  ]
+  // Require three selected seasons where available; in a shorter range,
+  // require participation in every selected season.
+  const minimumSeasons = Math.min(3, historyStats.seasonCount)
+  const eligibleLeaders = historyStats.managers
+    .filter((manager) => {
+      if (leaderMetric === 'championships') return manager.championships > 0
+      if (leaderMetric === 'podiums') return manager.podiums > 0
+      if (leaderMetric === 'winPercentage' || leaderMetric === 'pointsPerGame') {
+        return manager.seasons >= minimumSeasons && manager.games > 0
+      }
+      return manager.games > 0
+    })
+    .sort((a, b) => b[leaderMetric] - a[leaderMetric] || b.wins - a.wins || getManagerName(a.managerId).localeCompare(getManagerName(b.managerId)))
+  const leaderMax = Math.max(1, ...eligibleLeaders.map((manager) => manager[leaderMetric]))
+  const championshipYears = new Map()
+  historyStats.seasons.forEach((season) => {
+    const id = season.podium?.champion?.managerId
+    if (id) championshipYears.set(id, [...(championshipYears.get(id) ?? []), season.season])
+  })
+  const formatLeaderValue = (manager) => {
+    const value = manager[leaderMetric]
+    if (leaderMetric === 'winPercentage') return `${value.toFixed(1)}%`
+    if (leaderMetric === 'pointsFor') return value.toLocaleString(undefined, { maximumFractionDigits: 1 })
+    if (leaderMetric === 'pointsPerGame') return value.toFixed(1)
+    return String(value)
+  }
+  const leaderDetails = (manager) => {
+    if (leaderMetric === 'championships') return `Titles: ${(championshipYears.get(manager.managerId) ?? []).join(', ')}`
+    if (leaderMetric === 'podiums') return `${manager.championships} first · ${manager.runnerUps} second · ${manager.thirdPlaces} third`
+    if (leaderMetric === 'winPercentage') return `${manager.wins}-${manager.losses}${manager.ties ? `-${manager.ties}` : ''} · ${manager.games} games`
+    if (leaderMetric === 'wins') return `${manager.wins}-${manager.losses}${manager.ties ? `-${manager.ties}` : ''} · ${manager.seasons} seasons`
+    if (leaderMetric === 'pointsFor') return `${manager.games} regular-season games`
+    return `${manager.games} regular-season games · ${manager.pointsFor.toLocaleString()} total PF`
+  }
   const selectedSeasonCount =
   availableSeasons.filter(
     (year) => year >= startSeason && year <= endSeason
@@ -282,6 +326,40 @@ const podiumLeaders = historyStats.leaders.podiums
             <div><span>Seasons with scores</span><strong>{scoredSeasons.length}</strong><small>Within the selected range</small></div>
           </div>
         </> : <p>No completed regular-season scoring data in this range.</p>}
+      </section>
+      <section className="history-league-leaders" aria-label="League leaders">
+        <div className="history-timeline-heading">
+          <div><div className="eyebrow">MANAGER LEADERBOARD</div><h2>League Leaders</h2>
+            <p>Rankings across the selected seasons, grouped by historical manager identity.</p></div>
+          <strong>{startSeason}–{endSeason}</strong>
+        </div>
+        <div className="history-leader-metrics" role="group" aria-label="Leaderboard metric">
+          {leaderMetrics.map((metric) => <button key={metric.key} type="button"
+            className={leaderMetric === metric.key ? 'active' : ''}
+            aria-pressed={leaderMetric === metric.key}
+            onClick={() => { setLeaderMetric(metric.key); setShowAllLeaders(false) }}>{metric.label}</button>)}
+        </div>
+        {(leaderMetric === 'winPercentage' || leaderMetric === 'pointsPerGame') &&
+          <p className="history-leader-note">Qualification: at least {minimumSeasons} {minimumSeasons === 1 ? 'season' : 'seasons'} in the selected range. Win % counts ties as half a win.</p>}
+        <div className="history-leader-list">
+          {(showAllLeaders ? eligibleLeaders : eligibleLeaders.slice(0, 10)).map((manager, index) => <div className="history-leader-entry" key={manager.managerId}>
+            <div className="history-leader-entry-top">
+              <button type="button" className="history-leader-manager" onClick={() => onSelectManager(manager.managerId)}>
+                <span className="history-leader-rank">{index + 1}.</span> {getManagerName(manager.managerId)}
+              </button>
+              <strong>{formatLeaderValue(manager)}</strong>
+            </div>
+            <div className="history-leader-track"><div className="history-leader-fill" style={{ width: `${Math.max(0, manager[leaderMetric] / leaderMax * 100)}%` }} /></div>
+            <div className="history-leader-detail">{leaderDetails(manager)}</div>
+          </div>)}
+          {!eligibleLeaders.length && <p>No qualifying managers in this range.</p>}
+        </div>
+        {eligibleLeaders.length > 10 && (
+          <button type="button" className="history-leader-expand" aria-expanded={showAllLeaders}
+            onClick={() => setShowAllLeaders((current) => !current)}>
+            {showAllLeaders ? "Show Top 10" : `Show All Managers (${eligibleLeaders.length})`}
+          </button>
+        )}
       </section>
      <div className="history-overview-records">
   <div className="history-overview-record-card">
