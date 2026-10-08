@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
-import { buildScoringTrends, buildScoringDistributions } from '../../utils/scoringAnalytics'
+import { buildScoringTrends, buildScoringDistributions, buildTopScoringSeasons } from '../../utils/scoringAnalytics'
 
 const COLORS = ['#e7b654', '#f46c78', '#4d9eff', '#39bd89']
 const ERAS = [
@@ -16,11 +16,18 @@ export default function ScoringAnalytics({ historicalSeasons, getManagerName }) 
   const [end, setEnd] = useState(years[years.length - 1])
   const [mode, setMode] = useState('relative')
   const [distributionManager, setDistributionManager] = useState('all')
+  const [topMetric, setTopMetric] = useState('ppg')
+  const [showAllTop, setShowAllTop] = useState(false)
   const [selected, setSelected] = useState(['yaakov', 'jeremy', 'max', 'halpert'])
   const seasons = buildScoringTrends(historicalSeasons, start, end)
   const managers = [...new Set(Object.values(historicalSeasons).flatMap((season) => season.seasonTeams?.map((team) => team.managerId) ?? []))]
     .sort((a, b) => getManagerName(a).localeCompare(getManagerName(b)))
   const distributions = buildScoringDistributions(historicalSeasons, start, end, distributionManager)
+  const topSeasons = buildTopScoringSeasons(historicalSeasons, start, end)
+    .filter((row) => topMetric !== 'relative' || Number.isFinite(row.relative))
+    .sort((a, b) => (b[topMetric] - a[topMetric]) || (b.points - a.points) || (a.season - b.season) || a.managerId.localeCompare(b.managerId))
+  const visibleTopSeasons = showAllTop ? topSeasons : topSeasons.slice(0, 10)
+  const topMaximum = Math.max(0, ...visibleTopSeasons.map((row) => row[topMetric]))
   const chartData = seasons.map((season) => ({
     season: String(season.season),
     baseline: mode === 'relative' ? 100 : season.leagueAverage,
@@ -45,6 +52,22 @@ export default function ScoringAnalytics({ historicalSeasons, getManagerName }) 
           <DistributionPlot data={distributions} />
         </div></div>
         <p className="scoring-distribution-note">Hover or tap a box for minimum, lower quartile, median, upper quartile, maximum, and sample size. Seasons without eligible scores are omitted.</p>
+      </section>
+      <section className="scoring-panel scoring-top-seasons">
+        <div className="scoring-panel-header"><div><h2>Top Scoring Seasons</h2><p>Greatest individual manager-seasons, ranked by regular-season offense.</p></div></div>
+        <div className="scoring-top-tabs" aria-label="Scoring season ranking metric">
+          {[['ppg', 'Highest PPG'], ['points', 'Most Total PF'], ['relative', 'Best Relative to League']].map(([key, label]) => <button key={key} className={topMetric === key ? 'active' : ''} onClick={() => { setTopMetric(key); setShowAllTop(false) }}>{label}</button>)}
+        </div>
+        <div className="scoring-top-list">
+          {visibleTopSeasons.map((row, index) => <div className="scoring-top-row" key={`${row.season}-${row.managerId}`}>
+            <div className="scoring-top-person"><span className="scoring-top-rank">{index + 1}.</span><div><strong>{getManagerName(row.managerId)}</strong><small>{row.season} · {row.teamName}</small></div></div>
+            <div className="scoring-top-bar-track"><div className="scoring-top-bar" style={{ width: `${topMaximum ? row[topMetric] / topMaximum * 100 : 0}%` }}/></div>
+            <strong className="scoring-top-value">{topMetric === 'relative' ? `${row.relative.toFixed(1)}%` : row[topMetric].toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 1 })}</strong>
+            <div className="scoring-top-stats">{row.games} games · {row.ppg.toFixed(1)} PPG · {row.points.toFixed(1)} PF · League {row.leagueAverage?.toFixed(1) ?? '—'} PPG · {row.aboveLeague >= 0 ? '+' : ''}{row.aboveLeague?.toFixed(1) ?? '—'} vs league</div>
+          </div>)}
+          {!visibleTopSeasons.length && <p>No eligible scoring seasons in this range.</p>}
+        </div>
+        {topSeasons.length > 10 && <button className="scoring-top-expand" onClick={() => setShowAllTop((value) => !value)}>{showAllTop ? 'Show Top 10' : `Show All ${topSeasons.length} Manager-Seasons`}</button>}
       </section>
     </main>
   )

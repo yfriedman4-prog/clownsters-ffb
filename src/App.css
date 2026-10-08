@@ -3172,3 +3172,20 @@ button.history-manager-name:hover {
 .scoring-boxplot-detail strong { color: #e7b654; }
 .scoring-distribution-note { color: #a9bdd2; font-size: .83rem; margin: 10px 0 0; }
 @media(max-width:560px) { .scoring-distribution-select { width: 100%; } .scoring-boxplot-detail { width: auto; } }
+
+/* 3C-3: Top Scoring Seasons */
+.scoring-top-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.scoring-top-tabs button,.scoring-top-expand{background:#1c3048;color:#dce9fa;border:1px solid #3a536f;border-radius:8px;padding:11px 15px;cursor:pointer;font:inherit}
+.scoring-top-tabs button.active{background:#e7b654;color:#101a2b;border-color:#e7b654;font-weight:700}
+.scoring-top-list{display:grid;gap:16px}
+.scoring-top-row{display:grid;grid-template-columns:minmax(175px,240px) minmax(80px,1fr) minmax(65px,100px);column-gap:16px;align-items:center;row-gap:5px;min-width:0}
+.scoring-top-person{display:flex;gap:9px;align-items:baseline;min-width:0;color:#f2f6fc}
+.scoring-top-person>div{min-width:0}.scoring-top-person strong,.scoring-top-person small{display:block;overflow-wrap:anywhere}
+.scoring-top-person small,.scoring-top-stats{font-size:12px;color:#9eb9d9;margin-top:3px}
+.scoring-top-rank{color:#e7b654;font-weight:700}
+.scoring-top-bar-track{height:14px;border-radius:5px;background:#263b56;overflow:hidden}
+.scoring-top-bar{height:100%;background:linear-gradient(90deg,#2b78d4,#67b0ff);border-radius:5px}
+.scoring-top-value{text-align:right;color:#e7b654;font-variant-numeric:tabular-nums}
+.scoring-top-stats{grid-column:1/-1;padding-left:23px}
+.scoring-top-expand{display:block;margin:24px auto 0}
+@media(max-width:650px){.scoring-top-row{grid-template-columns:minmax(0,1fr) 85px;gap:6px 10px}.scoring-top-person{grid-column:1}.scoring-top-value{grid-column:2;grid-row:1}.scoring-top-bar-track{grid-column:1/-1;grid-row:2}.scoring-top-stats{grid-column:1/-1;grid-row:3;padding-left:0}.scoring-top-tabs button{flex:1 1 130px}}

@@ -53,3 +53,15 @@ export function buildScoringDistributions(historicalSeasons, startYear, endYear,
     })
     .filter(Boolean)
 }
+
+// Individual manager-season scoring performances; completed regular seasons only.
+export function buildTopScoringSeasons(historicalSeasons, startYear, endYear) {
+  return buildScoringTrends(historicalSeasons, startYear, endYear).flatMap((row) => {
+    const season = Object.values(historicalSeasons).find((s) => s.season === row.season)
+    return Object.entries(row.managers).map(([managerId, stats]) => ({
+      managerId, season: row.season, teamName: season?.seasonTeams?.find((t) => t.managerId === managerId)?.teamName ?? '—',
+      ...stats, leagueAverage: row.leagueAverage,
+      aboveLeague: row.leagueAverage == null ? null : stats.ppg - row.leagueAverage,
+    }))
+  }).filter((entry) => entry.games > 0 && Number.isFinite(entry.ppg))
+}
