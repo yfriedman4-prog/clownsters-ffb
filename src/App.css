@@ -3049,3 +3049,13 @@ button.history-manager-name:hover {
 .rivalry-chart-scroll { max-width: 100%; overflow-x: auto; }
 @media (max-width: 900px) { .rivalry-visuals { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 580px) { .rivalry-chart-card { padding: 14px 8px; } .rivalry-chart-frame { height: 260px; } }
+
+/* Rivalry highlight cards */
+.rivalry-highlights { margin-top: 24px; }
+.rivalry-highlight-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 14px 0 24px; }
+.rivalry-highlight-card { min-width: 0; padding: 18px; border: 1px solid #34445a; border-radius: 12px; background: #182438; display: flex; flex-direction: column; gap: 10px; }
+.rivalry-highlight-card span { color: #aab7ca; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .045em; }
+.rivalry-highlight-card strong { color: #f1f5f9; font-size: clamp(1.35rem, 2vw, 1.9rem); line-height: 1.1; }
+.rivalry-highlight-card small { color: #b9c8d9; line-height: 1.5; overflow-wrap: anywhere; }
+@media (max-width: 950px) { .rivalry-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .rivalry-highlight-grid { grid-template-columns: 1fr; } }

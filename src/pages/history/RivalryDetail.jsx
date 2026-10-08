@@ -16,6 +16,23 @@ export default function RivalryDetail({ managerId, opponentId, historicalSeasons
     ['Points allowed', points(rivalry.pointsAgainst)],
     ['Point differential', `${rivalry.pointDifferential > 0 ? '+' : ''}${points(rivalry.pointDifferential)}`],
   ]
+
+  const biggestVictory = rivalry.matchups.filter((game) => game.margin !== 0)
+    .reduce((best, game) => !best || Math.abs(game.margin) > Math.abs(best.margin) ? game : best, null)
+  const closest = rivalry.matchups.reduce((best, game) =>
+    !best || Math.abs(game.margin) < Math.abs(best.margin) ? game : best, null)
+  const winnerName = (id) => id ? getManagerName(id) : 'Neither manager'
+  const gameWhen = (game) => game ? `${game.season} · Week ${game.week}` : 'No completed games'
+  const highlights = [
+    { title: 'Biggest victory', value: biggestVictory ? `${points(Math.abs(biggestVictory.margin))} pts` : '—',
+      detail: biggestVictory ? `${winnerName(biggestVictory.winnerId)} · ${gameWhen(biggestVictory)}` : 'No decisive games' },
+    { title: 'Closest matchup', value: closest ? `${points(Math.abs(closest.margin))} pts` : '—',
+      detail: closest ? `${closest.winnerId ? winnerName(closest.winnerId) : 'Tie'} · ${gameWhen(closest)}` : 'No completed games' },
+    { title: 'Longest winning streak', value: rivalry.longestStreak.length ? `${rivalry.longestStreak.length} straight` : '—',
+      detail: rivalry.longestStreak.length ? `${winnerName(rivalry.longestStreak.managerId)} · ${gameWhen(rivalry.longestStreak.start)} to ${gameWhen(rivalry.longestStreak.end)}` : 'No winning streak' },
+    { title: 'Current streak', value: rivalry.currentStreak.length ? `${rivalry.currentStreak.length} straight` : '—',
+      detail: rivalry.currentStreak.length ? winnerName(rivalry.currentStreak.managerId) : 'No active winning streak' },
+  ]
   return (
     <section className="panel rivalry-detail">
       <button type="button" className="rivalry-back" onClick={onBack}>← Back to {getManagerName(managerId)}'s profile</button>
@@ -25,6 +42,14 @@ export default function RivalryDetail({ managerId, opponentId, historicalSeasons
         <p>All completed regular-season meetings, including played weeks of the current season. Statistics are shown from {getManagerName(managerId)}'s perspective.</p>
       </header>
       <div className="rivalry-stats">{stats.map(([label, value]) => <div className="rivalry-stat" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
+      <section className="rivalry-highlights" aria-label="Rivalry highlights">
+        <div className="history-profile-section-heading"><div><div className="eyebrow">RIVALRY RECORDS</div><h2>Rivalry Highlights</h2></div></div>
+        <div className="rivalry-highlight-grid">
+          {highlights.map((item) => <article className="rivalry-highlight-card" key={item.title}>
+            <span>{item.title}</span><strong>{item.value}</strong><small>{item.detail}</small>
+          </article>)}
+        </div>
+      </section>
       <section className="rivalry-visuals" aria-label="Rivalry historical charts">
         <div className="rivalry-chart-card">
           <div className="eyebrow">RIVALRY MOMENTUM</div>
