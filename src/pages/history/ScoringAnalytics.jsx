@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
-import { buildScoringTrends, buildScoringDistributions, buildTopScoringSeasons } from '../../utils/scoringAnalytics'
+import { buildScoringTrends, buildScoringDistributions, buildTopScoringSeasons, buildScoringHeatmap } from '../../utils/scoringAnalytics'
 
 const COLORS = ['#e7b654', '#f46c78', '#4d9eff', '#39bd89']
 const ERAS = [
@@ -18,6 +19,9 @@ export default function ScoringAnalytics({ historicalSeasons, getManagerName }) 
   const [distributionManager, setDistributionManager] = useState('all')
   const [topMetric, setTopMetric] = useState('ppg')
   const [showAllTop, setShowAllTop] = useState(false)
+  const [heatmapSort, setHeatmapSort] = useState('performance')
+  const [heatmapSelected, setHeatmapSelected] = useState(null)
+  const [heatmapHover, setHeatmapHover] = useState(null)
   const [selected, setSelected] = useState(['yaakov', 'jeremy', 'max', 'halpert'])
   const seasons = buildScoringTrends(historicalSeasons, start, end)
   const managers = [...new Set(Object.values(historicalSeasons).flatMap((season) => season.seasonTeams?.map((team) => team.managerId) ?? []))]
@@ -28,6 +32,17 @@ export default function ScoringAnalytics({ historicalSeasons, getManagerName }) 
     .sort((a, b) => (b[topMetric] - a[topMetric]) || (b.points - a.points) || (a.season - b.season) || a.managerId.localeCompare(b.managerId))
   const visibleTopSeasons = showAllTop ? topSeasons : topSeasons.slice(0, 10)
   const topMaximum = Math.max(0, ...visibleTopSeasons.map((row) => row[topMetric]))
+  const heatmapSeasons = buildScoringHeatmap(historicalSeasons, start, end)
+  const heatmapManagers = managers.filter((id) => heatmapSeasons.some((season) => season.managers[id])).sort((a, b) => {
+    if (heatmapSort === 'name') return getManagerName(a).localeCompare(getManagerName(b))
+    const totals = (id) => heatmapSeasons.reduce((acc, season) => {
+      const entry = season.managers[id]
+      if (entry && Number.isFinite(season.leagueAverage)) { acc.actual += entry.points; acc.expected += entry.games * season.leagueAverage; acc.seasons++ }
+      return acc
+    }, { actual: 0, expected: 0, seasons: 0 })
+    const aa = totals(a), bb = totals(b)
+    return (bb.expected ? bb.actual / bb.expected : 0) - (aa.expected ? aa.actual / aa.expected : 0) || getManagerName(a).localeCompare(getManagerName(b))
+  })
   const chartData = seasons.map((season) => ({
     season: String(season.season),
     baseline: mode === 'relative' ? 100 : season.leagueAverage,
@@ -68,6 +83,34 @@ export default function ScoringAnalytics({ historicalSeasons, getManagerName }) 
           {!visibleTopSeasons.length && <p>No eligible scoring seasons in this range.</p>}
         </div>
         {topSeasons.length > 10 && <button className="scoring-top-expand" onClick={() => setShowAllTop((value) => !value)}>{showAllTop ? 'Show Top 10' : `Show All ${topSeasons.length} Manager-Seasons`}</button>}
+      </section>
+      <section className="scoring-panel scoring-heatmap-panel">
+        <div className="scoring-panel-header"><div><h2>Team Scoring Heatmap</h2><p>Manager scoring relative to each season’s league average. Blank cells indicate no eligible regular-season scores.</p></div><label className="scoring-heatmap-sort">Order managers<select value={heatmapSort} onChange={(e) => setHeatmapSort(e.target.value)}><option value="performance">Best relative scoring</option><option value="name">Manager name</option></select></label></div>
+        <div className="scoring-heatmap-scroll" role="region" aria-label="Manager season scoring heatmap; scroll horizontally for more seasons" tabIndex={0}>
+          <table className="scoring-heatmap-table"><thead><tr><th className="scoring-heatmap-name">Manager</th><th>Seasons</th>{heatmapSeasons.map((season) => <th key={season.season}>{season.season}</th>)}</tr></thead><tbody>
+            {heatmapManagers.map((id) => <tr key={id}><th className="scoring-heatmap-name" scope="row">{getManagerName(id)}</th><td className="scoring-heatmap-count">{heatmapSeasons.filter((season) => season.managers[id]).length}</td>{heatmapSeasons.map((season) => {
+              const entry = season.managers[id]
+              const relative = entry?.relative
+              const deviation = Number.isFinite(relative) ? relative - 100 : null
+              const band = deviation == null ? 'missing' : deviation >= 15 ? 'high' : deviation >= 5 ? 'positive' : deviation > -5 ? 'neutral' : deviation > -15 ? 'negative' : 'low'
+              return <td key={season.season}><button type="button" className={`scoring-heatmap-cell heat-${band}`} disabled={!entry} aria-label={entry ? `${getManagerName(id)}, ${season.season}, ${relative.toFixed(1)} percent of league average` : `${getManagerName(id)}, ${season.season}: did not participate`} onMouseEnter={(event) => { if (event.nativeEvent?.pointerType !== 'touch') setHeatmapHover({ managerId: id, season: season.season, teamName: season.teamNames[id], ...entry, leagueAverage: season.leagueAverage }) }} onMouseLeave={() => setHeatmapHover(null)} onFocus={() => setHeatmapHover({ managerId: id, season: season.season, teamName: season.teamNames[id], ...entry, leagueAverage: season.leagueAverage })} onBlur={() => setHeatmapHover(null)} onClick={() => setHeatmapSelected((current) => current?.managerId === id && current?.season === season.season ? null : { managerId: id, season: season.season, teamName: season.teamNames[id], ...entry, leagueAverage: season.leagueAverage })}>{deviation == null ? '—' : `${Math.round(deviation) > 0 ? '+' : ''}${Math.round(deviation)}%`}</button></td>
+            })}</tr>)}
+          </tbody></table>
+        </div>
+        <div className="scoring-heatmap-legend"><span>vs. season league PPG</span><span><i className="heat-low"/> ≤ −15%</span><span><i className="heat-negative"/> −15 to −5%</span><span><i className="heat-neutral"/> ±5%</span><span><i className="heat-positive"/> +5 to +15%</span><span><i className="heat-high"/> ≥ +15%</span><span><i className="heat-missing"/> No scores</span></div>
+        {(heatmapSelected || heatmapHover) && (() => {
+          const detail = heatmapSelected || heatmapHover
+          return createPortal(<>
+            {heatmapSelected && <div className="scoring-heatmap-backdrop" onClick={() => { setHeatmapSelected(null); setHeatmapHover(null) }} aria-hidden="true" />}
+            <div className="scoring-heatmap-detail" role="dialog" aria-label="Selected season scoring details">
+            <div className="scoring-heatmap-detail-heading"><strong>{getManagerName(detail.managerId)} · {detail.season}</strong><button type="button" aria-label="Close scoring details" onClick={() => { setHeatmapSelected(null); setHeatmapHover(null) }}>×</button></div>
+            <span>{detail.teamName ?? 'Team name unavailable'}</span>
+            <span>{detail.ppg.toFixed(1)} PPG · League {detail.leagueAverage.toFixed(1)} PPG</span>
+            <strong className="scoring-heatmap-detail-relative">{(detail.relative - 100) >= 0 ? '+' : ''}{(detail.relative - 100).toFixed(1)}% vs league</strong>
+            <span>{detail.games} games · {detail.points.toFixed(1)} PF</span>
+            </div>
+          </>, document.body)
+        })()}
       </section>
     </main>
   )

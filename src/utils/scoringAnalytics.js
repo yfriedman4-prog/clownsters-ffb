@@ -65,3 +65,11 @@ export function buildTopScoringSeasons(historicalSeasons, startYear, endYear) {
     }))
   }).filter((entry) => entry.games > 0 && Number.isFinite(entry.ppg))
 }
+
+// Matrix cells use the same completed regular-season scoring baseline as trends.
+export function buildScoringHeatmap(historicalSeasons, startYear, endYear) {
+  return buildScoringTrends(historicalSeasons, startYear, endYear).map((row) => {
+    const seasonData = Object.values(historicalSeasons).find((season) => season.season === row.season)
+    return { ...row, teamNames: Object.fromEntries((seasonData?.seasonTeams ?? []).map((team) => [team.managerId, team.teamName])) }
+  })
+}
