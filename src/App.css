@@ -3059,3 +3059,23 @@ button.history-manager-name:hover {
 .rivalry-highlight-card small { color: #b9c8d9; line-height: 1.5; overflow-wrap: anywhere; }
 @media (max-width: 950px) { .rivalry-highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .rivalry-highlight-grid { grid-template-columns: 1fr; } }
+
+
+/* Milestone 3A: history scoring timeline */
+.history-timeline-card { margin: 22px 0; padding: 22px; border: 1px solid #34445a; border-radius: 14px; background: #111b2c; min-width: 0; }
+.history-timeline-heading { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.history-timeline-heading h2 { margin: 6px 0; }
+.history-timeline-heading p { color: #b9c8d9; margin: 6px 0 0; }
+.history-timeline-heading > strong { white-space: nowrap; color: #e4ba65; }
+.history-timeline-chart { height: 280px; width: 100%; margin-top: 20px; }
+.history-timeline-milestones { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 16px; }
+.history-timeline-milestones > div { min-width: 0; display: flex; flex-direction: column; gap: 5px; padding: 14px; border: 1px solid #34445a; border-radius: 10px; background: #182438; }
+.history-timeline-milestones span { color: #aab7ca; font-size: .8rem; }
+.history-timeline-milestones strong { font-size: 1.4rem; }
+.history-timeline-milestones small { color: #b9c8d9; }
+@media (max-width: 600px) {
+ .history-timeline-card { padding: 14px; }
+ .history-timeline-heading { flex-direction: column; }
+ .history-timeline-chart { height: 240px; }
+ .history-timeline-milestones { grid-template-columns: 1fr; }
+}

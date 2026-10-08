@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceDot } from 'recharts'
 import { aggregateHistory } from '../../utils/historyAnalytics'
 
 const LEAGUE_ERAS = [
@@ -98,6 +99,23 @@ const podiumLeaders = historyStats.leaders.podiums
     const year = Number(event.target.value)
     setEndSeason(Math.max(year, startSeason))
   }
+  const timeline = Object.values(historicalSeasons)
+    .filter((season) => season.season >= startSeason && season.season <= endSeason)
+    .sort((a, b) => a.season - b.season)
+    .map((season) => {
+      const scores = (season.matchups ?? [])
+        .filter((game) => game.week >= season.regularSeasonStartWeek && game.week <= season.regularSeasonEndWeek)
+        .flatMap((game) => [game.home?.score, game.away?.score])
+        .filter((score) => Number.isFinite(score))
+      return {
+        season: season.season,
+        average: scores.length ? Number((scores.reduce((sum, score) => sum + score, 0) / scores.length).toFixed(2)) : null,
+        games: scores.length / 2,
+      }
+    })
+  const scoredSeasons = timeline.filter((entry) => entry.average !== null)
+  const highest = scoredSeasons.reduce((best, entry) => !best || entry.average > best.average ? entry : best, null)
+  const lowest = scoredSeasons.reduce((best, entry) => !best || entry.average < best.average ? entry : best, null)
   const selectedSeasonCount =
   availableSeasons.filter(
     (year) => year >= startSeason && year <= endSeason
@@ -237,6 +255,34 @@ const podiumLeaders = historyStats.leaders.podiums
 </div>
       </div>
 
+      <section className="history-timeline-card" aria-label="Historical league scoring timeline">
+        <div className="history-timeline-heading">
+          <div><div className="eyebrow">LEAGUE HISTORY TIMELINE</div><h2>How League Scoring Evolved</h2>
+            <p>Average points per team per regular-season matchup, for the selected seasons.</p></div>
+          <strong>{startSeason}–{endSeason}</strong>
+        </div>
+        {scoredSeasons.length ? <>
+          <div className="history-timeline-chart" role="img" aria-label="Line chart of average team scores by season">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={timeline} margin={{ top: 20, right: 20, left: 6, bottom: 8 }}>
+                <CartesianGrid vertical={false} stroke="#34445a" strokeDasharray="3 4" />
+                <XAxis dataKey="season" stroke="#aab7ca" tickLine={false} interval="preserveStartEnd" />
+                <YAxis stroke="#aab7ca" tickLine={false} domain={['auto', 'auto']} width={52} />
+                <Tooltip contentStyle={{ background: '#182438', border: '1px solid #52627a', borderRadius: 8, color: '#f1f5f9' }}
+                  formatter={(value) => [Number(value).toFixed(2), 'Avg team points']} labelFormatter={(year) => `Season ${year}`} />
+                <Line type="monotone" dataKey="average" name="Avg team points" stroke="#39d6b0" strokeWidth={3} dot={{ r: 3 }} connectNulls={false} />
+                {highest && <ReferenceDot x={highest.season} y={highest.average} r={6} fill="#e4ba65" stroke="#101827" />}
+                {lowest && lowest.season !== highest?.season && <ReferenceDot x={lowest.season} y={lowest.average} r={6} fill="#ef7878" stroke="#101827" />}
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="history-timeline-milestones">
+            <div><span>Highest average</span><strong>{highest.season}</strong><small>{highest.average.toFixed(2)} points per team</small></div>
+            <div><span>Lowest average</span><strong>{lowest.season}</strong><small>{lowest.average.toFixed(2)} points per team</small></div>
+            <div><span>Seasons with scores</span><strong>{scoredSeasons.length}</strong><small>Within the selected range</small></div>
+          </div>
+        </> : <p>No completed regular-season scoring data in this range.</p>}
+      </section>
      <div className="history-overview-records">
   <div className="history-overview-record-card">
     <span>MOST WINS</span>
