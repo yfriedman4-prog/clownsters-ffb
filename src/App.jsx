@@ -119,6 +119,7 @@ import HistoryOverview from './pages/history/HistoryOverview'
 import ManagerProfile from './pages/history/ManagerProfile'
 import ManagerDirectory from './pages/history/ManagerDirectory'
 import HeadToHeadMatrix from './pages/history/HeadToHeadMatrix'
+import RivalryDetail from './pages/history/RivalryDetail'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 import RecordBook from './pages/history/RecordBook'
@@ -296,6 +297,7 @@ function App() {
   availableSeasons[0]
 )
   const [selectedManagerId, setSelectedManagerId] = useState(null)
+  const [rivalryOpponentId, setRivalryOpponentId] = useState(null)
   const [managersView, setManagersView] = useState('profiles')
   const [managerProfileOrigin, setManagerProfileOrigin] =
   useState('overview')
@@ -970,6 +972,7 @@ page !== 'records' ? (
       h2hSeasons={historicalSeasons}
       getManagerName={getManagerName}
       onBack={() => setPage(managerProfileOrigin)}
+      onSelectRivalry={(opponentId) => { setRivalryOpponentId(opponentId); setPage('rivalry-detail') }}
       backLabel={
   managerProfileOrigin === 'managers'
     ? 'Managers'
@@ -977,6 +980,9 @@ page !== 'records' ? (
 }
     />
   )}
+{mode === 'history' && page === 'rivalry-detail' && selectedManagerId && rivalryOpponentId && (
+  <RivalryDetail managerId={selectedManagerId} opponentId={rivalryOpponentId} historicalSeasons={historicalSeasons} getManagerName={getManagerName} onBack={() => setPage('manager-profile')} />
+)}
 {page === 'standings' && (
   <section className="panel">
     <div className="page-header">

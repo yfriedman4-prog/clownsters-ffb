@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { getCompletedH2HMatchups } from '../../utils/headToHeadAnalytics'
 
-export default function HeadToHeadCards({ managerId, historicalSeasons, getManagerName }) {
+export default function HeadToHeadCards({ managerId, historicalSeasons, getManagerName, onSelectRivalry }) {
   const opponents = useMemo(() => {
     const records = new Map()
     for (const game of getCompletedH2HMatchups(historicalSeasons)) {
@@ -32,6 +32,7 @@ export default function HeadToHeadCards({ managerId, historicalSeasons, getManag
       <p className="h2h-cards-note">Regular-season meetings, including completed 2026 weeks. Ties count as half a win.</p>
       {opponents.length ? <div className="h2h-opponent-grid">
         {opponents.map(r => <article className="h2h-opponent-card" key={r.opponentId}>
+          <button type="button" className="h2h-opponent-open" onClick={() => onSelectRivalry?.(r.opponentId)} aria-label={`View rivalry with ${getManagerName(r.opponentId)}`}>View rivalry →</button>
           <h3>{getManagerName(r.opponentId)}</h3>
           <div className="h2h-opponent-record"><strong>{r.wins}–{r.losses}–{r.ties}</strong><span>{(r.winPercentage * 100).toFixed(1)}%</span></div>
           <div className="h2h-opponent-bar" role="img" aria-label={`${r.wins} wins, ${r.losses} losses, ${r.ties} ties`}>

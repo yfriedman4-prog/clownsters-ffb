@@ -3018,3 +3018,24 @@ button.history-manager-name:hover {
 .h2h-diff-negative { color: #f87171; }
 @media (max-width: 950px) { .h2h-opponent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 580px) { .h2h-opponent-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Rivalry detail — milestone 2C-2 */
+.h2h-opponent-open { cursor: pointer; margin: 0 0 12px; padding: 5px 0; background: transparent; color: #65b5ff; border: 0; font: inherit; font-size: .82rem; font-weight: 700; }
+.h2h-opponent-open:hover, .h2h-opponent-open:focus-visible { text-decoration: underline; }
+.rivalry-back { cursor: pointer; background: transparent; border: 0; color: #65b5ff; padding: 0; font: inherit; margin-bottom: 22px; }
+.rivalry-heading { margin-bottom: 24px; }
+.rivalry-heading h1 { overflow-wrap: anywhere; }
+.rivalry-heading h1 span { color: #94a3b8; font-weight: 400; }
+.rivalry-heading p { color: #a7b0c0; max-width: 850px; }
+.rivalry-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-bottom: 32px; }
+.rivalry-stat { min-width: 0; padding: 18px; border: 1px solid rgba(148,163,184,.22); border-radius: 12px; background: rgba(148,163,184,.07); }
+.rivalry-stat span { display: block; color: #a7b0c0; font-size: .82rem; margin-bottom: 8px; }
+.rivalry-stat strong { display: block; font-size: clamp(1.1rem,2vw,1.7rem); overflow-wrap: anywhere; }
+.rivalry-games { width: 100%; }
+.rivalry-game { display: grid; grid-template-columns: minmax(135px,1.6fr) repeat(4,minmax(75px,1fr)); gap: 12px; align-items: center; padding: 13px 12px; border-bottom: 1px solid rgba(148,163,184,.17); font-variant-numeric: tabular-nums; }
+.rivalry-game-header { font-size: .78rem; color: #a7b0c0; font-weight: 700; }
+.rivalry-result { display: inline-block; min-width: 25px; text-align: center; padding: 3px 6px; border-radius: 5px; }
+.rivalry-result-w { color: #86efac; background: rgba(34,197,94,.14); }
+.rivalry-result-l { color: #fca5a5; background: rgba(239,68,68,.14); }
+.rivalry-result-t { color: #fcd34d; background: rgba(245,158,11,.14); }
+@media (max-width: 680px) { .rivalry-stats { grid-template-columns: repeat(2,minmax(0,1fr)); } .rivalry-game { grid-template-columns: minmax(90px,1.5fr) repeat(4,minmax(45px,1fr)); gap: 5px; padding: 12px 2px; font-size: .73rem; } .rivalry-game-header { font-size: .65rem; } }

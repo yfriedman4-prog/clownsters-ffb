@@ -7,6 +7,7 @@ function ManagerProfile({
   h2hSeasons,
   getManagerName,
   onBack,
+  onSelectRivalry,
     backLabel = 'Overview',
 }) {
   const profile = getManagerProfile(
@@ -318,6 +319,7 @@ function ManagerProfile({
     managerId={managerId}
     historicalSeasons={h2hSeasons ?? historicalSeasons}
     getManagerName={getManagerName}
+    onSelectRivalry={onSelectRivalry}
   />
 
       </section>
