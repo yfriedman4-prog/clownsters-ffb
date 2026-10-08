@@ -1,8 +1,10 @@
+import HeadToHeadCards from './HeadToHeadCards'
 import { getManagerProfile } from '../../utils/managerAnalytics'
 
 function ManagerProfile({
   managerId,
   historicalSeasons,
+  h2hSeasons,
   getManagerName,
   onBack,
     backLabel = 'Overview',
@@ -309,9 +311,16 @@ function ManagerProfile({
         )
       })}
     </div>
+    </div>
   </div>
-</div>
-    </section>
+
+  <HeadToHeadCards
+    managerId={managerId}
+    historicalSeasons={h2hSeasons ?? historicalSeasons}
+    getManagerName={getManagerName}
+  />
+
+      </section>
   )
 }
 

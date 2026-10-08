@@ -967,6 +967,7 @@ page !== 'records' ? (
     <ManagerProfile
       managerId={selectedManagerId}
       historicalSeasons={completedHistoricalSeasons}
+      h2hSeasons={historicalSeasons}
       getManagerName={getManagerName}
       onBack={() => setPage(managerProfileOrigin)}
       backLabel={

@@ -2998,3 +2998,23 @@ button.history-manager-name:hover {
 .h2h-even { background: #3b4352; color: #f0f2f7; }
 .h2h-empty, .h2h-self { background: #222b39; color: #aab4c4; }
 @media (max-width: 640px) { .h2h-filters { width: 100%; } .h2h-filters label { flex: 1 1 100px; } .h2h-filters select { width: 100%; } .h2h-table .h2h-corner { min-width: 130px; } .h2h-table th, .h2h-table td { padding: 7px 4px; } }
+
+/* Manager profile: head-to-head opponent cards */
+.history-profile-h2h { margin: 28px 0; }
+.h2h-cards-sort { color: var(--text-muted, #9caac0); font-size: 0.8rem; }
+.h2h-cards-note { color: var(--text-muted, #9caac0); font-size: 0.85rem; margin: 8px 0 16px; }
+.h2h-opponent-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.h2h-opponent-card { min-width: 0; padding: 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.2); background: rgba(148,163,184,.07); }
+.h2h-opponent-card h3 { margin: 0 0 12px; font-size: 0.95rem; overflow-wrap: anywhere; }
+.h2h-opponent-record { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.h2h-opponent-record strong { font-size: 1.3rem; }
+.h2h-opponent-record span { font-weight: 700; }
+.h2h-opponent-bar { display: flex; height: 9px; width: 100%; overflow: hidden; border-radius: 999px; background: #475569; }
+.h2h-opponent-wins { background: #22c55e; }
+.h2h-opponent-losses { background: #ef4444; }
+.h2h-opponent-ties { background: #94a3b8; }
+.h2h-opponent-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-top: 10px; font-size: 0.78rem; color: var(--text-muted, #9caac0); }
+.h2h-diff-positive { color: #4ade80; }
+.h2h-diff-negative { color: #f87171; }
+@media (max-width: 950px) { .h2h-opponent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 580px) { .h2h-opponent-grid { grid-template-columns: minmax(0, 1fr); } }
