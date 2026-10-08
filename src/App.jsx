@@ -118,6 +118,7 @@ const getManagerName = (managerId) =>
 import HistoryOverview from './pages/history/HistoryOverview'
 import ManagerProfile from './pages/history/ManagerProfile'
 import ManagerDirectory from './pages/history/ManagerDirectory'
+import HeadToHeadMatrix from './pages/history/HeadToHeadMatrix'
 import { calculateStandings } from './utils/standings'
 import './App.css'
 import RecordBook from './pages/history/RecordBook'
@@ -295,6 +296,7 @@ function App() {
   availableSeasons[0]
 )
   const [selectedManagerId, setSelectedManagerId] = useState(null)
+  const [managersView, setManagersView] = useState('profiles')
   const [managerProfileOrigin, setManagerProfileOrigin] =
   useState('overview')
   const activeHistoricalSeason =
@@ -925,15 +927,33 @@ page !== 'records' ? (
 />
 )}
 {mode === 'history' && page === 'managers' && (
-  <ManagerDirectory
-    historicalSeasons={completedHistoricalSeasons}
-    getManagerName={getManagerName}
-    onSelectManager={(managerId) => {
-  setSelectedManagerId(managerId)
-  setManagerProfileOrigin('managers')
-  setPage('manager-profile')
-}}
-  />
+  <div className="history-managers-hub">
+    <div className="h2h-view-toggle" role="group" aria-label="Managers view">
+      <button type="button" className={managersView === 'profiles' ? 'active' : ''} aria-pressed={managersView === 'profiles'} onClick={() => setManagersView('profiles')}>Manager Profiles</button>
+      <button type="button" className={managersView === 'matrix' ? 'active' : ''} aria-pressed={managersView === 'matrix'} onClick={() => setManagersView('matrix')}>H2H Matrix</button>
+    </div>
+    {managersView === 'profiles' ? (
+      <ManagerDirectory
+        historicalSeasons={completedHistoricalSeasons}
+        getManagerName={getManagerName}
+        onSelectManager={(managerId) => {
+          setSelectedManagerId(managerId)
+          setManagerProfileOrigin('managers')
+          setPage('manager-profile')
+        }}
+      />
+    ) : (
+      <HeadToHeadMatrix
+        historicalSeasons={historicalSeasons}
+        getManagerName={getManagerName}
+        onSelectManager={(managerId) => {
+          setSelectedManagerId(managerId)
+          setManagerProfileOrigin('managers')
+          setPage('manager-profile')
+        }}
+      />
+    )}
+  </div>
 )}
 {mode === 'history' && page === 'records' && (
   <RecordBook
