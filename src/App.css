@@ -3158,3 +3158,17 @@ button.history-manager-name:hover {
   .scoring-legend-manager { overflow-wrap: anywhere; align-items: flex-start; }
   .scoring-legend-line { margin-top: 7px; width: 14px; flex-basis: 14px; }
 }
+
+/* 3C-2: season scoring distribution */
+.scoring-distribution-panel { margin-top: 22px; }
+.scoring-distribution-select { display: grid; gap: 7px; color: #b7c9dc; font-size: .9rem; min-width: 185px; }
+.scoring-distribution-select select { background: #14253b; color: #edf4fc; border: 1px solid #3b536f; border-radius: 7px; padding: 10px; font: inherit; width: 100%; }
+.scoring-distribution-scroll { overflow-x: auto; width: 100%; padding-bottom: 5px; }
+.scoring-distribution-chart { position: relative; height: 320px; }
+.scoring-boxplot { display: block; height: 320px; width: 100%; }
+.scoring-boxplot g[tabindex] { cursor: pointer; outline: none; }
+.scoring-boxplot g[tabindex]:focus-visible rect { stroke: #e7b654; stroke-width: 3; }
+.scoring-boxplot-detail { position: sticky; left: 0; bottom: 0; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: #1b3048; border: 1px solid #54708c; border-radius: 8px; padding: 9px 12px; color: #e5effa; font-size: .82rem; margin-top: -44px; width: max-content; max-width: 100%; }
+.scoring-boxplot-detail strong { color: #e7b654; }
+.scoring-distribution-note { color: #a9bdd2; font-size: .83rem; margin: 10px 0 0; }
+@media(max-width:560px) { .scoring-distribution-select { width: 100%; } .scoring-boxplot-detail { width: auto; } }
