@@ -116,6 +116,7 @@ const managersById = Object.fromEntries(
 const getManagerName = (managerId) =>
   managersById[managerId]?.displayName ?? managerId
 import HistoryOverview from './pages/history/HistoryOverview'
+import ScoringAnalytics from './pages/history/ScoringAnalytics'
 import ManagerProfile from './pages/history/ManagerProfile'
 import ManagerDirectory from './pages/history/ManagerDirectory'
 import HeadToHeadMatrix from './pages/history/HeadToHeadMatrix'
@@ -719,6 +720,7 @@ const cumulativePointsChartData = Array.from(
   ['history', 'Seasons'],
   ['managers', 'Managers'],
   ['records', 'Records'],
+  ['scoring-analytics', 'Scoring Analytics'],
 ]
     ).map(([id, label]) => (
       <button
@@ -769,6 +771,7 @@ page !== 'history' &&
   page !== 'managers' &&
     page !== 'manager-profile' &&
   page !== 'rivalry-detail' &&
+  page !== 'scoring-analytics' &&
   page !== 'records' ? (
       <section className="placeholder-page">
     <div className="eyebrow">CLOWNSTERS FFB</div>
@@ -928,6 +931,9 @@ page !== 'history' &&
   setPage('manager-profile')
 }}
 />
+)}
+{mode === 'history' && page === 'scoring-analytics' && (
+  <ScoringAnalytics historicalSeasons={completedHistoricalSeasons} getManagerName={getManagerName} />
 )}
 {mode === 'history' && page === 'managers' && (
   <div className="history-managers-hub">
