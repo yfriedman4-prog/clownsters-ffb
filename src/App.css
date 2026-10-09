@@ -3321,3 +3321,32 @@ button.history-manager-name:hover {
 @media (min-width: 1101px) {
   .history-record-book .record-book-grid-season { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+/* 4C: Record Book era selector */
+.history-record-book .record-book-era-filter { margin: 0 0 28px; padding: 16px 18px; background: #111d30; border: 1px solid #30435e; border-radius: 13px; }
+.history-record-book .record-book-era-filter-label { display: block; margin-bottom: 11px; font-size: 11px; font-weight: 800; letter-spacing: 1.2px; color: #8eb5ff; }
+.history-record-book .record-book-era-options { display: flex; flex-wrap: wrap; gap: 9px; }
+.history-record-book .record-book-era-options button { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 118px; padding: 10px 15px; color: #c3d6f1; background: #182840; border: 1px solid #3b5476; border-radius: 9px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.history-record-book .record-book-era-options button small { font-size: 11px; font-weight: 500; color: #94add0; }
+.history-record-book .record-book-era-options button.active { color: #111827; background: #e7b654; border-color: #e7b654; }
+.history-record-book .record-book-era-options button.active small { color: #343029; }
+.history-record-book .record-book-era-options button:focus-visible { outline: 2px solid #8eb5ff; outline-offset: 3px; }
+@media (max-width: 560px) {
+  .history-record-book .record-book-era-filter { padding: 12px; }
+  .history-record-book .record-book-era-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .history-record-book .record-book-era-options button { min-width: 0; }
+}
+
+/* 4C QA: compact era filter without an oversized panel */
+.history-record-book { gap: 14px; }
+.history-record-book .page-header { margin-bottom: 0; }
+.history-record-book .record-book-era-filter { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin: 0 0 6px; padding: 0; background: transparent; border: 0; border-radius: 0; }
+.history-record-book .record-book-era-filter-label { margin: 0; white-space: nowrap; }
+.history-record-book .record-book-era-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.history-record-book .record-book-era-options button { display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: 7px; min-width: 0; padding: 8px 12px; font-size: 12px; border-radius: 7px; }
+.history-record-book .record-book-era-options button small { font-size: 10px; }
+@media (max-width: 560px) {
+  .history-record-book .record-book-era-filter { padding: 0; align-items: flex-start; }
+  .history-record-book .record-book-era-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .history-record-book .record-book-era-options button { padding: 9px 7px; gap: 5px; }
+}

@@ -1,5 +1,22 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { buildRecordBook } from '../../utils/recordAnalytics'
+
+export const RECORD_ERAS = [
+  { id: 'all', label: 'All Time', start: 2006, end: 2025 },
+  { id: 'high-school', label: 'High School', start: 2006, end: 2009 },
+  { id: 'revival', label: 'Revival', start: 2012, end: 2017 },
+  { id: 'modern', label: 'Modern', start: 2018, end: 2025 },
+]
+
+export function filterRecordSeasons(historicalSeasons, eraId) {
+  if (eraId === 'all') return historicalSeasons
+  const era = RECORD_ERAS.find((item) => item.id === eraId)
+  if (!era) return historicalSeasons
+  return Object.fromEntries(Object.entries(historicalSeasons).filter(([key, season]) => {
+    const year = Number(season?.season ?? key)
+    return year >= era.start && year <= era.end
+  }))
+}
 
 const RECORD_SECTIONS = [
   {
@@ -186,7 +203,7 @@ function RecordCard({ sectionId, record, holders, expanded, onToggle, getManager
   )
 }
 
-function RecordLeaderboard({ sectionId, record, leaderboard, getManagerName, onClose }) {
+function RecordLeaderboard({ sectionId, record, leaderboard, getManagerName, onClose, periodLabel }) {
   const rankedRows = getCompetitionRanks(leaderboard, record.field)
   const values = rankedRows.map((row) => Number(row[record.field])).filter(Number.isFinite)
   const minimum = Math.min(0, ...values)
@@ -197,7 +214,7 @@ function RecordLeaderboard({ sectionId, record, leaderboard, getManagerName, onC
       <div className="record-book-inline-header">
         <div>
           <div className="record-book-inline-eyebrow">{sectionId === 'career' ? 'CAREER RECORD' : sectionId === 'season' ? 'SINGLE-SEASON RECORD' : 'SINGLE-GAME RECORD'}</div>
-          <h3>{record.label} <span>· All-Time Leaders</span></h3>
+          <h3>{record.label} <span>· {periodLabel} Leaders</span></h3>
         </div>
         <button type="button" className="record-book-inline-close" onClick={onClose} aria-label={`Close ${record.label} leaderboard`}>✕</button>
       </div>
@@ -226,7 +243,7 @@ function RecordLeaderboard({ sectionId, record, leaderboard, getManagerName, onC
   )
 }
 
-function RecordSection({ section, records, getManagerName }) {
+function RecordSection({ section, records, getManagerName, periodLabel }) {
   const [openId, setOpenId] = useState(null)
   const rows = []
   const columns = section.id === 'season' ? 3 : 4
@@ -246,7 +263,7 @@ function RecordSection({ section, records, getManagerName }) {
           ))}
         </div>
         {openRecord && <RecordLeaderboard sectionId={section.id} record={openRecord}
-          leaderboard={records.leaderboards[section.id][openRecord.id]}
+          leaderboard={records.leaderboards[section.id][openRecord.id]} periodLabel={periodLabel}
           getManagerName={getManagerName} onClose={() => setOpenId(null)} />}
         </div>
         <div className="record-book-mobile">
@@ -258,7 +275,7 @@ function RecordSection({ section, records, getManagerName }) {
                 onToggle={() => setOpenId((current) => current === record.id ? null : record.id)}
                 getManagerName={getManagerName} />
               {openId === record.id && <RecordLeaderboard sectionId={section.id} record={record}
-                leaderboard={records.leaderboards[section.id][record.id]}
+                leaderboard={records.leaderboards[section.id][record.id]} periodLabel={periodLabel}
                 getManagerName={getManagerName} onClose={() => setOpenId(null)} />}
             </div>
           ))}
@@ -267,7 +284,7 @@ function RecordSection({ section, records, getManagerName }) {
     )
   }
   return <section className="record-book-section">
-    <div className="record-book-section-header"><h2>{section.title}</h2><p>{section.subtitle}</p></div>
+    <div className="record-book-section-header"><h2>{section.title}</h2><p>{periodLabel === 'All-Time' ? section.subtitle : section.subtitle.replace(/All-time|All-Time|all-time/g, periodLabel).replace(/across league history/g, 'within this era')}</p></div>
     <div className="record-book-groups">{rows}</div>
   </section>
 }
@@ -276,9 +293,9 @@ function RecordBook({
   historicalSeasons,
   getManagerName,
 }) {
-  const records = buildRecordBook(
-    historicalSeasons
-  )
+  const [selectedEra, setSelectedEra] = useState('all')
+  const selectedPeriod = RECORD_ERAS.find((era) => era.id === selectedEra)
+  const records = useMemo(() => buildRecordBook(filterRecordSeasons(historicalSeasons, selectedEra)), [historicalSeasons, selectedEra])
 
   return (
     <section className="panel history-record-book">
@@ -291,8 +308,21 @@ function RecordBook({
         </p>
       </div>
 
+      <div className="record-book-era-filter" aria-label="Record Book period">
+        <span className="record-book-era-filter-label">PERIOD</span>
+        <div className="record-book-era-options">
+          {RECORD_ERAS.map((era) => (
+            <button key={era.id} type="button" className={selectedEra === era.id ? 'active' : ''}
+              aria-pressed={selectedEra === era.id} onClick={() => setSelectedEra(era.id)}>
+              {era.label}{era.id !== 'all' && <small>{era.start}–{era.end}</small>}
+            </button>
+          ))}
+        </div>
+      </div>
       {RECORD_SECTIONS.map((section) => (
-        <RecordSection key={section.id} section={section} records={records} getManagerName={getManagerName} />
+        <RecordSection key={section.id} section={section} records={records}
+          periodLabel={selectedEra === 'all' ? 'All-Time' : `${selectedPeriod.label} Era`}
+          getManagerName={getManagerName} />
       ))}
     </section>
   )
