@@ -309,6 +309,50 @@ function buildCareerRows(
   })
 }
 
+export function buildWeeklyHighScoreRows(historicalSeasons) {
+  const seasonCounts = new Map()
+  const careerCounts = new Map()
+
+  Object.values(historicalSeasons)
+    .filter((season) => season.seasonStatus !== 'in_progress')
+    .forEach((season) => {
+      const weeks = new Map()
+      for (const matchup of season.matchups ?? []) {
+        if (matchup.week < season.regularSeasonStartWeek ||
+            matchup.week > season.regularSeasonEndWeek) continue
+        if (!weeks.has(matchup.week)) weeks.set(matchup.week, new Map())
+        const teams = weeks.get(matchup.week)
+        for (const side of [matchup.home, matchup.away]) {
+          if (!side?.managerId || !Number.isFinite(side.score)) continue
+          teams.set(side.managerId, {
+            managerId: side.managerId,
+            teamName: side.teamName ?? null,
+            score: side.score,
+          })
+        }
+      }
+      for (const teams of weeks.values()) {
+        if (!teams.size) continue
+        const highest = Math.max(...[...teams.values()].map((team) => team.score))
+        for (const team of teams.values()) {
+          if (team.score !== highest) continue
+          const key = `${season.season}:${team.managerId}`
+          const current = seasonCounts.get(key) ?? {
+            season: season.season,
+            managerId: team.managerId,
+            teamName: team.teamName,
+            weeklyHighScores: 0,
+          }
+          current.weeklyHighScores += 1
+          seasonCounts.set(key, current)
+          careerCounts.set(team.managerId, (careerCounts.get(team.managerId) ?? 0) + 1)
+        }
+      }
+    })
+
+  return { seasonCounts, careerCounts }
+}
+
 export function buildRecordBook(historicalSeasons) {
   const seasonRows =
     buildSeasonRecordRows(historicalSeasons)
@@ -322,6 +366,16 @@ export function buildRecordBook(historicalSeasons) {
       historicalSeasons
     )
 
+  const weeklyHighScores = buildWeeklyHighScoreRows(historicalSeasons)
+  const weeklySeasonRows = seasonRows.map((row) => ({
+    ...row,
+    weeklyHighScores: weeklyHighScores.seasonCounts.get(`${row.season}:${row.managerId}`)?.weeklyHighScores ?? 0,
+  }))
+  const weeklyCareerRows = careerRows.map((row) => ({
+    ...row,
+    weeklyHighScores: weeklyHighScores.careerCounts.get(row.managerId) ?? 0,
+  }))
+
   const careerRateEligible =
     careerRows.filter(
       (manager) => manager.seasons >= 3
@@ -332,6 +386,7 @@ export function buildRecordBook(historicalSeasons) {
 
   return {
     career: {
+      weeklyHighScores: getExtremeRows(weeklyCareerRows, 'weeklyHighScores'),
       wins: getExtremeRows(
         careerRows,
         'wins'
@@ -369,6 +424,7 @@ export function buildRecordBook(historicalSeasons) {
     },
 
     season: {
+      weeklyHighScores: getExtremeRows(weeklySeasonRows, 'weeklyHighScores'),
       wins: getExtremeRows(
         seasonRows,
         'wins'
@@ -432,6 +488,7 @@ export function buildRecordBook(historicalSeasons) {
     },
     leaderboards: {
   career: {
+    weeklyHighScores: rankRows(weeklyCareerRows, 'weeklyHighScores'),
     wins: rankRows(
       careerRows,
       'wins'
@@ -469,6 +526,7 @@ export function buildRecordBook(historicalSeasons) {
   },
 
   season: {
+    weeklyHighScores: rankRows(weeklySeasonRows, 'weeklyHighScores'),
     wins: rankRows(
       seasonRows,
       'wins'
