@@ -1,0 +1,32 @@
+import { useState } from 'react'
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, Cell, Legend } from 'recharts'
+import { buildEraComparisons } from '../../utils/eraComparisons'
+
+const fmt = (n, suffix = '') => n == null ? '—' : `${n.toFixed(1)}${suffix}`
+export default function EraComparisons({ historicalSeasons, getManagerName }) {
+  const [selected, setSelected] = useState('all')
+  const eras = buildEraComparisons(historicalSeasons)
+  const visible = selected === 'all' ? eras : eras.filter((e) => e.id === selected)
+  const years = eras.flatMap((e) => e.scoring.map((s) => ({ year: s.year, ppg: +s.leagueAverage.toFixed(2), color: e.color })))
+  const cards = visible.map((e) => ({ name: e.label, ppg: e.ppg, spread: e.spread, color: e.color }))
+  const leader = [...eras].filter((e) => e.ppg != null).sort((a, b) => b.ppg - a.ppg)[0]
+  const closest = [...eras].filter((e) => e.spread != null).sort((a, b) => a.spread - b.spread)[0]
+  return <main className="era-page">
+    <header className="era-heading"><div><h1>Era Comparisons</h1><p>How the league evolved across three distinct eras · completed seasons through 2025</p></div><div className="era-filters">{[{ id: 'all', label: 'All Eras' }, ...eras].map((e) => <button key={e.id} className={selected === e.id ? 'active' : ''} onClick={() => setSelected(e.id)}>{e.label}</button>)}</div></header>
+    <section className="era-section"><h2><span>1</span> How has league scoring evolved?</h2><p>Regular-season scoring per team-game, using actual matchup scores.</p>
+      <div className="era-grid"><div className="era-card"><h3>Average Points Per Game</h3><div className="era-chart"><ResponsiveContainer><BarChart data={cards}><CartesianGrid stroke="#2b405a" vertical={false}/><XAxis dataKey="name" stroke="#b6c6da" tick={{ fontSize: 11 }}/><YAxis stroke="#b6c6da"/><Tooltip formatter={(v) => fmt(v, ' PPG')}/><Bar dataKey="ppg" name="League PPG">{cards.map((e) => <Cell key={e.name} fill={e.color}/>)}</Bar></BarChart></ResponsiveContainer></div></div>
+      <div className="era-card era-wide"><h3>League Average PPG by Season</h3><div className="era-chart"><ResponsiveContainer><LineChart data={years}><CartesianGrid stroke="#2b405a" strokeDasharray="3 4"/><XAxis dataKey="year" stroke="#b6c6da" tick={{ fontSize: 10 }} interval="preserveStartEnd"/><YAxis stroke="#b6c6da" domain={['auto', 'auto']}/><Tooltip formatter={(v) => fmt(v, ' PPG')}/><Line dataKey="ppg" stroke="#69b8ff" strokeWidth={3} dot={(props) => <circle key={props.payload.year} cx={props.cx} cy={props.cy} r={4} fill={props.payload.color} />} /></LineChart></ResponsiveContainer></div></div></div>
+      <div className="era-metrics">{visible.map((e) => <div key={e.id} style={{ borderTopColor: e.color }}><strong>{e.label}</strong><span>{e.seasons} {e.seasons === 1 ? 'season' : 'seasons'}</span><b>{fmt(e.ppg)} PPG</b><small>Highest team season: {fmt(e.highest)} PPG</small></div>)}</div>
+    </section>
+    <section className="era-section"><h2><span>2</span> Which era was most competitive?</h2><p>Smaller gaps between the highest- and lowest-scoring teams indicate tighter offensive competition. This is a scoring-parity measure, not a complete measure of league competitiveness.</p>
+      <div className="era-grid"><div className="era-card"><h3>Average Top-to-Bottom PPG Gap</h3><div className="era-chart"><ResponsiveContainer><BarChart data={cards}><CartesianGrid stroke="#2b405a" vertical={false}/><XAxis dataKey="name" stroke="#b6c6da" tick={{ fontSize: 11 }}/><YAxis stroke="#b6c6da"/><Tooltip formatter={(v) => fmt(v, ' PPG')}/><Bar dataKey="spread" name="PPG gap">{cards.map((e) => <Cell key={e.name} fill={e.color}/>)}</Bar></BarChart></ResponsiveContainer></div></div>
+      <div className="era-card era-wide"><h3>Season-by-Season Scoring Gap</h3><div className="era-chart"><ResponsiveContainer><BarChart data={visible.flatMap((e) => e.scoring.map((s) => ({ year: String(s.year), gap: +s.spread.toFixed(2), color: e.color })))}><CartesianGrid stroke="#2b405a" vertical={false}/><XAxis dataKey="year" stroke="#b6c6da" tick={{ fontSize: 10 }} interval="preserveStartEnd"/><YAxis stroke="#b6c6da"/><Tooltip formatter={(v) => fmt(v, ' PPG')}/><Bar dataKey="gap" name="PPG gap">{visible.flatMap((e) => e.scoring.map((s) => <Cell key={s.year} fill={e.color}/>))}</Bar></BarChart></ResponsiveContainer></div></div></div>
+      <p className="era-insight">{closest ? `${closest.label} has the smallest average top-to-bottom team scoring gap (${fmt(closest.spread)} PPG).` : 'No eligible scoring data.'} A smaller gap means a more tightly grouped offense, not necessarily closer standings.</p>
+    </section>
+    <section className="era-section"><h2><span>3</span> Who dominated each era?</h2><p>Championships and regular-season winning percentages are attributed to stable manager identities, even when team names changed.</p>
+      <div className="era-domination">{visible.map((e) => <article className="era-card" key={e.id} style={{ borderTop: `4px solid ${e.color}` }}><h3>{e.label} <small>({e.start}–{e.end})</small></h3><p>{e.seasons} {e.seasons === 1 ? 'season' : 'seasons'}</p><div className="era-championship-block"><h4>Championship Leaders</h4>{e.champions.slice(0, 5).map((c) => <div className="era-rank" key={c.id}><span>{getManagerName(c.id)}</span><strong>{c.count} {c.count === 1 ? 'title' : 'titles'}</strong></div>)}{!e.champions.length && <p>No championship data</p>}</div><h4>Regular-Season Win %</h4>{e.managers.filter((m) => m.games >= 1).slice(0, 5).map((m) => <div className="era-win" key={m.id}><div><span>{getManagerName(m.id)}</span><strong>{fmt(m.pct, '%')}</strong></div><div className="era-track"><div style={{ width: `${m.pct}%`, background: e.color }}/></div><small>{m.seasons} {m.seasons === 1 ? 'season' : 'seasons'} · {m.games} games</small></div>)}</article>)}</div>
+      <p className="era-insight">Win percentage counts ties as half a win; manager rankings include all participating managers, with games and seasons shown for context.</p>
+    </section>
+    <div className="era-takeaway"><strong>Era Takeaways</strong><p>{leader ? `${leader.label} had the highest league-average scoring (${fmt(leader.ppg)} PPG). ` : ''}{closest ? `${closest.label} had the tightest average team scoring spread.` : ''} Championship leaders and win rates above are computed from the historical records.</p></div>
+  </main>
+}

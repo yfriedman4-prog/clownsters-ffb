@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   ResponsiveContainer,
   LineChart,
@@ -117,6 +117,7 @@ const getManagerName = (managerId) =>
   managersById[managerId]?.displayName ?? managerId
 import HistoryOverview from './pages/history/HistoryOverview'
 import ScoringAnalytics from './pages/history/ScoringAnalytics'
+import EraComparisons from './pages/history/EraComparisons'
 import ManagerProfile from './pages/history/ManagerProfile'
 import ManagerDirectory from './pages/history/ManagerDirectory'
 import HeadToHeadMatrix from './pages/history/HeadToHeadMatrix'
@@ -291,17 +292,52 @@ const POWER_CHART_COLORS = [
   '#2d7db8',
   '#467d2b',
 ]
+const NAV_STORAGE_KEY = 'clownsters-navigation-v1'
+const CURRENT_PAGES = ['dashboard', 'standings', 'matchups', 'teams', 'analytics']
+const HISTORY_PAGES = ['overview', 'history', 'managers', 'records', 'scoring-analytics', 'era-comparisons', 'manager-profile', 'rivalry-detail']
+
+function readSavedNavigation() {
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(NAV_STORAGE_KEY) || 'null')
+    if (!saved || !['current', 'history'].includes(saved.mode)) return null
+    const allowed = saved.mode === 'current' ? CURRENT_PAGES : HISTORY_PAGES
+    if (!allowed.includes(saved.page)) return null
+    if (['manager-profile', 'rivalry-detail'].includes(saved.page) &&
+        (!saved.selectedManagerId || !managersById[saved.selectedManagerId])) return null
+    if (saved.page === 'rivalry-detail' &&
+        (!saved.rivalryOpponentId || !managersById[saved.rivalryOpponentId])) return null
+    return saved
+  } catch {
+    return null
+  }
+}
+
 function App() {
-  const [mode, setMode] = useState('current')
-  const [page, setPage] = useState('dashboard')
+  const [savedNavigation] = useState(readSavedNavigation)
+  const [mode, setMode] = useState(savedNavigation?.mode ?? 'current')
+  const [page, setPage] = useState(savedNavigation?.page ?? 'dashboard')
   const [activeSeason, setActiveSeason] = useState(
-  availableSeasons[0]
-)
-  const [selectedManagerId, setSelectedManagerId] = useState(null)
-  const [rivalryOpponentId, setRivalryOpponentId] = useState(null)
-  const [managersView, setManagersView] = useState('profiles')
-  const [managerProfileOrigin, setManagerProfileOrigin] =
-  useState('overview')
+    availableSeasons.includes(savedNavigation?.activeSeason)
+      ? savedNavigation.activeSeason : availableSeasons[0]
+  )
+  const [selectedManagerId, setSelectedManagerId] = useState(savedNavigation?.selectedManagerId ?? null)
+  const [rivalryOpponentId, setRivalryOpponentId] = useState(savedNavigation?.rivalryOpponentId ?? null)
+  const [managersView, setManagersView] = useState(savedNavigation?.managersView === 'matrix' ? 'matrix' : 'profiles')
+  const [managerProfileOrigin, setManagerProfileOrigin] = useState(
+    ['overview', 'managers'].includes(savedNavigation?.managerProfileOrigin)
+      ? savedNavigation.managerProfileOrigin : 'overview'
+  )
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(NAV_STORAGE_KEY, JSON.stringify({
+        mode, page, activeSeason, selectedManagerId, rivalryOpponentId,
+        managersView, managerProfileOrigin,
+      }))
+    } catch {
+      // Navigation continues to work if browser storage is unavailable.
+    }
+  }, [mode, page, activeSeason, selectedManagerId, rivalryOpponentId, managersView, managerProfileOrigin])
   const activeHistoricalSeason =
   completedHistoricalSeasons[activeSeason]
   const [selectedWeek, setSelectedWeek] = useState(1)
@@ -721,6 +757,7 @@ const cumulativePointsChartData = Array.from(
   ['managers', 'Managers'],
   ['records', 'Records'],
   ['scoring-analytics', 'Scoring Analytics'],
+  ['era-comparisons', 'Era Comparisons'],
 ]
     ).map(([id, label]) => (
       <button
@@ -771,6 +808,7 @@ page !== 'history' &&
   page !== 'managers' &&
     page !== 'manager-profile' &&
   page !== 'rivalry-detail' &&
+  page !== 'era-comparisons' &&
   page !== 'scoring-analytics' &&
   page !== 'records' ? (
       <section className="placeholder-page">
@@ -931,6 +969,9 @@ page !== 'history' &&
   setPage('manager-profile')
 }}
 />
+)}
+{mode === 'history' && page === 'era-comparisons' && (
+  <EraComparisons historicalSeasons={completedHistoricalSeasons} getManagerName={getManagerName} />
 )}
 {mode === 'history' && page === 'scoring-analytics' && (
   <ScoringAnalytics historicalSeasons={completedHistoricalSeasons} getManagerName={getManagerName} />

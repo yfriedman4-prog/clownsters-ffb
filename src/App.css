@@ -3190,44 +3190,40 @@ button.history-manager-name:hover {
 .scoring-top-expand{display:block;margin:24px auto 0}
 @media(max-width:650px){.scoring-top-row{grid-template-columns:minmax(0,1fr) 85px;gap:6px 10px}.scoring-top-person{grid-column:1}.scoring-top-value{grid-column:2;grid-row:1}.scoring-top-bar-track{grid-column:1/-1;grid-row:2}.scoring-top-stats{grid-column:1/-1;grid-row:3;padding-left:0}.scoring-top-tabs button{flex:1 1 130px}}
 
-/* 3C-4: manager-by-season scoring heatmap */
-.scoring-heatmap-sort { display: flex; flex-direction: column; gap: 8px; color: #b9cee5; font-size: 13px; }
-.scoring-heatmap-sort select { background: #192c44; color: #fff; border: 1px solid #3c5877; border-radius: 8px; padding: 10px; }
-.scoring-heatmap-scroll { width: 100%; overflow-x: auto; margin-top: 22px; padding-bottom: 10px; }
-.scoring-heatmap-table { border-collapse: separate; border-spacing: 3px; width: 100%; min-width: 1040px; font-size: 12px; }
-.scoring-heatmap-table th { padding: 9px 5px; color: #c8d8e9; font-weight: 600; text-align: center; white-space: nowrap; }
-.scoring-heatmap-table td { padding: 0; text-align: center; }
-.scoring-heatmap-table .scoring-heatmap-name { position: sticky; left: 0; z-index: 2; background: #102137; text-align: left; min-width: 150px; max-width: 190px; padding-left: 10px; }
-.scoring-heatmap-count { color: #b9cee5; min-width: 48px; }
-.scoring-heatmap-cell { width: 100%; min-width: 47px; min-height: 36px; border: 0; border-radius: 3px; font-size: 11px; font-weight: 700; cursor: pointer; color: #112035; }
-.scoring-heatmap-cell:focus-visible { outline: 3px solid #e7b654; outline-offset: 1px; }
-.scoring-heatmap-cell:disabled { cursor: default; }
-.heat-low { background: #e26e69; } .heat-negative { background: #f5b7b1; } .heat-neutral { background: #d8e6e1; } .heat-positive { background: #9be0b2; } .heat-high { background: #37b67c; } .heat-missing { background: #30455b; color: #c0cbd7; }
-.scoring-heatmap-legend { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; margin-top: 15px; color: #b9cee5; font-size: 12px; }
-.scoring-heatmap-legend span { display: inline-flex; align-items: center; gap: 6px; }
-.scoring-heatmap-legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
-.scoring-heatmap-detail { margin-top: 16px; border: 1px solid #46617e; background: #14283f; border-radius: 10px; padding: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; color: #d9e6f3; }
-.scoring-heatmap-detail button { background: #263f5b; border: 1px solid #54708d; color: #fff; border-radius: 6px; padding: 7px 12px; cursor: pointer; }
-@media (max-width: 650px) { .scoring-heatmap-table { min-width: 1040px; } .scoring-heatmap-table .scoring-heatmap-name { min-width: 115px; max-width: 130px; } .scoring-heatmap-detail { flex-direction: column; align-items: flex-start; } }
+/* 3D: isolated era comparisons dashboard */
+.era-page{max-width:1440px;margin:0 auto;padding:24px 18px 56px;color:#e9f0fa;min-width:0}
+.era-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.era-heading h1{margin:0 0 7px;font-size:clamp(26px,3vw,36px)}
+.era-heading p,.era-section>p{margin:0 0 20px;color:#b2c3d8;line-height:1.5}
+.era-filters{display:flex;gap:7px;flex-wrap:wrap}
+.era-filters button{padding:10px 13px;border:1px solid #465c76;background:#17283e;color:#d9e7f8;border-radius:8px;cursor:pointer;font:inherit}
+.era-filters button.active{background:#e7b654;border-color:#e7b654;color:#111827;font-weight:800}
+.era-section{padding:22px;margin-bottom:18px;border:1px solid #31445c;border-radius:14px;background:#101c2d;min-width:0}
+.era-section h2{display:flex;align-items:center;gap:12px;margin:0 0 8px;font-size:clamp(20px,2.5vw,26px)}
+.era-section h2>span{display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;height:36px;border-radius:50%;background:#e7b654;color:#152033}
+.era-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);gap:12px}
+.era-card{min-width:0;padding:16px;border:1px solid #31445c;border-radius:10px;background:#14243a}
+.era-card h3{font-size:15px;margin:0 0 14px}.era-card h3 small{color:#b6c7d9;font-weight:400}
+.era-card h4{font-size:13px;margin:20px 0 10px;color:#e7b654}.era-card p,.era-card small{color:#a9bed6}
+.era-chart{height:270px;min-width:0}
+.era-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.era-metrics>div{border:1px solid #31445c;border-top:3px solid;padding:14px;border-radius:9px;display:grid;gap:5px;background:#14243a}
+.era-metrics strong{font-size:15px}.era-metrics b{font-size:22px}.era-metrics span,.era-metrics small{color:#aec0d5}
+.era-insight,.era-takeaway{margin:16px 0 0;padding:14px 16px;border:1px solid #3d526b;border-radius:9px;background:#1b3049;color:#d5e5f5;line-height:1.5}
+.era-domination{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.era-rank,.era-win>div:first-child{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin:9px 0}
+.era-rank strong,.era-win strong{white-space:nowrap}
+.era-win{margin:14px 0}.era-win small{font-size:11px}
+.era-track{height:8px;background:#283c56;border-radius:10px;overflow:hidden}.era-track>div{height:100%;border-radius:inherit}
+.era-takeaway{margin-top:20px}.era-takeaway p{margin:8px 0 0}
+@media(max-width:850px){.era-grid{grid-template-columns:1fr}.era-domination{grid-template-columns:1fr}.era-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.era-page{padding:12px 8px 36px}.era-section{padding:14px 10px}.era-metrics{grid-template-columns:1fr}.era-chart{height:245px}.era-filters button{flex:1 1 120px}}
 
-/* 3C-4: Keep selected heatmap cell details visible without scrolling to the end of the table. */
-.scoring-heatmap-detail { position: fixed; z-index: 1000; right: 24px; bottom: 24px; width: min(370px, calc(100vw - 32px)); margin: 0; display: flex; flex-direction: column; align-items: stretch; gap: 8px; box-shadow: 0 16px 45px rgba(0,0,0,.5); }
-.scoring-heatmap-detail-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.scoring-heatmap-detail-heading button { font-size: 23px; line-height: 1; padding: 2px 9px; }
-.scoring-heatmap-detail-relative { color: #77d9aa; }
-@media (max-width: 650px) { .scoring-heatmap-detail { right: 12px; bottom: 12px; width: calc(100vw - 24px); max-height: 45vh; overflow-y: auto; } }
-
-/* 3C-4 mobile detail: portal to body prevents clipping by scroll containers. */
-.scoring-heatmap-backdrop { display: none; }
-@media (max-width: 650px) {
-  .scoring-heatmap-backdrop { display: block; position: fixed; inset: 0; z-index: 1999; background: rgba(4, 10, 20, .45); }
-  .scoring-heatmap-detail {
-    position: fixed; z-index: 2000; inset: auto 0 0 0;
-    width: 100%; max-width: none; max-height: min(65dvh, 470px);
-    margin: 0; padding: 20px 18px calc(20px + env(safe-area-inset-bottom, 0px));
-    border-radius: 18px 18px 0 0; border-bottom: 0;
-    overflow-y: auto; overscroll-behavior: contain;
-    box-shadow: 0 -15px 45px rgba(0,0,0,.55);
-  }
-  .scoring-heatmap-detail-heading button { min-width: 44px; min-height: 44px; }
+/* 3D QA: align win-rate sections across side-by-side era cards. */
+@media (min-width: 851px) {
+  .era-domination .era-championship-block { min-height: 190px; }
 }
+
+/* 3D refinement: separate the win-rate heading and the explanatory card. */
+.era-domination .era-championship-block + h4 { margin-top: 28px; }
+.era-section .era-domination + .era-insight { margin-top: 26px; }
