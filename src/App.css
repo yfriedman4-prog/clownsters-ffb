@@ -3316,3 +3316,8 @@ button.history-manager-name:hover {
 .scoring-heatmap-detail-relative { color: #71dfbd; font-size: 19px; }
 @media (min-width: 701px) and (hover: hover) and (pointer: fine) { .scoring-heatmap-detail:not(:has(+ *)) { max-width: 360px; } }
 @media (max-width: 700px) { .scoring-heatmap-sort { width: 100%; justify-content: space-between; } .scoring-heatmap-table .scoring-heatmap-name { min-width: 125px; max-width: 125px; } .scoring-heatmap-cell { width: 51px; } .scoring-heatmap-detail { top: auto; bottom: 0; left: 0; width: 100%; transform: none; border-radius: 16px 16px 0 0; padding: 22px 18px max(24px, env(safe-area-inset-bottom)); } }
+
+/* 4B: three-column single-season record cards on wide screens. */
+@media (min-width: 1101px) {
+  .history-record-book .record-book-grid-season { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

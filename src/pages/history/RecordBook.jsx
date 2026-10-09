@@ -41,6 +41,7 @@ const RECORD_SECTIONS = [
         label: 'Most Podiums',
         field: 'podiums',
       },
+      { id: 'weeklyHighScores', label: 'Most Weekly High Scores', field: 'weeklyHighScores' },
     ],
   },
   {
@@ -49,6 +50,7 @@ const RECORD_SECTIONS = [
     subtitle: 'The greatest individual seasons in league history.',
     records: [
       { id: 'wins', label: 'Most Wins', field: 'wins' },
+      { id: 'weeklyHighScores', label: 'Most Weekly High Scores', field: 'weeklyHighScores' },
       {
         id: 'winPercentage',
         label: 'Best Win %',
@@ -140,7 +142,7 @@ function getCompetitionRanks(rows, field) {
 
 
 const RECORD_ICONS = {
-  wins: '🏆', championships: '🏆', winPercentage: 'target',
+  weeklyHighScores: 'crown', wins: '🏆', championships: '🏆', winPercentage: 'target',
   pointsFor: 'bars', pointsPerGame: '★', playoffAppearances: 'pennant',
   podiums: '🥇', highestScore: '🏈', lowestScore: '⚠',
   largestVictory: 'bars', closestVictory: '🤝',
@@ -148,9 +150,9 @@ const RECORD_ICONS = {
 
 function RecordIcon({ record }) {
   const symbol = RECORD_ICONS[record.id] ?? '★'
-  const tone = ['wins', 'championships', 'podiums'].includes(record.id) ? 'gold' : record.id === 'lowestScore' ? 'red' : 'blue'
+  const tone = ['weeklyHighScores', 'wins', 'championships', 'podiums'].includes(record.id) ? 'gold' : record.id === 'lowestScore' ? 'red' : 'blue'
   return <span className={`record-book-symbol record-book-symbol-${tone}`} aria-hidden="true">
-    {symbol === 'target' ? <svg viewBox="0 0 48 48" width="45" height="45" fill="none" aria-hidden="true"><circle cx="22" cy="26" r="17" stroke="currentColor" strokeWidth="4"/><circle cx="22" cy="26" r="9" stroke="currentColor" strokeWidth="3"/><circle cx="22" cy="26" r="3" fill="currentColor"/><path d="M24 24L42 6M34 6h8v8" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg> : symbol === 'bars' ? <svg viewBox="0 0 48 48" width="45" height="45" fill="none" aria-hidden="true"><rect x="5" y="29" width="8" height="14" rx="1.5" fill="currentColor" opacity=".65"/><rect x="20" y="20" width="8" height="23" rx="1.5" fill="currentColor" opacity=".8"/><rect x="35" y="8" width="8" height="35" rx="1.5" fill="currentColor"/></svg> : symbol === 'pennant' ? <svg viewBox="0 0 56 64" width="48" height="52" fill="none" aria-hidden="true"><path d="M10 6H46V45L28 58L10 45V6Z" fill="currentColor" fillOpacity=".17" stroke="currentColor" strokeWidth="3"/><path d="M18 16H38M18 24H38M23 33H33" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg> : symbol}
+    {symbol === 'crown' ? <svg viewBox="0 0 48 48" width="45" height="45" fill="none" aria-hidden="true"><path d="M5 13L14 22L24 9L34 22L43 13L39 36H9L5 13Z" fill="currentColor" fillOpacity=".25" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/><path d="M10 41H38" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg> : symbol === 'target' ? <svg viewBox="0 0 48 48" width="45" height="45" fill="none" aria-hidden="true"><circle cx="22" cy="26" r="17" stroke="currentColor" strokeWidth="4"/><circle cx="22" cy="26" r="9" stroke="currentColor" strokeWidth="3"/><circle cx="22" cy="26" r="3" fill="currentColor"/><path d="M24 24L42 6M34 6h8v8" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/></svg> : symbol === 'bars' ? <svg viewBox="0 0 48 48" width="45" height="45" fill="none" aria-hidden="true"><rect x="5" y="29" width="8" height="14" rx="1.5" fill="currentColor" opacity=".65"/><rect x="20" y="20" width="8" height="23" rx="1.5" fill="currentColor" opacity=".8"/><rect x="35" y="8" width="8" height="35" rx="1.5" fill="currentColor"/></svg> : symbol === 'pennant' ? <svg viewBox="0 0 56 64" width="48" height="52" fill="none" aria-hidden="true"><path d="M10 6H46V45L28 58L10 45V6Z" fill="currentColor" fillOpacity=".17" stroke="currentColor" strokeWidth="3"/><path d="M18 16H38M18 24H38M23 33H33" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/></svg> : symbol}
   </span>
 }
 
@@ -227,13 +229,14 @@ function RecordLeaderboard({ sectionId, record, leaderboard, getManagerName, onC
 function RecordSection({ section, records, getManagerName }) {
   const [openId, setOpenId] = useState(null)
   const rows = []
-  for (let index = 0; index < section.records.length; index += 4) {
-    const group = section.records.slice(index, index + 4)
+  const columns = section.id === 'season' ? 3 : 4
+  for (let index = 0; index < section.records.length; index += columns) {
+    const group = section.records.slice(index, index + columns)
     const openRecord = group.find((record) => record.id === openId)
     rows.push(
       <div className="record-book-row-group" key={`${section.id}-${index}`}>
         <div className="record-book-desktop">
-        <div className="record-book-grid">
+        <div className={`record-book-grid${section.id === 'season' ? ' record-book-grid-season' : ''}`}>
           {group.map((record) => (
             <RecordCard key={record.id} sectionId={section.id} record={record}
               holders={records[section.id][record.id]}
