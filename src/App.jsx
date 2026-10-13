@@ -7,7 +7,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
 } from 'recharts'
 // import seasonData from './data/2025.json'
 // import matchupData from './data/2025-matchups.json'
@@ -1635,18 +1634,7 @@ page !== 'history' &&
           ]}
         />
 
-        <Legend
-          onClick={(entry) => {
-            const team = entry.dataKey
 
-            setHighlightedPowerTeam((current) =>
-              current === team ? null : team
-            )
-          }}
-          wrapperStyle={{
-            cursor: 'pointer',
-          }}
-        />
 
         {seasonData.teams.map((team, index) => {
           const isHighlighted =
@@ -1683,6 +1671,21 @@ page !== 'history' &&
         })}
       </LineChart>
     </ResponsiveContainer>
+
+    <div className="trend-team-legend" aria-label="Select a team to isolate its trend">
+      {seasonData.teams.map((team, index) => (
+        <button
+          key={team}
+          type="button"
+          className={`trend-team-legend-item${highlightedPowerTeam === team ? ' is-selected' : ''}${highlightedPowerTeam && highlightedPowerTeam !== team ? ' is-dimmed' : ''}`}
+          onClick={() => setHighlightedPowerTeam((current) => current === team ? null : team)}
+          aria-pressed={highlightedPowerTeam === team}
+        >
+          <span className="trend-team-legend-swatch" style={{ backgroundColor: POWER_CHART_COLORS[index % POWER_CHART_COLORS.length] }} />
+          <span>{team}</span>
+        </button>
+      ))}
+    </div>
   </div>
 </div>
 
@@ -1734,18 +1737,7 @@ page !== 'history' &&
 
         
 
-        <Legend
-          onClick={(entry) => {
-            const team = entry.dataKey
 
-            setHighlightedPointsTeam((current) =>
-              current === team ? null : team
-            )
-          }}
-          wrapperStyle={{
-            cursor: 'pointer',
-          }}
-        />
 
         {seasonData.teams.map((team, index) => {
           const isHighlighted =
@@ -1783,6 +1775,21 @@ page !== 'history' &&
       </LineChart>
     </ResponsiveContainer>
   </div>
+
+    <div className="trend-team-legend" aria-label="Select a team to isolate its trend">
+      {seasonData.teams.map((team, index) => (
+        <button
+          key={team}
+          type="button"
+          className={`trend-team-legend-item${highlightedPointsTeam === team ? ' is-selected' : ''}${highlightedPointsTeam && highlightedPointsTeam !== team ? ' is-dimmed' : ''}`}
+          onClick={() => setHighlightedPointsTeam((current) => current === team ? null : team)}
+          aria-pressed={highlightedPointsTeam === team}
+        >
+          <span className="trend-team-legend-swatch" style={{ backgroundColor: POWER_CHART_COLORS[index % POWER_CHART_COLORS.length] }} />
+          <span>{team}</span>
+        </button>
+      ))}
+    </div>
   </div>
     <div className="analytics-summary">
       <div className="analytics-summary-card">

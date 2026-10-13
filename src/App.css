@@ -3350,3 +3350,45 @@ button.history-manager-name:hover {
   .history-record-book .record-book-era-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   .history-record-book .record-book-era-options button { padding: 9px 7px; gap: 5px; }
 }
+
+/* Shared responsive legend for the two season trend charts */
+.trend-team-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px 12px;
+  margin-top: 12px;
+}
+.trend-team-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #b8c7dc;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+.trend-team-legend-item:hover,
+.trend-team-legend-item:focus-visible,
+.trend-team-legend-item.is-selected {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.18);
+}
+.trend-team-legend-item.is-dimmed { opacity: 0.35; }
+.trend-team-legend-swatch {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+}
+.trend-team-legend-item span:last-child { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .trend-team-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 6px; }
+  .trend-team-legend-item { padding: 5px; font-size: 12px; }
+}
