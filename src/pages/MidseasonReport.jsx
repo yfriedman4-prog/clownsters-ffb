@@ -37,6 +37,52 @@ const road = teamStats.map((t) => {
   return { ...t, opponents, difficulty: avg(opponents.map((o) => strength[o.name])) }
 }).sort((a, b) => b.difficulty - a.difficulty)
 
+
+// Editorial classifications use the frozen Week 7 data, not future results.
+// They describe different stories; a team can appear in more than one group.
+const standingsByWins = [...teamStats].sort((a, b) => b.wins - a.wins || b.pointsFor - a.pointsFor)
+const standingPosition = Object.fromEntries(standingsByWins.map((t, i) => [t.name, i + 1]))
+const byScoring = [...teamStats].sort((a, b) => b.ppg - a.ppg)
+const scoringPosition = Object.fromEntries(byScoring.map((t, i) => [t.name, i + 1]))
+const contenders = playoffForecast.filter((t) => t.playoffProbability >= 0.75).slice(0, 3)
+const pretenders = [...teamStats]
+  .filter((t) => standingPosition[t.name] < scoringPosition[t.name])
+  .sort((a, b) => (scoringPosition[b.name] - standingPosition[b.name]) - (scoringPosition[a.name] - standingPosition[a.name]) || a.name.localeCompare(b.name))
+  .slice(0, 2)
+const wildCards = playoffForecast
+  .filter((t) => t.playoffProbability >= 0.25 && t.playoffProbability < 0.75)
+  .sort((a, b) => Math.abs(a.playoffProbability - 0.5) - Math.abs(b.playoffProbability - 0.5))
+  .slice(0, 3)
+const editorialGroups = [
+  { id: 'contender', eyebrow: 'THE FAVORITES', title: 'Contenders', subtitle: 'The teams with a 75%+ projected playoff chance.', entries: contenders.map((t) => ({ name: t.teamName, stat: `${(t.playoffProbability * 100).toFixed(1)}%`, detail: 'playoff probability', copy: `Projected ${t.projectedWins.toFixed(1)} wins through Week 14. The numbers put this team in the driver's seat.` })) },
+  { id: 'pretender', eyebrow: 'THE WARNING SIGNS', title: 'Pretenders?', subtitle: 'Teams whose standings position is stronger than their scoring rank. A warning sign, not a verdict.', entries: pretenders.map((t) => ({ name: t.name, stat: `#${scoringPosition[t.name]}`, detail: 'scoring rank', copy: `Sitting #${standingPosition[t.name]} in the standings but #${scoringPosition[t.name]} in points per game. Can the record hold up?` })) },
+  { id: 'wildcard', eyebrow: 'THE CHAOS FACTOR', title: 'Wild Cards', subtitle: 'Bubble teams with 25–75% playoff odds, closest to a coin flip first.', entries: wildCards.map((t) => ({ name: t.teamName, stat: `${(t.playoffProbability * 100).toFixed(1)}%`, detail: 'playoff probability', copy: `Currently ${t.currentWins}–${t.currentLosses}. The remaining schedule could swing this story either way.` })) },
+]
+
+
+// Awards use observed Weeks 1–7 results. Luck compares actual wins with
+// the expected wins from each week's all-play matchups (11 opponents/week).
+const expectedWins = Object.fromEntries(teams.map((name) => [name, scores[name].reduce((total, score, week) => {
+  if (!Number.isFinite(score)) return total
+  const opponents = teams.filter((other) => other !== name && Number.isFinite(scores[other][week]))
+  return total + opponents.reduce((sum, other) => sum + (score > scores[other][week] ? 1 : score === scores[other][week] ? 0.5 : 0), 0) / Math.max(1, opponents.length)
+}, 0)]))
+const luckGap = (t) => t.wins - expectedWins[t.name]
+const strongest = [...teamStats].sort((a, b) => b.ppg - a.ppg || b.wins - a.wins)[0]
+const hottest = [...teamStats].sort((a, b) => b.delta - a.delta)[0]
+const luckiest = [...teamStats].sort((a, b) => luckGap(b) - luckGap(a))[0]
+const unluckiest = [...teamStats].sort((a, b) => luckGap(a) - luckGap(b))[0]
+const darkHorse = playoffForecast.filter((t) => standingPosition[t.teamName] > 3)
+  .sort((a, b) => b.playoffProbability - a.playoffProbability)[0]
+const signed = (value) => `${value > 0 ? '+' : ''}${value.toFixed(1)}`
+const awards = [
+  { icon: '★', label: 'THE HEADLINER', title: 'Midseason MVP', team: strongest.name, stat: `${strongest.ppg.toFixed(1)} PPG`, copy: `The league's highest-scoring team through Week 7, with ${strongest.wins} wins and ${strongest.pointsFor.toFixed(1)} points for.` },
+  { icon: '↗', label: 'THE HEAT CHECK', title: 'Hottest Team', team: hottest.name, stat: `${signed(hottest.delta)} PPG`, copy: `Scoring ${hottest.recent.toFixed(1)} PPG in Weeks 4–7 versus ${hottest.first.toFixed(1)} in Weeks 1–3. The biggest scoring improvement in the league.` },
+  { icon: '♣', label: 'THE FORTUNATE', title: 'Luckiest Team', team: luckiest.name, stat: `${signed(luckGap(luckiest))} wins`, copy: `${luckiest.wins} actual wins versus ${expectedWins[luckiest.name].toFixed(1)} all-play expected wins. The matchups have been kind.` },
+  { icon: '☂', label: 'THE HARD-LUCK STORY', title: 'Unluckiest Team', team: unluckiest.name, stat: `${signed(luckGap(unluckiest))} wins`, copy: `${unluckiest.wins} actual wins versus ${expectedWins[unluckiest.name].toFixed(1)} all-play expected wins. The schedule has not rewarded the scoring.` },
+  ...(darkHorse ? [{ icon: '⚡', label: 'THE SLEEPER', title: 'Dark Horse', team: darkHorse.teamName, stat: `${(darkHorse.playoffProbability * 100).toFixed(1)}%`, copy: `Outside the current top three, but carrying the strongest playoff probability among the chasing pack.` }] : []),
+]
+
 export default function MidseasonReport() {
   const [expanded, setExpanded] = useState(null)
   const [momentumSort, setMomentumSort] = useState('recent')
@@ -123,6 +169,38 @@ export default function MidseasonReport() {
       </div>
       <p className="midseason-playoff-method">Model: 70% full-season scoring + 30% recent scoring, with team-specific weekly volatility. Simulation seed is fixed so this report stays reproducible.</p>
     </section>
-    <section className="midseason-section midseason-coming"><div className="midseason-section-label">COMING NEXT</div><h2>Contenders, wild cards & midseason awards</h2><p>These editorial sections will be added after we validate the core report metrics and layout.</p></section>
+    <section className="midseason-section midseason-editorial-section">
+      <div className="midseason-section-label">05 / THE MIDSEASON VERDICT</div>
+      <h2>Contenders, Pretenders &amp; Wild Cards</h2>
+      <p>Seven weeks in, the standings only tell half the story. Here's what the numbers say about the playoff race.</p>
+      <div className="midseason-editorial-grid">
+        {editorialGroups.map((group) => <article key={group.id} className={`midseason-editorial-card ${group.id}`}>
+          <div className="midseason-editorial-eyebrow">{group.eyebrow}</div>
+          <h3>{group.title}</h3>
+          <p className="midseason-editorial-intro">{group.subtitle}</p>
+          {group.entries.length ? group.entries.map((entry, i) => <div key={entry.name} className="midseason-editorial-entry">
+            <div className="midseason-editorial-entry-top"><span className="midseason-editorial-number">{String(i + 1).padStart(2, '0')}</span><strong>{entry.name}</strong></div>
+            <div className="midseason-editorial-stat"><strong>{entry.stat}</strong><span>{entry.detail}</span></div>
+            <p>{entry.copy}</p>
+          </div>) : <p className="midseason-editorial-empty">No teams meet this category's criteria after Week 7.</p>}
+        </article>)}
+      </div>
+      <p className="midseason-editorial-note">Editorial labels are based on Week 7 standings, scoring rank and the frozen playoff simulation. Categories are not mutually exclusive.</p>
+    </section>
+    <section className="midseason-section midseason-awards-section">
+      <div className="midseason-section-label">06 / THE MIDSEASON AWARDS</div>
+      <h2>The Clownsters Honors</h2>
+      <p>Five stories, seven weeks of evidence. Every award is based on the frozen Week 7 snapshot—not on what happens next.</p>
+      <div className="midseason-awards-grid">
+        {awards.map((award, index) => <article className={`midseason-award-card ${index === 0 ? 'featured' : ''}`} key={award.title}>
+          <div className="midseason-award-top"><span className="midseason-award-icon" aria-hidden="true">{award.icon}</span><span className="midseason-award-label">{award.label}</span></div>
+          <h3>{award.title}</h3>
+          <div className="midseason-award-team">{award.team}</div>
+          <div className="midseason-award-stat">{award.stat}</div>
+          <p>{award.copy}</p>
+        </article>)}
+      </div>
+      <p className="midseason-awards-note">Luck measures actual wins minus all-play expected wins (the fraction of other teams beaten each week). MVP recognizes scoring leadership; Dark Horse excludes the current top three in the standings. These are editorial awards, not official league honors.</p>
+    </section>
   </div>
 }

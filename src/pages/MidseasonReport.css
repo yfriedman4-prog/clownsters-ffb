@@ -41,3 +41,40 @@
 .midseason-playoff-detail{display:flex;flex-wrap:wrap;gap:5px 20px;margin-top:8px;color:#b8c6d7;font-size:12px;font-variant-numeric:tabular-nums}
 .midseason-playoff-section .midseason-playoff-method{font-size:12px;margin:18px 0 0;color:#91a5b9}
 @media(max-width:650px){.midseason-playoff-entry{padding:12px 0}.midseason-playoff-detail{gap:4px 12px;font-size:11px}.midseason-playoff-team{font-size:13px}}
+
+
+/* Phase 3: magazine-style, data-backed midseason storylines */
+.midseason-editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.midseason-editorial-card{min-width:0;padding:22px;border:1px solid #42536a;border-radius:16px;background:linear-gradient(160deg,#23354a,#182638)}
+.midseason-editorial-card.contender{border-top:4px solid #e4b866}
+.midseason-editorial-card.pretender{border-top:4px solid #d77c6f}
+.midseason-editorial-card.wildcard{border-top:4px solid #51b99c}
+.midseason-editorial-eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;color:#d5b778}
+.midseason-editorial-card h3{font-size:clamp(23px,3vw,30px);line-height:1.1;margin:10px 0 8px}
+.midseason-editorial-card .midseason-editorial-intro{font-size:12px;line-height:1.5;min-height:56px;margin:0 0 14px}
+.midseason-editorial-entry{padding:15px 0;border-top:1px solid #405065}
+.midseason-editorial-entry-top{display:flex;align-items:baseline;gap:8px;overflow-wrap:anywhere;font-size:14px}
+.midseason-editorial-number{color:#8fa6bd;font-size:11px;flex-shrink:0}
+.midseason-editorial-stat{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;margin-top:10px}
+.midseason-editorial-stat strong{font-size:28px;color:#f1d493;font-variant-numeric:tabular-nums}
+.midseason-editorial-stat span{font-size:11px;color:#aebfd0}
+.midseason-editorial-card .midseason-editorial-entry p{font-size:12px;line-height:1.55;margin:8px 0 0}
+.midseason-editorial-card .midseason-editorial-empty{font-size:12px}
+.midseason-editorial-section .midseason-editorial-note{font-size:11px;color:#91a5b9;margin:16px 0 0}
+@media(max-width:900px){.midseason-editorial-grid{grid-template-columns:1fr}.midseason-editorial-card .midseason-editorial-intro{min-height:0}}
+@media(max-width:650px){.midseason-editorial-card{padding:18px}}
+
+
+/* Phase 3, checkpoint 2: magazine-style awards */
+.midseason-awards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:26px}
+.midseason-award-card{min-width:0;border:1px solid #42536a;border-radius:16px;padding:24px;background:linear-gradient(145deg,#24364a,#172537);position:relative;overflow:hidden}
+.midseason-award-card.featured{grid-column:1/-1;background:radial-gradient(circle at 90% 0%,#43523e 0%,transparent 50%),linear-gradient(130deg,#2a3546,#18283a);border-color:#9b7e45}
+.midseason-award-top{display:flex;align-items:center;gap:12px;color:#e4b866}
+.midseason-award-icon{display:grid;place-items:center;width:38px;height:38px;border:1px solid #806d49;border-radius:11px;font-size:22px;flex-shrink:0}
+.midseason-award-label{font-size:10px;font-weight:800;letter-spacing:.17em}
+.midseason-award-card h3{font-size:clamp(20px,3vw,27px);margin:18px 0 12px;color:#f3e5c4}
+.midseason-award-team{font-size:clamp(19px,3vw,31px);font-weight:850;overflow-wrap:anywhere;line-height:1.15}
+.midseason-award-stat{display:inline-block;margin:14px 0 5px;padding:7px 11px;background:#34475b;border-radius:7px;color:#83d8bc;font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.midseason-award-card p{margin:10px 0 0;font-size:13px;line-height:1.65}
+.midseason-awards-section .midseason-awards-note{font-size:11px;color:#9eb0c3;margin:20px 0 0}
+@media(max-width:650px){.midseason-awards-grid{grid-template-columns:minmax(0,1fr)}.midseason-award-card.featured{grid-column:auto}.midseason-award-card{padding:20px}}
