@@ -11,6 +11,7 @@ import {
 // import seasonData from './data/2025.json'
 // import matchupData from './data/2025-matchups.json'
 import SeasonHistory from './pages/history/SeasonHistory'
+import MidseasonReport from './pages/MidseasonReport'
 const historicalSeasonModules = import.meta.glob(
   './data/history/seasons/*.json',
   { eager: true, import: 'default' }
@@ -749,6 +750,7 @@ const cumulativePointsChartData = Array.from(
           ['matchups', 'Matchups'],
           ['teams', 'Teams'],
           ['analytics', 'Analytics'],
+          ['midseason', 'Midseason Report'],
         ]
       : [
   ['overview', 'Overview'],
@@ -802,6 +804,7 @@ page !== 'standings' &&
 page !== 'matchups' &&
 page !== 'teams' &&
 page !== 'analytics' &&
+page !== 'midseason' &&
 page !== 'history' &&
   page !== 'overview' &&
   page !== 'managers' &&
@@ -821,6 +824,8 @@ page !== 'history' &&
       This section is under construction.
     </p>
   </section>
+) : page === 'midseason' ? (
+    <MidseasonReport />
 ) : page === 'dashboard' ? (
     <>
 

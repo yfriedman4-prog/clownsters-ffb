@@ -1,0 +1,23 @@
+.midseason-report{max-width:1160px;margin:0 auto;color:var(--text,#e9edf6)}.midseason-cover{padding:64px clamp(22px,6vw,80px);border-radius:22px;background:radial-gradient(circle at 90% 20%,#244d68 0%,transparent 45%),linear-gradient(125deg,#111e32,#172b3d 70%,#19212f);border:1px solid #355069;margin-bottom:32px}.midseason-kicker,.midseason-section-label{font-size:12px;font-weight:800;letter-spacing:.19em;color:#e4b866}.midseason-cover h1{font-size:clamp(48px,9vw,108px);line-height:.95;letter-spacing:-.055em;margin:25px 0}.midseason-cover h1 span{color:#e4b866}.midseason-cover p{font-size:18px;color:#c4d2df}.midseason-stamp{display:inline-flex;gap:12px;margin-top:28px;padding:10px 16px;border:1px solid #a08a5a;border-radius:999px;color:#f3d68b;font-weight:800;letter-spacing:.09em}.midseason-section{background:#172335;border:1px solid #304052;border-radius:18px;padding:clamp(20px,4vw,38px);margin:22px 0}.midseason-section h2{font-size:clamp(26px,4vw,38px);margin:12px 0}.midseason-section p{color:#b8c6d7;max-width:760px;line-height:1.65}.midseason-table-wrap{overflow-x:auto;margin-top:20px}.midseason-section table{width:100%;border-collapse:collapse;white-space:nowrap}.midseason-section th,.midseason-section td{text-align:left;padding:12px;border-bottom:1px solid #344357}.midseason-section th{font-size:12px;color:#d5b778;text-transform:uppercase}.midseason-bars{display:grid;gap:12px;margin-top:24px}.midseason-bar-row{display:grid;grid-template-columns:minmax(150px,220px) minmax(80px,1fr) 70px;align-items:center;gap:14px;font-size:13px}.midseason-bar-track{height:13px;background:#293a4e;border-radius:8px;overflow:hidden}.midseason-bar-fill{height:100%;border-radius:8px}.midseason-bar-fill.positive{background:#51b99c}.midseason-bar-fill.negative{background:#d77c6f}.midseason-bar-fill.difficulty{background:#e1b56d}.midseason-bar-row strong{text-align:right;font-variant-numeric:tabular-nums}.midseason-expand{width:100%;background:transparent;border:0;color:inherit;cursor:pointer;text-align:left;padding:5px 0}.midseason-expand:hover{color:#e4b866}.midseason-opponents{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0 16px}.midseason-opponents span{background:#26374a;border-radius:6px;padding:7px 10px;font-size:12px}.midseason-coming{border-style:dashed}@media(max-width:650px){.midseason-cover{padding:40px 22px}.midseason-bar-row{grid-template-columns:minmax(100px,145px) minmax(40px,1fr) 55px;gap:8px;font-size:11px}.midseason-section{padding:18px}.midseason-stamp{font-size:11px}}
+
+/* Midseason Momentum Meter: period PPG on a shared scale */
+.midseason-momentum-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:22px}
+.midseason-momentum-legend{display:flex;flex-wrap:wrap;gap:16px;color:#c5d0dd;font-size:12px}
+.midseason-momentum-legend span{display:inline-flex;align-items:center;gap:7px}
+.midseason-momentum-swatch{display:inline-block;width:12px;height:12px;border-radius:3px}
+.midseason-momentum-swatch.early,.midseason-momentum-fill.early{background:#7890b4}
+.midseason-momentum-swatch.recent,.midseason-momentum-fill.recent{background:#51b99c}
+.midseason-momentum-sort{display:flex;align-items:center;gap:10px;color:#c5d0dd;font-size:12px;font-weight:700}
+.midseason-momentum-sort select{max-width:100%;min-width:0;background:#26374a;border:1px solid #496078;border-radius:8px;color:#f1f5fb;padding:9px 10px;font:inherit}
+.midseason-momentum-list{display:grid;gap:16px;margin-top:22px}
+.midseason-momentum-entry{min-width:0;padding-bottom:14px;border-bottom:1px solid #304052}
+.midseason-momentum-entry:last-child{border-bottom:0;padding-bottom:0}
+.midseason-momentum-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:9px;font-size:13px}
+.midseason-momentum-team{min-width:0;overflow-wrap:anywhere;font-weight:700}
+.midseason-momentum-heading strong{flex-shrink:0;font-size:12px;font-variant-numeric:tabular-nums}
+.midseason-momentum-up{color:#72d4b6}.midseason-momentum-down{color:#ef9c91}
+.midseason-momentum-series{display:grid;grid-template-columns:minmax(0,1fr) 52px;gap:6px 10px;align-items:center}
+.midseason-momentum-track{height:11px;overflow:hidden;border-radius:6px;background:#293a4e}
+.midseason-momentum-fill{height:100%;border-radius:6px}
+.midseason-momentum-value{text-align:right;color:#d7e0eb;font-size:12px;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.midseason-momentum-controls{align-items:stretch;flex-direction:column}.midseason-momentum-sort{justify-content:space-between}.midseason-momentum-sort select{width:min(100%,230px)}.midseason-momentum-heading{font-size:12px}}
