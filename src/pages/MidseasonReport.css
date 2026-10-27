@@ -21,3 +21,23 @@
 .midseason-momentum-fill{height:100%;border-radius:6px}
 .midseason-momentum-value{text-align:right;color:#d7e0eb;font-size:12px;font-variant-numeric:tabular-nums}
 @media(max-width:650px){.midseason-momentum-controls{align-items:stretch;flex-direction:column}.midseason-momentum-sort{justify-content:space-between}.midseason-momentum-sort select{width:min(100%,230px)}.midseason-momentum-heading{font-size:12px}}
+
+/* Frozen Week 7 playoff forecast */
+.midseason-playoff-key{display:flex;flex-wrap:wrap;gap:10px 18px;margin:20px 0;color:#c5d0dd;font-size:12px}
+.midseason-playoff-key span{display:inline-flex;align-items:center;gap:7px}
+.midseason-playoff-dot{display:inline-block;width:10px;height:10px;border-radius:50%}
+.midseason-playoff-dot.likely,.midseason-playoff-fill.likely{background:#51b99c}
+.midseason-playoff-dot.bubble,.midseason-playoff-fill.bubble{background:#e1b56d}
+.midseason-playoff-dot.longshot,.midseason-playoff-fill.longshot{background:#d77c6f}
+.midseason-playoff-list{display:grid;gap:0}
+.midseason-playoff-entry{min-width:0;padding:14px 0;border-bottom:1px solid #304052}
+.midseason-playoff-entry:last-child{border-bottom:0}
+.midseason-playoff-top{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.midseason-playoff-rank{color:#92a4b9;font-size:12px;font-variant-numeric:tabular-nums}
+.midseason-playoff-team{flex:1;min-width:0;overflow-wrap:anywhere;font-size:14px}
+.midseason-playoff-pct{font-size:16px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.midseason-playoff-track{height:12px;border-radius:7px;background:#293a4e;overflow:hidden}
+.midseason-playoff-fill{height:100%;border-radius:7px}
+.midseason-playoff-detail{display:flex;flex-wrap:wrap;gap:5px 20px;margin-top:8px;color:#b8c6d7;font-size:12px;font-variant-numeric:tabular-nums}
+.midseason-playoff-section .midseason-playoff-method{font-size:12px;margin:18px 0 0;color:#91a5b9}
+@media(max-width:650px){.midseason-playoff-entry{padding:12px 0}.midseason-playoff-detail{gap:4px 12px;font-size:11px}.midseason-playoff-team{font-size:13px}}

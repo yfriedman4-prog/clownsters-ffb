@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react'
 import snapshot from '../data/midseason/2026-week7.json'
+import { forecastPlayoffs } from '../utils/midseasonPlayoffForecast.mjs'
 import './MidseasonReport.css'
 
 const WEEKS = 7
+const playoffForecast = forecastPlayoffs(snapshot)
 const teams = snapshot.standings.map((row) => row.teamName)
 const games = snapshot.matchups
 const scores = Object.fromEntries(teams.map((name) => [name, Array.from({ length: WEEKS }, (_, i) => {
@@ -96,6 +98,30 @@ export default function MidseasonReport() {
       <h2>Remaining schedule difficulty</h2>
       <p>Opponent strength combines season scoring (35%), all-play performance (35%), and Weeks 4–7 scoring (30%). All components are normalized across the league. Higher means harder.</p>
       <div className="midseason-bars">{road.map((t,i)=><div key={t.name} className="midseason-road-entry"><button className="midseason-bar-row midseason-expand" onClick={()=>setExpanded(expanded===t.name?null:t.name)} aria-expanded={expanded===t.name}><span>{i+1}. {t.name}</span><div className="midseason-bar-track"><div className="midseason-bar-fill difficulty" style={{width:`${t.difficulty}%`}} /></div><strong>{t.difficulty.toFixed(1)} ▾</strong></button>{expanded===t.name&&<div className="midseason-opponents">{t.opponents.map((o)=><span key={o.week}>W{o.week}: {o.name} ({strength[o.name].toFixed(1)})</span>)}</div>}</div>)}</div>
+    </section>
+    <section className="midseason-section midseason-playoff-section">
+      <div className="midseason-section-label">04 / PLAYOFF CRYSTAL BALL</div>
+      <h2>The playoff picture</h2>
+      <p>20,000 simulated finishes of Weeks 8–14, based only on the frozen Week 7 snapshot. Six teams qualify; standings use wins, then Points For. Percentages are model estimates, not guarantees.</p>
+      <div className="midseason-playoff-key"><span><i className="midseason-playoff-dot likely" /> 75%+ likely</span><span><i className="midseason-playoff-dot bubble" /> 25–75% bubble</span><span><i className="midseason-playoff-dot longshot" /> Under 25% long shot</span></div>
+      <div className="midseason-playoff-list">
+        {playoffForecast.map((t, i) => {
+          const pct = t.playoffProbability * 100
+          const tier = pct >= 75 ? 'likely' : pct >= 25 ? 'bubble' : 'longshot'
+          return <div className="midseason-playoff-entry" key={t.teamName}>
+            <div className="midseason-playoff-top">
+              <span className="midseason-playoff-rank">{String(i + 1).padStart(2, '0')}</span>
+              <strong className="midseason-playoff-team">{t.teamName}</strong>
+              <strong className="midseason-playoff-pct">{pct.toFixed(1)}%</strong>
+            </div>
+            <div className="midseason-playoff-track" role="meter" aria-label={`${t.teamName} playoff probability`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Number(pct.toFixed(1))}>
+              <div className={`midseason-playoff-fill ${tier}`} style={{ width: `${pct}%` }} />
+            </div>
+            <div className="midseason-playoff-detail"><span>Current: {t.currentWins}–{t.currentLosses}</span><span>Projected wins: {t.projectedWins.toFixed(1)}</span><span>Avg. finish: #{t.expectedFinish.toFixed(1)}</span></div>
+          </div>
+        })}
+      </div>
+      <p className="midseason-playoff-method">Model: 70% full-season scoring + 30% recent scoring, with team-specific weekly volatility. Simulation seed is fixed so this report stays reproducible.</p>
     </section>
     <section className="midseason-section midseason-coming"><div className="midseason-section-label">COMING NEXT</div><h2>Contenders, wild cards & midseason awards</h2><p>These editorial sections will be added after we validate the core report metrics and layout.</p></section>
   </div>
