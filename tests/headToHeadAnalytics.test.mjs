@@ -6,8 +6,10 @@ const directory = new URL('../src/data/history/seasons/', import.meta.url)
 const seasons = Object.fromEntries(fs.readdirSync(directory).filter((name) => name.endsWith('.json')).map((name) => [name.slice(0, 4), JSON.parse(fs.readFileSync(new URL(name, directory)))]))
 test('current season only includes completed weeks', () => {
   const games = getCompletedH2HMatchups(seasons, 2026, 2026)
-  assert.ok(games.length > 0)
-  assert.ok(games.every((game) => game.week <= 4))
+  const completedThroughWeek = seasons[2026].completedThroughWeek
+  assert.equal(games.length, completedThroughWeek * 6)
+  assert.ok(games.every((game) => game.week <= completedThroughWeek))
+  assert.ok(games.some((game) => game.week === completedThroughWeek))
 })
 test('records mirror and count games once', () => {
   const { managerIds, matrix, matchupCount } = buildHeadToHeadMatrix(seasons)
