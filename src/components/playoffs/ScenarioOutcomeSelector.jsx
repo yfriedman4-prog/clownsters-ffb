@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { matchupKey, presetPolicies, scenarioPreset, toggleSelection } from '../../utils/playoffs/scenarioSelections.js'
-export default function ScenarioOutcomeSelector({ season, state, selections, onChange }) {
+export default function ScenarioOutcomeSelector({ season, state, selections, onChange, headingRef }) {
   const [notice,setNotice]=useState(null)
   const byId=Object.fromEntries(state.teams.map(t=>[t.managerId,t.teamName]))
   const weeks=[...new Set(state.remaining.map(g=>g.week))]
   const preset=id=>{try{const result=scenarioPreset(season,id);onChange(result.selections);setNotice({text:presetPolicies[id],conflicts:result.conflicts})}catch(e){setNotice({error:e.message})}}
   return <div className="whatif-selector">
-    <h3>Select Game Outcomes</h3><p>Pick hypothetical winners. Unselected games remain probabilistically simulated. Click a selected winner again to clear it.</p>
+    <h3 ref={headingRef} tabIndex={-1}>Select Game Outcomes</h3><p>Pick hypothetical winners. Unselected games remain probabilistically simulated. Click a selected winner again to clear it.</p>
     <fieldset className="whatif-presets"><legend>Quick scenarios · hypothetical, not predictions</legend>{[['current','Current Forecast'],['top','Top Teams Win Out'],['bubble','Bubble Teams Win Out'],['chaos','Underdog Chaos']].map(([id,label])=><button type="button" key={id} onClick={()=>preset(id)}>{label}</button>)}</fieldset>
     <details className="whatif-policy"><summary>Preset policies and conflict handling</summary>{Object.values(presetPolicies).map(p=><p key={p}>{p}</p>)}<p>Tied current standings require manual selections; no official tiebreaker is invented.</p></details>
     {notice && <div className="whatif-notice" role={notice.error?'alert':'status'}><p>{notice.error??notice.text}</p>{notice.conflicts?.length>0 && <details open><summary>{notice.conflicts.length} preset conflicts resolved by the stated policy</summary><ul>{notice.conflicts.map(c=><li key={c}>{c}</li>)}</ul></details>}</div>}

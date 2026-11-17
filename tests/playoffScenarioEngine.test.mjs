@@ -50,3 +50,13 @@ test('existing worker routes scenario requests and explicit validation errors wi
   assert.equal(messages[1].requestId,'invalid');assert.match(messages[1].error,/remaining matchup/)
  }finally{delete globalThis.self}
 })
+test('complete Games That Matter report exactly matches production ranking and conditional probabilities',async()=>{
+ let simulation=execFileSync('git',['show','9bb43ea:src/utils/playoffs/simulation.js']).toString()
+ for(const relative of ['../../config/playoffs2026.js','./seasonState.js','./ranking.js','./sampling.js'])simulation=simulation.replaceAll(relative,new URL(relative,new URL('../src/utils/playoffs/simulation.js',import.meta.url)).href)
+ const simulationUrl=`data:text/javascript;base64,${Buffer.from(simulation).toString('base64')}`
+ let insights=execFileSync('git',['show','9bb43ea:src/utils/playoffs/raceInsights.js']).toString().replace('./simulation.js',simulationUrl)
+ for(const relative of ['./seasonState.js','./ranking.js','./sampling.js'])insights=insights.replaceAll(relative,new URL(relative,new URL('../src/utils/playoffs/raceInsights.js',import.meta.url)).href)
+ const prior=await import(`data:text/javascript;base64,${Buffer.from(insights).toString('base64')}`)
+ const {analyzeKeyMatchups}=await import('../src/utils/playoffs/raceInsights.js')
+ assert.deepEqual(analyzeKeyMatchups(season,{iterations:100,seed:42}),prior.analyzeKeyMatchups(season,{iterations:100,seed:42}))
+})
