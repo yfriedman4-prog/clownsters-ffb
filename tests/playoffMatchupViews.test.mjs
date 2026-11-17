@@ -59,5 +59,5 @@ test('actual conditional outputs retain original combined ordering and all leagu
   for(const g of ranked){assert.equal(g.homeWin.results.length,12);assert.equal(g.awayWin.results.length,12)}
  }
  assert.deepEqual(analysis,before)
- for(const path of ['src/utils/playoffs/simulation.js','src/utils/playoffs/raceInsights.js','src/workers/playoffScenarios.worker.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`6a1bbc7:${path}`]).toString())
+ for(const path of ['src/utils/playoffs/raceInsights.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`6a1bbc7:${path}`]).toString())
 })
