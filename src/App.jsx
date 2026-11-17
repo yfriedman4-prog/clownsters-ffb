@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import DashboardNavigation from './components/DashboardNavigation.jsx'
+import { validNavigationPage,restoreSectionPages } from './utils/navigation.js'
 import {
   ResponsiveContainer,
   LineChart,
@@ -294,15 +296,12 @@ const POWER_CHART_COLORS = [
   '#467d2b',
 ]
 const NAV_STORAGE_KEY = 'clownsters-navigation-v1'
-const CURRENT_PAGES = ['dashboard', 'standings', 'matchups', 'teams', 'analytics', 'playoffs']
-const HISTORY_PAGES = ['overview', 'history', 'managers', 'records', 'scoring-analytics', 'era-comparisons', 'manager-profile', 'rivalry-detail']
 
 function readSavedNavigation() {
   try {
     const saved = JSON.parse(window.localStorage.getItem(NAV_STORAGE_KEY) || 'null')
     if (!saved || !['current', 'history'].includes(saved.mode)) return null
-    const allowed = saved.mode === 'current' ? CURRENT_PAGES : HISTORY_PAGES
-    if (!allowed.includes(saved.page)) return null
+    if (!validNavigationPage(saved.mode,saved.page,saved)) return null
     if (['manager-profile', 'rivalry-detail'].includes(saved.page) &&
         (!saved.selectedManagerId || !managersById[saved.selectedManagerId])) return null
     if (saved.page === 'rivalry-detail' &&
@@ -317,6 +316,13 @@ function App() {
   const [savedNavigation] = useState(readSavedNavigation)
   const [mode, setMode] = useState(savedNavigation?.mode ?? 'current')
   const [page, setPage] = useState(savedNavigation?.page ?? 'dashboard')
+  const sectionPages=useRef(restoreSectionPages(savedNavigation))
+  const switchSection=next=>{
+    if (next===mode) return
+    sectionPages.current[mode]=page
+    setMode(next)
+    setPage(sectionPages.current[next])
+  }
   const [activeSeason, setActiveSeason] = useState(
     availableSeasons.includes(savedNavigation?.activeSeason)
       ? savedNavigation.activeSeason : availableSeasons[0]
@@ -331,9 +337,10 @@ function App() {
 
   useEffect(() => {
     try {
+      sectionPages.current[mode]=page
       window.localStorage.setItem(NAV_STORAGE_KEY, JSON.stringify({
         mode, page, activeSeason, selectedManagerId, rivalryOpponentId,
-        managersView, managerProfileOrigin,
+        managersView, managerProfileOrigin, sectionPages:sectionPages.current,
       }))
     } catch {
       // Navigation continues to work if browser storage is unavailable.
@@ -714,74 +721,9 @@ const cumulativePointsChartData = Array.from(
 })
   return (
     <div className="app">
-     <header className="header">
-  <div className="header-brand">
-    <div className="brand">🏈 CLOWNSTERS FFB</div>
-    <div className="subtitle">Fantasy Football League</div>
-  </div>
-
-<div className="header-navigation">
-  <div className="mode-switcher">
-    <button
-      className={`mode-button ${mode === 'current' ? 'active' : ''}`}
-      onClick={() => {
-        setMode('current')
-        setPage('dashboard')
-      }}
-    >
-      Current Season
-    </button>
-
-    <button
-      className={`mode-button ${mode === 'history' ? 'active' : ''}`}
-      onClick={() => {
-        setMode('history')
-        setPage('overview')
-      }}
-    >
-      League History
-    </button>
-  </div>
-
-  <nav className="nav">
-    {(mode === 'current'
-      ? [
-          ['dashboard', 'Dashboard'],
-          ['standings', 'Standings'],
-          ['matchups', 'Matchups'],
-          ['teams', 'Teams'],
-          ['analytics', 'Analytics'],
-          ['playoffs', 'Playoff Scenarios'],
-          ['midseason', 'Midseason Report'],
-        ]
-      : [
-  ['overview', 'Overview'],
-  ['history', 'Seasons'],
-  ['managers', 'Managers'],
-  ['records', 'Records'],
-  ['scoring-analytics', 'Scoring Analytics'],
-  ['era-comparisons', 'Era Comparisons'],
-]
-    ).map(([id, label]) => (
-      <button
-        key={id}
-        className={`nav-item ${page === id ? 'active' : ''}`}
-        onClick={() => {
-          setPage(id)
-
-          if (id === 'teams') {
-            setSelectedTeam(null)
-          }
-        }}
-      >
-        {label}
-      </button>
-    ))}
-  </nav>
-</div>
-
+      <DashboardNavigation mode={mode} page={['manager-profile','rivalry-detail'].includes(page) ? managerProfileOrigin : page} onModeChange={switchSection} onPageChange={id=>{setPage(id);if(id==='teams')setSelectedTeam(null)}} />
   {mode === 'history' && page === 'history' && (
-  <div className="season">
+  <div className="season navigation-season">
     <select
       className="season-select"
       value={activeSeason}
@@ -798,7 +740,6 @@ const cumulativePointsChartData = Array.from(
     </select>
   </div>
 )}
-</header>
 
       <main className="dashboard">
 {page !== 'dashboard' &&
