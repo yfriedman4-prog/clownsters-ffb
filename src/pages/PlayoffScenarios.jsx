@@ -15,16 +15,18 @@ export default function PlayoffScenarios({ season }) {
   const state = useMemo(() => { try { return { data: validateSeason(season) } } catch (e) { return { error: e.message } } }, [season])
   useEffect(() => {
     if (state.error) return
+    let active = true
     const worker = new Worker(new URL('../workers/playoffScenarios.worker.js', import.meta.url), { type: 'module' })
     worker.onmessage = ({ data }) => {
+      if (!active) return
       if (data.result) setSimulation(data.result)
       if (data.insights) setInsights(data.insights)
       if (data.progress) setProgress(data.progress)
       if (data.error) setError(data.error)
     }
-    worker.onerror = () => setError('Simulation could not run. Please reload or choose another simulation count.')
+    worker.onerror = () => active && setError('Simulation could not run. Please reload or choose another simulation count.')
     worker.postMessage({ season, options: { iterations, seed: 202610 } })
-    return () => worker.terminate()
+    return () => { active = false; worker.terminate() }
   }, [season, iterations, state.error])
   if (state.error) return <section className="playoff-page"><h1>Playoff Race</h1><p role="alert">Data needs review: {state.error}</p></section>
   const rows = rankTeams(state.data.teams)
