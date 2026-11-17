@@ -34,7 +34,7 @@ test('conditional winner samples feasible scores with PF effects and preserves d
   assert.throws(()=>simulatePlayoffs(season,{forcedWinner:{...g,week:1,winner:g.home}}),/remaining matchup/)
   assert.throws(()=>simulatePlayoffs(season,{forcedWinner:{...g,winner:'unknown'}}),/remaining matchup/)
 })
-test('storylines select strongest outsider, weakest qualifier and largest projected riser; absent criteria omitted',()=>{
+test('storylines select strongest outsider, weakest qualifier and postseason-relevant projected riser; absent criteria omitted',()=>{
   const rows=rankTeams(validateSeason(season).teams)
   const results=rows.map(t=>({managerId:t.managerId,playoffLower:(13-t.seedMin)/13,playoffUpper:(13-t.seedMin)/13,expectedSeedMin:t.seedMin,expectedSeedMax:t.seedMin}))
   const outsider=rows[6];results[6].playoffLower=0.95;results[6].playoffUpper=0.95;results[6].expectedSeedMin=4;results[6].expectedSeedMax=4
@@ -58,4 +58,39 @@ test('all actual remaining games ranked by documented impact with reproducible u
     for(const r of g.homeWin.results){assert.ok(r.playoffInterval[0]<=r.playoffLower);assert.ok(r.playoffInterval[1]>=r.playoffUpper)}
   }
   assert.ok(samplingInterval(0,100)[1]>0);assert.ok(samplingInterval(1,100)[0]<1)
+})
+
+
+test('riser regression: reject displayed zero odds and weight seed gain by playoff and bye exposure',()=>{
+  const rows=[{managerId:'bubble',seedMin:7,seedMax:7},{managerId:'longshot',seedMin:12,seedMax:12},{managerId:'bye',seedMin:3,seedMax:3}]
+  const results=[
+    {managerId:'bubble',playoffLower:0.6,playoffUpper:0.6,byeLower:0,byeUpper:0,expectedSeedMin:6.4,expectedSeedMax:6.4},
+    {managerId:'longshot',playoffLower:0.0004,playoffUpper:0.0004,byeLower:0,byeUpper:0,expectedSeedMin:10,expectedSeedMax:10},
+    {managerId:'bye',playoffLower:0.99,playoffUpper:0.99,byeLower:0.5,byeUpper:0.5,expectedSeedMin:2.5,expectedSeedMax:2.5},
+  ]
+  const original=JSON.stringify({rows,results})
+  const stories=selectStorylines(rows,results)
+  assert.equal(stories.find(s=>s.type==='Projected-Seed Riser').team.managerId,'bye')
+  assert.deepEqual(stories,selectStorylines(rows,results))
+  assert.equal(JSON.stringify({rows,results}),original)
+  results[2].expectedSeedMax=3;results[2].expectedSeedMin=3
+  assert.equal(selectStorylines(rows,results).find(s=>s.type==='Projected-Seed Riser').team.managerId,'bubble')
+  results[0].playoffLower=0;results[0].playoffUpper=0
+  assert.equal(selectStorylines(rows,results).at(-1).type,'Bye Battle')
+  results[2].byeLower=0;results[2].byeUpper=0
+  assert.equal(selectStorylines(rows,results).at(-1).type,'Cutline Pressure')
+  results[2].playoffLower=1;results[2].playoffUpper=1
+  assert.equal(selectStorylines(rows,results).length,2)
+})
+
+test('actual Week 10 riser has a visible postseason chance; simulation and matchup ranking code remain unchanged',()=>{
+  const state=validateSeason(season), results=simulatePlayoffs(season,{iterations:1000}).results
+  const riser=selectStorylines(rankTeams(state.teams),results).find(s=>s.type==='Projected-Seed Riser')
+  assert.ok(riser)
+  assert.notEqual((100*riser.team.estimate.playoffLower).toFixed(1),'0.0')
+  assert.ok(riser.team.estimate.expectedSeedMax<riser.team.seedMin)
+  for(const path of ['src/utils/playoffs/simulation.js','src/utils/playoffs/sampling.js','src/utils/playoffs/ranking.js','src/utils/playoffs/seasonState.js','src/workers/playoffScenarios.worker.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`c02f094:${path}`]).toString())
+  const old=execFileSync('git',['show','c02f094:src/utils/playoffs/raceInsights.js']).toString()
+  const current=fs.readFileSync('src/utils/playoffs/raceInsights.js','utf8')
+  assert.equal(current.slice(current.indexOf('export function analyzeKeyMatchups')),old.slice(old.indexOf('export function analyzeKeyMatchups')))
 })

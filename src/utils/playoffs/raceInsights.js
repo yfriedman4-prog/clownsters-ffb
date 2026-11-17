@@ -8,8 +8,19 @@ export function selectStorylines(rows, results) {
   const candidates = rows.map(t => ({ ...t, estimate: results.find(r => r.managerId === t.managerId) })).filter(t => t.estimate)
   const bubble = candidates.filter(t => t.seedMin > 6).sort((a,b) => b.estimate.playoffLower - a.estimate.playoffLower)[0]
   const risk = candidates.filter(t => t.seedMax <= 6).sort((a,b) => a.estimate.playoffUpper - b.estimate.playoffUpper)[0]
-  const riser = candidates.filter(t => t.estimate.expectedSeedMax < t.seedMin).sort((a,b) => (b.seedMin - b.estimate.expectedSeedMax) - (a.seedMin - a.estimate.expectedSeedMax))[0]
-  return [{type:'Bubble Surge', team:bubble}, {type:'At Risk', team:risk}, {type:'Projected-Seed Riser', team:riser}].filter(s => s.team)
+  // Editorial relevance, not league rules: weight seed improvement by estimated
+  // postseason exposure. A displayed 0.0% qualification chance cannot lead this card.
+  const exposure = t => t.estimate.playoffLower + (t.estimate.byeLower ?? 0)
+  const displayedChance = p => Number((100 * p).toFixed(1)) > 0
+  const riser = candidates.filter(t => displayedChance(t.estimate.playoffLower) && t.estimate.expectedSeedMax < t.seedMin)
+    .sort((a,b) => (b.seedMin - b.estimate.expectedSeedMax) * exposure(b) - (a.seedMin - a.estimate.expectedSeedMax) * exposure(a))[0]
+  const byeBattle = candidates.filter(t => displayedChance(t.estimate.byeLower ?? 0) && Number((100 * (t.estimate.byeUpper ?? 1)).toFixed(1)) < 100)
+    .sort((a,b) => (b.estimate.byeLower * (1 - b.estimate.byeLower)) - (a.estimate.byeLower * (1 - a.estimate.byeLower)))[0]
+  const pressure = candidates.filter(t => displayedChance(t.estimate.playoffLower) && Number((100 * t.estimate.playoffUpper).toFixed(1)) < 100)
+    .sort((a,b) => Math.abs(a.seedMin - 6.5) - Math.abs(b.seedMin - 6.5) || Math.abs(a.estimate.playoffLower - 0.5) - Math.abs(b.estimate.playoffLower - 0.5))[0]
+  const third = riser ? {type:'Projected-Seed Riser', team:riser}
+    : byeBattle ? {type:'Bye Battle', team:byeBattle} : {type:'Cutline Pressure', team:pressure}
+  return [{type:'Bubble Surge', team:bubble}, {type:'At Risk', team:risk}, third].filter(s => s.team)
 }
 export function analyzeKeyMatchups(season, options = {}, onProgress = () => {}) {
   const state = validateSeason(season)
