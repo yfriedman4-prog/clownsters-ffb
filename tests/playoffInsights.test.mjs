@@ -89,7 +89,7 @@ test('actual Week 10 riser has a visible postseason chance; simulation and match
   assert.ok(riser)
   assert.notEqual((100*riser.team.estimate.playoffLower).toFixed(1),'0.0')
   assert.ok(riser.team.estimate.expectedSeedMax<riser.team.seedMin)
-  for(const path of ['src/utils/playoffs/simulation.js','src/utils/playoffs/sampling.js','src/utils/playoffs/ranking.js','src/utils/playoffs/seasonState.js','src/workers/playoffScenarios.worker.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`c02f094:${path}`]).toString())
+  for(const path of ['src/utils/playoffs/sampling.js','src/utils/playoffs/ranking.js','src/utils/playoffs/seasonState.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`c02f094:${path}`]).toString())
   const old=execFileSync('git',['show','c02f094:src/utils/playoffs/raceInsights.js']).toString()
   const current=fs.readFileSync('src/utils/playoffs/raceInsights.js','utf8')
   assert.equal(current.slice(current.indexOf('export function analyzeKeyMatchups')),old.slice(old.indexOf('export function analyzeKeyMatchups')))

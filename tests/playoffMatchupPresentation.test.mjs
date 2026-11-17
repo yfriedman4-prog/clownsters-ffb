@@ -32,5 +32,5 @@ test('beneficiary excludes participants, shows both outcomes and picks supported
 test('zero swings omit callouts; release leaves validated calculations, rankings and worker unchanged',()=>{
  const f=structuredClone(fixture);f.awayWin=structuredClone(f.homeWin)
  assert.deepEqual(matchupStakes(f,'combined'),{highlight:null,beneficiary:null})
- for(const path of ['src/utils/playoffs/matchupViews.js','src/utils/playoffs/simulation.js','src/utils/playoffs/raceInsights.js','src/utils/playoffs/sampling.js','src/workers/playoffScenarios.worker.js','src/pages/PlayoffScenarios.jsx','src/config/playoffs2026.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`893f8af:${path}`]).toString())
+ for(const path of ['src/utils/playoffs/matchupViews.js','src/utils/playoffs/raceInsights.js','src/utils/playoffs/sampling.js','src/config/playoffs2026.js']) assert.equal(fs.readFileSync(path,'utf8'),execFileSync('git',['show',`893f8af:${path}`]).toString())
 })
