@@ -12,6 +12,7 @@ import {
 // import matchupData from './data/2025-matchups.json'
 import SeasonHistory from './pages/history/SeasonHistory'
 import MidseasonReport from './pages/MidseasonReport'
+import PlayoffScenarios from './pages/PlayoffScenarios'
 const historicalSeasonModules = import.meta.glob(
   './data/history/seasons/*.json',
   { eager: true, import: 'default' }
@@ -293,7 +294,7 @@ const POWER_CHART_COLORS = [
   '#467d2b',
 ]
 const NAV_STORAGE_KEY = 'clownsters-navigation-v1'
-const CURRENT_PAGES = ['dashboard', 'standings', 'matchups', 'teams', 'analytics']
+const CURRENT_PAGES = ['dashboard', 'standings', 'matchups', 'teams', 'analytics', 'playoffs']
 const HISTORY_PAGES = ['overview', 'history', 'managers', 'records', 'scoring-analytics', 'era-comparisons', 'manager-profile', 'rivalry-detail']
 
 function readSavedNavigation() {
@@ -750,6 +751,7 @@ const cumulativePointsChartData = Array.from(
           ['matchups', 'Matchups'],
           ['teams', 'Teams'],
           ['analytics', 'Analytics'],
+          ['playoffs', 'Playoff Scenarios'],
           ['midseason', 'Midseason Report'],
         ]
       : [
@@ -805,6 +807,7 @@ page !== 'matchups' &&
 page !== 'teams' &&
 page !== 'analytics' &&
 page !== 'midseason' &&
+page !== 'playoffs' &&
 page !== 'history' &&
   page !== 'overview' &&
   page !== 'managers' &&
@@ -824,6 +827,8 @@ page !== 'history' &&
       This section is under construction.
     </p>
   </section>
+) : page === 'playoffs' ? (
+    <PlayoffScenarios season={currentSeason} />
 ) : page === 'midseason' ? (
     <MidseasonReport />
 ) : page === 'dashboard' ? (
