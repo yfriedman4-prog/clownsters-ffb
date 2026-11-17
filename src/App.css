@@ -3392,3 +3392,58 @@ button.history-manager-name:hover {
   .trend-team-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 6px; }
   .trend-team-legend-item { padding: 5px; font-size: 12px; }
 }
+
+/* Two-tier navigation: section selection above the existing page links. */
+.primary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 16px 3%;
+  border-bottom: 1px solid #202e40;
+  background: #0d121e;
+}
+.primary-header .header-brand { min-width: 0; }
+.primary-header .brand { font-size: 21px; white-space: nowrap; }
+.primary-header .subtitle { font-size: 12px; color: #98a8bf; }
+.primary-header .mode-switcher { flex: 0 0 auto; margin: 0 0 0 auto; align-self: center; }
+.primary-header .mode-button { min-height: 40px; padding: 10px 15px; color: #a7b5ca; font-size: 12px; }
+.primary-header .mode-button.active { color: #f3f8fc; background: #28433f; }
+.secondary-navigation {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0 3%;
+  min-height: 50px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  border-bottom: 1px solid #263448;
+  background: #101925;
+}
+.secondary-navigation::-webkit-scrollbar { display: none; }
+.secondary-navigation .nav-item { flex: 0 0 auto; padding: 14px 13px; min-height: 48px; white-space: nowrap; font-size: 13px; color: #a3b3c6; }
+.secondary-navigation .nav-item:hover { color: #f5fafb; background: #192939; }
+.secondary-navigation .nav-item.active { color: #e9fff8; }
+.secondary-navigation .nav-item.active::after { left: 13px; right: 13px; bottom: 0; height: 3px; background: #70cbb5; }
+.primary-header button:focus-visible, .secondary-navigation button:focus-visible { outline: 2px solid #e4b866; outline-offset: -4px; }
+.navigation-season { width: fit-content; margin: 18px 3% 0; }
+@media (max-width: 700px) {
+  .primary-header { flex-wrap: wrap; gap: 12px; padding: 14px 16px; min-height: 0; }
+  .primary-header .brand { font-size: 18px; }
+  .primary-header .subtitle { font-size: 11px; }
+  .primary-header .mode-switcher { margin: 0; }
+  .primary-header .mode-button { min-height: 40px; padding: 9px 13px; font-size: 11px; }
+  .secondary-navigation { padding: 0 12px; gap: 4px; }
+  .secondary-navigation .nav-item { padding: 14px 12px; min-height: 48px; font-size: 12px; }
+  .secondary-navigation .nav-item.active::after { left: 12px; right: 12px; }
+}
+/* The existing long league-leader name must also fit the smallest QA viewport. */
+@media (max-width: 360px) {
+  .hero > div { min-width: 0; }
+  .hero h1 { font-size: clamp(26px, 9vw, 32px); overflow-wrap: anywhere; }
+}
