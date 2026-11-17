@@ -5,7 +5,7 @@
     "importedFrom": "FRB CSV export"
   },
   "seasonStatus": "in_progress",
-  "completedThroughWeek": 9,
+  "completedThroughWeek": 10,
   "regularSeasonWeeks": 14,
   "regularSeasonStartWeek": 1,
   "regularSeasonEndWeek": 14,
@@ -90,19 +90,19 @@
       "sourceManagerName": "Max",
       "teamName": "mongrel",
       "wins": 6,
-      "losses": 3,
-      "pointsFor": 1339.84,
-      "pointsAgainst": 1150.34
+      "losses": 4,
+      "pointsFor": 1477.74,
+      "pointsAgainst": 1343.86
     },
     {
       "rank": 0,
       "managerId": "finn",
       "sourceManagerName": "Michael",
       "teamName": "Pukaluxklan",
-      "wins": 5,
+      "wins": 6,
       "losses": 4,
-      "pointsFor": 1284.52,
-      "pointsAgainst": 1209.34
+      "pointsFor": 1430.06,
+      "pointsAgainst": 1316.26
     },
     {
       "rank": 0,
@@ -110,39 +110,39 @@
       "sourceManagerName": "Alex",
       "teamName": "Likely Injured",
       "wins": 3,
-      "losses": 6,
-      "pointsFor": 996.7,
-      "pointsAgainst": 1152.82
+      "losses": 7,
+      "pointsFor": 1112.02,
+      "pointsAgainst": 1273.0
     },
     {
       "rank": 0,
       "managerId": "reoven",
       "sourceManagerName": "Reoven",
       "teamName": "Reoven's Rad Team",
-      "wins": 7,
+      "wins": 8,
       "losses": 2,
-      "pointsFor": 1336.76,
-      "pointsAgainst": 1280.84
+      "pointsFor": 1484.12,
+      "pointsAgainst": 1400.98
     },
     {
       "rank": 0,
       "managerId": "yaakov",
       "sourceManagerName": "Yaakov",
       "teamName": "Couchpotatoes",
-      "wins": 8,
+      "wins": 9,
       "losses": 1,
-      "pointsFor": 1250.78,
-      "pointsAgainst": 1085.78
+      "pointsFor": 1444.3,
+      "pointsAgainst": 1223.68
     },
     {
       "rank": 0,
       "managerId": "yaron",
       "sourceManagerName": "Rones1992",
       "teamName": "ZDAWG",
-      "wins": 4,
+      "wins": 5,
       "losses": 5,
-      "pointsFor": 1190.08,
-      "pointsAgainst": 1296.92
+      "pointsFor": 1328.64,
+      "pointsAgainst": 1423.08
     },
     {
       "rank": 0,
@@ -150,19 +150,19 @@
       "sourceManagerName": "Slimbig",
       "teamName": "Herbo",
       "wins": 1,
-      "losses": 8,
-      "pointsFor": 1099.56,
-      "pointsAgainst": 1241.08
+      "losses": 9,
+      "pointsFor": 1225.72,
+      "pointsAgainst": 1379.64
     },
     {
       "rank": 0,
       "managerId": "jeff",
       "sourceManagerName": "Jeffrey",
       "teamName": "Da Bears",
-      "wins": 1,
+      "wins": 2,
       "losses": 8,
-      "pointsFor": 991.98,
-      "pointsAgainst": 1184.22
+      "pointsFor": 1112.16,
+      "pointsAgainst": 1299.54
     },
     {
       "rank": 0,
@@ -170,9 +170,9 @@
       "sourceManagerName": "Joseph",
       "teamName": "Cee Deez Nuts",
       "wins": 4,
-      "losses": 5,
-      "pointsFor": 1180.2,
-      "pointsAgainst": 1208.88
+      "losses": 6,
+      "pointsFor": 1287.12,
+      "pointsAgainst": 1354.42
     },
     {
       "rank": 0,
@@ -180,19 +180,19 @@
       "sourceManagerName": "Daniel",
       "teamName": "The Dearborn Squad",
       "wins": 5,
-      "losses": 4,
-      "pointsFor": 1215.08,
-      "pointsAgainst": 1209.84
+      "losses": 5,
+      "pointsFor": 1335.22,
+      "pointsAgainst": 1357.2
     },
     {
       "rank": 0,
       "managerId": "halpert",
       "sourceManagerName": "Jonathon H",
       "teamName": "Penny pinchers",
-      "wins": 6,
+      "wins": 7,
       "losses": 3,
-      "pointsFor": 1258.72,
-      "pointsAgainst": 1052.48
+      "pointsFor": 1430.44,
+      "pointsAgainst": 1155.6
     },
     {
       "rank": 0,
@@ -200,9 +200,9 @@
       "sourceManagerName": "Jeremy",
       "teamName": "Team Sandwich Club",
       "wins": 4,
-      "losses": 5,
-      "pointsFor": 1092.32,
-      "pointsAgainst": 1164
+      "losses": 6,
+      "pointsFor": 1195.44,
+      "pointsAgainst": 1335.72
     }
   ],
   "matchups": [
@@ -1022,13 +1022,13 @@
         "managerId": "finn",
         "sourceManagerName": "Michael",
         "teamName": "Pukaluxklan",
-        "score": 0
+        "score": 145.54
       },
       "away": {
         "managerId": "hasten",
         "sourceManagerName": "Joseph",
         "teamName": "Cee Deez Nuts",
-        "score": 0
+        "score": 106.92
       }
     },
     {
@@ -1037,13 +1037,13 @@
         "managerId": "max",
         "sourceManagerName": "Max",
         "teamName": "mongrel",
-        "score": 0
+        "score": 137.9
       },
       "away": {
         "managerId": "yaakov",
         "sourceManagerName": "Yaakov",
         "teamName": "Couchpotatoes",
-        "score": 0
+        "score": 193.52
       }
     },
     {
@@ -1052,13 +1052,13 @@
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
         "teamName": "Da Bears",
-        "score": 0
+        "score": 120.18
       },
       "away": {
         "managerId": "alex",
         "sourceManagerName": "Alex",
         "teamName": "Likely Injured",
-        "score": 0
+        "score": 115.32
       }
     },
     {
@@ -1067,13 +1067,13 @@
         "managerId": "kotsias",
         "sourceManagerName": "Daniel",
         "teamName": "The Dearborn Squad",
-        "score": 0
+        "score": 120.14
       },
       "away": {
         "managerId": "reoven",
         "sourceManagerName": "Reoven",
         "teamName": "Reoven's Rad Team",
-        "score": 0
+        "score": 147.36
       }
     },
     {
@@ -1082,13 +1082,13 @@
         "managerId": "yair",
         "sourceManagerName": "Slimbig",
         "teamName": "Herbo",
-        "score": 0
+        "score": 126.16
       },
       "away": {
         "managerId": "yaron",
         "sourceManagerName": "Rones1992",
         "teamName": "ZDAWG",
-        "score": 0
+        "score": 138.56
       }
     },
     {
@@ -1097,13 +1097,13 @@
         "managerId": "halpert",
         "sourceManagerName": "Jonathon H",
         "teamName": "Penny pinchers",
-        "score": 0
+        "score": 171.72
       },
       "away": {
         "managerId": "jeremy",
         "sourceManagerName": "Jeremy",
         "teamName": "Team Sandwich Club",
-        "score": 0
+        "score": 103.12
       }
     },
     {
