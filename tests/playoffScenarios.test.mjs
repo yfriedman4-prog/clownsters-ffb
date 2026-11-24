@@ -1,23 +1,39 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import fs from 'node:fs'
 import { validateSeason } from '../src/utils/playoffs/seasonState.js'
 import { rankTeams } from '../src/utils/playoffs/ranking.js'
 import { simulatePlayoffs } from '../src/utils/playoffs/simulation.js'
-const season = JSON.parse(fs.readFileSync(new URL('../src/data/history/seasons/2026.json', import.meta.url)))
+import { activeSeason as season, remainingFixtures, week10Season } from './playoffFixtures.mjs'
 test('current state reconciles scores, records and complete remaining schedule', () => {
   const state = validateSeason(season)
-  assert.equal(state.throughWeek, 10); assert.equal(state.remaining.length, 24)
+  const completed = season.matchups.filter(g => g.week <= season.completedThroughWeek)
+  assert.equal(state.throughWeek, season.completedThroughWeek)
+  assert.equal(completed.length, season.completedThroughWeek * 6)
+  assert.equal(state.remaining.length, (season.regularSeasonEndWeek - season.completedThroughWeek) * 6)
+  assert.deepEqual(state.remaining, remainingFixtures(season))
   assert.equal(state.teams.length, 12)
-  for (const t of state.teams) { assert.equal(t.scores.length, 10); assert.equal(t.wins + t.losses, 10) }
-  const rows = rankTeams(state.teams)
-  assert.equal(rows[0].managerId, 'yaakov'); assert.equal(rows[5].managerId, 'kotsias')
+  const cents = n => Math.round(n * 100)
+  for (const team of state.teams) {
+    const observations = completed.flatMap(({ home, away }) =>
+      home.managerId === team.managerId ? [[home.score, away.score]] :
+        away.managerId === team.managerId ? [[away.score, home.score]] : []
+    )
+    assert.equal(observations.length, season.completedThroughWeek)
+    assert.deepEqual(team.scores, observations.map(([score]) => score))
+    assert.equal(team.wins, observations.filter(([pf, pa]) => pf > pa).length)
+    assert.equal(team.losses, observations.filter(([pf, pa]) => pf < pa).length)
+    assert.equal(team.wins + team.losses, season.completedThroughWeek)
+    assert.equal(cents(team.pointsFor), observations.reduce((sum, [pf]) => sum + cents(pf), 0))
+    assert.equal(cents(team.pointsAgainst), observations.reduce((sum, [, pa]) => sum + cents(pa), 0))
+  }
+  const expectedOrder = season.standings.toSorted((a, b) => b.wins - a.wins || b.pointsFor - a.pointsFor)
+  assert.deepEqual(rankTeams(state.teams).map(t => t.managerId), expectedOrder.map(t => t.managerId))
 })
 test('invalid scores, records, identities and schedule are rejected; future placeholders ignored', () => {
   for (const mutate of [s => s.matchups.pop(), s => {s.matchups[0].home.score = null}, s => {s.matchups[0].home.score = Infinity}, s => {s.standings[0].pointsFor++}, s => {s.matchups[0].home.managerId = 'unknown'}, s => {s.matchups[0].home.managerId = s.matchups[0].away.managerId}, s => {s.standings[0].managerId = s.standings[1].managerId}]) {
     const copy = structuredClone(season); mutate(copy); assert.throws(() => validateSeason(copy))
   }
-  const copy = structuredClone(season); copy.matchups.find(g => g.week === 11).home.score = null
+  const copy = structuredClone(season); copy.matchups.find(g => g.week === season.completedThroughWeek + 1).home.score = null
   assert.deepEqual(validateSeason(copy), validateSeason(season))
   copy.matchups[0].home.score = copy.matchups[0].away.score
   assert.throws(() => validateSeason(copy), /tie requires/)
@@ -32,6 +48,7 @@ test('ranking applies wins then PF and preserves unresolved seed ranges across b
   assert.equal(rankTeams([{ managerId: 'a', wins: 1, pointsFor: 100 }, { managerId: 'b', wins: 1, pointsFor: 101 }])[0].managerId, 'b')
 })
 test('seeded simulations reproduce results, preserve inputs, and conserve berths, byes and seeds', () => {
+  const season = week10Season
   const original = JSON.stringify(season)
   const a = simulatePlayoffs(season, { iterations: 1000, seed: 42 })
   assert.deepEqual(a, simulatePlayoffs(season, { iterations: 1000, seed: 42 }))

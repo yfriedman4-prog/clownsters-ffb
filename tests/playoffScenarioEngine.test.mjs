@@ -1,11 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import fs from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { simulatePlayoffs } from '../src/utils/playoffs/simulation.js'
 import { simulateScenario } from '../src/utils/playoffs/scenarioResults.js'
 import { scenarioPreset,remainingScenarioState } from '../src/utils/playoffs/scenarioSelections.js'
-const season=JSON.parse(fs.readFileSync('src/data/history/seasons/2026.json'))
+import { week10Season as season } from './playoffFixtures.mjs'
 const options={iterations:1000,seed:42}
 async function legacy(){let code=execFileSync('git',['show','9bb43ea:src/utils/playoffs/simulation.js']).toString();for(const relative of ['../../config/playoffs2026.js','./seasonState.js','./ranking.js','./sampling.js'])code=code.replace(relative,new URL(relative,new URL('../src/utils/playoffs/simulation.js',import.meta.url)).href);return import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)}
 test('empty scenarios exactly preserve production baseline; single pick exactly matches legacy conditional',async()=>{

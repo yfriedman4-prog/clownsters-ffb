@@ -5,7 +5,7 @@
     "importedFrom": "FRB CSV export"
   },
   "seasonStatus": "in_progress",
-  "completedThroughWeek": 10,
+  "completedThroughWeek": 11,
   "regularSeasonWeeks": 14,
   "regularSeasonStartWeek": 1,
   "regularSeasonEndWeek": 14,
@@ -61,7 +61,7 @@
     {
       "managerId": "jeff",
       "sourceManagerName": "Jeffrey",
-      "teamName": "Da Bears",
+      "teamName": "The Injured Reserves",
       "sourceOwnerId": "frb:0b49254d2e3343de90448380da3cff17"
     },
     {
@@ -89,20 +89,20 @@
       "managerId": "max",
       "sourceManagerName": "Max",
       "teamName": "mongrel",
-      "wins": 6,
+      "wins": 7,
       "losses": 4,
-      "pointsFor": 1477.74,
-      "pointsAgainst": 1343.86
+      "pointsFor": 1607.08,
+      "pointsAgainst": 1421.06
     },
     {
       "rank": 0,
       "managerId": "finn",
       "sourceManagerName": "Michael",
       "teamName": "Pukaluxklan",
-      "wins": 6,
+      "wins": 7,
       "losses": 4,
-      "pointsFor": 1430.06,
-      "pointsAgainst": 1316.26
+      "pointsFor": 1583.4,
+      "pointsAgainst": 1435.66
     },
     {
       "rank": 0,
@@ -110,9 +110,9 @@
       "sourceManagerName": "Alex",
       "teamName": "Likely Injured",
       "wins": 3,
-      "losses": 7,
-      "pointsFor": 1112.02,
-      "pointsAgainst": 1273.0
+      "losses": 8,
+      "pointsFor": 1189.22,
+      "pointsAgainst": 1402.34
     },
     {
       "rank": 0,
@@ -120,29 +120,29 @@
       "sourceManagerName": "Reoven",
       "teamName": "Reoven's Rad Team",
       "wins": 8,
-      "losses": 2,
-      "pointsFor": 1484.12,
-      "pointsAgainst": 1400.98
+      "losses": 3,
+      "pointsFor": 1603.52,
+      "pointsAgainst": 1554.32
     },
     {
       "rank": 0,
       "managerId": "yaakov",
       "sourceManagerName": "Yaakov",
       "teamName": "Couchpotatoes",
-      "wins": 9,
+      "wins": 10,
       "losses": 1,
-      "pointsFor": 1444.3,
-      "pointsAgainst": 1223.68
+      "pointsFor": 1634.56,
+      "pointsAgainst": 1354.78
     },
     {
       "rank": 0,
       "managerId": "yaron",
       "sourceManagerName": "Rones1992",
       "teamName": "ZDAWG",
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
-      "pointsFor": 1328.64,
-      "pointsAgainst": 1423.08
+      "pointsFor": 1447.28,
+      "pointsAgainst": 1494.08
     },
     {
       "rank": 0,
@@ -150,39 +150,39 @@
       "sourceManagerName": "Slimbig",
       "teamName": "Herbo",
       "wins": 1,
-      "losses": 9,
-      "pointsFor": 1225.72,
-      "pointsAgainst": 1379.64
+      "losses": 10,
+      "pointsFor": 1330.78,
+      "pointsAgainst": 1501.02
     },
     {
       "rank": 0,
       "managerId": "jeff",
       "sourceManagerName": "Jeffrey",
-      "teamName": "Da Bears",
+      "teamName": "The Injured Reserves",
       "wins": 2,
-      "losses": 8,
-      "pointsFor": 1112.16,
-      "pointsAgainst": 1299.54
+      "losses": 9,
+      "pointsFor": 1183.16,
+      "pointsAgainst": 1418.18
     },
     {
       "rank": 0,
       "managerId": "hasten",
       "sourceManagerName": "Joseph",
       "teamName": "Cee Deez Nuts",
-      "wins": 4,
+      "wins": 5,
       "losses": 6,
-      "pointsFor": 1287.12,
-      "pointsAgainst": 1354.42
+      "pointsFor": 1408.5,
+      "pointsAgainst": 1459.48
     },
     {
       "rank": 0,
       "managerId": "kotsias",
       "sourceManagerName": "Daniel",
       "teamName": "The Dearborn Squad",
-      "wins": 5,
+      "wins": 6,
       "losses": 5,
-      "pointsFor": 1335.22,
-      "pointsAgainst": 1357.2
+      "pointsFor": 1463.38,
+      "pointsAgainst": 1469.12
     },
     {
       "rank": 0,
@@ -190,9 +190,9 @@
       "sourceManagerName": "Jonathon H",
       "teamName": "Penny pinchers",
       "wins": 7,
-      "losses": 3,
-      "pointsFor": 1430.44,
-      "pointsAgainst": 1155.6
+      "losses": 4,
+      "pointsFor": 1561.54,
+      "pointsAgainst": 1345.86
     },
     {
       "rank": 0,
@@ -200,9 +200,9 @@
       "sourceManagerName": "Jeremy",
       "teamName": "Team Sandwich Club",
       "wins": 4,
-      "losses": 6,
-      "pointsFor": 1195.44,
-      "pointsAgainst": 1335.72
+      "losses": 7,
+      "pointsFor": 1307.36,
+      "pointsAgainst": 1463.88
     }
   ],
   "matchups": [
@@ -217,7 +217,7 @@
       "away": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 121.86
       }
     },
@@ -361,7 +361,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 130.78
       },
       "away": {
@@ -436,7 +436,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 133.7
       },
       "away": {
@@ -481,7 +481,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 91.16
       },
       "away": {
@@ -622,7 +622,7 @@
       "away": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 97.14
       }
     },
@@ -667,7 +667,7 @@
       "away": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 100.92
       }
     },
@@ -796,7 +796,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 118.6
       },
       "away": {
@@ -847,7 +847,7 @@
       "away": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 103.38
       }
     },
@@ -976,7 +976,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 94.44
       },
       "away": {
@@ -1051,7 +1051,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 120.18
       },
       "away": {
@@ -1112,13 +1112,13 @@
         "managerId": "finn",
         "sourceManagerName": "Michael",
         "teamName": "Pukaluxklan",
-        "score": 0
+        "score": 153.34
       },
       "away": {
         "managerId": "reoven",
         "sourceManagerName": "Reoven",
         "teamName": "Reoven's Rad Team",
-        "score": 0
+        "score": 119.4
       }
     },
     {
@@ -1127,13 +1127,13 @@
         "managerId": "hasten",
         "sourceManagerName": "Joseph",
         "teamName": "Cee Deez Nuts",
-        "score": 0
+        "score": 121.38
       },
       "away": {
         "managerId": "yair",
         "sourceManagerName": "Slimbig",
         "teamName": "Herbo",
-        "score": 0
+        "score": 105.06
       }
     },
     {
@@ -1142,13 +1142,13 @@
         "managerId": "max",
         "sourceManagerName": "Max",
         "teamName": "mongrel",
-        "score": 0
+        "score": 129.34
       },
       "away": {
         "managerId": "alex",
         "sourceManagerName": "Alex",
         "teamName": "Likely Injured",
-        "score": 0
+        "score": 77.2
       }
     },
     {
@@ -1156,14 +1156,14 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
-        "score": 0
+        "teamName": "The Injured Reserves",
+        "score": 71
       },
       "away": {
         "managerId": "yaron",
         "sourceManagerName": "Rones1992",
         "teamName": "ZDAWG",
-        "score": 0
+        "score": 118.64
       }
     },
     {
@@ -1172,13 +1172,13 @@
         "managerId": "kotsias",
         "sourceManagerName": "Daniel",
         "teamName": "The Dearborn Squad",
-        "score": 0
+        "score": 128.16
       },
       "away": {
         "managerId": "jeremy",
         "sourceManagerName": "Jeremy",
         "teamName": "Team Sandwich Club",
-        "score": 0
+        "score": 111.92
       }
     },
     {
@@ -1187,13 +1187,13 @@
         "managerId": "halpert",
         "sourceManagerName": "Jonathon H",
         "teamName": "Penny pinchers",
-        "score": 0
+        "score": 131.1
       },
       "away": {
         "managerId": "yaakov",
         "sourceManagerName": "Yaakov",
         "teamName": "Couchpotatoes",
-        "score": 0
+        "score": 190.26
       }
     },
     {
@@ -1222,7 +1222,7 @@
       "away": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 0
       }
     },
@@ -1336,7 +1336,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 0
       },
       "away": {
@@ -1411,7 +1411,7 @@
       "home": {
         "managerId": "jeff",
         "sourceManagerName": "Jeffrey",
-        "teamName": "Da Bears",
+        "teamName": "The Injured Reserves",
         "score": 0
       },
       "away": {
