@@ -4,6 +4,10 @@
  */
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
+import { activeSeason as season, remainingFixtures } from '../playoffFixtures.mjs'
+
+const remaining = remainingFixtures(season)
+const weeks = [...new Set(remaining.map(game => game.week))]
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE ?? 'playwright')
 const output=process.env.ARTIFACT_DIR ?? '/workspace/artifacts'
 fs.mkdirSync(output,{recursive:true})
@@ -12,6 +16,7 @@ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH ??
 try {
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[]
  page.on('pageerror',e=>errors.push(e.message))
+ page.on('console',message=>{if(message.type()==='error')errors.push(message.text())})
  await page.addInitScript(()=>{
   const Original=window.Worker
   window.__workers=[];window.__requests=0;window.__latest=null
@@ -27,10 +32,11 @@ try {
  await page.getByRole('button',{name:'Bye Battle',exact:true}).click()
  await page.getByRole('button',{name:'Playoff Chase',exact:true}).click()
  await page.locator('.playoff-key-game').first().waitFor({timeout:90000})
+ assert.match(await page.locator('.playoff-kicker').first().innerText(),new RegExp(`THROUGH WEEK ${season.completedThroughWeek}\\b`))
  const requests=await page.evaluate(()=>window.__requests)
  const currentRuntime=await page.evaluate(()=>window.__workers.find(w=>w.elapsed)?.elapsed)
  assert.equal(await page.locator('.playoff-key-game').count(),3)
- for(const [width,height] of [[1440,1000],[768,1024],[390,844],[320,844]]){
+ for(const [width,height] of [[1440,1000],[1366,1000],[768,1024],[390,844],[320,844]]){
   await page.setViewportSize({width,height})
   for(const [label,kind] of [['Playoff Chase','playoff'],['Bye Battle','bye'],['All Key Matchups','combined']]){
    await page.getByRole('button',{name:label,exact:true}).focus()
@@ -65,14 +71,15 @@ try {
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`expanded overflow ${width} ${kind}`)
    await first.locator('.playoff-game-details>summary').focus()
    await page.keyboard.press('Enter')
-   await page.getByRole('button',{name:'View All Key Matchups (24)',exact:true}).click()
-   assert.equal(await page.locator('.playoff-key-game').count(),24)
+   await page.getByRole('button',{name:`View All Key Matchups (${remaining.length})`,exact:true}).click()
+   assert.equal(await page.locator('.playoff-key-game').count(),remaining.length)
    await page.getByRole('button',{name:'Show Top Three Matchups',exact:true}).click()
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`overflow ${width} ${kind}`)
   }
  }
  assert.equal(await page.evaluate(()=>window.__requests),requests,'View changes must not resimulate')
- assert.equal(await page.locator('.playoff-weeks p').count(),24)
+ assert.equal(await page.locator('.playoff-weeks p').count(),remaining.length)
+ assert.deepEqual(await page.locator('.playoff-weeks h3').allTextContents(),weeks.map(week=>`Week ${week}`))
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:width===1440?1000:844})
   await page.getByRole('button',{name:'Bye Battle',exact:true}).click()
@@ -90,7 +97,7 @@ try {
  await page.getByRole('button',{name:'Midseason Report',exact:true}).click();await page.locator('.midseason-report').waitFor()
  await page.getByRole('button',{name:'League History',exact:true}).click();await page.getByRole('button',{name:'Managers',exact:true}).click();await page.getByRole('button',{name:'H2H Matrix',exact:true}).waitFor()
  assert.deepEqual(errors,[])
- const report={currentWorkerMs:currentRuntime,viewSwitchAdditionalRequests:0,widths:[320,390,768,1440],keyboard:'Space selects views; Enter toggles Advanced Analysis',result:'passed'}
+ const report={currentWorkerMs:currentRuntime,viewSwitchAdditionalRequests:0,widths:[320,390,768,1366,1440],keyboard:'Space selects views; Enter toggles Advanced Analysis',result:'passed'}
  fs.writeFileSync(`${output}/playoffs-v121-browser-qa.json`,JSON.stringify(report,null,2)+'\n')
  console.log(JSON.stringify(report))
  console.log('PASS rankings, conditional display, three-view expansion, no resimulation, responsive widths, count changes, worker cancellation/stale messages, schedule and existing navigation.')

@@ -6,7 +6,7 @@ import { simulatePlayoffs } from '../src/utils/playoffs/simulation.js'
 import { validateSeason } from '../src/utils/playoffs/seasonState.js'
 import { rankTeams } from '../src/utils/playoffs/ranking.js'
 import { selectStorylines, analyzeKeyMatchups, samplingInterval } from '../src/utils/playoffs/raceInsights.js'
-const season=JSON.parse(fs.readFileSync(new URL('../src/data/history/seasons/2026.json',import.meta.url)))
+import { activeSeason, remainingFixtures, week10Season as season } from './playoffFixtures.mjs'
 test('unconditioned baseline is identical to validated v1 for identical seed and count', async()=>{
   let old=execFileSync('git',['show','e720dd4:src/utils/playoffs/simulation.js']).toString()
   for(const [relative,url] of [['../../config/playoffs2026.js',new URL('../src/config/playoffs2026.js',import.meta.url)],['./seasonState.js',new URL('../src/utils/playoffs/seasonState.js',import.meta.url)],['./ranking.js',new URL('../src/utils/playoffs/ranking.js',import.meta.url)]]) old=old.replace(relative,url.href)
@@ -14,7 +14,7 @@ test('unconditioned baseline is identical to validated v1 for identical seed and
   assert.deepEqual(simulatePlayoffs(season,{iterations:1000,seed:42}),prior.simulatePlayoffs(season,{iterations:1000,seed:42}))
 })
 test('conditional winner samples feasible scores with PF effects and preserves deterministic input',()=>{
-  // Only one game remains: conditional winner must get the win, and winning PF is higher than losing PF.
+  // Force one remaining game and verify its effect on wins and projected PF.
   const fixture=structuredClone(season);fixture.completedThroughWeek=13
   for(const g of fixture.matchups.filter(g=>g.week<=13 && g.week>10)){g.home.score=140;g.away.score=100}
   for(const t of fixture.standings){t.wins=0;t.losses=0;t.pointsFor=0;t.pointsAgainst=0;for(const g of fixture.matchups.filter(g=>g.week<=13)){const a=g.home.managerId===t.managerId?g.home:g.away.managerId===t.managerId?g.away:null;if(!a)continue;const b=a===g.home?g.away:g.home;t.wins+=Number(a.score>b.score);t.losses+=Number(a.score<b.score);t.pointsFor+=a.score;t.pointsAgainst+=b.score}t.pointsFor=+t.pointsFor.toFixed(2);t.pointsAgainst=+t.pointsAgainst.toFixed(2)}
@@ -45,12 +45,15 @@ test('storylines select strongest outsider, weakest qualifier and postseason-rel
   assert.ok(!selectStorylines(rows,results).some(s=>s.type==='Projected-Seed Riser'))
 })
 test('all actual remaining games ranked by documented impact with reproducible uncertainty',()=>{
-  const before=JSON.stringify(season),progress=[]
+  const season=activeSeason,expected=remainingFixtures(season),progress=[]
+  const before=JSON.stringify(season)
   const report=analyzeKeyMatchups(season,{iterations:100,seed:42},n=>progress.push(n))
-  assert.equal(report.games.length,24);assert.equal(progress.at(-1),24)
+  assert.equal(report.games.length,expected.length);assert.equal(progress.at(-1),expected.length)
+  const key=({week,home,away})=>`${week}:${home}:${away}`
+  assert.deepEqual(report.games.map(key).sort(),expected.map(key).sort())
   assert.deepEqual(report,analyzeKeyMatchups(season,{iterations:100,seed:42}));assert.equal(JSON.stringify(season),before)
-  for(let i=0;i<24;i++){
-    const g=report.games[i];assert.ok(g.week>=11&&g.week<=14)
+  for(let i=0;i<expected.length;i++){
+    const g=report.games[i];assert.ok(g.week>season.completedThroughWeek&&g.week<=season.regularSeasonEndWeek)
     if(i)assert.ok(report.games[i-1].impact>=g.impact)
     const metric=g.homeWin.results.reduce((n,h)=>{const a=g.awayWin.results.find(t=>t.managerId===h.managerId);return n+Math.abs(h.playoffLower-a.playoffLower)+0.5*Math.abs(h.byeLower-a.byeLower)},0)/2
     assert.equal(g.impact,metric)

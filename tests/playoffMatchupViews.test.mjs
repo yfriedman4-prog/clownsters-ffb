@@ -4,6 +4,7 @@ import fs from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { rankMatchups, leagueEffects, matchupExplanation, probabilityRange, probabilityChange, points } from '../src/utils/playoffs/matchupViews.js'
 import { analyzeKeyMatchups } from '../src/utils/playoffs/raceInsights.js'
+import { activeSeason as season, remainingFixtures } from './playoffFixtures.mjs'
 const row=(managerId,p,b)=>({managerId,playoffLower:p,playoffUpper:p,byeLower:b,byeUpper:b})
 const game=(week,home,away,h,a,impact=0)=>({week,home,away,homeWin:{results:h},awayWin:{results:a},impact})
 const fixtures=[
@@ -50,12 +51,14 @@ test('bye explanation identifies a nonparticipant beneficiary from actual condit
  assert.equal(explanation.label,'Top-two seed stakes')
 })
 test('actual conditional outputs retain original combined ordering and all league probabilities',()=>{
- const season=JSON.parse(fs.readFileSync('src/data/history/seasons/2026.json'))
+ const expected=remainingFixtures(season)
  const analysis=analyzeKeyMatchups(season,{iterations:100,seed:42}),before=structuredClone(analysis)
  assert.deepEqual(rankMatchups(analysis.games,'combined').map(g=>[g.week,g.home,g.away,g.viewImpact]),analysis.games.map(g=>[g.week,g.home,g.away,g.impact]))
  for(const view of ['bye','playoff']){
   const ranked=rankMatchups(analysis.games,view)
-  assert.equal(ranked.length,24)
+  assert.equal(ranked.length,expected.length)
+  const key=({week,home,away})=>`${week}:${home}:${away}`
+  assert.deepEqual(ranked.map(key).sort(),expected.map(key).sort())
   for(const g of ranked){assert.equal(g.homeWin.results.length,12);assert.equal(g.awayWin.results.length,12)}
  }
  assert.deepEqual(analysis,before)
